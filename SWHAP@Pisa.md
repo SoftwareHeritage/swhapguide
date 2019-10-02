@@ -1,30 +1,43 @@
 ---
 title: 'The Software Heritage Acquisition Process'
+date: 10 October 2019
+author: 
+ - name: Laura Bussi
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: l.bussi1@studenti.unipi.it
+ - name: Roberto Di Cosmo
+   affiliation: Software Heritage, Inria and University of Paris
+   email: roberto@dicosmo.org
+ - name: Carlo Montangero
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: carlo@montangero.eu
+ - name: Guido Scatena
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: guido.scatena@unipi.it
+abstract: |
+  The source code of landmark legacy software is particularly important: it sheds
+  insights in the history of the evolution of a technology that has changed the
+  world, and tells a story of the humans that dedicated their lives to it.
+
+  Rescuing it is urgent, collecting and curating it is a complex task that
+  requires significant human intervention.
+
+  This document presents the first version of SWHAP, the Software Heritage
+  Acquisition Process: a protocol for the collection and preservation of software
+  of historical and scientific relevance. SWHAP results from a fruitful
+  collaboration of the University of Pisa with Software Heritage in this area of
+  research, under the auspices of UNESCO, and has been validated on a selection of
+  software source code produced in the Pisa area over the past 50 years.
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{common/latex/swhap}
+  \shortreporttitle{SWHAP}
+  \reporttitle{Software Heritage Acquisition Process}
+  \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
+  ```
+bibliography: swhap.bib
 ---
-
-Laura Bussi
-
-Dept. of Computer Science, University of Pisa
-
-[[l.bussi1\@studenti.unipi.it]{.underline}](mailto:l.bussi1@studenti.unipi.it)
-
-Roberto Di Cosmo
-
-Software Heritage, Inria and University of Paris
-
-[[roberto\@dicosmo.org]{.underline}](mailto:roberto@dicosmo.org)
-
-Carlo Montangero
-
-Dept. of Computer Science, University of Pisa
-
-[[carlo\@montangero.eu]{.underline}](mailto:carlo@montangero.eu)
-
-Guido Scatena
-
-Dept. of Computer Science, University of Pisa
-
-[[guido.scatena\@unipi.it]{.underline}](mailto:guido.scatena@unipi.it)
 
 Introduction
 ============
@@ -38,14 +51,11 @@ knowledge is embodied in, or depends on software artifacts.
 Software does not come out of the blue: it is written by humans, in the
 form of software Source Code, a precious, unique form of knowledge that,
 besides being readily translated into machine-executable form, should
-also "be written for humans to read"
-[\[1\]](https://www.zotero.org/google-docs/?D1fWSV), and "provides a
-view into the mind of the designer"
-[\[2\]](https://www.zotero.org/google-docs/?FKl8rZ).
+also "be written for humans to read" (@Abelson:SIC85), and "provides a
+view into the mind of the designer" (@Shustek06).
 
 As stated in the Paris Call on Software Source code as Heritage for
-sustainable development
-[\[3\]](https://www.zotero.org/google-docs/?G5w9mv), from the
+sustainable development (@ParisCall2019), from the
 UNESCO-Inria expert group meeting, it is essential to preserve this
 precious technical, scientific and cultural heritage over the long term.
 
@@ -54,8 +64,7 @@ launched by Inria in partnership with UNESCO, that has taken over this
 challenge. Its stated mission is to collect, preserve, and make readily
 accessible all the software source code ever written, in the Software
 Heritage Archive. To this end, Software Heritage designed specific
-strategies to collect software according to its nature
-[\[4\]](https://www.zotero.org/google-docs/?t96cvU).
+strategies to collect software according to its nature (@swhcacm2018).
 
 For software that is easily accessible online, and that can be copied
 without specific legal authorizations, the approach is based on
@@ -74,10 +83,8 @@ are still alive, and the existence of ancillary materials like
 documentation, articles, books, technical reports, email exchanges. Such
 an approach shall be based on a focused search, involving a significant
 amount of human intervention, as demonstrated by the pioneering works
-reconstructing the history of Unix
-[\[5\]](https://www.zotero.org/google-docs/?6rgDgO) and the source code
-of the Apollo Guidance Computer
-[\[6\]](https://www.zotero.org/google-docs/?gXUwvR).
+reconstructing the history of Unix (@SpinellisUnix2017) and the source code
+of the Apollo Guidance Computer (@VirtualAGC).
 
 This document presents the first version of SWHAP, the ***SoftWare
 Heritage Acquisition Process*** to rescue, curate and illustrate
@@ -96,10 +103,9 @@ collaborative development platform. This implementation is named SWHAPPE
 
 This document is complemented by online resources available at
 [[https://www.softwareheritage.org/swhap]{.underline}](https://www.softwareheritage.org/swhap).
-This includes an annotated example, using a real world medium-sized
-software project [\[7\]](https://www.zotero.org/google-docs/?wXnfzI), as
-well as a list of tools that may be helpful for other landmark legacy
-software source code rescue teams.
+This includes an annotated example, using a real world medium-sized software
+project (@AttardiF96), as well as a list of tools that may be helpful for other
+landmark legacy software source code rescue teams.
 
 Revised versions of this document will be published as needed.
 
@@ -149,7 +155,7 @@ descriptions should be provided to cater for the different situations
 identified. The same applies to the Curator role, which may need
 different capabilities in different scenarios.
 
-### Curate
+### **Curate**
 
 The purpose of this phase is *to* *analyze, cleanup and structure* the
 raw material that has been collected.
@@ -172,7 +178,7 @@ Particular care is required to *identify the owners* of the different
 artifacts, and *obtain if needed the necessary authorizations* to make
 these artifacts publicly available[^1].
 
-### Archive
+### **Archive**
 
 The purpose of this phase is to contribute the curated materials to the
 infrastructures specialized for each kind of materials: ***Software
@@ -360,9 +366,6 @@ Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
 acquisition process.
 
- 
-=
-
 The process, a concrete view
 ============================
 
@@ -548,70 +551,69 @@ explanations.
 
 ### Collect phase
 
-> **Upload files in raw\_materials**
->
-> All the collected files must be uploaded in the raw\_materials folder.
->
-> If there are physical materials, folder raw\_materials should contain
-> a reference to the related Warehouse, that may follow the Spectrum
-> guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
->
-> **Move the source code to browsable\_source**
->
-> All the source code files must then be put into the browsable\_source
-> folder.
->
-> If the raw material is an archive, you should unpack it locally and
-> then upload the result on GitHub by performing a push[^7].
->
-> If the code was only available in non digital form (e.g. printed
-> listings), you can either transcribe it manually, or use a scanner and
-> an OCR (optical character recognition) tool to parse it. See
-> [[Appendix
-> A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
-> for a list of suggested tools.
->
-> Particular care should be used to ensure the files in
-> browsable\_source have the correct extension: scanner and OCR usually
-> generate files with a generic .txt extension, that must be changed to
-> the extension typically used for the programming language they
-> contain.
->
-> Note that, at this stage, we are not interested in precise information
-> about the versions of the software. The purpose is to have
-> machine-readable documents.
->
-> Finally, in preparation for the curation phase, you may want to copy
-> the files in browsable\_source to the source folder.
->
-> **Create Depository**
->
-> The next step is to create the branch Depository, containing only the
-> folders raw\_materials and browsable\_source, together with the
-> metadata updated to this point. Then, create the Depository repository
-> from this branch.
+**Upload files in raw\_materials**
+
+All the collected files must be uploaded in the raw\_materials folder.
+
+If there are physical materials, folder raw\_materials should contain
+a reference to the related Warehouse, that may follow the Spectrum
+guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
+
+**Move the source code to browsable\_source**
+
+All the source code files must then be put into the browsable\_source
+folder.
+
+If the raw material is an archive, you should unpack it locally and
+then upload the result on GitHub by performing a push[^7].
+
+If the code was only available in non digital form (e.g. printed
+listings), you can either transcribe it manually, or use a scanner and
+an OCR (optical character recognition) tool to parse it. See
+[[Appendix
+A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
+for a list of suggested tools.
+
+Particular care should be used to ensure the files in
+browsable\_source have the correct extension: scanner and OCR usually
+generate files with a generic .txt extension, that must be changed to
+the extension typically used for the programming language they
+contain.
+
+Note that, at this stage, we are not interested in precise information
+about the versions of the software. The purpose is to have
+machine-readable documents.
+
+Finally, in preparation for the curation phase, you may want to copy
+the files in browsable\_source to the source folder.
+
+**Create Depository**
+
+The next step is to create the branch Depository, containing only the
+folders raw\_materials and browsable\_source, together with the
+metadata updated to this point. Then, create the Depository repository
+from this branch.
 
 ### Curate phase
 
 **Curate the source code**
 
-> Once the Depository creation is complete, you can move back to the
-> source folder in the master branch. Here you have to divide and number
-> the versions, putting the files of each one in a dedicated folder and
-> determining who did what and when.
->
-> In practice, this means that *for each version of the software* you
-> need to ascertain:
+Once the Depository creation is complete, you can move back to the
+source folder in the master branch. Here you have to divide and number
+the versions, putting the files of each one in a dedicated folder and
+determining who did what and when.
+
+In practice, this means that *for each version of the software* you
+need to ascertain:
 
 -   the *main contributing author*,
 
 -   the *exact date* of the release of this particular version
 
-> This information should be consigned in a dedicated metadata file,
-> version\_history.csv, having the following fields:
+This information should be consigned in a dedicated metadata file,
+version\_history.csv, having the following fields:
 
--   directory name name of the directory containing the source code of
-    > this version
+-   directory name name of the directory containing the source code of this version
 
 -   author name name of the main author
 
@@ -629,13 +631,13 @@ empty otherwise
 
 -   commit message text with brief note from the curation team
 
-> **(Re-)Create the Development History**
->
-> Now we are ready to (re-)create the development history of the
-> software. First you need to create a branch Source Code, with the
-> *src* folder.
->
-> Then, you can proceed in two ways:
+**(Re-)Create the Development History**
+
+Now we are ready to (re-)create the development history of the
+software. First you need to create a branch Source Code, with the
+*src* folder.
+
+Then, you can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
     > into the source folder, reading the information collected in the
@@ -648,14 +650,14 @@ empty otherwise
     > ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
     > , and you can see a running example in the next section.
 
-> The result will be a branch that materializes the development history
-> of the software via Git commits and releases.
->
-> **Create the final repository**
->
-> Finally you can create the "official" software repository, taking the
-> versions history from the src branch and the metadata from the master
-> branch.
+The result will be a branch that materializes the development history
+of the software via Git commits and releases.
+
+**Create the final repository**
+
+Finally you can create the "official" software repository, taking the
+versions history from the src branch and the metadata from the master
+branch.
 
 Iteration
 ---------
@@ -691,9 +693,6 @@ recreate it, performing the following steps:
 
 -   Recreate the software history as for the first iteration.
 
- 
-=
-
 A walkthrough on a running example
 ==================================
 
@@ -722,16 +721,14 @@ repository[^9], that we name "CMM-Workbench". This action, as most of
 the following ones, can be performed through the user interface (as
 shown in fig. 4), or programmatically through the GitHub API.
 
-![](./media/image9.png){width="4.769792213473316in"
-height="3.133439413823272in"}
+![](./media/image9.png)
 
 Figure 4. Template instantiation.
 
 It has the same directory structure as SWHAP-Template, as shown in fig.
 5.
 
-![](./media/image16.png){width="6.390625546806649in"
-height="4.05405293088364in"}
+![](./media/image16.png)
 
 Figure 5. Instantiated workbench for CMM.
 
@@ -772,8 +769,7 @@ and we commit all these new contents:
 
 The resulting state of raw\_materials is shown in figure 6.
 
-![](./media/image8.png){width="6.695833333333334in"
-height="2.361111111111111in"}
+![](./media/image8.png)
 
 Figure 6. CMM raw materials on GitHub.
 
@@ -792,8 +788,7 @@ and commit the changes as done for the raw\_materials folder
 
 > **git push**
 
-![](./media/image5.png){width="6.695833333333334in"
-height="5.555555555555555in"}
+![](./media/image5.png)
 
 Figure 7. CMM browsable sources on GitHub.
 
@@ -838,8 +833,7 @@ that, however, we have to create the new remote repository on GitHub
 (fig. 8 shows how to do this using the web interface; here too one could
 use the GitHub API instead).
 
-![](./media/image6.png){width="6.203125546806649in"
-height="4.512998687664042in"}
+![](./media/image6.png)
 
 Figure 8. CMM-Depository creation.
 
@@ -850,13 +844,12 @@ Finally, we can perform a push and fill the remote repository.
 **git push
 [[https://github.com/Unipisa/CMM-Depository.git]{.underline}](https://github.com/Unipisa/CMM-Depository.git)**
 
-> **+Depository:master**
+**+Depository:master**
 
 We can check the resulting repositories via the web interface (figure
 9): CMM-Depository is now filled with the pushed materials.
 
-![](./media/image13.png){width="6.270833333333333in"
-height="2.5694444444444446in"}
+![](./media/image13.png)
 
 Figure 9. The CMM repositories at the end of the collect phase.
 
@@ -882,13 +875,11 @@ In order to support the (re-)creation of the development history of the
 original project, we prepare the version\_history.csv file with the
 appropriate metadata (see fig. 10).
 
-![](./media/image14.png){width="6.695833333333334in"
-height="4.333333333333333in"}
+![](./media/image14.png)
 
 Figure 10. The folder with CMM version history data.
 
-![](./media/image12.png){width="6.695833333333334in"
-height="3.0972222222222223in"}
+![](./media/image12.png)
 
 Figure XXX. CMM instantiation (right) of codemeta.json template (left).
 
@@ -934,7 +925,7 @@ tool
 As a result we will find in our local repository a new local branch
 containing the rebuilt version history, that is shown in fig. 11.
 
-![](./media/image10.png){width="6.695833333333334in" height="6.0in"}
+![](./media/image10.png)
 
 Figure 11. An excerpt of the synthetic history of CMM.
 
@@ -958,8 +949,7 @@ We now create the README.md file, add it and commit changes:
 Now we create the final remote repository, that we call "CMM", see
 figure 12, and we push the relevant branches (and tags) to it.
 
-![](./media/image15.png){width="6.307292213473316in"
-height="3.544443350831146in"}
+![](./media/image15.png)
 
 Figure 12. The creation of the final repository.
 
@@ -974,24 +964,19 @@ Figure 12. The creation of the final repository.
 Figure 13, 14, 15 show the final result of CMM, their Depository and
 Workbench.
 
-![](./media/image7.png){width="6.695833333333334in"
-height="6.111111111111111in"}
+![](./media/image7.png)
 
 Figure 14. The final CMM repository.
 
-![](./media/image11.png){width="6.695833333333334in"
-height="5.513888888888889in"}
+![](./media/image11.png)
 
 Figure 15. The final CMM Depository.
 
-![](./media/image4.png){width="6.695833333333334in"
-height="6.861111111111111in"}
+![](./media/image4.png)
 
 Figure 16. The final CMM Workbench.
 
-#### 
-
-#### Public the repositories and trigger Software Heritage acquisition
+#### Publish the repositories and trigger Software Heritage acquisition
 
 In order to publish Depository and SourceCode repository we have to set
 their visibility to "public", either through GitHub web interface (as
@@ -1103,38 +1088,6 @@ SWHAPPE.
 
 Bibliography
 ============
-
-[\[1\] H. Abelson and G. J. S. with J. Sussman, *Structure and
-Interpretation of Computer Programs*. The MIT Press: The MIT Press,
-1985.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[2\] L. J. Shustek, "What Should We Collect to Preserve the History of
-Software?," *IEEE Ann. Hist. Comput.*, vol. 28, no. 4, pp. 110--112,
-2006.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[3\] Institut national de recherche en informatique et en automatique,
-*Paris Call: Software Source Code as Heritage for Sustainable
-Development*. UNESCO, 2019.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[4\] J.-F. Abramatic, R. Di Cosmo, and S. Zacchiroli, "Building the
-Universal Archive of Source Code," *Commun ACM*, vol. 61, no. 10, pp.
-29--31, Sep. 2018.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[5\] D. Spinellis, "A repository of Unix history and evolution,"
-*Empir. Softw. Eng.*, vol. 22, no. 3, pp. 1372--1404,
-2017.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[6\] R. Burkey, "Virtual AGC - Changelog," 2019. \[Online\].
-Available: http://ibiblio.org/apollo/changes.html. \[Accessed:
-24-Sep-2019\].](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[7\] G. Attardi and T. Flagella, "Memory Management in the PoSSo
-Solver," *J Symb Comput*, vol. 21, no. 3, pp. 293--311,
-1996.](https://www.zotero.org/google-docs/?hIHI4c)
-
-[\[8\] T. Collections, "Introduction to Spectrum 5.0." \[Online\].
-Available: https://collectionstrust.org.uk/spectrum/spectrum-5/.
-\[Accessed: 24-Sep-2019\].](https://www.zotero.org/google-docs/?hIHI4c)
 
 [^1]: This is a complex issue, that may need to be handled according to
     country-specific regulations and is out of the scope of the present
