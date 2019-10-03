@@ -32,6 +32,7 @@ header-includes:
 - |
   ```{=latex}
   \usepackage{common/latex/swhap}
+  \usepackage{lastpage}
   \shortreporttitle{SWHAP}
   \reporttitle{Software Heritage Acquisition Process}
   \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
@@ -506,7 +507,7 @@ Figure 2. Overview of the SWHAPPE process.
 The SWHAP template
 ------------------
 
-The structure of the template is shown in fig. 3.
+The structure of the template is shown in Fig. 3.
 
 First of all, we can see a correspondence between the Depository
 presented in the process and the area provided by raw\_materials and
@@ -528,8 +529,7 @@ As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself.
 
-This figure is found
-[[here]{.underline}](https://drive.google.com/open?id=1ditGq2NrcjhZU-d_lLuIjEyjCWW6b4ihY9_p9kzjlgI)
+![](./media/Figure3.png)
 
 Figure 3. Top structure of the Template repository.
 
@@ -1081,3 +1081,4 @@ Bibliography
     remotely via the web interface.
 
 [^11]: Here shown with unix command line.
+
