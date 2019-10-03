@@ -737,17 +737,15 @@ repository[^10]. By clicking on the green button "clone or download"
 (fig. 5), we get a link that we can use for this purpose in the
 following command from the command line:
 
-**git clone https://github.com/Unipisa/CMM-Workbench.git**
+    git clone https://github.com/Unipisa/CMM-Workbench.git
 
 Now, we have a local copy of the CMM-Workbench, and we can, first of
 all, update the README.md file with the correct name and description of
 the acquisition, and synchronize it with the remote repository:
 
-**git add README.md**
-
-**git commit README.md -m "Updated README"**
-
-**git push**
+	git add README.md
+	git commit README.md -m "Updated README"
+	git push
 
 We are now ready to start the collect phase.
 
@@ -761,11 +759,9 @@ and the email that Giuseppe Attardi sent us along with them,
 
 and we commit all these new contents:
 
-**git add raw\_materials**
-
-**git commit -m "Added raw material"**
-
-**git push**
+	git add raw_materials
+	git commit -m "Added raw material"
+	git push
 
 The resulting state of raw\_materials is shown in figure 6.
 
@@ -778,15 +774,13 @@ Figure 6. CMM raw materials on GitHub.
 In order to get a browsable version of the source code, we decompress
 the .tar.gz archive into the browsable\_source folder
 
-**tar -xzf raw\_material/cmm.tgz -C browsable\_source**
+    tar -xzf raw_material/cmm.tgz -C browsable_source
 
 and commit the changes as done for the raw\_materials folder
 
-**git add browsable\_source**
-
-**git commit -m "Added browsable source"**
-
-> **git push**
+    git add browsable_source
+    git commit -m "Added browsable source"
+    git push
 
 ![](./media/image5.png)
 
@@ -795,15 +789,13 @@ Figure 7. CMM browsable sources on GitHub.
 Finally, in preparation for the next phase, curation, we copy the files
 contained in browsable\_source into the source folder[^11].
 
-> **cp -r browsable\_source source**
+    cp -r browsable_source source
 
 Again, we stage changes as in the previous two steps.
 
-> **git add source **
->
-> **git commit -m \"Added source\"**
->
-> **git push**
+	git add source
+	git commit -m "Added source"
+	git push
 
 #### Create Depository
 
@@ -811,22 +803,20 @@ The Depository has been filled, hence we create the Depository as an
 orphan branch, i.e., with no references to the parent repository, using
 the checkout command:
 
-**git checkout \--orphan Depository**
+    git checkout --orphan Depository
 
 As a result, we moved to the Depository branch. Here we modify the
 README (guidelines to fill the README file are given in the template)
 and remove the source and metadata folder, since they are not
 interesting for this area:
 
-**git rm -rf source metadata**
+    git rm -rf source metadata
 
 We stage the last modifications and then push to the remote repository.
 
-**git add .**
-
-**git commit -m "Added raw materials from master branch"**
-
-**git push \--mirror origin**
+	git add .
+	git commit -m "Added raw materials from master branch"
+	git push --mirror origin
 
 We are almost ready to move the Depository to a new repository: before
 that, however, we have to create the new remote repository on GitHub
@@ -841,10 +831,7 @@ Figure 8. CMM-Depository creation.
 
 Finally, we can perform a push and fill the remote repository.
 
-**git push
-[[https://github.com/Unipisa/CMM-Depository.git]{.underline}](https://github.com/Unipisa/CMM-Depository.git)**
-
-**+Depository:master**
+    git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
 
 We can check the resulting repositories via the web interface (figure
 9): CMM-Depository is now filled with the pushed materials.
@@ -858,11 +845,9 @@ having multiple copies that may diverge. Should new materials became
 available, a new iteration of the process should start, re-initializing
 the Workbench with the information in the Depository.
 
-**git checkout master**
-
-**git push \--delete origin Depository**
-
-**git branch -D Depository**
+	git checkout master
+	git push --delete origin Depository
+	git branch -D Depository
 
 ### Curate the code
 
@@ -887,9 +872,8 @@ Figure XXX. CMM instantiation (right) of codemeta.json template (left).
 
 We have to create a clean dedicated SourceCode branch
 
-**git checkout \--orphan SourceCode**
-
-**git rm -r \***
+	git checkout --orphan SourceCode
+	git rm -r
 
 The development history can now be (re-)created either by issuing
 manually (i.e. for each version directory) the appropriate git commands,
@@ -897,30 +881,21 @@ or by using a specialised tool.
 
 Here is the template to create manually an individual commit/release:
 
-**export GIT\_COMMITTER\_DATE=\"YYYY-MM-DD HH:MM:SS\"**
-
-**export GIT\_COMMITER\_NAME=\"Commiter Name \<email\@address\>\"**
-
-**export GIT\_AUTHOR\_DATE=\"YYYY-MM-DD HH:MM:SS\"**
-
-**export GIT\_AUTHOR\_NAME=\"Author Name \<email\@address\>\"**
-
-**git commit -m \'Commit Message Here\'**
-
-**git tag -a 1.9 -m "Version 1.9"**
+	export GIT_COMMITTER_DATE="YYYY-MM-DD HH:MM:SS"
+	export GIT_COMMITER_NAME="Commiter Name <email@address>"
+	export GIT_AUTHOR_DATE="YYYY-MM-DD HH:MM:SS"
+	export GIT_AUTHOR_NAME="Author Name <email@address>"
+	git commit -m 'Commit Message Here'
+	git tag -a 1.9 -m "Version 1.9"
 
 And here is an example using the [[DT2SG]{.underline}](#t3q5s097euy)
 tool
 
-**dotnet ./DT2SG/DT2SG\_app.dll **
-
-**-r /mnt/DATA/SRC/SoftwareHeritage/SWHAP-EXAMPLE/CMM-Workbench**
-
-> **/source/cmm/ **
-
-**-m /mnt/DATA/SRC/SoftwareHeritage/SWHAP-EXAMPLE/CMM-Workbench**
-
-> **/metadata/version\_history.csv**
+    dotnet ./DT2SG/DT2SG_app.dll
+      -r SWHAP-EXAMPLE/CMM-Workbench
+      /source/cmm/
+      -m SWHAP-EXAMPLE/CMM-Workbench
+      metadata/version_history.csv
 
 As a result we will find in our local repository a new local branch
 containing the rebuilt version history, that is shown in fig. 11.
@@ -934,17 +909,14 @@ Figure 11. An excerpt of the synthetic history of CMM.
 We move back to the master branch using the checkout command, then
 remove raw\_materials and source from it:
 
-**git rm -rf raw\_materials**
-
-**git rm -rf browsable\_source**
-
-**git rm -rf source**
+	git rm -rf raw_materials
+	git rm -rf browsable_source
+	git rm -rf source
 
 We now create the README.md file, add it and commit changes:
 
-**git add README.md**
-
-**git commit -m "Final repository created"**
+	git add README.md
+	git commit -m "Final repository created"
 
 Now we create the final remote repository, that we call "CMM", see
 figure 12, and we push the relevant branches (and tags) to it.
@@ -953,13 +925,8 @@ figure 12, and we push the relevant branches (and tags) to it.
 
 Figure 12. The creation of the final repository.
 
-**git push https://github.com/Unipisa/CMM.git +master:master **
-
-> **+src:src**
-
-**git push \--tags https://github.com/Unipisa/CMM.git **
-
-> **+master:master +src:src**
+    git push https://github.com/Unipisa/CMM.git +master:master +src:src
+    git push --tags https://github.com/Unipisa/CMM.git +master:master +src:src
 
 Figure 13, 14, 15 show the final result of CMM, their Depository and
 Workbench.
@@ -982,35 +949,26 @@ In order to publish Depository and SourceCode repository we have to set
 their visibility to "public", either through GitHub web interface (as
 shown in Fig. 17) or by GitHub API as follows:
 
-**curl -s **
+    curl -s -H 'Authorization: token '$auth_token'' 
+     -H "application/vnd.github.baptiste-preview+json" 
+     --data '{"private": false}'
+     -X PATCH https://api.github.com/repos/$org/$repository_archive
 
-**-H \'Authorization: token \'\$auth\_token\'\' **
+where **\$repository\_archive** is CMM or CMM-Depository and **\$auth\_token**
+is the authorizzarion token. As a result, the code is now publicly visible at
 
-**-H \"application/vnd.github.baptiste-preview+json\" **
-
-**\--data \'{\"private\": false}\' **
-
-**-X PATCH
-[[https://api.github.com/repos/\$org/\$repository\_archive]{.underline}](https://api.github.com/repos/$org/$repository_archive)**
-
-where \$repository\_archive is CMM or CMM-Depository and \$auth\_token
-is the authorizzarion token.,
+[**[https://github.com/Unipisa/CMM.git/]{.underline}**](https://github.com/Unipisa/CMM.git/)
 
 Finally, we trigger the archival of this repository in Software
 Heritage, using the "save code now" functionality. This can be done
 using the web interface at
-[[https://save.softwareheritage.org]{.underline}](https://save.softwareheritage.org),
+**[[https://save.softwareheritage.org]{.underline}](https://save.softwareheritage.org)**,
 or by connecting to the API on the command line as follows:
 
-**curl -s -X **
+    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$reporul
 
-**POST https://archive.softwareheritage.org/api/1/origin**
+where **\$repourl** is https://github.com/Unipisa/CMM.git/
 
-> **/save/git/url/https://github.com/Unipisa/CMM.git/**
-
-and the code is now publicly visible at
-
-[**[https://github.com/Unipisa/CMM.git/]{.underline}**](https://github.com/Unipisa/CMM.git/)
 
 Appendix A - Tools that can help
 ================================
