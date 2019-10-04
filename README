@@ -1,0 +1,13 @@
+Software Heritage Acquisition Process Guidelines
+------------------------------------------------
+
+This directory contains the full sources of the SWHAP Guidelines, in Markdown format.
+In order to produce the PDF output, you need the following tools installed:
+
+Mandatory:
+ - pandoc https://pandoc.org
+
+Optional:
+ - rubber https://launchpad.net/ubuntu/+source/rubber
+
+See the Makefile for the commands used to produce LaTeX from Markdown.
