@@ -31,9 +31,10 @@ abstract: |
 header-includes:
 - |
   ```{=latex}
-  \usepackage{common/latex/swhap}
+  \usepackage{swhap}
   \usepackage{lastpage}
   \shortreporttitle{SWHAP}
+  \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
   \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
   ```
