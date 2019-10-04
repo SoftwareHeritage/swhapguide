@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{swh}[2017/06/10 SWH Report Style]
+\ProvidesPackage{swh}[2019/09/04 SWH Report Style]
 
 \RequirePackage{fancyhdr}
 \RequirePackage{color}
@@ -147,31 +147,11 @@
 {%
  \begin{titlepage}
  %
- % Background picture with logos to make partners happy
+ % Background picture with logos
  %
-\ThisULCornerWallPaper{1}{logos/swhbg.pdf}
-% \includegraphics[width=8em]{logos/inria} \hfill
-% \includegraphics[width=8em]{logos/upmc}\\[2em]
-%\mbox{}\hfill with support from  \includegraphics[width=8em]{logos/inria-logo-new-resized}\\
- \mbox{}\vfill
- \begin{center}
- %\begin{minipage}[p]{7cm}
- \includegraphics*[width=16cm]{logos/SWHbaseline}
- \mbox{}\\
- %\end{minipage}
- \end{center}
- \mbox{}\\[3em]
- \begin{center}
- \textcolor{SWHRed}{
- \noindent \huge \textbf{\@reporttitle}
-}\\[4em]
-Version \@reportversion
- \end{center}
-  
- \vfill
+\ThisULCornerWallPaper{1}{logos/swhapbg.pdf}
  \mbox{}
- \vfill
- \textcolor{SWHRed}{{\bf\Large \url{https://www.softwareheritage.org}}}
+ \textcolor{SWHRed}{\hfill \Large \bf Version \@reportversion\hspace{2em}}
  \end{titlepage}
 
  % 
