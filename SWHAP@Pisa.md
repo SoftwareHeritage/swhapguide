@@ -14,7 +14,7 @@ author:
  - name: Guido Scatena
    affiliation: Dept. of Computer Science, University of Pisa
    email: guido.scatena@unipi.it
-abstract: |
+subparagraph: yes
 header-includes:
 - |
   ```{=latex}
@@ -37,7 +37,12 @@ header-includes:
   of historical and scientific relevance. SWHAP results from a fruitful
   collaboration of the University of Pisa with Software Heritage in this area of
   research, under the auspices of UNESCO, and has been validated on a selection of
-  software source code produced in the Pisa area over the past 50 years.
+  software source code produced in the Pisa area over the past 50 years.\\[2em]
+  \paragraph{Acknowledments}
+  L. Bussi wants to acknowledge the Software Heritage Foundation for the
+  scholarship that supported her work and the Department of Computer
+  Science of the University of Pisa for hosting her while working on
+  SWHAPPE.
   }
   ```
 bibliography: swhap.bib
@@ -370,6 +375,7 @@ Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
 acquisition process.
 
+\clearpage
 The process, a concrete view
 ============================
 
@@ -691,6 +697,7 @@ recreate it, performing the following steps:
 
 -   Recreate the software history as for the first iteration.
 
+\clearpage
 A walkthrough on a running example
 ==================================
 
@@ -1026,21 +1033,13 @@ https://desktop.github.com/]{.underline}](https://desktop.github.com/).
 For more information about the commit mechanism and how to see the log
 of changes, please see the following link:
 [[https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History]{.underline}](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
-
+	
 To implement the process and separate areas, we chose to create two
 different branches (Depository and SourceCode) and get the corresponding
 repositories from them. Each branch has an independent commit history,
 thus the history of Depository and SourceCode is kept clean and easy to
 consult. Here is a discussion on how to see the branch history:
 [[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
-
-Acknowledgments
-===============
-
-L. Bussi wants to acknowledge the Software Heritage Foundation for the
-scholarship that supported her work and the Department of Computer
-Science of the University of Pisa for hosting her while working on
-SWHAPPE.
 
 Bibliography
 ============
