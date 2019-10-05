@@ -25,6 +25,7 @@ header-includes:
   \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
   \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
+  \setcounter{secnumdepth}{2}
   \reportabstract{
     The source code of landmark legacy software is particularly important: it sheds
   insights in the history of the evolution of a technology that has changed the
