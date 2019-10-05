@@ -18,9 +18,9 @@ subparagraph: yes
 header-includes:
 - |
   ```{=latex}
+  \input{header}
   \usepackage{swhap}
   \usepackage{lastpage}
-  \input{header}
   \shortreporttitle{SWHAP}
   \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
