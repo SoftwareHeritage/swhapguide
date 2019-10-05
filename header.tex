@@ -96,4 +96,34 @@
     }
 \makeatother
 
+%
+% Create nice section headers using tikz and titlesec
+%
 
+\usepackage[explicit]{titlesec}
+
+\titleformat{\section}
+  {\gdef\sectionlabel{}
+   \normalfont\sffamily\Large\bfseries\scshape}
+  {\gdef\sectionlabel{\thesection)\ }}{0pt}
+  {   \begin{tikzpicture}%[remember picture, overlay]
+        \node[rectangle,
+              rounded corners=14pt,inner sep=8pt,
+              fill=red!90]
+              {\color{white}~~\sectionlabel#1~~};
+       \end{tikzpicture}
+  }
+\titlespacing*{\section}{-20pt}{30pt}{30pt}
+
+\titleformat{\subsection}
+  {\gdef\subsectionlabel{}
+   \normalfont\sffamily\large\bfseries\scshape}
+  {\gdef\subsectionlabel{\thesubsection)\ }}{0pt}
+  {   \begin{tikzpicture}%[remember picture, overlay]
+        \node[rectangle,
+              rounded corners=10pt,inner sep=4pt,
+              fill=red!90]
+              {\color{white}~~\subsectionlabel#1~~};
+       \end{tikzpicture}
+  }
+\titlespacing*{\subsection}{-10pt}{10pt}{10pt}
