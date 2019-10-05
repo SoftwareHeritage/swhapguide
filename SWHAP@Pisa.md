@@ -15,19 +15,6 @@ author:
    affiliation: Dept. of Computer Science, University of Pisa
    email: guido.scatena@unipi.it
 abstract: |
-  The source code of landmark legacy software is particularly important: it sheds
-  insights in the history of the evolution of a technology that has changed the
-  world, and tells a story of the humans that dedicated their lives to it.
-
-  Rescuing it is urgent, collecting and curating it is a complex task that
-  requires significant human intervention.
-
-  This document presents the first version of SWHAP, the Software Heritage
-  Acquisition Process: a protocol for the collection and preservation of software
-  of historical and scientific relevance. SWHAP results from a fruitful
-  collaboration of the University of Pisa with Software Heritage in this area of
-  research, under the auspices of UNESCO, and has been validated on a selection of
-  software source code produced in the Pisa area over the past 50 years.
 header-includes:
 - |
   ```{=latex}
@@ -38,6 +25,19 @@ header-includes:
   \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
   \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
+  \reportabstract{
+    The source code of landmark legacy software is particularly important: it sheds
+  insights in the history of the evolution of a technology that has changed the
+  world, and tells a story of the humans that dedicated their lives to it.\\
+  Rescuing it is urgent, collecting and curating it is a complex task that
+  requires significant human intervention.\\
+  This document presents the first version of SWHAP, the Software Heritage
+  Acquisition Process: a protocol for the collection and preservation of software
+  of historical and scientific relevance. SWHAP results from a fruitful
+  collaboration of the University of Pisa with Software Heritage in this area of
+  research, under the auspices of UNESCO, and has been validated on a selection of
+  software source code produced in the Pisa area over the past 50 years.
+  }
   ```
 bibliography: swhap.bib
 ---

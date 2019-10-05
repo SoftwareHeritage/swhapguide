@@ -59,6 +59,7 @@
 \def\@reportdistr{Public}
 \def\@reportauthorlist{Please define & reportauthorlist!\\}
 \def\@reportversion{1.0}
+\def\@reportabstract{FILL WITH ABSTRACT}
 
 %
 % Define macros to change the default values
@@ -71,6 +72,7 @@
 \DeclareRobustCommand*{\reportdistr}[1]{\def\@reportdistr{#1}}
 \DeclareRobustCommand*{\reportauthorlist}[1]{\def\@reportauthorlist{#1}}
 \DeclareRobustCommand*{\reportversion}[1]{\def\@reportversion{#1}}
+\DeclareRobustCommand*{\reportabstract}[1]{\def\@reportabstract{#1}}
 
 %
 % Page layout (geometry)
@@ -173,6 +175,10 @@
                                 $\langle${\tt roberto@dicosmo.org}$\rangle$\\\hline
 \end{tabular}
 \end{flushright}
+\vskip 5em
+\begin{abstract}
+\@reportabstract
+\end{abstract}
 \clearpage
 }
 
