@@ -612,25 +612,18 @@ need to ascertain:
 -   the *exact date* of the release of this particular version
 
 This information should be consigned in a dedicated metadata file,
-version\_history.csv, having the following fields:
+version\_history.csv, with the following fields:
 
--   directory name name of the directory containing the source code of this version
-
--   author name name of the main author
-
--   author email email of the main author (when available)
-
--   date original date when this commit/version was made
-
--   curator name name of the curator person or team
-
--   curator email the reference email of the acquisition process
-
--   release tag a tag name if the directory contains a release,
-
-empty otherwise
-
--   commit message text with brief note from the curation team
+| Field name          | description                                                      |
+|---------------------+------------------------------------------------------------------|
+| directory name 	 | name of the directory containing the source code of this version |
+| author name    	 | name of the main author                                          |
+| author email   	 | email of the main author, when available                         |
+| date original  	 | original date when this version was made                         |
+| curator name   	 | name of the curator person or team                               |
+| curator email  	 | the reference email of the acquisition process                   |
+| release tag   	  | a tag name if the directory contains a release, empty otherwise  |
+| commit message 	 | text containing a brief note from the curation team              |
 
 **(Re-)Create the Development History**
 
@@ -641,15 +634,15 @@ software. First you need to create a branch Source Code, with the
 Then, you can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    > into the source folder, reading the information collected in the
-    > file version\_history.csv to set the fields for each version to
-    > the values determined during the curation phase;
+    into the source folder, reading the information collected in the
+    file version\_history.csv to set the fields for each version to
+    the values determined during the curation phase;
 
 -   *automatically*: using a tool that reads the information from
-    > version\_history.csv and produces the synthetic history in a
-    > single run; one such tool has been developed, DT2SG
-    > ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
-    > , and you can see a running example in the next section.
+    version\_history.csv and produces the synthetic history in a
+    single run; one such tool has been developed, DT2SG
+    ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
+    , and you can see a running example in the next section.
 
 The result will be a branch that materializes the development history
 of the software via Git commits and releases.
@@ -668,11 +661,11 @@ triggering an iteration of some of the phases described above. In this
 case, we recommend to proceed as follows:
 
 -   if new raw material (non-source code) is found, we have to clone the
-    > Depository repository and add new items to it. In this way, the
-    > performed commits will correctly follow the previous ones.
+    Depository repository and add new items to it. In this way, the
+    performed commits will correctly follow the previous ones.
 
 -   if new source code is found, after we collected it in the
-    > Depository, we have the following cases:
+    Depository, we have the following cases:
 
 > \(1) The recovered source code is related to a version which is already
 > included in the software history.
@@ -980,19 +973,19 @@ used during the initial experimentation of SWHAPPE:
 -   Used/suggested OCR:
 
     -   Tesseract
-        > ([[https://github.com/tesseract-ocr/]{.underline}](https://github.com/tesseract-ocr/)).
-        > It can be installed and used from command line. An API is also
-        > provided to use the OCR in a script.
+        ([[https://github.com/tesseract-ocr/]{.underline}](https://github.com/tesseract-ocr/)).
+        It can be installed and used from command line. An API is also
+        provided to use the OCR in a script.
 
     -   OCR.space
-        > ([[https://ocr.space/]{.underline}](https://ocr.space/)).
-        > Online OCR and free API.
+        ([[https://ocr.space/]{.underline}](https://ocr.space/)).
+        Online OCR and free API.
 
 -   Dedicated scripts:
 
     -   DT2SG-Directory Tree 2 Synthetic Git
-        > ([[https://github.com/Unipisa/SWHAP-DT2SG]{.underline}](https://github.com/Unipisa/SWHAP-DT2SG)).
-        > Creates the synthetic history of the software.
+        ([[https://github.com/Unipisa/SWHAP-DT2SG]{.underline}](https://github.com/Unipisa/SWHAP-DT2SG)).
+        Creates the synthetic history of the software.
 
     -   SWHAP-EXAMPLE([[https://github.com/Unipisa/SWHAP-EXAMPLE]{.underline}](https://github.com/Unipisa/SWHAP-EXAMPLE))
 
