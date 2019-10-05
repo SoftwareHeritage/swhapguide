@@ -615,6 +615,8 @@ need to ascertain:
 This information should be consigned in a dedicated metadata file,
 `version_history.csv`, with the following fields:
 
+\rowcolors{1}{gray!10}{white} 
+
 | Field name          | description                                                      |
 |---------------------+------------------------------------------------------------------|
 | directory name 	 | name of the directory containing the source code of this version |
