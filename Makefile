@@ -8,7 +8,7 @@ all: $(PDFS)
 .PRECIOUS: $(TEXS)
 
 %.tex: %.md
-	pandoc -s $< -f markdown+fenced_code_blocks+fenced_code_attributes+pipe_tables -t latex --listings --biblatex --bibliography=swhap.bib -o $@
+	pandoc -s $< -f markdown+fenced_code_blocks+fenced_code_attributes+pipe_tables -t latex --listings --toc --biblatex --bibliography=swhap.bib -o $@
 
 %.pdf: %.tex
 	rubber -m pdftex $<
