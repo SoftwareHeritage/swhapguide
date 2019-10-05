@@ -512,7 +512,7 @@ The SWHAP template
 The structure of the template is shown in Fig. 3.
 
 First of all, we can see a correspondence between the Depository
-presented in the process and the area provided by ``raw_materials`` and
+presented in the process and the area provided by `raw_materials` and
 `browsable_source`: indeed, these two folders will be moved in order to
 instantiate the Depository, once they have been loaded, the former with
 the original materials, just as they have been found or submitted, the
@@ -802,7 +802,7 @@ the checkout command:
 
 As a result, we moved to the Depository branch. Here we modify the
 README (guidelines to fill the README file are given in the template)
-and remove the source and metadata folder, since they are not
+and remove the `source` and `metadata` folder, since they are not
 interesting for this area:
 
     git rm -rf source metadata
@@ -902,7 +902,7 @@ Figure 11. An excerpt of the synthetic history of CMM.
 #### Create the final repository
 
 We move back to the master branch using the checkout command, then
-remove `raw_materials` and source from it:
+remove `raw_materials` and `source` from it:
 
 	git rm -rf raw_materials
 	git rm -rf browsable_source
