@@ -33,6 +33,7 @@ header-includes:
   ```{=latex}
   \usepackage{swhap}
   \usepackage{lastpage}
+  \input{header}
   \shortreporttitle{SWHAP}
   \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
@@ -511,15 +512,15 @@ The SWHAP template
 The structure of the template is shown in Fig. 3.
 
 First of all, we can see a correspondence between the Depository
-presented in the process and the area provided by raw\_materials and
-browsable\_source: indeed, these two folders will be moved in order to
+presented in the process and the area provided by ``raw_materials`` and
+`browsable_source`: indeed, these two folders will be moved in order to
 instantiate the Depository, once they have been loaded, the former with
 the original materials, just as they have been found or submitted, the
 latter with a first revision of the source code, made accessible through
 the GitHub web interface, e.g., archives should be decompressed, code
 transcribed from pictures, etc.
 
-The source folder is provided as the starting point for the creation of
+The `source` folder is provided as the starting point for the creation of
 the Source Code *Git* repository, in the curation phase. The curator has
 to recognize each major version of the code, and refactor it accordingly
 - one separate folder per each version. To create the Source Code
@@ -552,17 +553,17 @@ explanations.
 
 ### Collect phase
 
-**Upload files in raw\_materials**
+**Upload files in `raw_materials`**
 
-All the collected files must be uploaded in the raw\_materials folder.
+All the collected files must be uploaded in the `raw_materials` folder.
 
-If there are physical materials, folder raw\_materials should contain
+If there are physical materials, folder `raw_materials` should contain
 a reference to the related Warehouse, that may follow the Spectrum
 guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 
-**Move the source code to browsable\_source**
+**Move the source code to `browsable_source`**
 
-All the source code files must then be put into the browsable\_source
+All the source code files must then be put into the `browsable_source`
 folder.
 
 If the raw material is an archive, you should unpack it locally and
@@ -576,7 +577,7 @@ A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
 for a list of suggested tools.
 
 Particular care should be used to ensure the files in
-browsable\_source have the correct extension: scanner and OCR usually
+`browsable_source` have the correct extension: scanner and OCR usually
 generate files with a generic .txt extension, that must be changed to
 the extension typically used for the programming language they
 contain.
@@ -586,12 +587,12 @@ about the versions of the software. The purpose is to have
 machine-readable documents.
 
 Finally, in preparation for the curation phase, you may want to copy
-the files in browsable\_source to the source folder.
+the files in `browsable_source` to the `source` folder.
 
 **Create Depository**
 
 The next step is to create the branch Depository, containing only the
-folders raw\_materials and browsable\_source, together with the
+folders `raw_materials` and `browsable_source`, together with the
 metadata updated to this point. Then, create the Depository repository
 from this branch.
 
@@ -600,7 +601,7 @@ from this branch.
 **Curate the source code**
 
 Once the Depository creation is complete, you can move back to the
-source folder in the master branch. Here you have to divide and number
+`source` folder in the master branch. Here you have to divide and number
 the versions, putting the files of each one in a dedicated folder and
 determining who did what and when.
 
@@ -612,7 +613,7 @@ need to ascertain:
 -   the *exact date* of the release of this particular version
 
 This information should be consigned in a dedicated metadata file,
-version\_history.csv, with the following fields:
+`version_history.csv`, with the following fields:
 
 | Field name          | description                                                      |
 |---------------------+------------------------------------------------------------------|
@@ -634,12 +635,12 @@ software. First you need to create a branch Source Code, with the
 Then, you can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the source folder, reading the information collected in the
-    file version\_history.csv to set the fields for each version to
+    into the `source` folder, reading the information collected in the
+    file `version_history.csv` to set the fields for each version to
     the values determined during the curation phase;
 
 -   *automatically*: using a tool that reads the information from
-    version\_history.csv and produces the synthetic history in a
+    `version_history.csv` and produces the synthetic history in a
     single run; one such tool has been developed, DT2SG
     ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
     , and you can see a running example in the next section.
@@ -748,7 +749,7 @@ We are now ready to start the collect phase.
 Here we fill the local folders with the collected material. In the case
 of CMM, we got a tar.gz file containing the various versions of the
 software, organized according to an ad-hoc versioning system. In the
-raw\_materials folder we store also the paper presenting the software
+`raw_materials` folder we store also the paper presenting the software
 and the email that Giuseppe Attardi sent us along with them,
 
 and we commit all these new contents:
@@ -757,7 +758,7 @@ and we commit all these new contents:
 	git commit -m "Added raw material"
 	git push
 
-The resulting state of raw\_materials is shown in figure 6.
+The resulting state of `raw_materials` is shown in figure 6.
 
 ![](./media/image8.png)
 
@@ -766,11 +767,11 @@ Figure 6. CMM raw materials on GitHub.
 #### Unpack the source code in the browsable\_source directory 
 
 In order to get a browsable version of the source code, we decompress
-the .tar.gz archive into the browsable\_source folder
+the .tar.gz archive into the `browsable_source` folder
 
     tar -xzf raw_material/cmm.tgz -C browsable_source
 
-and commit the changes as done for the raw\_materials folder
+and commit the changes as done for the `raw_materials` folder
 
     git add browsable_source
     git commit -m "Added browsable source"
@@ -781,7 +782,7 @@ and commit the changes as done for the raw\_materials folder
 Figure 7. CMM browsable sources on GitHub.
 
 Finally, in preparation for the next phase, curation, we copy the files
-contained in browsable\_source into the source folder[^11].
+contained in `browsable_source` into the `source` folder[^11].
 
     cp -r browsable_source source
 
@@ -851,7 +852,7 @@ already structured this way, as shown in figure 7, so there is nothing
 to do.
 
 In order to support the (re-)creation of the development history of the
-original project, we prepare the version\_history.csv file with the
+original project, we prepare the `version_history.csv` file with the
 appropriate metadata (see fig. 10).
 
 ![](./media/image14.png)
@@ -901,7 +902,7 @@ Figure 11. An excerpt of the synthetic history of CMM.
 #### Create the final repository
 
 We move back to the master branch using the checkout command, then
-remove raw\_materials and source from it:
+remove `raw_materials` and source from it:
 
 	git rm -rf raw_materials
 	git rm -rf browsable_source

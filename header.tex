@@ -1,0 +1,68 @@
+%
+% put gray background around verbatim text
+%
+% Reference
+% <https://tex.stackexchange.com/questions/411194/package-soul-error-reconstruction-failed>
+
+\usepackage{xcolor}
+\usepackage{soul}
+
+\definecolor{inlineBG}{HTML}{F3F3F3}  % same as GitHub Flavored Markdown
+\sethlcolor{inlineBG}
+
+\let\OldTexttt\texttt
+\renewcommand{\texttt}[1]{\sethlcolor{inlineBG}{\ttfamily\hl{\mbox{#1}}}}
+
+%
+% configure lstlisting package
+%
+\usepackage{lstconfig}
+
+%
+% from: https://tex.stackexchange.com/questions/30845/how-to-redefine-lstinline-to-automatically-highlight-or-draw-frames-around-all
+%
+
+\usepackage{etoolbox}
+\usepackage{atbegshi,ifthen,listings,tikz}
+
+% change this to customize the appearance of the highlight
+\tikzstyle{highlighter} = [
+  inlineBG,
+  line width = \baselineskip,
+]
+
+% enable these two lines for a more human-looking highlight
+%\usetikzlibrary{decorations.pathmorphing}
+%\tikzstyle{highlighter} += [decorate, decoration = random steps]
+
+% implementation of the core highlighting logic; do not change!
+\newcounter{highlight}[page]
+\newcommand{\tikzhighlightanchor}[1]{\ensuremath{\vcenter{\hbox{\tikz[remember picture, overlay]{\coordinate (#1 highlight \arabic{highlight});}}}}}
+\newcommand{\bh}[0]{\stepcounter{highlight}\tikzhighlightanchor{begin}}
+\newcommand{\eh}[0]{\tikzhighlightanchor{end}}
+\AtBeginShipout{\AtBeginShipoutUpperLeft{\ifthenelse{\value{highlight} > 0}{\tikz[remember picture, overlay]{\foreach \stroke in {1,...,\arabic{highlight}} \draw[highlighter] (begin highlight \stroke) -- (end highlight \stroke);}}{}}}
+%--------------------------
+
+
+\makeatletter %   Redefine macros from listings package:
+\newtoggle{@InInlineListing}%
+\togglefalse{@InInlineListing}%
+
+\renewcommand\lstinline[1][]{%
+    \leavevmode\bgroup\toggletrue{@InInlineListing}\bh % \hbox\bgroup --> \bgroup
+      \def\lst@boxpos{b}%
+      \lsthk@PreSet\lstset{flexiblecolumns,#1}%
+      \lsthk@TextStyle
+      \@ifnextchar\bgroup{\afterassignment\lst@InlineG \let\@let@token}%
+                         \lstinline@}%
+
+\def\lst@LeaveAllModes{%
+    \ifnum\lst@mode=\lst@nomode
+        \expandafter\lsthk@EndGroup\iftoggle{@InInlineListing}{\eh{}}{}%
+    \else
+        \expandafter\egroup\expandafter\lst@LeaveAllModes
+    \fi%
+    }
+\makeatother
+
+
