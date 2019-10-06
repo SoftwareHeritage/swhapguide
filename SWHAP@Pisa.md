@@ -167,7 +167,7 @@ different capabilities in different scenarios.
 ### **Curate**
 
 The purpose of this phase is *to* *analyze, cleanup and structure* the
-raw material that has been collected.
+raw materials that have been collected.
 
 Preparing software source code for archival in **Software Heritage**
 requires special care: the source code needs to be *cleaned up*,
