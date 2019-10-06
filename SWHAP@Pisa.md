@@ -970,7 +970,7 @@ using the web interface at
 **[[https://save.softwareheritage.org]{.underline}](https://save.softwareheritage.org)**,
 or by connecting to the API on the command line as follows:
 
-    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$reporul
+    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$repourl
 
 where **\$repourl** is https://github.com/Unipisa/CMM.git/
 
