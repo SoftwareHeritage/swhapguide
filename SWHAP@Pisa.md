@@ -718,14 +718,14 @@ repository[^9], that we name "CMM-Workbench". This action, as most of
 the following ones, can be performed through the user interface (as
 shown in fig. 4), or programmatically through the GitHub API.
 
-![](./media/image9.png)
+![Template_Instantiation](./media/image9.png){#fig:temp_inst}
 
 Figure 4. Template instantiation.
 
 It has the same directory structure as SWHAP-Template, as shown in fig.
 5.
 
-![](./media/image16.png)
+![CMM_WB_Instantiated](./media/image16.png){fig:cmm_wb_inst}
 
 Figure 5. Instantiated workbench for CMM.
 
@@ -762,7 +762,7 @@ and we commit all these new contents:
 
 The resulting state of `raw_materials` is shown in figure 6.
 
-![](./media/image8.png)
+![CMM_Raw](./media/image8.png){#fig:cmm_raw}
 
 Figure 6. CMM raw materials on GitHub.
 
@@ -779,7 +779,7 @@ and commit the changes as done for the `raw_materials` folder
     git commit -m "Added browsable source"
     git push
 
-![](./media/image5.png)
+![CMM_browsable_source](./media/image5.png){#fig:cmm_brows}
 
 Figure 7. CMM browsable sources on GitHub.
 
@@ -820,7 +820,7 @@ that, however, we have to create the new remote repository on GitHub
 (fig. 8 shows how to do this using the web interface; here too one could
 use the GitHub API instead).
 
-![](./media/image6.png)
+![CMM_Depository_Creation](./media/image6.png){#cmm_depo_creat}
 
 Figure 8. CMM-Depository creation.
 
@@ -833,7 +833,7 @@ Finally, we can perform a push and fill the remote repository.
 We can check the resulting repositories via the web interface (figure
 9): CMM-Depository is now filled with the pushed materials.
 
-![](./media/image13.png)
+![CMM_Repositories](./media/image13.png){#fig:cmm_repos}
 
 Figure 9. The CMM repositories at the end of the collect phase.
 
@@ -857,11 +857,11 @@ In order to support the (re-)creation of the development history of the
 original project, we prepare the `version_history.csv` file with the
 appropriate metadata (see fig. 10).
 
-![](./media/image14.png)
+![CMM_Version_History](./media/image14.png){#fig:cmm_vers_hist}
 
 Figure 10. The folder with CMM version history data.
 
-![](./media/image12.png)
+![CMM_Codemeta_Instatiation](./media/image12.png){#fig:cmm_json}
 
 Figure XXX. CMM instantiation (right) of codemeta.json template (left).
 
@@ -897,7 +897,7 @@ tool
 As a result we will find in our local repository a new local branch
 containing the rebuilt version history, that is shown in fig. 11.
 
-![](./media/image10.png)
+![CMM_Synthetic_History](./media/image10.png){#fig:cmm_sh}
 
 Figure 11. An excerpt of the synthetic history of CMM.
 
@@ -918,7 +918,7 @@ We now create the README.md file, add it and commit changes:
 Now we create the final remote repository, that we call "CMM", see
 figure 12, and we push the relevant branches (and tags) to it.
 
-![](./media/image15.png)
+![Final_Repository_Creation](./media/image15.png){#fig:create_fin}
 
 Figure 12. The creation of the final repository.
 
