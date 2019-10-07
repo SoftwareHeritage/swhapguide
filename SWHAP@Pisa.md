@@ -43,6 +43,9 @@ header-includes:
   scholarship that supported her work and the Department of Computer
   Science of the University of Pisa for hosting her while working on
   SWHAPPE.
+  \vfill
+  \paragraph{License}
+  This work is distributed under the terms of the Creative Commons license CC-BY 4.0
   }
   ```
 bibliography: swhap.bib
