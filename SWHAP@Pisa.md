@@ -45,7 +45,7 @@ header-includes:
   SWHAPPE.
   \vfill
   \paragraph{License}
-  This work is distributed under the terms of the Creative Commons license CC-BY 4.0
+  This work is distributed under the terms of the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons license CC-BY 4.0}
   }
   ```
 bibliography: swhap.bib
