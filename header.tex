@@ -129,3 +129,16 @@
        \end{tikzpicture}
   }
 \titlespacing*{\subsection}{-10pt}{10pt}{10pt}
+
+\titleformat{\subsubsection}
+  {\gdef\subsubsectionlabel{}
+   \normalfont\sffamily\bfseries\scshape}
+  {\gdef\subsubsectionlabel{\thesubsubsection)\ }}{0pt}
+  {   \begin{tikzpicture}%[remember picture, overlay]
+        \node[rectangle,
+              rounded corners=8pt,inner sep=4pt,
+              fill=red!90]
+              {\color{white}~~\subsubsectionlabel#1~~};
+       \end{tikzpicture}
+  }
+\titlespacing*{\subsubsection}{0pt}{10pt}{8pt}
