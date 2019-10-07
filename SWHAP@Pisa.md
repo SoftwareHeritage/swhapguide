@@ -239,8 +239,7 @@ information. This suggests that, whenever possible, the data stores
 should be fully versionable, not to loose historical information about
 the acquisition process itself.
 
-This figure is found
-[[here]{.underline}](https://drive.google.com/open?id=1SM2W4TzLXX_P_RIezcpgUFaKCcJ_5uFn)
+![](./media/image1.png)
 
 Fig. 1. Source code acquisition process.
 
@@ -508,8 +507,7 @@ become two repositories: the latter is shipped to the Software Heritage
 archive, the former is published by the organization promoting the
 acquisition.
 
-This figure is found
-[[here]{.underline}](https://drive.google.com/open?id=1BJrTsX5fIupZCZVIrWF15sFoJYEgEe3u)
+![](./media/image2.png)
 
 Figure 2. Overview of the SWHAPPE process.
 
