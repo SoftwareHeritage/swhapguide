@@ -530,7 +530,7 @@ As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself.
 
-![](./media/Figure3.png)
+![template](./media/Figure3.png){#fig:template}
 
 Figure 3. Top structure of the Template repository.
 
@@ -928,15 +928,15 @@ Figure 12. The creation of the final repository.
 Figure 13, 14, 15 show the final result of CMM, their Depository and
 Workbench.
 
-![](./media/image7.png)
+![CMM_final](./media/image7.png){#fig:cmm_final}
 
 Figure 14. The final CMM repository.
 
-![](./media/image11.png)
+![CMM_Depo](./media/image11.png){#fig:cmm_depo}
 
 Figure 15. The final CMM Depository.
 
-![](./media/image4.png)
+![CMM_WB](./media/image4.png){#fig:cmm_wb}
 
 Figure 16. The final CMM Workbench.
 
