@@ -1,0 +1,131 @@
+%
+% put gray background around verbatim text
+%
+% Reference
+% <https://tex.stackexchange.com/questions/411194/package-soul-error-reconstruction-failed>
+
+%\PassOptionsToPackage{table}{xcolor}
+%\PassOptionsToPackage{dvipscolor}{xcolor}
+\usepackage[table,dvipscolor,usenames]{xcolor}
+\usepackage{soul}
+
+\definecolor{inlineBG}{HTML}{F3F3F3}  % same as GitHub Flavored Markdown
+\sethlcolor{inlineBG}
+
+\let\OldTexttt\texttt
+\renewcommand{\texttt}[1]{\sethlcolor{inlineBG}{\ttfamily\hl{\mbox{#1}}}}
+
+%
+% configure lstlisting package
+%
+  \lstset{ 
+  backgroundcolor=\color{gray!10},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\normalsize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={source},         % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  emph={git,curl},
+  emphstyle={\color{blue}},
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=shadowbox,	                   % adds a frame around the code
+  frameround=tttt,
+  rulesepcolor=\color{gray},
+  columns=flexible,
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=bash,                   % the language of the code
+  morekeywords={git,curl}          % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{cyan},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+}
+
+%
+% from: https://tex.stackexchange.com/questions/30845/how-to-redefine-lstinline-to-automatically-highlight-or-draw-frames-around-all
+%
+
+\usepackage{etoolbox}
+\usepackage{atbegshi,ifthen,listings,tikz}
+
+% change this to customize the appearance of the highlight
+\tikzstyle{highlighter} = [
+  inlineBG,
+  line width = \baselineskip,
+]
+
+% enable these two lines for a more human-looking highlight
+%\usetikzlibrary{decorations.pathmorphing}
+%\tikzstyle{highlighter} += [decorate, decoration = random steps]
+
+% implementation of the core highlighting logic; do not change!
+\newcounter{highlight}[page]
+\newcommand{\tikzhighlightanchor}[1]{\ensuremath{\vcenter{\hbox{\tikz[remember picture, overlay]{\coordinate (#1 highlight \arabic{highlight});}}}}}
+\newcommand{\bh}[0]{\stepcounter{highlight}\tikzhighlightanchor{begin}}
+\newcommand{\eh}[0]{\tikzhighlightanchor{end}}
+\AtBeginShipout{\AtBeginShipoutUpperLeft{\ifthenelse{\value{highlight} > 0}{\tikz[remember picture, overlay]{\foreach \stroke in {1,...,\arabic{highlight}} \draw[highlighter] (begin highlight \stroke) -- (end highlight \stroke);}}{}}}
+%--------------------------
+
+
+\makeatletter %   Redefine macros from listings package:
+\newtoggle{@InInlineListing}%
+\togglefalse{@InInlineListing}%
+
+\renewcommand\lstinline[1][]{%
+    \leavevmode\bgroup\toggletrue{@InInlineListing}\bh % \hbox\bgroup --> \bgroup
+      \def\lst@boxpos{b}%
+      \lsthk@PreSet\lstset{flexiblecolumns,#1}%
+      \lsthk@TextStyle
+      \@ifnextchar\bgroup{\afterassignment\lst@InlineG \let\@let@token}%
+                         \lstinline@}%
+
+\def\lst@LeaveAllModes{%
+    \ifnum\lst@mode=\lst@nomode
+        \expandafter\lsthk@EndGroup\iftoggle{@InInlineListing}{\eh{}}{}%
+    \else
+        \expandafter\egroup\expandafter\lst@LeaveAllModes
+    \fi%
+    }
+\makeatother
+
+%
+% Create nice section headers using tikz and titlesec
+%
+
+\usepackage[explicit]{titlesec}
+
+\titleformat{\section}
+  {\gdef\sectionlabel{}
+   \normalfont\sffamily\Large\bfseries\scshape}
+  {\gdef\sectionlabel{\thesection)\ }}{0pt}
+  {   \begin{tikzpicture}%[remember picture, overlay]
+        \node[rectangle,
+              rounded corners=14pt,inner sep=8pt,
+              fill=red!90]
+              {\color{white}~~\sectionlabel#1~~};
+       \end{tikzpicture}
+  }
+\titlespacing*{\section}{-20pt}{30pt}{30pt}
+
+\titleformat{\subsection}
+  {\gdef\subsectionlabel{}
+   \normalfont\sffamily\large\bfseries\scshape}
+  {\gdef\subsectionlabel{\thesubsection)\ }}{0pt}
+  {   \begin{tikzpicture}%[remember picture, overlay]
+        \node[rectangle,
+              rounded corners=10pt,inner sep=4pt,
+              fill=red!90]
+              {\color{white}~~\subsectionlabel#1~~};
+       \end{tikzpicture}
+  }
+\titlespacing*{\subsection}{-10pt}{10pt}{10pt}

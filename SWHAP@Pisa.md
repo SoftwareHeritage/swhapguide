@@ -14,29 +14,36 @@ author:
  - name: Guido Scatena
    affiliation: Dept. of Computer Science, University of Pisa
    email: guido.scatena@unipi.it
-abstract: |
-  The source code of landmark legacy software is particularly important: it sheds
-  insights in the history of the evolution of a technology that has changed the
-  world, and tells a story of the humans that dedicated their lives to it.
-
-  Rescuing it is urgent, collecting and curating it is a complex task that
-  requires significant human intervention.
-
-  This document presents the first version of SWHAP, the Software Heritage
-  Acquisition Process: a protocol for the collection and preservation of software
-  of historical and scientific relevance. SWHAP results from a fruitful
-  collaboration of the University of Pisa with Software Heritage in this area of
-  research, under the auspices of UNESCO, and has been validated on a selection of
-  software source code produced in the Pisa area over the past 50 years.
+subparagraph: yes
 header-includes:
 - |
   ```{=latex}
+  \input{header}
   \usepackage{swhap}
   \usepackage{lastpage}
   \shortreporttitle{SWHAP}
   \reportkind{SWHAP Guidelines}
   \reporttitle{Software Heritage Acquisition Process}
   \reportauthorlist{{\bf Authors:} & Laura Bussi, Dept. of Computer Science, University of Pisa $\langle${\tt l.bussi1@studenti.unipi.it}$\rangle$\\&Roberto Di Cosmo, Software Heritage, Inria and University of Paris $\langle${\tt roberto@dicosmo.org}$\rangle$\\& Carlo Montangero, Dept. of Computer Science, University of Pisa $\langle${\tt carlo@montangero.eu}$\rangle$\\& Guido Scatena, Dept. of Computer Science, University of Pisa $\langle${\tt guido.scatena@unipi.it}$\rangle$\\}
+  \setcounter{secnumdepth}{2}
+  \reportabstract{
+    The source code of landmark legacy software is particularly important: it sheds
+  insights in the history of the evolution of a technology that has changed the
+  world, and tells a story of the humans that dedicated their lives to it.\\
+  Rescuing it is urgent, collecting and curating it is a complex task that
+  requires significant human intervention.\\
+  This document presents the first version of SWHAP, the Software Heritage
+  Acquisition Process: a protocol for the collection and preservation of software
+  of historical and scientific relevance. SWHAP results from a fruitful
+  collaboration of the University of Pisa with Software Heritage in this area of
+  research, under the auspices of UNESCO, and has been validated on a selection of
+  software source code produced in the Pisa area over the past 50 years.\\[2em]
+  \paragraph{Acknowledments}
+  L. Bussi wants to acknowledge the Software Heritage Foundation for the
+  scholarship that supported her work and the Department of Computer
+  Science of the University of Pisa for hosting her while working on
+  SWHAPPE.
+  }
   ```
 bibliography: swhap.bib
 ---
@@ -160,7 +167,7 @@ different capabilities in different scenarios.
 ### **Curate**
 
 The purpose of this phase is *to* *analyze, cleanup and structure* the
-raw material that has been collected.
+raw materials that have been collected.
 
 Preparing software source code for archival in **Software Heritage**
 requires special care: the source code needs to be *cleaned up*,
@@ -368,6 +375,7 @@ Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
 acquisition process.
 
+\clearpage
 The process, a concrete view
 ============================
 
@@ -511,15 +519,15 @@ The SWHAP template
 The structure of the template is shown in Fig. 3.
 
 First of all, we can see a correspondence between the Depository
-presented in the process and the area provided by raw\_materials and
-browsable\_source: indeed, these two folders will be moved in order to
+presented in the process and the area provided by `raw_materials` and
+`browsable_source`: indeed, these two folders will be moved in order to
 instantiate the Depository, once they have been loaded, the former with
 the original materials, just as they have been found or submitted, the
 latter with a first revision of the source code, made accessible through
 the GitHub web interface, e.g., archives should be decompressed, code
 transcribed from pictures, etc.
 
-The source folder is provided as the starting point for the creation of
+The `source` folder is provided as the starting point for the creation of
 the Source Code *Git* repository, in the curation phase. The curator has
 to recognize each major version of the code, and refactor it accordingly
 - one separate folder per each version. To create the Source Code
@@ -552,17 +560,17 @@ explanations.
 
 ### Collect phase
 
-**Upload files in raw\_materials**
+**Upload files in `raw_materials`**
 
-All the collected files must be uploaded in the raw\_materials folder.
+All the collected files must be uploaded in the `raw_materials` folder.
 
-If there are physical materials, folder raw\_materials should contain
+If there are physical materials, folder `raw_materials` should contain
 a reference to the related Warehouse, that may follow the Spectrum
 guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 
-**Move the source code to browsable\_source**
+**Move the source code to `browsable_source`**
 
-All the source code files must then be put into the browsable\_source
+All the source code files must then be put into the `browsable_source`
 folder.
 
 If the raw material is an archive, you should unpack it locally and
@@ -576,7 +584,7 @@ A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
 for a list of suggested tools.
 
 Particular care should be used to ensure the files in
-browsable\_source have the correct extension: scanner and OCR usually
+`browsable_source` have the correct extension: scanner and OCR usually
 generate files with a generic .txt extension, that must be changed to
 the extension typically used for the programming language they
 contain.
@@ -586,12 +594,12 @@ about the versions of the software. The purpose is to have
 machine-readable documents.
 
 Finally, in preparation for the curation phase, you may want to copy
-the files in browsable\_source to the source folder.
+the files in `browsable_source` to the `source` folder.
 
 **Create Depository**
 
 The next step is to create the branch Depository, containing only the
-folders raw\_materials and browsable\_source, together with the
+folders `raw_materials` and `browsable_source`, together with the
 metadata updated to this point. Then, create the Depository repository
 from this branch.
 
@@ -600,7 +608,7 @@ from this branch.
 **Curate the source code**
 
 Once the Depository creation is complete, you can move back to the
-source folder in the master branch. Here you have to divide and number
+`source` folder in the master branch. Here you have to divide and number
 the versions, putting the files of each one in a dedicated folder and
 determining who did what and when.
 
@@ -612,25 +620,20 @@ need to ascertain:
 -   the *exact date* of the release of this particular version
 
 This information should be consigned in a dedicated metadata file,
-version\_history.csv, having the following fields:
+`version_history.csv`, with the following fields:
 
--   directory name name of the directory containing the source code of this version
+\rowcolors{1}{gray!10}{white} 
 
--   author name name of the main author
-
--   author email email of the main author (when available)
-
--   date original date when this commit/version was made
-
--   curator name name of the curator person or team
-
--   curator email the reference email of the acquisition process
-
--   release tag a tag name if the directory contains a release,
-
-empty otherwise
-
--   commit message text with brief note from the curation team
+| Field name          | description                                                      |
+|---------------------+------------------------------------------------------------------|
+| directory name 	 | name of the directory containing the source code of this version |
+| author name    	 | name of the main author                                          |
+| author email   	 | email of the main author, when available                         |
+| date original  	 | original date when this version was made                         |
+| curator name   	 | name of the curator person or team                               |
+| curator email  	 | the reference email of the acquisition process                   |
+| release tag   	  | a tag name if the directory contains a release, empty otherwise  |
+| commit message 	 | text containing a brief note from the curation team              |
 
 **(Re-)Create the Development History**
 
@@ -641,15 +644,15 @@ software. First you need to create a branch Source Code, with the
 Then, you can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    > into the source folder, reading the information collected in the
-    > file version\_history.csv to set the fields for each version to
-    > the values determined during the curation phase;
+    into the `source` folder, reading the information collected in the
+    file `version_history.csv` to set the fields for each version to
+    the values determined during the curation phase;
 
 -   *automatically*: using a tool that reads the information from
-    > version\_history.csv and produces the synthetic history in a
-    > single run; one such tool has been developed, DT2SG
-    > ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
-    > , and you can see a running example in the next section.
+    `version_history.csv` and produces the synthetic history in a
+    single run; one such tool has been developed, DT2SG
+    ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
+    , and you can see a running example in the next section.
 
 The result will be a branch that materializes the development history
 of the software via Git commits and releases.
@@ -668,11 +671,11 @@ triggering an iteration of some of the phases described above. In this
 case, we recommend to proceed as follows:
 
 -   if new raw material (non-source code) is found, we have to clone the
-    > Depository repository and add new items to it. In this way, the
-    > performed commits will correctly follow the previous ones.
+    Depository repository and add new items to it. In this way, the
+    performed commits will correctly follow the previous ones.
 
 -   if new source code is found, after we collected it in the
-    > Depository, we have the following cases:
+    Depository, we have the following cases:
 
 > \(1) The recovered source code is related to a version which is already
 > included in the software history.
@@ -694,6 +697,7 @@ recreate it, performing the following steps:
 
 -   Recreate the software history as for the first iteration.
 
+\clearpage
 A walkthrough on a running example
 ==================================
 
@@ -755,7 +759,7 @@ We are now ready to start the collect phase.
 Here we fill the local folders with the collected material. In the case
 of CMM, we got a tar.gz file containing the various versions of the
 software, organized according to an ad-hoc versioning system. In the
-raw\_materials folder we store also the paper presenting the software
+`raw_materials` folder we store also the paper presenting the software
 and the email that Giuseppe Attardi sent us along with them,
 
 and we commit all these new contents:
@@ -764,7 +768,7 @@ and we commit all these new contents:
 	git commit -m "Added raw material"
 	git push
 
-The resulting state of raw\_materials is shown in figure 6.
+The resulting state of `raw_materials` is shown in figure 6.
 
 ![](./media/image8.png)
 
@@ -773,11 +777,11 @@ Figure 6. CMM raw materials on GitHub.
 #### Unpack the source code in the browsable\_source directory 
 
 In order to get a browsable version of the source code, we decompress
-the .tar.gz archive into the browsable\_source folder
+the .tar.gz archive into the `browsable_source` folder
 
     tar -xzf raw_material/cmm.tgz -C browsable_source
 
-and commit the changes as done for the raw\_materials folder
+and commit the changes as done for the `raw_materials` folder
 
     git add browsable_source
     git commit -m "Added browsable source"
@@ -788,7 +792,7 @@ and commit the changes as done for the raw\_materials folder
 Figure 7. CMM browsable sources on GitHub.
 
 Finally, in preparation for the next phase, curation, we copy the files
-contained in browsable\_source into the source folder[^11].
+contained in `browsable_source` into the `source` folder[^11].
 
     cp -r browsable_source source
 
@@ -808,7 +812,7 @@ the checkout command:
 
 As a result, we moved to the Depository branch. Here we modify the
 README (guidelines to fill the README file are given in the template)
-and remove the source and metadata folder, since they are not
+and remove the `source` and `metadata` folder, since they are not
 interesting for this area:
 
     git rm -rf source metadata
@@ -858,7 +862,7 @@ already structured this way, as shown in figure 7, so there is nothing
 to do.
 
 In order to support the (re-)creation of the development history of the
-original project, we prepare the version\_history.csv file with the
+original project, we prepare the `version_history.csv` file with the
 appropriate metadata (see fig. 10).
 
 ![](./media/image14.png)
@@ -908,7 +912,7 @@ Figure 11. An excerpt of the synthetic history of CMM.
 #### Create the final repository
 
 We move back to the master branch using the checkout command, then
-remove raw\_materials and source from it:
+remove `raw_materials` and `source` from it:
 
 	git rm -rf raw_materials
 	git rm -rf browsable_source
@@ -966,7 +970,7 @@ using the web interface at
 **[[https://save.softwareheritage.org]{.underline}](https://save.softwareheritage.org)**,
 or by connecting to the API on the command line as follows:
 
-    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$reporul
+    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$repourl
 
 where **\$repourl** is https://github.com/Unipisa/CMM.git/
 
@@ -980,19 +984,19 @@ used during the initial experimentation of SWHAPPE:
 -   Used/suggested OCR:
 
     -   Tesseract
-        > ([[https://github.com/tesseract-ocr/]{.underline}](https://github.com/tesseract-ocr/)).
-        > It can be installed and used from command line. An API is also
-        > provided to use the OCR in a script.
+        ([[https://github.com/tesseract-ocr/]{.underline}](https://github.com/tesseract-ocr/)).
+        It can be installed and used from command line. An API is also
+        provided to use the OCR in a script.
 
     -   OCR.space
-        > ([[https://ocr.space/]{.underline}](https://ocr.space/)).
-        > Online OCR and free API.
+        ([[https://ocr.space/]{.underline}](https://ocr.space/)).
+        Online OCR and free API.
 
 -   Dedicated scripts:
 
     -   DT2SG-Directory Tree 2 Synthetic Git
-        > ([[https://github.com/Unipisa/SWHAP-DT2SG]{.underline}](https://github.com/Unipisa/SWHAP-DT2SG)).
-        > Creates the synthetic history of the software.
+        ([[https://github.com/Unipisa/SWHAP-DT2SG]{.underline}](https://github.com/Unipisa/SWHAP-DT2SG)).
+        Creates the synthetic history of the software.
 
     -   SWHAP-EXAMPLE([[https://github.com/Unipisa/SWHAP-EXAMPLE]{.underline}](https://github.com/Unipisa/SWHAP-EXAMPLE))
 
@@ -1029,21 +1033,13 @@ https://desktop.github.com/]{.underline}](https://desktop.github.com/).
 For more information about the commit mechanism and how to see the log
 of changes, please see the following link:
 [[https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History]{.underline}](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
-
+	
 To implement the process and separate areas, we chose to create two
 different branches (Depository and SourceCode) and get the corresponding
 repositories from them. Each branch has an independent commit history,
 thus the history of Depository and SourceCode is kept clean and easy to
 consult. Here is a discussion on how to see the branch history:
 [[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
-
-Acknowledgments
-===============
-
-L. Bussi wants to acknowledge the Software Heritage Foundation for the
-scholarship that supported her work and the Department of Computer
-Science of the University of Pisa for hosting her while working on
-SWHAPPE.
 
 Bibliography
 ============
