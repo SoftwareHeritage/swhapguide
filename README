@@ -6,6 +6,9 @@ In order to produce the PDF output, you need the following tools installed:
 
 Mandatory:
  - pandoc https://pandoc.org
+ - pandoc-secnos and pandoc-fignos from the pandoc-xnos filter suite: https://github.com/tomduck/pandoc-xnos
+   usually just make sure you have Python 3 and do:
+     pip install pandoc-secnos pandoc-fignos --user
 
 Optional:
  - rubber https://launchpad.net/ubuntu/+source/rubber
