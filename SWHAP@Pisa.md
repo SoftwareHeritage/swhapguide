@@ -100,25 +100,17 @@ Heritage Acquisition Process*** to rescue, curate and illustrate
 landmark legacy software source code, a joint initiative of Software
 Heritage and the University of Pisa, in collaboration with UNESCO.
 
-The next section provides an *abstract* view of SWHAP, its steps,
-documents and resources. No specific assumptions on the *tools,
-platforms and technologies* that may be used to enact it are made, but
-some requirements are made explicit.
+Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
+documents and resources. No specific assumptions on the *tools, platforms and
+technologies* that may be used to enact it are made, but some requirements are
+made explicit. Section {@sec:processconcrete} describes how the abstract process
+is implemented at the University of Pisa by leveraging the Git toolset and the
+GitHub collaborative development platform. This implementation is named SWHAPPE
+(SWH Acquisition Process Pisa Enactor) in this document. Finally, Section {@sec:walkthrough}
+provides a walkthrough on an annotated example, using a real world medium-sized software
+project (@AttardiF96).
 
-The last section describes how the abstract process is implemented at
-the University of Pisa by leveraging the Git toolset and the GitHub
-collaborative development platform. This implementation is named SWHAPPE
-(SWH Acquisition Process Pisa Enactor) in this document.
-
-This document is complemented by online resources available at
-[[https://www.softwareheritage.org/swhap]{.underline}](https://www.softwareheritage.org/swhap).
-This includes an annotated example, using a real world medium-sized software
-project (@AttardiF96), as well as a list of tools that may be helpful for other
-landmark legacy software source code rescue teams.
-
-Revised versions of this document will be published as needed.
-
-The process, abstract view
+The process, abstract view {#sec:processabs}
 ==========================
 
 This section describes SWHAP, the acquisition process for software
@@ -126,14 +118,17 @@ artifacts at an *abstract* level, that is, without making specific
 assumptions on the *tools, platforms and technologies* that may be used
 to perform the various operations described here.
 
+![Source code acquisition process.](./media/image1.png){#fig:absprocess}
+
 Phases
 ------
 
-The activities involved in the acquisition process can be organized in
-the following four phases, of which the first one is *conservative*,
-i.e., it is devoted to save the raw materials that the other phases will
-build upon. Figure 1 provides a pictorial view of the process, its
-phases, data stores and roles.
+The activities involved in the acquisition process can be organized in the
+following four phases, of which the first one is *conservative*, i.e., it is
+devoted to save the raw materials that the other phases will build upon.
+
+Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
+data stores and roles.
 
 ### **Collect** 
 
@@ -238,10 +233,6 @@ process enacted once more from there to update all the relevant
 information. This suggests that, whenever possible, the data stores
 should be fully versionable, not to loose historical information about
 the acquisition process itself.
-
-![](./media/image1.png)
-
-Fig. 1. Source code acquisition process.
 
 Resources needed by the process
 -------------------------------
@@ -378,7 +369,7 @@ and coordination of the many actors playing the many roles of the
 acquisition process.
 
 \clearpage
-The process, a concrete view
+The process, a concrete view {#sec:processconcrete}
 ============================
 
 In order to implement SWHAP, the first step is to decide how to
@@ -699,7 +690,7 @@ recreate it, performing the following steps:
 -   Recreate the software history as for the first iteration.
 
 \clearpage
-A walkthrough on a running example
+A walkthrough on a running example {#sec:walkthrough}
 ==================================
 
 In this section we will show the process at work on one of the first
