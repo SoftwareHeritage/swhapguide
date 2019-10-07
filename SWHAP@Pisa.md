@@ -533,9 +533,7 @@ As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself.
 
-![The template](./media/Figure3.png){#fig:template}
-
-Figure 3. Top structure of the Template repository.
+![Top structure of the Template repository.](./media/Figure3.png){#fig:template}
 
 The process, step by step
 -------------------------
@@ -704,7 +702,7 @@ and the Oak GC [\[7\]](https://www.zotero.org/google-docs/?tVCOZn).
 Since it has evolved through various versions, CMM is a good workbench
 for SWHAPPE and an appropriate example to show how to use the tools.
 
-#### Starting the process
+### Starting the process
 
 The acquisition process of the CMM software started informally when one
 of the authors, still active in the Computer Science department, learned
@@ -714,23 +712,23 @@ message with all the sources, as well as the associated research
 article. Since the materials were already in digital form, the process
 does not involve a Warehouse.
 
-#### Instantiation
+### Instantiation
+
+![Instantiation of the template](./media/image9.png){#fig:temp_inst}
 
 We instantiate on GitHub the SWHAP repository template[^8] into a new
 repository[^9], that we name "CMM-Workbench". This action, as most of
 the following ones, can be performed through the user interface (as
 shown in Figure {@fig:temp_inst}), or programmatically through the GitHub API.
 
-![Instantiation of the template](./media/image9.png){#fig:temp_inst}
-
 It has the same directory structure as SWHAP-Template, as shown in Figure
-{@fig:cmm_wb_inst}.
+{@fig:template}.
 
 ![Instantiated workbench for CMM.](./media/image16.png){#fig:cmm_wb_inst}
 
 To start working, we create a local copy on our computer, cloning this
 repository[^10]. By clicking on the green button "clone or download"
-(fig. 5), we get a link that we can use for this purpose in the
+(Figure {@fig:cmm_wb_inst}), we get a link that we can use for this purpose in the
 following command from the command line:
 
     git clone https://github.com/Unipisa/CMM-Workbench.git
@@ -745,14 +743,13 @@ the acquisition, and synchronize it with the remote repository:
 
 We are now ready to start the collect phase.
 
-#### Upload files in raw\_materials
+### Upload files in raw\_materials
 
 Here we fill the local folders with the collected material. In the case
 of CMM, we got a tar.gz file containing the various versions of the
 software, organized according to an ad-hoc versioning system. In the
 `raw_materials` folder we store also the paper presenting the software
 and the email that Giuseppe Attardi sent us along with them,
-
 and we commit all these new contents:
 
 	git add raw_materials
@@ -763,7 +760,7 @@ The resulting state of `raw_materials` is shown in Figure {@fig:cmm_raw}.
 
 ![CMM raw materials on GitHub.](./media/image8.png){#fig:cmm_raw}
 
-#### Unpack the source code in the browsable\_source directory 
+### Unpack the source code in the browsable\_source directory 
 
 In order to get a browsable version of the source code, we decompress
 the .tar.gz archive into the `browsable_source` folder
@@ -775,6 +772,8 @@ and commit the changes as done for the `raw_materials` folder
     git add browsable_source
     git commit -m "Added browsable source"
     git push
+
+We can see the resulting state of the repository in Figure {@fig:cmm_brows}.
 
 ![CMM browsable sources on GitHub.](./media/image5.png){#fig:cmm_brows}
 
@@ -789,7 +788,7 @@ Again, we stage changes as in the previous two steps.
 	git commit -m "Added source"
 	git push
 
-#### Create Depository
+### Create Depository
 
 The Depository has been filled, hence we create the Depository as an
 orphan branch, i.e., with no references to the parent repository, using
@@ -817,7 +816,7 @@ could use the GitHub API instead).
 
 ![CMM-Depository creation.](./media/image6.png){#fig:cmm_depo_creat}
 
-#### Final depository
+### Final depository
 
 Finally, we can perform a push and fill the remote repository.
 
@@ -856,7 +855,7 @@ Figure 10. The folder with CMM version history data.
 
 Figure XXX. CMM instantiation (right) of codemeta.json template (left).
 
-#### (Re-)Create the development History
+### (Re-)Create the development History
 
 We have to create a clean dedicated SourceCode branch
 
@@ -890,7 +889,7 @@ containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 
 ![An excerpt of the synthetic history of CMM.](./media/image10.png){#fig:cmm_sh}
 
-#### Create the final repository
+### Create the final repository
 
 We move back to the master branch using the checkout command, then
 remove `raw_materials` and `source` from it:
@@ -921,7 +920,7 @@ Workbench.
 
 ![The final CMM Workbench.](./media/image4.png){#fig:cmm_wb}
 
-#### Publish the repositories and trigger Software Heritage acquisition
+### Publish the repositories and trigger Software Heritage acquisition
 
 In order to publish the Depository and SourceCode repositories we have to set
 their visibility to "public", either through GitHub web interface or using the
