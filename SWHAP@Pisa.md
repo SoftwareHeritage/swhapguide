@@ -501,7 +501,7 @@ become two repositories: the latter is shipped to the Software Heritage
 archive, the former is published by the organization promoting the
 acquisition.
 
-![](./media/image2.png)
+![swhappe_overview](./media/image2.png){#fig:swhappe}
 
 Figure 2. Overview of the SWHAPPE process.
 
