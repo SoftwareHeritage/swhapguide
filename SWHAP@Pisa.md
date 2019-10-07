@@ -292,6 +292,9 @@ list of the *Actors* involved in the process is also necessary.
 Provision to store all these information safely has to be foreseen in
 any supporting implementation.
 
+Roles in the process
+--------------------
+
 With respect to the human resources, several roles are needed to enact
 the process, as indicated in the top part of fig. 1. Here is a short
 summary of the involved capabilities.
