@@ -714,7 +714,7 @@ does not involve a Warehouse.
 
 ### Instantiation
 
-![Instantiation of the template](./media/image9.png){#fig:temp_inst}
+![Instantiation of the template](./media/temp_inst.png){#fig:temp_inst}
 
 We instantiate on GitHub the SWHAP repository template[^8] into a new
 repository[^9], that we name "CMM-Workbench". This action, as most of
@@ -724,7 +724,7 @@ shown in Figure {@fig:temp_inst}), or programmatically through the GitHub API.
 It has the same directory structure as SWHAP-Template, as shown in Figure
 {@fig:template}.
 
-![Instantiated workbench for CMM.](./media/image16.png){#fig:cmm_wb_inst}
+![Instantiated workbench for CMM.](./media/cmm_wb_inst.png){#fig:cmm_wb_inst}
 
 To start working, we create a local copy on our computer, cloning this
 repository[^10]. By clicking on the green button "clone or download"
@@ -758,7 +758,7 @@ and we commit all these new contents:
 
 The resulting state of `raw_materials` is shown in Figure {@fig:cmm_raw}.
 
-![CMM raw materials on GitHub.](./media/image8.png){#fig:cmm_raw}
+![CMM raw materials on GitHub.](./media/cmm_raw.png){#fig:cmm_raw}
 
 ### Unpack the source code in the browsable\_source directory 
 
@@ -775,7 +775,7 @@ and commit the changes as done for the `raw_materials` folder
 
 We can see the resulting state of the repository in Figure {@fig:cmm_brows}.
 
-![CMM browsable sources on GitHub.](./media/image5.png){#fig:cmm_brows}
+![CMM browsable sources on GitHub.](./media/cmm_brows.png){#fig:cmm_brows}
 
 Finally, in preparation for the next phase, curation, we copy the files
 contained in `browsable_source` into the `source` folder[^11].
@@ -814,7 +814,7 @@ however, we have to create the new remote repository on GitHub (Figure
 {@fig:cmm_depo_creat} shows how to do this using the web interface; here too one
 could use the GitHub API instead).
 
-![CMM-Depository creation.](./media/image6.png){#fig:cmm_depo_creat}
+![CMM-Depository creation.](./media/cmm_depo_creat.png){#fig:cmm_depo_creat}
 
 ### Final depository
 
@@ -825,7 +825,7 @@ Finally, we can perform a push and fill the remote repository.
 We can check the resulting repositories via the web interface (Figure
 {@fig:cmm_repos}): CMM-Depository is now filled with the pushed materials.
 
-![The CMM repositories at the end of the collect phase.](./media/image13.png){#fig:cmm_repos}
+![The CMM repositories at the end of the collect phase.](./media/cmm_repos.png){#fig:cmm_repos}
 
 The Depository branch is then removed from the Workbench, to avoid
 having multiple copies that may diverge. Should new materials became
@@ -838,33 +838,46 @@ the Workbench with the information in the Depository.
 
 ### Curate the code
 
+#### Version History
+
 In this phase, the curation team should clean up the code and organize
 it in separate folders, one per version. In the case of CMM, the code is
-already structured this way, as shown in figure 7, so there is nothing
+already structured this way, as shown in Figure
+{@fig:cmm_repos}, so there is nothing
 to do.
 
 In order to support the (re-)creation of the development history of the
 original project, we prepare the `version_history.csv` file with the
-appropriate metadata (see fig. 10).
+appropriate metadata (see (Figure
+{#fig:cmm_vers_hist})).
 
-![The version history for CMM](./media/image14.png){#fig:cmm_vers_hist}
+![The version history for CMM](./media/cmm_vers_hist.png){#fig:cmm_vers_hist}
 
-Figure 10. The folder with CMM version history data.
 
-![Instatiation of the CodeMeta template for CMM](./media/image12.png){#fig:cmm_json}
+#### Codemeta
 
-Figure XXX. CMM instantiation (right) of codemeta.json template (left).
+Contextually we fill the `metadata/codemeta.json` template file (see Figure {#fig:cmm_json}, left) with metadata according to [CodeMeta guidelines](https://codemeta.github.io/terms/) obtaining what shown in  (see Figure {#fig:cmm_json}, right).
+
+![CMM instantiation (right) of codemeta.json template (left)](./media/cmm-codemeta.png){#fig:cmm_json}
+
+
+#### License
+
+To conclude the curation phase, we have to identify licensing information.
+
+If we find a file specyfing the licence in the source code, we have to copy its content in the `metadata/LICENCE` file.  Otherwise, in the case there is no licensing file in the source and we obtained license information in other finds, we fill `metadata/LICENCE` according to the [SPDX standard](https://spdx.org/licenses/).
+
 
 ### (Re-)Create the development History
+
+The development history can now be (re-)created either by issuing manually (i.e. for each version directory) the appropriate git commands, or by using a specialised tool.
+
+##### Manually
 
 We have to create a clean dedicated SourceCode branch
 
 	git checkout --orphan SourceCode
 	git rm -r
-
-The development history can now be (re-)created either by issuing
-manually (i.e. for each version directory) the appropriate git commands,
-or by using a specialised tool.
 
 Here is the template to create manually an individual commit/release:
 
@@ -874,6 +887,8 @@ Here is the template to create manually an individual commit/release:
 	export GIT_AUTHOR_NAME="Author Name <email@address>"
 	git commit -m 'Commit Message Here'
 	git tag -a 1.9 -m "Version 1.9"
+
+##### With DT2SG
 
 And here is an example using the [[DT2SG]{.underline}](#t3q5s097euy)
 tool
@@ -887,16 +902,14 @@ tool
 As a result we will find in our local repository a new local branch
 containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 
-![An excerpt of the synthetic history of CMM.](./media/image10.png){#fig:cmm_sh}
+![An excerpt of the synthetic history of CMM.](./media/cmm_sh.png){#fig:cmm_sh}
 
 ### Create the final repository
 
 We move back to the master branch using the checkout command, then
 remove `raw_materials` and `source` from it:
 
-	git rm -rf raw_materials
-	git rm -rf browsable_source
-	git rm -rf source
+	git rm -rf raw_materials browsable_source source
 
 We now create the README.md file, add it and commit changes:
 
@@ -908,17 +921,17 @@ Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
 ![The creation of the final repository.](./media/image15.png){#fig:create_fin}
 
-    git push https://github.com/Unipisa/CMM.git +master:master +src:src
-    git push --tags https://github.com/Unipisa/CMM.git +master:master +src:src
+    git push https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
+    git push --tags https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
 
 Figures {@fig:cmm_final}, {@fig:cmm_depo}, {@fig:cmm_wb} show the final result of CMM, their Depository and
 Workbench.
 
-![The final CMM repository.](./media/image7.png){#fig:cmm_final}
+![The final CMM repository.](./media/cmm_final.png){#fig:cmm_final}
 
-![The final CMM Depository.](./media/image11.png){#fig:cmm_depo}
+![The final CMM Depository.](./media/cmm_depo.png){#fig:cmm_depo}
 
-![The final CMM Workbench.](./media/image4.png){#fig:cmm_wb}
+![The final CMM Workbench.](./media/cmm_wb.png){#fig:cmm_wb}
 
 ### Publish the repositories and trigger Software Heritage acquisition
 
@@ -942,10 +955,30 @@ using the web interface at
 **[[https://save.softwareheritage.org]{.underline}](https://save.softwareheritage.org)**,
 or by connecting to the API on the command line as follows:
 
-    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$repourl
+    curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$repo_url
 
-where **\$repourl** is https://github.com/Unipisa/CMM.git/
+where  **\$repo_url** is `https://github.com/Unipisa/CMM.git/` and the archived software will as 
 
+    [**[Software Heritage archivied software]{.underline}**](https://archive.softwareheritage.org/browse/search/?q=https%3A%2F%2Fgithub.com%2FUnipisa%2F)
+
+### Fill the Workbench metadata
+
+In order to preserve information about the curation process we have to fill the template files under the Workbench `metadata`.
+Starting from some template files (see Figure {#fig:cmm-catalogue}-{#fig:cmm-actors}-{#fig:cmm-journal}, left), we obtain what shown in Figure {#fig:cmm-catalogue}-{#fig:cmm-actors}-{#fig:cmm-journal}, right.
+
+
+![The CMM Catalogue.](./media/cmm-catalogue.png){#fig:cmm-catalogue}
+
+![The CMM Actors.](./media/cmm-actors.png){#fig:cmm-actors}
+
+![The CMM Journal.](./media/cmm-journal.png){#fig:cmm-journal}
+
+In particular we should create :
+
++ a catalogue : `metatdata/catologue.md`, where each item in the `raw_materials` should have a record describing its origin, the possible warehouse, their authors and collectors along with a description. The result of `tree -a` on `raw_materials` should be included;
++ a journal :`metatdata/journal.md`, where each collect and curate action should be annotated;
++ an actors registry: `metatdata/actors.md`, every person taking part in the process should be registered, with their roles, affiliations and contact information;
++ a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
 
 Appendix A - Tools that can help
 ================================
