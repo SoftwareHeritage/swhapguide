@@ -533,7 +533,7 @@ As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself.
 
-![Top structure of the Template repository.](./media/Figure3.png){#fig:template}
+![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
 
 The process, step by step
 -------------------------
@@ -919,7 +919,7 @@ We now create the README.md file, add it and commit changes:
 Now we create the final remote repository, that we call "CMM", see
 Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
-![The creation of the final repository.](./media/image15.png){#fig:create_fin}
+![The creation of the final repository.](./media/create_fin.png){#fig:create_fin}
 
     git push https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
     git push --tags https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
