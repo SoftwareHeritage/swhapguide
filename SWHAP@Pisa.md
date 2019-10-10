@@ -1,3 +1,5 @@
+<details>
+<summary>Click to show header</summary>
 ---
 title: 'The Software Heritage Acquisition Process'
 date: 10 October 2019
@@ -50,6 +52,70 @@ header-includes:
   ```
 bibliography: swhap.bib
 ---
+</details>
+
+------------
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [The process, abstract view](#the-process-abstract-view)
+  - [Phases](#phases)
+    - [**Collect**](#collect)
+    - [**Curate**](#curate)
+    - [**Archive**](#archive)
+    - [**Present**](#present)
+  - [An iterative process](#an-iterative-process)
+  - [Resources needed by the process](#resources-needed-by-the-process)
+    - [Warehouse](#warehouse)
+    - [Depository](#depository)
+    - [Workbench](#workbench)
+    - [Curated source code deposit](#curated-source-code-deposit)
+    - [Catalogues and journals](#catalogues-and-journals)
+  - [Roles in the process](#roles-in-the-process)
+    - [Collector](#collector)
+    - [Deposit engineer](#deposit-engineer)
+    - [Curator](#curator)
+    - [Archive engineer](#archive-engineer)
+    - [Presentation designer and Web engineer](#presentation-designer-and-web-engineer)
+  - [Implementation requirements](#implementation-requirements)
+    - [Long term availability](#long-term-availability)
+    - [Historical accuracy](#historical-accuracy)
+    - [Traceability](#traceability)
+    - [Openness](#openness)
+    - [Interoperability](#interoperability)
+- [The process, a concrete view](#the-process-a-concrete-view)
+  - [General Motivation for using Git and GitHub](#general-motivation-for-using-git-and-github)
+  - [SWHAP - GitHub correspondence](#swhap---github-correspondence)
+  - [Process overview](#process-overview)
+  - [The SWHAP template](#the-swhap-template)
+  - [The process, step by step](#the-process-step-by-step)
+    - [Instantiation](#instantiation)
+    - [Collect phase](#collect-phase)
+    - [Curate phase](#curate-phase)
+  - [Iteration](#iteration)
+- [A walkthrough on a running example](#a-walkthrough-on-a-running-example)
+    - [Starting the process](#starting-the-process)
+    - [Instantiation](#instantiation-1)
+    - [Upload files in raw\_materials](#upload-files-in-rawmaterials)
+    - [Unpack the source code in the browsable\_source directory](#unpack-the-source-code-in-the-browsablesource-directory)
+    - [Create Depository](#create-depository)
+    - [Final depository](#final-depository)
+    - [Curate the code](#curate-the-code)
+      - [Version History](#version-history)
+      - [Codemeta](#codemeta)
+      - [License](#license)
+    - [(Re-)Create the development History](#re-create-the-development-history)
+        - [Manually](#manually)
+        - [With DT2SG](#with-dt2sg)
+    - [Create the final repository](#create-the-final-repository)
+    - [Publish the repositories and trigger Software Heritage acquisition](#publish-the-repositories-and-trigger-software-heritage-acquisition)
+    - [Fill the Workbench metadata](#fill-the-workbench-metadata)
+- [Appendix A - Tools that can help](#appendix-a---tools-that-can-help)
+- [Appendix B - A few tips on Github](#appendix-b---a-few-tips-on-github)
+- [Bibliography](#bibliography)
+
+------------------
 
 Introduction
 ============
@@ -113,8 +179,9 @@ GitHub collaborative development platform. This implementation is named SWHAPPE
 provides a walkthrough on an annotated example, using a real world medium-sized software
 project (@AttardiF96).
 
-The process, abstract view {#sec:processabs}
+The process, abstract view 
 ==========================
+<details><summary></summary>{#sec:processabs}</details>
 
 This section describes SWHAP, the acquisition process for software
 artifacts at an *abstract* level, that is, without making specific
@@ -371,9 +438,12 @@ Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
 acquisition process.
 
-\clearpage
-The process, a concrete view {#sec:processconcrete}
+
+<details><summary></summary>\clearpage</details>
+
+The process, a concrete view 
 ============================
+<details><summary></summary>{#sec:processconcrete}</details>
 
 In order to implement SWHAP, the first step is to decide how to
 instantiate the needed storage and working areas: Warehouse, Depository,
@@ -690,9 +760,11 @@ recreate it, performing the following steps:
 
 -   Recreate the software history as for the first iteration.
 
-\clearpage
-A walkthrough on a running example {#sec:walkthrough}
+<details><summary></summary>\clearpage</details>
+
+A walkthrough on a running example
 ==================================
+ <details><summary></summary>{#sec:walkthrough}</details>
 
 In this section we will show the process at work on one of the first
 source code acquired by the SWHAP\@Pisa project, the CMM conservative
