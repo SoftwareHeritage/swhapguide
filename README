@@ -1,8 +1,14 @@
 Software Heritage Acquisition Process Guidelines
 ------------------------------------------------
 
-This directory contains the full sources of the SWHAP Guidelines, in Markdown format.
-In order to produce the PDF output, you need the following tools installed:
+This directory contains the full sources of the SWHAP Guidelines, in Markdown
+format, which are designed to produce a beautifully rendered PDF output, as well
+as to ease maintainability.
+
+This requires the use of a few extensions, that make the Markdown rendering on
+GitHub suboptimal, hence we also add the generated PDF output for your immediate use.
+
+In order to reproduce the PDF, you will need the following tools installed:
 
 Mandatory:
  - pandoc https://pandoc.org
