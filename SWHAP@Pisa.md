@@ -964,14 +964,11 @@ where  **\$repo_url** is `https://github.com/Unipisa/CMM.git/` and the archived 
 ### Fill the Workbench metadata
 
 In order to preserve information about the curation process we have to fill the template files under the Workbench `metadata`.
-Starting from some template files (see Figure {#fig:cmm-catalogue}-{#fig:cmm-actors}-{#fig:cmm-journal}, left), we obtain what shown in Figure {#fig:cmm-catalogue}-{#fig:cmm-actors}-{#fig:cmm-journal}, right.
+Starting from some template files (see Figure {#fig:cmm-metadata}, left), we obtain what shown in Figure {#fig:cmm-metadata}, right.
 
 
-![The CMM Catalogue.](./media/cmm-catalogue.png){#fig:cmm-catalogue}
+![The CMM Metadata.](./media/cmm-metadata.png){#fig:cmm-metadata}
 
-![The CMM Actors.](./media/cmm-actors.png){#fig:cmm-actors}
-
-![The CMM Journal.](./media/cmm-journal.png){#fig:cmm-journal}
 
 In particular we should create :
 
