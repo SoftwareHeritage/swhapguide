@@ -372,6 +372,7 @@ and coordination of the many actors playing the many roles of the
 acquisition process.
 
 \clearpage
+
 The process, a concrete view {#sec:processconcrete}
 ============================
 
@@ -691,6 +692,7 @@ recreate it, performing the following steps:
 -   Recreate the software history as for the first iteration.
 
 \clearpage
+
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
 
