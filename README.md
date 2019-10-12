@@ -1,9 +1,13 @@
 Software Heritage Acquisition Process Guidelines
 ------------------------------------------------
 
-This directory contains the full sources of the [SWHAP](https://www.softwareheritage.org/swhap) Guidelines, in Markdown
-format, which are designed to produce a [beautifully rendered PDF output](SWHAP@Pisa.pdf), as well
-as to ease maintainability.
+This directory contains the full sources of the [SWHAP](https://www.softwareheritage.org/swhap) Guidelines, 
+that describe the detailed process to rescue, curate and archive landmark legacy source code, as originally
+developed by Software Heritage and the University of Pisa with support from UNESCO.
+
+The document sources are in Markdown format, and are designed to produce
+a [beautifully rendered PDF output](SWHAP@Pisa.pdf), as well as to ease
+maintainability.
 
 This requires the use of a few extensions, that make the Markdown rendering on
 GitHub suboptimal, hence we also add the generated PDF output for your immediate use.
