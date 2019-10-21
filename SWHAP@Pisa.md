@@ -824,6 +824,12 @@ could use the GitHub API instead).
 
 ![CMM-Depository creation.](./media/cmm_depo_creat.png){#fig:cmm_depo_creat}
 
+To facilitate the search of the created repository, we add the 
+"software-heritage", "depository" and "swhappe" tags (in the same way of 
+what done for the workbench as shown in Figure
+{@fig:workbench_tags}).
+
+
 ### Final depository
 
 Finally, we can perform a push and fill the remote repository.
@@ -931,6 +937,11 @@ Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
     git push https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
     git push --tags https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
+
+To facilitate the search of the created repository, we add the 
+"software-heritage", "archive" and "swhappe" tags (in the same way of 
+what done for the workbench as shown in Figure
+{@fig:workbench_tags}).
 
 Figures {@fig:cmm_final}, {@fig:cmm_depo}, {@fig:cmm_wb} show the final result of CMM, their Depository and
 Workbench.
