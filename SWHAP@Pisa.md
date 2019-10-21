@@ -728,6 +728,12 @@ It has the same directory structure as SWHAP-Template, as shown in Figure
 
 ![Instantiated workbench for CMM.](./media/cmm_wb_inst.png){#fig:cmm_wb_inst}
 
+To facilitate the search of the created repository, we add the 
+"software-heritage", "workbench" and "swhappe" tags, as shown in Figure
+{@fig:workbench_tags}.
+
+![Tags for the workbench for CMM.](./media/workbench_tags.png){#fig:workbench_tags}
+
 To start working, we create a local copy on our computer, cloning this
 repository[^10]. By clicking on the green button "clone or download"
 (Figure {@fig:cmm_wb_inst}), we get a link that we can use for this purpose in the
