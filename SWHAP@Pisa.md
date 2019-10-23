@@ -934,7 +934,6 @@ Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
 ![The creation of the final repository.](./media/create_fin.png){#fig:create_fin}
 
-    git push https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
     git push --tags https://github.com/Unipisa/CMM.git +master:master +SourceCode:SourceCode
 
 To facilitate the search of the created repository, we add the 
