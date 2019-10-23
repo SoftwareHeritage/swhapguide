@@ -862,15 +862,14 @@ to do.
 
 In order to support the (re-)creation of the development history of the
 original project, we prepare the `version_history.csv` file with the
-appropriate metadata (see (Figure
-{#fig:cmm_vers_hist})).
+appropriate metadata (see Figure {@fig:cmm_vers_hist}).
 
 ![The version history for CMM](./media/cmm_vers_hist.png){#fig:cmm_vers_hist}
 
 
 #### Codemeta
 
-Contextually we fill the `metadata/codemeta.json` template file (see Figure {#fig:cmm_json}, left) with metadata according to [CodeMeta guidelines](https://codemeta.github.io/terms/) obtaining what shown in  (see Figure {#fig:cmm_json}, right).
+Contextually we fill the `metadata/codemeta.json` template file (see Figure {@fig:cmm_json}, left) with metadata according to [CodeMeta guidelines](https://codemeta.github.io/terms/) obtaining what shown in  (see Figure {@fig:cmm_json}, right).
 
 ![CMM instantiation (right) of codemeta.json template (left)](./media/cmm-codemeta.png){#fig:cmm_json}
 
@@ -983,7 +982,7 @@ where  **\$repo_url** is `https://github.com/Unipisa/CMM.git/` and the archived 
 ### Fill the Workbench metadata
 
 In order to preserve information about the curation process we have to fill the template files under the Workbench `metadata`.
-Starting from some template files (see Figure {#fig:cmm-metadata}, left), we obtain what shown in Figure {#fig:cmm-metadata}, right.
+Starting from some template files (see Figure {@fig:cmm-metadata}, left), we obtain what shown in Figure {@fig:cmm-metadata}, right.
 
 
 ![The CMM Metadata.](./media/cmm-metadata.png){#fig:cmm-metadata}
