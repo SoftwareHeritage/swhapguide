@@ -920,7 +920,7 @@ containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 ### Create the final repository
 
 We move back to the master branch using the checkout command, then
-remove `raw_materials` and `source` from it:
+remove `raw_materials`, `browsable_source` and `source` from it:
 
 	git rm -rf raw_materials browsable_source source
 
