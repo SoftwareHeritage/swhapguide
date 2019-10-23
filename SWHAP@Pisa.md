@@ -964,7 +964,7 @@ GitHub API as follows:
 where **\$repository\_archive** is CMM or CMM-Depository and **\$auth\_token**
 is the authorizzarion token. As a result, the code is now publicly visible at
 
-[**[https://github.com/Unipisa/CMM.git/]{.underline}**](https://github.com/Unipisa/CMM.git/)
+[**[https://github.com/Unipisa/CMM/]{.underline}**](https://github.com/Unipisa/CMM/)
 
 Finally, we trigger the archival of this repository in Software
 Heritage, using the "save code now" functionality. This can be done
@@ -974,9 +974,12 @@ or by connecting to the API on the command line as follows:
 
     curl -s -X POST https://archive.softwareheritage.org/api/1/origin/save/git/url/$repo_url
 
-where  **\$repo_url** is `https://github.com/Unipisa/CMM.git/` and the archived software will as 
+where  **\$repo_url** is `https://github.com/Unipisa/CMM/`.
 
-[**[Software Heritage archived software]{.underline}**](https://archive.softwareheritage.org/browse/search/?q=https%3A%2F%2Fgithub.com%2FUnipisa%2F)
+A few hours later, the archived software will be visible in the Software Heritage archive
+at 
+
+[**[https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM]{.underline}**](https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM)
 
 ### Fill the Workbench metadata
 
