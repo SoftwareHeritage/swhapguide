@@ -976,7 +976,7 @@ or by connecting to the API on the command line as follows:
 
 where  **\$repo_url** is `https://github.com/Unipisa/CMM.git/` and the archived software will as 
 
-    [**[Software Heritage archivied software]{.underline}**](https://archive.softwareheritage.org/browse/search/?q=https%3A%2F%2Fgithub.com%2FUnipisa%2F)
+[**[Software Heritage archived software]{.underline}**](https://archive.softwareheritage.org/browse/search/?q=https%3A%2F%2Fgithub.com%2FUnipisa%2F)
 
 ### Fill the Workbench metadata
 
