@@ -15,7 +15,7 @@ GitHub suboptimal, hence we also add the generated PDF output for your immediate
 In order to reproduce the PDF, you will need the following tools installed:
 
 Mandatory:
- - pandoc https://pandoc.org
+ - pandoc https://pandoc.org ; use at least version 2
  - pandoc-secnos and pandoc-fignos from the pandoc-xnos filter suite: https://github.com/tomduck/pandoc-xnos
    usually just make sure you have Python 3 and do:
      pip install pandoc-secnos pandoc-fignos --user
