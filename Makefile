@@ -2,8 +2,9 @@
 MDS = $(wildcard *.md)
 TEXS = $(patsubst %.md,%.tex,$(MDS))
 PDFS = $(patsubst %.md,%.pdf,$(MDS))
+MAIN = SWHAP@Pisa
 
-all: $(PDFS)
+all: $(MAIN).pdf
 
 .PRECIOUS: $(TEXS)
 
