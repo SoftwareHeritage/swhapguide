@@ -1,6 +1,6 @@
 ---
-title: 'The Software Heritage Acquisition Process'
-date: 10 October 2019
+title: 'The Software Heritage Acquisition Process V2'
+date: 30 November 2021
 author: 
  - name: Laura Bussi
    affiliation: Dept. of Computer Science, University of Pisa
@@ -65,10 +65,12 @@ amount of human intervention, as demonstrated by the pioneering works
 reconstructing the history of Unix (@SpinellisUnix2017) and the source code
 of the Apollo Guidance Computer (@VirtualAGC).
 
-This document presents the first version of SWHAP, the ***SoftWare
+This document presents the second version of SWHAP, the ***SoftWare
 Heritage Acquisition Process*** to rescue, curate and illustrate
 landmark legacy software source code, a joint initiative of Software
 Heritage and the University of Pisa, in collaboration with UNESCO.
+
+TBD: add Kat and Ken, and summary of enhancements.
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -99,6 +101,8 @@ devoted to save the raw materials that the other phases will build upon.
 
 Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
 data stores and roles.
+
+*** TBD?: Presentation designer might be abstract, and instantiated in SWH-stories designer in this version.
 
 ### **Collect** 
 
@@ -185,11 +189,10 @@ Heritage provides intrinsic persistent identifiers that are fully
 documented at
 [[https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html]{.underline}](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html)
 
-The presentation phase is out of the scope of this document, and as such
-we are currently not providing a supporting implementation. Anyway, a
-good example of what can be done is the
-[[https://sciencestories.io]{.underline}](https://sciencestories.io)
-website.
+In this document we describe an instance of the Present phase, Present in SWH-stories, inspired by the
+[[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
+
+#### Present in SWH-stories
 
 An iterative process
 --------------------
