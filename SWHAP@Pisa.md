@@ -189,10 +189,11 @@ Heritage provides intrinsic persistent identifiers that are fully
 documented at
 [[https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html]{.underline}](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html)
 
-In this document we describe an instance of the Present phase, Present in SWH-stories, inspired by the
-[[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
+TDB: decide between an *embedded* or an *external* approach to describe how to present in SWH-stories. 
+In the embedded case we insert here a section describing as abstractly as possible the process, and see how to put other information in the rest. In the external case, we refer to a new document, based on Morane and Kat's report, plus a section related to support in the adjourned template in SWHAPPE.
 
-#### Present in SWH-stories
+Either way we are talking about an instance of the Present phase, **Present in SWH-stories**, inspired by the
+[[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
 
 An iterative process
 --------------------
