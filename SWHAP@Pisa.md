@@ -9,7 +9,7 @@ author:
    affiliation: Software Heritage, Inria and University of Paris
    email: roberto@dicosmo.org
  - name: Carlo Montangero
-   affiliation: Dept. of Computer Science, University of Pisa
+   affiliation: Dept. of Computer Science, University of Pisa (retired)
    email: carlo@montangero.eu
  - name: Guido Scatena
    affiliation: Dept. of Computer Science, University of Pisa
