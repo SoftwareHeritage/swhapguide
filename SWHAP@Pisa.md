@@ -498,13 +498,15 @@ to recognize each major version of the code, and refactor it accordingly
 Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 *Git*.
 
-The `additional-materials` folder 
+The `additional-materials` folder is where all the new materials generated during the acquisition are kept. Examples are: enhanced pictures of the original code from the Depository, articles and presentations on the acquisition itself, etc.
 
 As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself.
 
 ![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
+
+TBD: Update this picture, adding the additional materials folder in the Workbench.
 
 The process, step by step
 -------------------------
@@ -626,6 +628,20 @@ of the software via Git commits and releases.
 Finally you can create the "official" software repository, taking the
 versions history from the src branch and the metadata from the master
 branch.
+
+### Present phase
+
+**Create a SWH-story**
+
+The suggested process to document the recovered source code with a story in the SWH-stories website [[https://swh.stories.k2.services/stories/]{.underline}](https://swh.stories.k2.services/stories/) consists of two phases:
+
+collect
+
+publish
+
+TBD: Choose between inserting the senstence *The process is described in detail in ???* or elaborate here the description above.
+ 
+http://stage.stories.k2.services/publisher/
 
 Iteration
 ---------
