@@ -135,7 +135,7 @@ different capabilities in different scenarios.
 
 ### **Curate**
 
-The purpose of this phase is *to* *analyze, cleanup and structure* the
+The purpose of this phase is *to analyze, cleanup and structure* the
 raw materials that have been collected.
 
 Preparing software source code for archival in **Software Heritage**
@@ -190,10 +190,9 @@ documented at
 [[https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html]{.underline}](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html)
 
 TDB: decide between an *embedded* or an *external* approach to describe how to present in SWH-stories. 
-In the embedded case we insert here a section describing as abstractly as possible the process, and see how to put other information in the rest. In the external case, we refer to a new document, based on Morane and Kat's report, plus a section related to support in the adjourned template in SWHAPPE.
+In the embedded case we insert here a section describing as abstractly as possible the process to create a SWH-story, and see how to put other information in the rest. In the external case, we refer to a new document, based on Morane and Kat's report, plus a section related to support in the adjourned template in SWHAPPE.
 
-Either way we are talking about an instance of the Present phase, **Present in SWH-stories**, inspired by the
-[[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
+Either way we are talking about an instance of the Present phase, **Present in SWH-stories**, inspired by the [[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
 
 An iterative process
 --------------------
@@ -240,7 +239,10 @@ referred to as **Wikies** in fig. 1 - in the other phases.
 
 Any implementation of the process will need a virtual space and working
 environment where the activities can be carried out, with support for
-temporary storage and for logging the various operations in a journal.
+temporary storage and for logging the various operations in a journal. 
+The workbench also stores the new materials that are generated during the process, like articles describing the work, interviews to the authors, etc.
+
+It is advised to structure the virtual space according to the structure of the process so that the materials pertaining to the various phases are kept separated. 
 
 ### Curated source code deposit
 
@@ -287,10 +289,7 @@ publish the context in the Wikies.
 
 ### Presentation designer and Web engineer
 
-These are out of the scope of this document, and are mentioned only to
-note that, though most of the presentations of the archived software
-will be on line, the abilities to design the contents of a presentation
-should be considered separately from the technical ones.
+Though most of the presentations of the archived software will be on line, the abilities to design the contents of a presentation should be considered separately from the technical ones. For instance, in the case of the SWH-stories, the presentation designer should be competent in the topic addressed by the code, to be able to search and select the items to be inserted in the story. On the other side, the web engineer should be acknowledgeable of Wikimedia and the other tools involved in creating the stories.
 
 **[Remark]{.underline}** the technical resources described above in
 abstract terms, may be implemented in a variety of ways. For example,
@@ -365,7 +364,7 @@ implementation adopted by the SWHAP\@Pisa project: SWHAPPE exploits the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
 platform for all the virtual support areas of the process.
-
+                                      
 The solutions adopted in SWHAPPE are described in detail in this
 section, together with their rationale.
 
@@ -450,9 +449,7 @@ Process overview
 ----------------
 
 GitHub features *template* repositories that can be instantiated
-whenever needed (see
-
-[[https://help.github.com/en/articles/creating-a-template-repository]{.underline}](https://help.github.com/en/articles/creating-a-template-repository)).
+whenever needed (see                                                  [[https://help.github.com/en/articles/creating-a-template-repository]{.underline}](https://help.github.com/en/articles/creating-a-template-repository)).
 We used this feature in SWHAPPE, and designed a repository,
 SWHAP-TEMPLATE, that embodies the core support to enact the process. Its
 structure and use is shown in figure 2. In the picture and in the
@@ -500,6 +497,8 @@ to recognize each major version of the code, and refactor it accordingly
 - one separate folder per each version. To create the Source Code
 Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 *Git*.
+
+The `additional-materials` folder 
 
 As for the metadata folder, here we record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
