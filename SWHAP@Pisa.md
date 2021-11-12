@@ -70,7 +70,7 @@ Heritage Acquisition Process*** to rescue, curate and illustrate
 landmark legacy software source code, a joint initiative of Software
 Heritage and the University of Pisa, in collaboration with UNESCO.
 
-TBD: add Kat and Ken, and summary of enhancements.
+TBD : add Kat and Ken, and summary of enhancements.
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -102,7 +102,7 @@ devoted to save the raw materials that the other phases will build upon.
 Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
 data stores and roles.
 
-*** TBD?: Presentation designer might be abstract, and instantiated in SWH-stories designer in this version.
+TBD : Presentation designer might be abstract, and instantiated as SWH-stories designer in this version.
 
 ### **Collect** 
 
@@ -189,10 +189,11 @@ Heritage provides intrinsic persistent identifiers that are fully
 documented at
 [[https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html]{.underline}](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html)
 
-TDB: decide between an *embedded* or an *external* approach to describe how to present in SWH-stories. 
-In the embedded case we insert here a section describing as abstractly as possible the process to create a SWH-story, and see how to put other information in the rest. In the external case, we refer to a new document, based on Morane and Kat's report, plus a section related to support in the adjourned template in SWHAPPE.
+#### Present in SWH-stories
 
-Either way we are talking about an instance of the Present phase, **Present in SWH-stories**, inspired by the [[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
+This way of presenting the recovered source code is inspired by the [[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
+
+TDB : decide between an *embedded* or an *external* approach. In the embedded case we insert here a  description as abstract as possible of the process to create a SWH-story, and see how to put other information in the rest of the document. In the external case, we refer to a new document, based on Morane and Kat's report, completed with a section related to the support in the adjourned template of SWHAPPE. 
 
 An iterative process
 --------------------
@@ -475,7 +476,10 @@ acquisition.
 
 ![Overview of the SWHAPPE approach](./media/image2.png){#fig:swhappe}
 
+TBD : Add additional-materials to the Workbench, in the picture.
+
 Figure 2. Overview of the SWHAPPE process.
+
 
 The SWHAP template
 ------------------
@@ -633,16 +637,14 @@ branch.
 
 **Create a SWH-story**
 
-The suggested process to document the recovered source code with a story in the SWH-stories website [[https://swh.stories.k2.services/stories/]{.underline}](https://swh.stories.k2.services/stories/) consists of two phases:
+The suggested process to document the recovered source code with a story in the SWH-stories website [[https://swh.stories.k2.services/stories/]{.underline}](https://swh.stories.k2.services/stories/) has two phases:
+- Collect, where the Presentation designer collects the images, videos, documents to be published. For each item, he also gathers in a suitably structered *inventory* in the Workbench the information nedeed to insure that once uploaded in the appropriate Wikimedia data base the item is satisfactorily self documenting. The Presentation designer should also take care that the item can be granted a pubblic domain license, as required by Wikimedia policies.
+- Publish, where the Web engineer, in this case the Wikimedia expert, uploads the items in such a way that they are best presented exploiting the STORIES SERVICE at [[http://stage.stories.k2.services/publisher/]{.underline}].
 
-collect
+The story will be available at [(https://swh.stories.k2.services/stories/){.underline}]. Since the story is dinamically constructed at each access, the above process can be freely iterated, to add new elements or to correct the presented information.
 
-publish
-
-TBD: Choose between inserting the senstence *The process is described in detail in ???* or elaborate here the description above.
+TBD : Choose between inserting the sentence *The process is described in detail in ???* or elaborate here the description above.
  
-http://stage.stories.k2.services/publisher/
-
 Iteration
 ---------
 
