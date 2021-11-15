@@ -1001,6 +1001,11 @@ used during the initial experimentation of SWHAPPE:
     -   OCR.space
         ([[https://ocr.space/]{.underline}](https://ocr.space/)).
         Online OCR and free API.
+    
+    -   Microsoft Computer Vision of Azure Cognitive Services
+        ([[https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview]{.underline}](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview)).
+        Very effective for OCR of ancient code tabulates; free for limited use by [API](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts-sdk/client-library?tabs=visual-studio&pivots=programming-language-csharp).
+        An example of usage on FORTRAN listin can be found at [[https://gist.github.com/scatenag/fc82d771a8dc0e453c649c3bf2297116]{.underline}](https://gist.github.com/scatenag/fc82d771a8dc0e453c649c3bf2297116).
 
 -   Dedicated scripts:
 
