@@ -1,3 +1,8 @@
+## On Ubuntu 20.04: 
+## sudo apt install pandoc
+## pip install pandoc-xnos
+## make
+
 # Depends: rubber
 MDS = $(wildcard *.md)
 TEXS = $(patsubst %.md,%.tex,$(MDS))
