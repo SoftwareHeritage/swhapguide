@@ -1,8 +1,8 @@
 Software Heritage Acquisition Process Guidelines
 ------------------------------------------------
 
-This directory contains the full sources of the [SWHAP](https://www.softwareheritage.org/swhap) Guidelines, 
-that describe the detailed process to rescue, curate and archive landmark legacy source code, as originally
+This directory contains the full sources of the [ScienceStories](https://swh.stories.k2.services/) part of [SWHAP](https://www.softwareheritage.org/swhap) Guidelines, 
+that describe the detailed process to present landmark legacy source code, as originally
 developed by Software Heritage and the University of Pisa with support from UNESCO.
 
 The document sources are in Markdown format, and are designed to produce
