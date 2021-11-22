@@ -29,9 +29,10 @@ TBD : Choose between inserting the sentence *The process is described in detail 
 The presentation process, abstract view {#sec:processabs}
 
 TBD : Presentation designer might be abstract, and instantiated as SWH-stories designer in this version.
+
+Presenting in SWH-stories
 ==========================
 
-#### Present in SWH-stories
 
 This way of presenting the recovered source code is inspired by the [[https://sciencestories.io]{.underline}](https://sciencestories.io) website.
 
@@ -48,49 +49,58 @@ Resources in the process
 
 SWHAP Repository structure
 --------------------
-## Story Inventory
+### **Story Inventory** 
+
+
+
+The story invetory is the central worikng point of the presentation process of SWHAP. 
+It consists in a document and a set of folders.
+The document serves ad catalogue of collected items and guides the process of tranfer acquired matherials to wiki*. 
+
+### **Presentation Moments** 
+
+The story of a software, as presented by ScienceStories.io, is divided in "moments".
+
+### People Moments 
+
+as a software story is also a story about people ...
+This section, and the realtive folders, provides informatins and storage for the images, videos, documents, etc. related to the people involved in the software project.
+
+The people story moments fall in two classes, with a dedicated sub-folder each: 
+
+* *media_gallery*, for images and videos, and 
+* *library*, for documents.
+
+An entry should be added to the [StoryInventory](https://github.com/Unipisa/Softi-Workbench/blob/structure_review/additional-materials/swh_stories_workplace/StoryInventory.md) file for each added item, following the pattern offered in the dedicated section.
+
+#### Software Moments
+This section, and the relative folders, provides storage for the images, videos, documents, etc. related to the software. 
+
+The software story moments fall in four classes, with a dedicated sub-folder each: 
+* **code_listing**, for PDF versions of the source code, annotated with permalinks to the SWH archive,
+* **media_gallery**, for images of the original source code recovered from non digital documents, 
+* **library** for links to documents related to the software, and
+* **videos** for related videos.
+
+An entry should be added to the [StoryInventory](https://github.com/Unipisa/Softi-Workbench/blob/structure_review/additional-materials/swh_stories_workplace/StoryInventory.md) file for each added item, following the pattern offered in the dedicated section.
 
 #### Wikidata Entities 
 
 in this section we annotate the entities to be created
-### Presentation Moments
-
-## People Moments
-
-as a software story is also a story about people ...
-##### People Media Gallery
-contains all immages related to people
-
-##### People Library
-
-contains all documents related to people
-
-
-#### Software Moments
-
-##### Media Gallery Moment
-
-
-##### Libray Moment
-##### Media Gallery Moment
-
 
 Roles in the process
 --------------------
 
-* Curator
+### **Collector**
+
+### **Curator**
 
 Presentation designer and Web engineer
 
 Though most of the presentations of the archived software will be on line, the abilities to design the contents of a presentation should be considered separately from the technical ones. For instance, in the case of the SWH-stories, the presentation designer should be competent in the topic addressed by the code, to be able to search and select the items to be inserted in the story. On the other side, the web engineer should be acknowledgeable of Wikimedia and the other tools involved in creating the stories. 
 
-* Visitor
-### Collector
-
-
-
-
-
+### **Visitor**
+  
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
 

@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'SWHAP@Pisa.blg'
+[56] biber:322> INFO - === lun nov 22, 2021, 13:20:18
+[67] Biber.pm:415> INFO - Reading 'SWHAP@Pisa.bcf'
+[123] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[128] Utils.pm:293> WARN - The file 'SWHAP@Pisa.bcf' does not contain any citations!
+[135] bbl.pm:652> INFO - Writing 'SWHAP@Pisa.bbl' with encoding 'UTF-8'
+[136] bbl.pm:755> INFO - Output to SWHAP@Pisa.bbl
+[136] Biber.pm:128> INFO - WARNINGS: 1
