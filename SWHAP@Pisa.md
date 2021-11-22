@@ -49,6 +49,13 @@ Resources in the process
 
 SWHAP Repository structure
 --------------------
+
+
+### **Cover Page** 
+
+Cover page TODO:
+
+
 ### **Story Inventory** 
 
 
@@ -93,14 +100,23 @@ Roles in the process
 
 ### **Collector**
 
+The curator is in charge of retirve alle the mandatory information abot the collected matherials, as, for instance, the authors, the dates and the copytright.
+
 ### **Curator**
 
-Presentation designer and Web engineer
+The curator is in charge of recustructing the story behind the software, about people and places.
+Moreover, the curator is in charge of selecting and creating a presentable objects for acquired matherials. 
+For instance he select and crop the acquired images, he create the annotaded pdf version of relevant pieces of code listng, with links to the actual code archived in Software Heritage by the SWHID.
+
+
+### **Presentation designer and Web engineer***
 
 Though most of the presentations of the archived software will be on line, the abilities to design the contents of a presentation should be considered separately from the technical ones. For instance, in the case of the SWH-stories, the presentation designer should be competent in the topic addressed by the code, to be able to search and select the items to be inserted in the story. On the other side, the web engineer should be acknowledgeable of Wikimedia and the other tools involved in creating the stories. 
 
 ### **Visitor**
-  
+
+The visitor can navigate to https://swh.stories.k2.services/ where he can find the collection of software acquired and presented by Software Heritage.
+
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
 
