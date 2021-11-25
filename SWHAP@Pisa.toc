@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{People Moments}{3}{section*.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Software Moments}{4}{section*.1}%
+\contentsline {subsubsection}{Software Moments}{4}{section*.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Wikidata Entities}{4}{section*.1}%
 \defcounter {refsection}{0}\relax 
