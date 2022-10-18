@@ -857,16 +857,38 @@ The development history can now be (re-)created either by issuing manually (i.e.
 We have to create a clean dedicated SourceCode branch
 
 	git checkout --orphan SourceCode
-	git rm -r
+	git rm -rf *
 
-Here is the template to create manually an individual commit/release:
+Then, for every directory containing a version of the source code, in
+chronological order, we copy its contents from the `master` branch to the
+current branch, and commit it with the appropriate metadata.
+
+For example, for the directory 1.9 of the CMM sources, here is how
+we copy the source contents into our branch:
+
+	git checkout master -- source/1.9
+	mv source/1.9/* .
+	rm -rf source
+
+Then we use the following template to create manually an individual commit/release:
 
 	export GIT_COMMITTER_DATE="YYYY-MM-DD HH:MM:SS"
-	export GIT_COMMITER_NAME="Commiter Name <email@address>"
+	export GIT_COMMITTER_NAME="Commiter Name"
+	export GIT_COMMITTER_EMAIL="email@address"
 	export GIT_AUTHOR_DATE="YYYY-MM-DD HH:MM:SS"
-	export GIT_AUTHOR_NAME="Author Name <email@address>"
+	export GIT_AUTHOR_NAME="Author Name"
+	export GIT_AUTHOR_EMAIL=<email@address>"
+	git add -A
 	git commit -m 'Commit Message Here'
+	
+We also need to add an annotated tag to this version. For version 1.9 of CMM, here is
+the command we used, you can adapt it to your needs:
+
 	git tag -a 1.9 -m "Version 1.9"
+
+Finally, we clean up the directory before importing a new version
+
+    git rm -rf *
 
 ##### With DT2SG
 
