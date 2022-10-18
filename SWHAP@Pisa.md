@@ -965,7 +965,7 @@ or by connecting to the API on the command line as follows:
 
 where  **\$repo_url** is `https://github.com/Unipisa/CMM/`.
 
-A few hours later, the archived software will be visible in the Software Heritage archive
+A short time after (this may go up to a few hours for huge repositories), the archived software will be visible in the Software Heritage archive
 at 
 
 [**[https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM]{.underline}**](https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM)
