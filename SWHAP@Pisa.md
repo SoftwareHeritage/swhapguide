@@ -1,6 +1,6 @@
 ---
 title: 'The Software Heritage Acquisition Process'
-date: 10 October 2019
+date: 18 October 2022
 author: 
  - name: Laura Bussi
    affiliation: Dept. of Computer Science, University of Pisa
