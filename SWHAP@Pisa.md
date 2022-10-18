@@ -981,7 +981,7 @@ Starting from some template files (see Figure {@fig:cmm-metadata}, left), we obt
 
 In particular we should create :
 
-+ a catalogue : `metatdata/catologue.md`, where each item in the `raw_materials` should have a record describing its origin, the possible warehouse, their authors and collectors along with a description. The result of `tree -a` on `raw_materials` should be included;
++ a catalogue : `metatdata/catalogue.md`, where each item in the `raw_materials` should have a record describing its origin, the possible warehouse, their authors and collectors along with a description. The result of `tree -a` on `raw_materials` should be included;
 + a journal :`metatdata/journal.md`, where each collect and curate action should be annotated;
 + an actors registry: `metatdata/actors.md`, every person taking part in the process should be registered, with their roles, affiliations and contact information;
 + a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
