@@ -68,7 +68,36 @@ of the Apollo Guidance Computer (@VirtualAGC).
 This document presents the first version of SWHAP, the ***SoftWare
 Heritage Acquisition Process*** to rescue, curate and illustrate
 landmark legacy software source code, a joint initiative of Software
-Heritage and the University of Pisa, in collaboration with UNESCO.
+Heritage and the University of Pisa, in collaboration with UNESCO. 
+
+The SWHAP process aims at preserving and presenting legacy software and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
+
+### Who is this guide for?
+
+The goal of this guide is to allow any party interested in preserving, curating and presenting legacy softwares in a digital format to achieve the SWHAP process in full autonomy. 
+Typically :
+- An archive, museum or library 
+- A company or research center
+- Any individual wishing to archive its own legacy software products
+
+#### Copyright disclaimer
+
+The individual or institution entering the SWHAP process should have all copyrights on the collected documents
+
+#### What entities should be involved ?
+
+- A physical archive: a physical location where physical raw materials are safely archived and
+stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner. 
+- Digital archives: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining the digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
+- Working depositories: between the collection of physical artefacts and the final digital archives a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. We will further elaborate about that later in this document. 
+
+TO DO : ajouter shéma
+
+#### What if I am stuck or have a question ?
+
+Because we are still developpig and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
+First, we suggest you checkout our FAQ:
+If you can't find what you are looking for there, please reachout to:
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -94,8 +123,12 @@ Phases
 ------
 
 The activities involved in the acquisition process can be organized in the
-following four phases, of which the first one is *conservative*, i.e., it is
-devoted to save the raw materials that the other phases will build upon.
+following four phases.
+
+- **Collect**: the first phase  is *conservative*, i.e., it is devoted to save the raw materials, in their physical or digital format, that the other phases will build upon.
+- **Curate**: the second phase aims at *analyzing, cleaning up and structuring* the raw materials that have been collected.
+- **Archive**: the third phase's goal is to contribute the curated materials to the digital infrastructures specialized for each kind of materials. From this stage on, all the curated material should have been digitalised in order to be processed. 
+- **Present** The purpose of this phase is to create dedicated presentations of the curated materials.
 
 Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
 data stores and roles.
@@ -216,6 +249,7 @@ value, as already mentioned, and to pass the collected information
 across the phases. These are shown in the lower part of Figure 1, and
 are summarized here.
 
+<!--
 ### Warehouse
 
 A physical location where physical raw materials are safely archived and
@@ -252,6 +286,7 @@ and a *Journal* recording its activities - *who did what, and when*. A
 list of the *Actors* involved in the process is also necessary.
 Provision to store all these information safely has to be foreseen in
 any supporting implementation.
+-->
 
 Roles in the process
 --------------------
