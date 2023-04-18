@@ -635,7 +635,7 @@ This information should be consigned in a dedicated metadata file,
 
 Now we are ready to (re-)create the development history of the
 software. First you need to create a branch Source Code, with the
-*src* folder.
+*source* folder.
 
 Then, you can proceed in two ways:
 
@@ -656,7 +656,7 @@ of the software via Git commits and releases.
 **Create the final repository**
 
 Finally you can create the "official" software repository, taking the
-versions history from the src branch and the metadata from the master
+versions history from the Source-Code branch and the metadata from the master
 branch.
 
 Iteration
