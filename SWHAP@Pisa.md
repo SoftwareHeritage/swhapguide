@@ -775,7 +775,7 @@ The resulting state of `raw_materials` is shown in Figure {@fig:cmm_raw}.
 In order to get a browsable version of the source code, we decompress
 the .tar.gz archive into the `browsable_source` folder
 
-    tar -xzf raw_material/cmm.tgz -C browsable_source
+    tar -xzf raw_materials/cmm.tgz -C browsable_source
 
 and commit the changes as done for the `raw_materials` folder
 
