@@ -914,7 +914,7 @@ Then we use the following template to create manually an individual commit/relea
 	export GIT_AUTHOR_NAME="Author Name"
 	export GIT_AUTHOR_EMAIL=<email@address>"
 	git add -A
-	git commit -m 'Commit Message Here'
+	git commit -m "Commit Message Here"
 	
 We also need to add an annotated tag to this version. For version 1.9 of CMM, here is
 the command we used, you can adapt it to your needs:
