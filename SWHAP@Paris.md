@@ -164,18 +164,19 @@ provides a walkthrough on an annotated example, using a real world medium-sized 
 project (@AttardiF96).
 
 ##### Table of Contents 
--[Inroduction](#intro)
--[Who is this guide intended for and how to use it?](#context)
--[The process, abstract view](#abstractview) 
--[The process, concrete view](#concreteview) 
--[A walkthrough on a running example](#runningexample)
--[Appendix A](#appendixa)
--[Appendix B](#appendixb)
--[Appendix C](#appendixc)
--[Bibliography](#bibliography)
+- [Inroduction](#intro)
+- [Who is this guide intended for and how to use it?](#context)
+- [The process, abstract view](#abstractview) 
+- [The process, concrete view](#concreteview) 
+- [A walkthrough on a running example](#runningexample)
+- [Appendix A - General Motivation for using Git and GitHub](#appendixa)
+- [Appendix B - Tools that can help](#appendixb)
+- [Appendix C - Tips on Github](#appendixc)
+- [Bibliography](#bibliography)
 
 
 <a name="abstractview"/>
+
 The process, abstract view {#sec:processabs}
 ==========================
 
@@ -415,6 +416,7 @@ acquisition process.
 \clearpage
 
 <a name="concreteview"/>
+
 The process, a concrete view {#sec:processconcrete}
 ============================
 
@@ -744,6 +746,7 @@ TO DO: Add story creation instructions
 
 
 <a name="runningexample"/>
+
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
 
@@ -1072,6 +1075,7 @@ In particular we should create :
 
 
 <a name="appendixa"/>
+
 Appendix A - General Motivation for using Git and GitHub
 ================================
 
@@ -1120,6 +1124,7 @@ the guide can be easily adapted to any of the other *Git*-based
 collaborative platforms.
 
 <a name="appendixb"/>
+
 Appendix B - Tools that can help
 ================================
 
@@ -1149,6 +1154,7 @@ Many other tools exist, and are currently under construction and will be
 loaded on the SWHAPPE repository on GitHub.
 
 <a name="appendixc"/>
+
 Appendix C - A few tips on Github
 =================================
 
