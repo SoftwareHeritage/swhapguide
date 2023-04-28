@@ -18,6 +18,7 @@ subparagraph: yes
 bibliography: swhap.bib
 ---
 <a name="intro"/>
+
 Introduction
 ============
 
@@ -163,15 +164,15 @@ provides a walkthrough on an annotated example, using a real world medium-sized 
 project (@AttardiF96).
 
 ##### Table of Contents 
-[Inroduction](#intro)
-[Who is this guide intended for and how to use it?](#context)
-[The process, abstract view](#abstractview) 
-[The process, concrete view](#concreteview) 
-[A walkthrough on a running example](#runningexample)
-[Appendix A](#appendixa)
-[Appendix B](#appendixb)
-[Appendix C](#appendixc)
-[Bibliography](#bibliography)
+-[Inroduction](#intro)
+-[Who is this guide intended for and how to use it?](#context)
+-[The process, abstract view](#abstractview) 
+-[The process, concrete view](#concreteview) 
+-[A walkthrough on a running example](#runningexample)
+-[Appendix A](#appendixa)
+-[Appendix B](#appendixb)
+-[Appendix C](#appendixc)
+-[Bibliography](#bibliography)
 
 
 <a name="abstractview"/>
