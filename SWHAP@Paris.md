@@ -74,7 +74,8 @@ Heritage and the University of Pisa, in collaboration with UNESCO.
 The SWHAP process aims at preserving and presenting legacy software and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 
 <a name="context"/>
-Who is this guide intended for and how to use it?
+
+Who is this guide for and what do you need to get started?
 ============
 
 The goal of this guide is to allow any party interested in preserving, curating and presenting legacy softwares in a digital format to achieve the SWHAP process in full autonomy. 
@@ -108,30 +109,16 @@ With respect to the human resources, several roles are needed to enact
 the process, as indicated in the top part of fig. 1. Here is a short
 summary of the involved capabilities.
 
-### Collector
-
-Searches and receives the raw materials. Identifies, classifies and
+- **Collector**: Searches and receives the raw materials. Identifies, classifies and
 separates source code and ancillary materials.
-
-### Deposit engineer
-
-Masters the procedures to archive physical and digital materials, in the
+- **Deposit engineer**: Masters the procedures to archive physical and digital materials, in the
 local context.
-
-### Curator
-
-Prepares the version history, identifying the authors and other
+- **Curator**: Prepares the version history, identifying the authors and other
 contributors. Provides a context to the source code, choosing among the
 ancillary materials.
-
-### Archive engineer
-
-Masters the procedures to transfer the curated source code to SWH and to
+- **Archive engineer**: Masters the procedures to transfer the curated source code to SWH and to
 publish the context in the Wikies.
-
-### Presentation designer and Web engineer
-
-These are out of the scope of this document, and are mentioned only to
+- **Presentation designer and Web engineer**: These are out of the scope of this document, and are mentioned only to
 note that, though most of the presentations of the archived software
 will be on line, the abilities to design the contents of a presentation
 should be considered separately from the technical ones.
@@ -152,6 +139,16 @@ If you can't find what you are looking for there, please reachout to: TO DO: dec
 
 What is the content of this guide?
 --------------------
+ 
+- [Inroduction](#intro)
+- [Who is this guide for and what do you need to get started?](#context)
+- [The process, abstract view](#abstractview) 
+- [The process, concrete view](#concreteview) 
+- [A walkthrough on a running example](#runningexample)
+- [Appendix A - General Motivation for using Git and GitHub](#appendixa)
+- [Appendix B - Tools that can help](#appendixb)
+- [Appendix C - Tips on Github](#appendixc)
+- [Bibliography](#bibliography)
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -162,18 +159,6 @@ GitHub collaborative development platform. This implementation is named SWHAPPE
 (SWH Acquisition Process Pisa Enactor) in this document. Finally, Section {@sec:walkthrough}
 provides a walkthrough on an annotated example, using a real world medium-sized software
 project (@AttardiF96).
-
-##### Table of Contents 
-- [Inroduction](#intro)
-- [Who is this guide intended for and how to use it?](#context)
-- [The process, abstract view](#abstractview) 
-- [The process, concrete view](#concreteview) 
-- [A walkthrough on a running example](#runningexample)
-- [Appendix A - General Motivation for using Git and GitHub](#appendixa)
-- [Appendix B - Tools that can help](#appendixb)
-- [Appendix C - Tips on Github](#appendixc)
-- [Bibliography](#bibliography)
-
 
 <a name="abstractview"/>
 
@@ -187,9 +172,6 @@ to perform the various operations described here.
 
 ![Source code acquisition process.](./media/image1.png){#fig:absprocess}
 
-Phases
-------
-
 The activities involved in the acquisition process can be organized in the
 following four phases.
 
@@ -201,7 +183,8 @@ following four phases.
 Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
 data stores and roles.
 
-### **Collect** 
+Collect
+------ 
 
 The purpose of this phase is *to find* the source code and related
 materials and *gather* it *as is* in a physical and/or logical place
@@ -230,7 +213,8 @@ descriptions should be provided to cater for the different situations
 identified. The same applies to the Curator role, which may need
 different capabilities in different scenarios.
 
-### **Curate**
+Curate
+------ 
 
 The purpose of this phase is *to* *analyze, cleanup and structure* the
 raw materials that have been collected.
@@ -253,7 +237,8 @@ Particular care is required to *identify the owners* of the different
 artifacts, and *obtain if needed the necessary authorizations* to make
 these artifacts publicly available[^1].
 
-### **Archive**
+Archive
+------ 
 
 The purpose of this phase is to contribute the curated materials to the
 infrastructures specialized for each kind of materials: ***Software
@@ -270,7 +255,8 @@ and Wikidata (see
 software source code to Software Heritage, a process that is new and may
 require rather technical steps.
 
-### **Present** 
+Present
+------  
 
 TO DO: Update with science stories / software stories
 
@@ -424,6 +410,11 @@ MF: the process should start with collecting, are at least making it clear we ar
 
 In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
 
+Seeting up your digital working environment
+----------------
+
+### General structure
+
 In order to implement SWHAP, the first step is to create the *Digital working environment* that will allow you to store the collected digital artifacts and to curate them. This can very well be set up using
 distinct digital platforms, but it is also possible to instantiate all
 of them on a single platform.
@@ -433,9 +424,6 @@ implementation adopted by the SWHAP\@Pisa project relies on the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
 platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to Appendix A. TO DO: add link
-
-Process overview
-----------------
 
 The core of the process will take place in your *Digital working environnement*. We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
 
@@ -562,9 +550,10 @@ Let us now see the steps to be followed, together with some
 explanations.
 -->
 
-### Collect phase
+Collect
+----------------
 
-**Collect artifacts and upload them**
+### Collect artifacts and upload them
 
 In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
@@ -584,7 +573,7 @@ guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 MF: wrong link, to be updated if relevant
 -->
 
-**Make the source code machine readable**
+### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
 
@@ -615,7 +604,7 @@ Finally, in preparation for the curation phase, you may want to copy
 the files in `browsable_source` to the `source` folder. TO DO: why? 
 
 
-**Create Depository**
+### Create Depository
 
 MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
 Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
@@ -625,9 +614,10 @@ folders `raw_materials` and `browsable_source`, together with the
 metadata updated to this point. Then, create the Depository repository
 from this branch.
 
-### Curate phase
+Curate 
+----------------
 
-**Curate the source code**
+### Curate the source code
 
 <!-- unclear sentence
 Once the Depository creation is complete, you can move back to the
@@ -683,16 +673,34 @@ You can proceed in two ways:
 The result will be a `source`folder that materializes the development history
 of the software via Git commits and releases.
 
-**Curate the ancillary materials**
+### Curate the ancillary materials
 
 From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`
 
-**Create the final repository**
+### Create the final repository
 
 MF: this should be part of archiving IMO. A dedicated repo is only need because of SWH ingestion process if I understand well. 
 Finally you can create the "official" software repository, taking the
 versions history from the Source-Code branch and the metadata from the master
 branch.
+
+
+Archive
+----------------
+
+### Archving Source Code
+
+TO DO: Add the logic of archiving in SWH
+
+### Archiving Ancillary materials
+
+TO DO: Add the logic of archiving in Wikimedia/wikidata etc
+
+Present
+----------------
+
+TO DO: Add story creation instructions
+
 
 Iteration
 ---------
@@ -729,21 +737,6 @@ recreate it, performing the following steps:
 > if (2), add the new version folder with the related metadata.
 
 -   Recreate the software history as for the first iteration.
-
-### Archving
-
-**Archving Source Code**
-
-TO DO: Add the logic of archiving in SWH
-
-**Archiving Ancillary materials**
-
-TO DO: Add the logic of archiving in Wikimedia/wikidata etc
-
-### Presenting
-
-TO DO: Add story creation instructions
-
 
 <a name="runningexample"/>
 
