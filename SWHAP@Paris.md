@@ -409,7 +409,7 @@ platform for all the virtual support areas of the process. If you are interested
 Process overview
 ----------------
 
-We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folder, also called repositories on Github.
+The core of the process will take place in your *Digital working environnement*. We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
 
 > *Workbench* repository, a working
 > area where one can temporarily collect the materials and then proceed
@@ -425,7 +425,7 @@ We propose to structure your *Digital working environment* into three disctinct 
 > projects that did not use a version control system.
 
 
-Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository and *Source Code* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see you to instantiate your *Workbench*.
+Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository and *Source Code* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
 
 ### Instantiating your Workbench
 
@@ -447,19 +447,13 @@ physical location, following the well established process for museums,
 so we will not cover it in this guide.
 -->
 
-GitHub features *template* repositories that can be instantiated
-whenever needed (see
+We created a *template* repository that you can easily copy to instantiate your dedicated workbench. 
+The [SWHAP-TEMPLATE](https://github.com/Unipisa/SWHAP-TEMPLATE) embodies the core support to enact the process. Its
+structure and use is shown in figure 2. After copying it, you can change its name to *SWName-Workbench* ; the *SWName* being the name of the Software you are working on. 
 
-[[https://help.github.com/en/articles/creating-a-template-repository]{.underline}](https://help.github.com/en/articles/creating-a-template-repository)).
-We used this feature in SWHAPPE, and designed a repository,
-SWHAP-TEMPLATE, that embodies the core support to enact the process. Its
-structure and use is shown in figure 2. In the picture and in the
-following *SWName* is a variable that takes the name of the acquired
-code as its value at each instantiation.
-
-Once SWHAP-TEMPLATE has been instantiated, the *SWName-Workbench*
-repository so created need to be cloned to the user's machine, so that
-he can work on the collected files locally - the Git clone mechanism
+We recommand you to clone your *SWName-Workbench*
+repository to your machine, so that
+you can work on the collected files locally - the Git clone mechanism
 ensures that these changes can be safely moved to the original
 repository, for publication and sharing with other actors in the
 acquisition.
@@ -480,8 +474,7 @@ acquisition.
 
 Figure 2. Overview of the SWHAPPE process.
 
-The SWHAP template
-------------------
+### Workbench structure
 
 The structure of the template is shown in Fig. 3.
 
@@ -499,21 +492,31 @@ the GitHub web interface, e.g., archives should be decompressed, code
 transcribed from pictures, etc.
 -->
 
+Your newly created workbench is composed of the following folders:
+- The `raw_materials` folder used to store all the collected materials in their intial format (ex: source code can be a scanned document) 
+- The `browsable source` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
+- The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
+- The `source` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of
+*Git*
+- The metadata folder, is used to record all the information about the
+software and the acquisition process (catalogue, actors, journal, etc.).
+The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
 
-
+<!--
 The `source` folder is provided as the starting point for the creation of
 the Source Code *Git* repository, in the curation phase. The curator has
 to recognize each major version of the code, and refactor it accordingly
 - one separate folder per each version. To create the Source Code
 Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 *Git*.
+-->
 
-As for the metadata folder, here we record all the information about the
-software and the acquisition process (catalogue, actors, journal, etc.).
-The guidelines to fill this part are given in the template itself.
+
 
 ![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
 
+
+<!--
 The process, step by step
 -------------------------
 
@@ -529,31 +532,46 @@ GitHub.
 
 Let us now see the steps to be followed, together with some
 explanations.
+-->
 
 ### Collect phase
 
-**Upload files in `raw_materials`**
+**Collect artifacts and upload them**
 
-All the collected files must be uploaded in the `raw_materials` folder.
+In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
+Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
+We encourage you to dititalise (by scanning or photographying) all the relevant physical objects. 
+
+All the collected digital files must then be uploaded in the `raw_materials` folder.
+
+To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case?)
+
+
+<!-- MF: should'nt that be done in the metadata folder? I feel like Spectrum guidelines are way over the top, we are not a museum. + is this our role? 
 If there are physical materials, folder `raw_materials` should contain
 a reference to the related Warehouse, that may follow the Spectrum
 guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 
-**Move the source code to `browsable_source`**
+MF: wrong link, to be updated if relevant
+-->
 
-All the source code files must then be put into the `browsable_source`
-folder.
+**Make the source code machine readable**
 
-If the raw material is an archive, you should unpack it locally and
-then upload the result on GitHub by performing a push[^7].
+The next step is to ensure that the collected source code is made available in a machine-readable format. 
 
-If the code was only available in non digital form (e.g. printed
+
+If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
 an OCR (optical character recognition) tool to parse it. See
 [[Appendix
 A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
-for a list of suggested tools.
+for a list of suggested tools. 
+
+If the raw source code is an archive file (.tar) and/or compressed, you should unpack it locally on your computer. 
+
+Once you made your source code machine readable, all the source code files must then be put into the `browsable_source`
+folder.
 
 Particular care should be used to ensure the files in
 `browsable_source` have the correct extension: scanner and OCR usually
@@ -566,9 +584,13 @@ about the versions of the software. The purpose is to have
 machine-readable documents.
 
 Finally, in preparation for the curation phase, you may want to copy
-the files in `browsable_source` to the `source` folder.
+the files in `browsable_source` to the `source` folder. TO DO: why? 
+
 
 **Create Depository**
+
+MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
+Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
 
 The next step is to create the branch Depository, containing only the
 folders `raw_materials` and `browsable_source`, together with the
@@ -579,20 +601,23 @@ from this branch.
 
 **Curate the source code**
 
+<!-- unclear sentence
 Once the Depository creation is complete, you can move back to the
-`source` folder in the master branch. Here you have to divide and number
-the versions, putting the files of each one in a dedicated folder and
-determining who did what and when.
+`source` folder in the master branch. -->
+
+The curation phase will allow you to recreate the development history of the code, leveraging the *commit* and *versionning mechanisms of Git. To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  
+
+First, sort out the source code files present int the `browsable_source` folder, putting them in a different folder for each version. You can typically call each folder `MySoftware-V1.0`, `MySoftware-V2.0`etc. 
+
+Second,determine who did what and when.
 
 In practice, this means that *for each version of the software* you
 need to ascertain:
 
 -   the *main contributing author*,
-
 -   the *exact date* of the release of this particular version
 
-This information should be consigned in a dedicated metadata file,
-`version_history.csv`, with the following fields:
+This information should be consigned in the `version_history.csv` in the `metadata`folder, with the following fields:
 
 \rowcolors{1}{gray!10}{white} 
 
@@ -605,15 +630,16 @@ This information should be consigned in a dedicated metadata file,
 | curator name   	 | name of the curator person or team                               |
 | curator email  	 | the reference email of the acquisition process                   |
 | release tag   	  | a tag name if the directory contains a release, empty otherwise  |
-| commit message 	 | text containing a brief note from the curation team              |
+| message 	 | text containing a brief note from the curation team              |
 
-**(Re-)Create the Development History**
 
-Now we are ready to (re-)create the development history of the
-software. First you need to create a branch Source Code, with the
-*source* folder.
+Now you are ready to (re-)create the development history of the
+software, by successively commiting the source code files of each version from the `browsable source` into the `source` folder, updating the commits metadata to reflect historical develoment.  
 
-Then, you can proceed in two ways:
+<!--First you need to create a branch Source Code, with the
+*source* folder.-->
+
+You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
     into the `source` folder, reading the information collected in the
@@ -626,11 +652,16 @@ Then, you can proceed in two ways:
     ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
     , and you can see a running example in the next section.
 
-The result will be a branch that materializes the development history
+The result will be a `source`folder that materializes the development history
 of the software via Git commits and releases.
+
+**Curate the ancillary materials**
+
+From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`
 
 **Create the final repository**
 
+MF: this should be part of archiving IMO. A dedicated repo is only need because of SWH ingestion process if I understand well. 
 Finally you can create the "official" software repository, taking the
 versions history from the Source-Code branch and the metadata from the master
 branch.
@@ -669,7 +700,20 @@ recreate it, performing the following steps:
 
 -   Recreate the software history as for the first iteration.
 
-\clearpage
+### Archving
+
+**Archving Source Code**
+
+TO DO: Add the logic of archiving in SWH
+
+**Archiving Ancillary materials**
+
+TO DO: Add the logic of archiving in Wikimedia/wikidata etc
+
+### Presenting
+
+TO DO: Add story creation instructions
+
 
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
