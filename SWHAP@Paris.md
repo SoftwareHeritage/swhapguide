@@ -1171,6 +1171,7 @@ consult. Here is a discussion on how to see the branch history:
 [[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
 
 <a name="bibliography"/>
+
 Bibliography
 ============
 
