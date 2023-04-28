@@ -72,7 +72,8 @@ Heritage and the University of Pisa, in collaboration with UNESCO.
 
 The SWHAP process aims at preserving and presenting legacy software and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 
-### Who is this guide for?
+Who is this guide intended for and how to use it?
+============
 
 The goal of this guide is to allow any party interested in preserving, curating and presenting legacy softwares in a digital format to achieve the SWHAP process in full autonomy. 
 Typically :
@@ -83,21 +84,26 @@ Typically :
 #### Copyright disclaimer
 
 The individual or institution entering the SWHAP process should have all copyrights on the collected documents
+TO DO: ellaborate on this
 
-#### What entities should be involved ?
+#### What entities should be involved?
 
-- A physical archive: a physical location where physical raw materials are safely archived and
-stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner. 
-- Digital archives: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining the digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
-- Working depositories: between the collection of physical artefacts and the final digital archives a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. We will further elaborate about that later in this document. 
+- A physical archive: a physical location where physical raw materials are safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
+- Digital archives: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
+- Online presentation plateform: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
+- Working depositories: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these depositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 TO DO : ajouter shéma
 
 #### What if I am stuck or have a question ?
 
-Because we are still developpig and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
-First, we suggest you checkout our FAQ:
-If you can't find what you are looking for there, please reachout to:
+Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
+
+First, we suggest you checkout our FAQ: TO DO: create FAQ and input link
+
+If you can't find what you are looking for there, please reachout to: TO DO: decide if we want to provide a contact point
+
+### What is the content of this guide?
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -173,13 +179,13 @@ different *versions* with their *production dates need to be
 ascertained*, and the *contributors need to be identified* in order to
 build a *faithful history of the evolution* of the software over time.
 
-Also, proper *metadata* should be created and made available alongside
-the source code, providing all the key information about the software
-that is discovered during the curation phase. We recommend to use the
+For both source code artifacts and ancilliary artificats, proper *metadata* should be created and made available, providing all the key information about the artifacts that are discovered during the curation phase. 
+Regarding source code artifcats, we recommend to use the
 vocabulary provided by **CodeMeta** as an extension to schema.org (see
 [[https://codemeta.github.io/terms/]{.underline}](https://codemeta.github.io/terms/));
 this includes the software runtime platform, programming languages,
 authors, license, etc.
+For other artifacts we will provide a dedicated template. 
 
 Particular care is required to *identify the owners* of the different
 artifacts, and *obtain if needed the necessary authorizations* to make
@@ -203,6 +209,8 @@ software source code to Software Heritage, a process that is new and may
 require rather technical steps.
 
 ### **Present** 
+
+TO DO: Update with science stories / software stories
 
 The purpose of this phase is to create dedicated presentations of the
 curated materials.
@@ -250,6 +258,9 @@ across the phases. These are shown in the lower part of Figure 1, and
 are summarized here.
 
 <!--
+
+MF: I think this should be moved earlier in the document and explaining who is responible for what. I don't fi=ully get the role of the despository. I don't think things are "safely archived" on Github (otherwise we wouldn't need SWH!), so I don't see the point of maintaining the depository there. 
+
 ### Warehouse
 
 A physical location where physical raw materials are safely archived and
@@ -290,6 +301,8 @@ any supporting implementation.
 
 Roles in the process
 --------------------
+
+MF: I think this should be move way before. The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should bot be a need for archive engineer or web engineer.
 
 With respect to the human resources, several roles are needed to enact
 the process, as indicated in the top part of fig. 1. Here is a short
@@ -378,6 +391,11 @@ acquisition process.
 The process, a concrete view {#sec:processconcrete}
 ============================
 
+MF: the process should start with collecting, are at least making it clear we are not tackling it here. Otherwise hard to understand where we are starting from. 
+
+### Collect
+
+### Curate
 In order to implement SWHAP, the first step is to decide how to
 instantiate the needed storage and working areas: Warehouse, Depository,
 Curated source code deposit and Workbench.
