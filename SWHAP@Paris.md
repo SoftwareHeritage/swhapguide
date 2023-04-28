@@ -81,12 +81,14 @@ Typically :
 - A company or research center
 - Any individual wishing to archive its own legacy software products
 
-#### Copyright disclaimer
+Copyright disclaimer
+--------------------
 
 The individual or institution entering the SWHAP process should have all copyrights on the collected documents
 TO DO: ellaborate on this
 
-#### What entities should be involved?
+What entities are involved?
+--------------------
 
 - *A physical archive*: a physical location where physical raw materials are safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
 - *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
@@ -95,7 +97,50 @@ TO DO: ellaborate on this
 
 TO DO : ajouter shéma
 
-#### What if I am stuck or have a question ?
+What are the different roles invovled?
+--------------------
+
+MF:  The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should bot be a need for archive engineer or web engineer.
+
+With respect to the human resources, several roles are needed to enact
+the process, as indicated in the top part of fig. 1. Here is a short
+summary of the involved capabilities.
+
+### Collector
+
+Searches and receives the raw materials. Identifies, classifies and
+separates source code and ancillary materials.
+
+### Deposit engineer
+
+Masters the procedures to archive physical and digital materials, in the
+local context.
+
+### Curator
+
+Prepares the version history, identifying the authors and other
+contributors. Provides a context to the source code, choosing among the
+ancillary materials.
+
+### Archive engineer
+
+Masters the procedures to transfer the curated source code to SWH and to
+publish the context in the Wikies.
+
+### Presentation designer and Web engineer
+
+These are out of the scope of this document, and are mentioned only to
+note that, though most of the presentations of the archived software
+will be on line, the abilities to design the contents of a presentation
+should be considered separately from the technical ones.
+
+**[Remark]{.underline}** the roles indicated above need not necessarily
+be played by different persons, e.g., Collector and Curator may be the
+same person, nor be played by a unique person, e.g., there can be
+several cooperating Curators, in case of large systems.
+
+What if I am stuck or have a question ?
+--------------------
 
 Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
 
@@ -103,7 +148,8 @@ First, we suggest you checkout our FAQ: TO DO: create FAQ and input link
 
 If you can't find what you are looking for there, please reachout to: TO DO: decide if we want to provide a contact point
 
-### What is the content of this guide?
+What is the content of this guide?
+--------------------
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
@@ -245,7 +291,7 @@ information. This suggests that, whenever possible, the data stores
 should be fully versionable, not to loose historical information about
 the acquisition process itself.
 
-Resources needed by the process
+<!--Resources needed by the process
 -------------------------------
 
 As any process supported digitally, SWHAP needs both human and technical
@@ -255,7 +301,7 @@ First of all, several data stores and working areas are needed, to save
 and make public the intermediate products, which are themselves of
 value, as already mentioned, and to pass the collected information
 across the phases. These are shown in the lower part of Figure 1, and
-are summarized here.
+are summarized here. -->
 
 <!--
 
@@ -300,53 +346,17 @@ Provision to store all these information safely has to be foreseen in
 any supporting implementation.
 -->
 
-Roles in the process
---------------------
 
-MF: I think this should be move way before. The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should bot be a need for archive engineer or web engineer.
 
-With respect to the human resources, several roles are needed to enact
-the process, as indicated in the top part of fig. 1. Here is a short
-summary of the involved capabilities.
-
-### Collector
-
-Searches and receives the raw materials. Identifies, classifies and
-separates source code and ancillary materials.
-
-### Deposit engineer
-
-Masters the procedures to archive physical and digital materials, in the
-local context.
-
-### Curator
-
-Prepares the version history, identifying the authors and other
-contributors. Provides a context to the source code, choosing among the
-ancillary materials.
-
-### Archive engineer
-
-Masters the procedures to transfer the curated source code to SWH and to
-publish the context in the Wikies.
-
-### Presentation designer and Web engineer
-
-These are out of the scope of this document, and are mentioned only to
-note that, though most of the presentations of the archived software
-will be on line, the abilities to design the contents of a presentation
-should be considered separately from the technical ones.
-
+<!--
 **[Remark]{.underline}** the technical resources described above in
 abstract terms, may be implemented in a variety of ways. For example,
 one can imagine a single Depository for all the software projects that
 are collected, but it is also possible to use a separate Depository for
 each software project, and the same holds for all the other areas.
+-->
 
-**[Remark]{.underline}** the roles indicated above need not necessarily
-be played by different persons, e.g., Collector and Curator may be the
-same person, nor be played by a unique person, e.g., there can be
-several cooperating Curators, in case of large systems.
+
 
 Implementation requirements
 ---------------------------
@@ -668,6 +678,8 @@ branch.
 
 Iteration
 ---------
+
+TO DO : to be updated, I don't think adding a simple picture should require clone and pushing etc. 
 
 New material may be discovered after the process has been completed,
 triggering an iteration of some of the phases described above. In this
