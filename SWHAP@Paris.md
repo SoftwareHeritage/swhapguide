@@ -161,6 +161,13 @@ GitHub collaborative development platform. This implementation is named SWHAPPE
 provides a walkthrough on an annotated example, using a real world medium-sized software
 project (@AttardiF96).
 
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
+
 The process, abstract view {#sec:processabs}
 ==========================
 
