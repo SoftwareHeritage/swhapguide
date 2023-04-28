@@ -88,10 +88,10 @@ TO DO: ellaborate on this
 
 #### What entities should be involved?
 
-- A physical archive: a physical location where physical raw materials are safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
-- Digital archives: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
-- Online presentation plateform: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
-- Working depositories: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these depositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
+- *A physical archive*: a physical location where physical raw materials are safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
+- *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
+- *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
+- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these depositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 TO DO : ajouter shéma
 
@@ -259,7 +259,8 @@ are summarized here.
 
 <!--
 
-MF: I think this should be moved earlier in the document and explaining who is responible for what. I don't fi=ully get the role of the despository. I don't think things are "safely archived" on Github (otherwise we wouldn't need SWH!), so I don't see the point of maintaining the depository there. 
+MF: I think this should be moved earlier in the document and explaining who is responible for what. I don't fully get the role of the Despository. I don't think things are "safely archived" on Github (otherwise we wouldn't need SWH!), so I don't see the point of maintaining the depository there. 
+Also this is mixing thing which are part of the SWHAP process iteself and some which are not (like the warehouse). 
 
 ### Warehouse
 
@@ -393,92 +394,28 @@ The process, a concrete view {#sec:processconcrete}
 
 MF: the process should start with collecting, are at least making it clear we are not tackling it here. Otherwise hard to understand where we are starting from. 
 
-### Collect
+In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
 
-### Curate
-In order to implement SWHAP, the first step is to decide how to
-instantiate the needed storage and working areas: Warehouse, Depository,
-Curated source code deposit and Workbench.
-
-The Warehouse is quite similar to the usual storage area where museums
-preserve their collections; it will need to be set up in a specific
-physical location, following the well established process for museums,
-so we will not cover it in this guide.
-
-The other areas, which are virtual spaces, can very well be set up using
+In order to implement SWHAP, the first step is to create the *Digital working environment* that will allow you to store the collected digital artifacts and to curate them. This can very well be set up using
 distinct digital platforms, but it is also possible to instantiate all
 of them on a single platform.
 
-This choice was made for the SWHAP Pisa Enactor (SWHAPPE), the
-implementation adopted by the SWHAP\@Pisa project: SWHAPPE exploits the
+The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
+implementation adopted by the SWHAP\@Pisa project relies on the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
-platform for all the virtual support areas of the process.
+platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to Appendix A. TO DO: add link
 
-The solutions adopted in SWHAPPE are described in detail in this
-section, together with their rationale.
+Process overview
+----------------
 
-General Motivation for using Git and GitHub
--------------------------------------------
+We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folder, also called repositories on Github.
 
-The choice of Git as the designated tool for traceability and historical
-accuracy, and of GitHub as the unifying platform to support the SWHAP
-process proceeds from several considerations that we review below.
-
-First of all we discuss the choice of *Git*. One of the key requirements
-set forth for SWHAP is the need to ensure *full traceability* of the
-operations performed on the recovered digital assets. This means that
-each of the virtual places must provide means to record the history of
-the modifications made to the digital assets, with information on *who
-did what and when*. It is very convenient to use the same tool in all of
-the virtual places of the process, as this reduces the learning effort
-and streamlines the process. All modern version control systems provide
-the needed functionality, and we have chosen *Git* as our standard tool,
-as it is open source (another of our requirements) and broadly adopted.
-*Git* is a powerful tool, and requires some expertise to make the most
-out of it. However, a large part of the process is scriptable, and this
-will hide the underlying complexity to the final user, which can then
-focus on the main issue: curating and preserving the code and its
-history.
-
-Another important motivation for our choice of Git is the ability to
-support *historical accuracy*, i.e., providing a faithful view of the
-history of both the recovered source code and the acquisition process,
-as prescribed by the SWHAP key requirements. This is properly
-accommodated by the commit and versioning mechanisms offered by Git,
-that allow to separate authors from committers: this way on can record
-both the story of the original software and the story of its curation.
-
-Finally, we had to choose one of the many online platforms that allow to
-collaborate using *Git*. GitHub, GitLab.com and Bitbucket are the most
-known ones and are all regularly archived in Software Heritage, so that
-*long term availability* of their contents is preserved, no matter which
-one of these platforms is chosen.
-
-Among all these platforms, GitHub is by far the most popular and active,
-and is also the platform adopted by the University of Pisa, so it was a
-natural choice, and we believe this will make the learning curve gentler
-for most SWHAP adopters.
-
-In the following, we provide detailed guidelines to instantiate the
-process using Git on GitHub. We think that most of what is described in
-the guide can be easily adapted to any of the other *Git*-based
-collaborative platforms.
-
-SWHAP - GitHub correspondence
------------------------------
-
-SWHAPPE is a straightforward implementation of the abstract process,
-which concretizes the (logical) areas described
-[[above]{.underline}](#v3wi5289omx) by means of *repositories* in
-GitHub: there are three repositories for each source code acquisition,
-one for each area of the abstract process:
-
-> *Workbench* repository, to implement the Workbench, i.e. a working
+> *Workbench* repository, a working
 > area where one can temporarily collect the materials and then proceed
 > to curate the code;
 >
-> *Depository* repository, to implement the Depository, where we can
+> *Depository* repository, where we can
 > collect and keep separated the raw materials from the curated source
 > code;
 >
@@ -487,6 +424,13 @@ one for each area of the abstract process:
 > history is usually "synthetic", rebuilt by the curation team, for old
 > projects that did not use a version control system.
 
+
+Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository and *Source Code* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see you to instantiate your *Workbench*.
+
+### Instantiating your Workbench
+
+<!--
+MF: is this comment needed ? Maybe to precise at this stage (avoiding mental overload). 
 Let's remark that SWHAPPE has *different* Workbench and Depository
 repositories for each code acquisition, but it would also be possible to
 use a single Workbench repository and/or a single Depository repository
@@ -494,9 +438,14 @@ to work on all the collected software, provided one maintains a
 well-organised directory structure which keeps the codes separated. On
 the other hand, we *need* a Source Code repository for each software
 project, to be actually ingested in the Software Heritage archive.
+-->
 
-Process overview
-----------------
+<!--
+The Warehouse is quite similar to the usual storage area where museums
+preserve their collections; it will need to be set up in a specific
+physical location, following the well established process for museums,
+so we will not cover it in this guide.
+-->
 
 GitHub features *template* repositories that can be instantiated
 whenever needed (see
@@ -515,15 +464,17 @@ ensures that these changes can be safely moved to the original
 repository, for publication and sharing with other actors in the
 acquisition.
 
+<!-- Too detailed at this point IMO
 We create two dedicated *branches*[^4], that allow to track separately
 the operations that will be later moved to the Depository and the
 Development History Deposit: *Depository*, to contain the raw materials
 and the browsable sources as well as the metadata, and *SourceCode* to
 organize the source code in view of the reconstruction of its
-development history. Finally, the *Depository* and *SourceCode* branches
-become two repositories: the latter is shipped to the Software Heritage
+development history. Finally, the *Depository* and *SourceCode* branches will
+become two distinct repositories: the latter is shipped to the Software Heritage
 archive, the former is published by the organization promoting the
 acquisition.
+-->
 
 ![Overview of the SWHAPPE approach](./media/image2.png){#fig:swhappe}
 
@@ -534,6 +485,10 @@ The SWHAP template
 
 The structure of the template is shown in Fig. 3.
 
+<!-- 
+
+MF: I don't understand this sentence,le t's just discribe each folder and what is it for
+
 First of all, we can see a correspondence between the Depository
 presented in the process and the area provided by `raw_materials` and
 `browsable_source`: indeed, these two folders will be moved in order to
@@ -542,6 +497,9 @@ the original materials, just as they have been found or submitted, the
 latter with a first revision of the source code, made accessible through
 the GitHub web interface, e.g., archives should be decompressed, code
 transcribed from pictures, etc.
+-->
+
+
 
 The `source` folder is provided as the starting point for the creation of
 the Source Code *Git* repository, in the curation phase. The curator has
@@ -1039,7 +997,56 @@ In particular we should create :
 + an actors registry: `metatdata/actors.md`, every person taking part in the process should be registered, with their roles, affiliations and contact information;
 + a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
 
-Appendix A - Tools that can help
+
+Appendix A - General Motivation for using Git and GitHub
+================================
+
+The choice of Git as the designated tool for traceability and historical
+accuracy, and of GitHub as the unifying platform to support the SWHAP
+process proceeds from several considerations that we review below.
+
+First of all we discuss the choice of *Git*. One of the key requirements
+set forth for SWHAP is the need to ensure *full traceability* of the
+operations performed on the recovered digital assets. This means that
+each of the virtual places must provide means to record the history of
+the modifications made to the digital assets, with information on *who
+did what and when*. It is very convenient to use the same tool in all of
+the virtual places of the process, as this reduces the learning effort
+and streamlines the process. All modern version control systems provide
+the needed functionality, and we have chosen *Git* as our standard tool,
+as it is open source (another of our requirements) and broadly adopted.
+*Git* is a powerful tool, and requires some expertise to make the most
+out of it. However, a large part of the process is scriptable, and this
+will hide the underlying complexity to the final user, which can then
+focus on the main issue: curating and preserving the code and its
+history.
+
+Another important motivation for our choice of Git is the ability to
+support *historical accuracy*, i.e., providing a faithful view of the
+history of both the recovered source code and the acquisition process,
+as prescribed by the SWHAP key requirements. This is properly
+accommodated by the commit and versioning mechanisms offered by Git,
+that allow to separate authors from committers: this way on can record
+both the story of the original software and the story of its curation.
+
+Finally, we had to choose one of the many online platforms that allow to
+collaborate using *Git*. GitHub, GitLab.com and Bitbucket are the most
+known ones and are all regularly archived in Software Heritage, so that
+*long term availability* of their contents is preserved, no matter which
+one of these platforms is chosen.
+
+Among all these platforms, GitHub is by far the most popular and active,
+and is also the platform adopted by the University of Pisa, so it was a
+natural choice, and we believe this will make the learning curve gentler
+for most SWHAP adopters.
+
+In the following, we provide detailed guidelines to instantiate the
+process using Git on GitHub. We think that most of what is described in
+the guide can be easily adapted to any of the other *Git*-based
+collaborative platforms.
+
+
+Appendix B - Tools that can help
 ================================
 
 Here is a list of tools for code acquisition and curation that have been
@@ -1067,7 +1074,7 @@ used during the initial experimentation of SWHAPPE:
 Many other tools exist, and are currently under construction and will be
 loaded on the SWHAPPE repository on GitHub.
 
-Appendix B - A few tips on Github
+Appendix C - A few tips on Github
 =================================
 
 *Git* is a distributed version-control system for tracking changes in
