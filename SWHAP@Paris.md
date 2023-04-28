@@ -17,7 +17,7 @@ author:
 subparagraph: yes
 bibliography: swhap.bib
 ---
-
+<a name="intro"/>
 Introduction
 ============
 
@@ -72,6 +72,7 @@ Heritage and the University of Pisa, in collaboration with UNESCO.
 
 The SWHAP process aims at preserving and presenting legacy software and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 
+<a name="context"/>
 Who is this guide intended for and how to use it?
 ============
 
@@ -161,13 +162,19 @@ GitHub collaborative development platform. This implementation is named SWHAPPE
 provides a walkthrough on an annotated example, using a real world medium-sized software
 project (@AttardiF96).
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+##### Table of Contents 
+[Inroduction](#intro)
+[Who is this guide intended for and how to use it?](#context)
+[The process, abstract view](#abstractview) 
+[The process, concrete view](#concreteview) 
+[A walkthrough on a running example](#runningexample)
+[Appendix A](#appendixa)
+[Appendix B](#appendixb)
+[Appendix C](#appendixc)
+[Bibliography](#bibliography)
 
+
+<a name="abstractview"/>
 The process, abstract view {#sec:processabs}
 ==========================
 
@@ -406,6 +413,7 @@ acquisition process.
 
 \clearpage
 
+<a name="concreteview"/>
 The process, a concrete view {#sec:processconcrete}
 ============================
 
@@ -734,6 +742,7 @@ TO DO: Add the logic of archiving in Wikimedia/wikidata etc
 TO DO: Add story creation instructions
 
 
+<a name="runningexample"/>
 A walkthrough on a running example {#sec:walkthrough}
 ==================================
 
@@ -1061,6 +1070,7 @@ In particular we should create :
 + a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
 
 
+<a name="appendixa"/>
 Appendix A - General Motivation for using Git and GitHub
 ================================
 
@@ -1108,7 +1118,7 @@ process using Git on GitHub. We think that most of what is described in
 the guide can be easily adapted to any of the other *Git*-based
 collaborative platforms.
 
-
+<a name="appendixb"/>
 Appendix B - Tools that can help
 ================================
 
@@ -1137,6 +1147,7 @@ used during the initial experimentation of SWHAPPE:
 Many other tools exist, and are currently under construction and will be
 loaded on the SWHAPPE repository on GitHub.
 
+<a name="appendixc"/>
 Appendix C - A few tips on Github
 =================================
 
@@ -1175,6 +1186,7 @@ thus the history of Depository and SourceCode is kept clean and easy to
 consult. Here is a discussion on how to see the branch history:
 [[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
 
+<a name="bibliography"/>
 Bibliography
 ============
 
