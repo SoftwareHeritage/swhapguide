@@ -367,39 +367,23 @@ The abstract process may be implemented using different tools, platforms
 and technologies, as long as the following key requirements are
 satisfied.
 
-### Long term availability
-
-The places where the artefact (both raw and curated) are stored must
+- **Long term availability**: The places where the artefact (both raw and curated) are stored must
 provide sufficient guarantees of availability over the long term. These
 places may be physical (warehouses), or logical (depositories).
-
-### Historical accuracy
-
-Any supporting implementation should support the faithful recording of
+- **Historical accuracy**: Any supporting implementation should support the faithful recording of
 the authorship of the source code as well as of the reconstruction
 process, e.g., via a flexible versioning system.
-
-### Traceability
-
-It must be possible to trace the origin of each of the artifacts that
+- **Traceability**: It must be possible to trace the origin of each of the artifacts that
 are collected, curated and deposited. For physical materials, we refer
 to common practice[^3]. For digital artifacts, it is recommended to keep
 a *journal of all the operations* that are performed, and to automate
 them as much as possible, as the collection and curation process may
 require several iterations.
-
-### Openness
-
-Any supporting implementation should be based on open and free tools and
+- **Openness**: Any supporting implementation should be based on open and free tools and
 standards.
-
-### Interoperability 
-
-Any supporting implementation should provide support for the cooperation
+- **Interoperability**: Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
 acquisition process.
-
-\clearpage
 
 <a name="concreteview"/>
 
