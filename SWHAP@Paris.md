@@ -544,9 +544,7 @@ Whenever possible, we encourage you to reach out to the authors of the softwares
 
 We encourage you to dititalise (by scanning or photographying) all the relevant physical objects. 
 
-All the collected digital files must then be uploaded in the `raw_materials` folder.
-
-To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case?)
+All the collected digital files must then be uploaded in the `raw_materials` folder. 
 
 
 <!-- MF: should'nt that be done in the metadata folder? I feel like Spectrum guidelines are way over the top, we are not a museum. + is this our role? 
@@ -588,16 +586,6 @@ Finally, in preparation for the curation phase, you may want to copy
 the files in `browsable_source` to the `source` folder. TO DO: why? 
 
 
-### Create Depository
-
-MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
-Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
-
-The next step is to create the branch Depository, containing only the
-folders `raw_materials` and `browsable_source`, together with the
-metadata updated to this point. Then, create the Depository repository
-from this branch.
-
 Curate 
 ----------------
 
@@ -611,7 +599,7 @@ The curation phase will allow you to recreate the development history of the cod
 
 First, sort out the source code files present int the `browsable_source` folder, putting them in a different folder for each version. You can typically call each folder `MySoftware-V1.0`, `MySoftware-V2.0`etc. 
 
-Second,determine who did what and when.
+Second, fill in the information that will be used in the metadata of the commits.
 
 In practice, this means that *for each version of the software* you
 need to ascertain:
@@ -654,29 +642,54 @@ You can proceed in two ways:
     ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
     , and you can see a running example in the next section.
 
-The result will be a `source`folder that materializes the development history
+The result will be a `source` folder that materializes the development history
 of the software via Git commits and releases.
-
-### Curate the ancillary materials
-
-From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`
 
 ### Create the final repository
 
-MF: this should be part of archiving IMO. A dedicated repo is only need because of SWH ingestion process if I understand well. 
-Finally you can create the "official" software repository, taking the
-versions history from the Source-Code branch and the metadata from the master
-branch.
+Using this `source` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
+
+### Curate the ancillary materials
+
+From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. (MF: are these the right subfolders? At this point of the process we are curating , not presenting yet. I think the folder organisation should have its own logic indepently of the choice of presentation)
+
+To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
+
+At this point you might have collected items for which you don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
+
+If you can't get copyright for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`.  
+
+### Create Depository
+
+MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
+Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
+
+The next step is to create the branch Depository, containing only the
+folders `raw_materials`, `browsable_source`, `additional_materials` together with the
+metadata updated to this point. Remember to remove the folder containing items for which you did not get the copyrights. 
+Then, create the Depository repository from this branch. This will be the publicly available showcase of your work. 
+
+
 
 
 Archive
 ----------------
 
-### Archving Source Code
+### Archiving Source Code
 
 TO DO: Add the logic of archiving in SWH
 
-### Archiving Ancillary materials
+### Archiving additional materials and software information
+
+The Archiving of additional materials will take place using the open source platforms Wikimedia and Wikidata. 
+Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
+
+To start, search Wikidata to see if an item for the software title exists. If no item is found, the curator creates a new item and adds statements to the Wikidata item based on the codemeta.json file as well as any other available information using properties related to software. (TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to deit no?)
+
+Upload images related to the software to Wikimedia Commons. If there is only one image, the curator visits the Wikidata item for the software title and uses field P18 to connect the image to the Wikidata item.
+If there are multiple images, the curator creates a category for the software title in Wikimedia Commons and the returns to Wikidata and uses field P373 to connect the category to the Wikidata item.
+
+
 
 TO DO: Add the logic of archiving in Wikimedia/wikidata etc
 
