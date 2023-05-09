@@ -498,7 +498,7 @@ Your newly created workbench is composed of the following folders:
 - The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
 - The `source` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of
 *Git*
-- The metadata folder, is used to record all the information about the
+- The `metadata folder`, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
 
