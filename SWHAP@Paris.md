@@ -521,7 +521,7 @@ Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 *Git*.
 -->
 
-
+TO DO: part of instantiation would be to add meta data regarding curators etc in actors.md
 
 ![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
 
@@ -745,7 +745,8 @@ Archive
 
 Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runes smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), andsubmit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
 
-TO DO: add the blaz to your github page. 
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your Source Code repositoru. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+
 
 ### Archiving additional materials and software information
 
