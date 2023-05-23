@@ -743,21 +743,33 @@ Archive
 
 ### Archiving Source Code
 
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runes smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), andsubmit the URL of you `Source Code` final repository.  
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runes smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), andsubmit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
+
+TO DO: add the blaz to your github page. 
 
 ### Archiving additional materials and software information
 
-The Archiving of additional materials will take place using the open source platforms Wikimedia and Wikidata. 
+As much as possible, the Archiving of additional materials will take place using the open source platforms.
+
+**General software information** 
+Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
-To start, search Wikidata to see if an item for the software title exists. If no item is found, the curator creates a new item and adds statements to the Wikidata item based on the codemeta.json file as well as any other available information using properties related to software. (TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to deit no?)
+To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P, which we will refer to later on to let you easily search for a giver property. 
 
-Upload images related to the software to Wikimedia Commons. If there is only one image, the curator visits the Wikidata item for the software title and uses field P18 to connect the image to the Wikidata item.
-If there are multiple images, the curator creates a category for the software title in Wikimedia Commons and the returns to Wikidata and uses field P373 to connect the category to the Wikidata item.
+Add statements to the Wikidata item based on the codemeta.json file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
 
+(TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to ediit no?)
 
+**Pictures and photos**
+Regarding archiving images and pictures: if there is only one image to archive, you can directly link it to the Wikidata item using a new statement with property P18. 
+If there are multiple images, you can create a category for the software title in Wikimedia Commons and the returns to Wikidata and uses field P373 to connect the category to the Wikidata item.
 
-TO DO: Add the logic of archiving in Wikimedia/wikidata etc
+**Videos**
+
+**Articles**
+TO DO: add link to hall. 
+
 
 Present
 ----------------
