@@ -412,17 +412,11 @@ platform for all the virtual support areas of the process. If you are interested
 The core of the process will take place in your *Digital working environnement*. We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
 
 > *Workbench* repository, a working
-> area where one can temporarily collect the materials and then proceed
-> to curate the code;
+> area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
 >
-> *Depository* repository, where we can
-> collect and keep separated the raw materials from the curated source
-> code;
+> *Depository* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials; 
 >
-> *Source Code* repository, to implement the Curated source code
-> deposit, where we store the version history of the code; this version
-> history is usually "synthetic", rebuilt by the curation team, for old
-> projects that did not use a version control system.
+> *Source Code* repository, will be used to store the "synthetic" version of the source code, as rebuilt by the curation team for old projects that did not use a version control system. This repository will be the source of ingestion for Software Heritage archiving process.
 
 
 Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository and *Source Code* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
