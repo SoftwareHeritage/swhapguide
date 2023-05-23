@@ -615,6 +615,29 @@ To each collected material (source code or other material) should correspond an 
 You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up.  
 
 
+### Go on license hunting
+
+If you own the copyright of the source code or any other material then you can freely decide what you will be willing to share on any given plateform. 
+At this point you might however have collected items for which you are not the copyright owner, or not the sole copyright owner. 
+
+In that case you will want to check if you are allowed to collect and share these items, and if so under which conditions. 
+
+Regarding source code, it might be the case that the software you are working on is under a free license such as _GNU General Public License_. Such license will typically let you freely archive and share the source code on any plateform you'd like, as well as any derived materials such as logos or screenshots. 
+
+Regarding other material, such as working documents, photos, videos, it might be the case that there is no predefined license attached to them. In that case you may want to reach out to the copyright owner and ask them for their authorisation to archive and share their documents. You will want to be specific on the use you will make of these documents and about the plateforms you will use in the process. 
+
+As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.  
+
+TO DO: be more specific about what to do with authorizations. 
+TO DO: show a template of license? DIfference between free license and specific license. 
+
+If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`. 
+
+<!--
+don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
+-->
+ 
+
 ### Curate the source code
 
 Modern progamming practice use versionning systems to allow to track changes made in the source code at a very detailed level. While that level of information may not be available for legacy softwares, the curation work will focus on rebuilding _part_ of the development history. This will allow a future viewer of the code to easily compare the different versions of the code and to easily see the differences and evolutions from one version to the other. 
@@ -686,9 +709,11 @@ You can proceed in two ways:
 The result will be a `versionned source code` folder that materializes the development history
 of the software via Git commits and releases.
 
-### Create the final repository
+### Create the final Source Code repository
 
-Using this `source` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
+Using this `versionned source code` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
+
+TO DO: explain why a separate repo needs to be created
 
 <!--
 ### Curate the ancillary materials
@@ -698,20 +723,17 @@ From the `raw_materials` folder, select the ancillary materials that you wish to
 To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
 -->
 
-
-At this point you might have collected items for which you don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
-
-If you can't get copyright for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`.  
-
-### Create Depository
+### Create final Depository repository
 
 MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
 Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
 
-The next step is to create the branch Depository, containing only the
-folders `raw_materials`, `browsable_source`, `additional_materials` together with the
-metadata updated to this point. Remember to remove the folder containing items for which you did not get the copyrights. 
-Then, create the Depository repository from this branch. This will be the publicly available showcase of your work. 
+Create the final `Depository` repository, containing only the
+folders `raw_source_code`, `browsable_source_code`, `additional_materials` together with the
+metadata updated to this point. 
+
+Remember to remove the folder containing items for which you did not get the copyrights or sharing license. 
+This will be the publicly available showcase of your work. 
 
 
 
@@ -721,7 +743,7 @@ Archive
 
 ### Archiving Source Code
 
-TO DO: Add the logic of archiving in SWH
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runes smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), andsubmit the URL of you `Source Code` final repository.  
 
 ### Archiving additional materials and software information
 
