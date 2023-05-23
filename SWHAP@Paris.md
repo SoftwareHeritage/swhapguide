@@ -552,9 +552,10 @@ Collect
 In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
-We encourage you to dititalise (by scanning or photographying) all the relevant physical objects. 
+We encourage you to dititalise (by scanning or photographying) all the relevant physical objects. Whenever possible, the physical objects should be stored in a dedicated warehouse.
 
-All the collected digital files must then be uploaded in the `raw_materials` folder. 
+The collected source code should be then stored in the All the collected digital files must then be uploaded in the `raw_source_code` folder. 
+The other collected materials should be stored in the `additional_materials` folder, in the corresponding subfolder. 
 
 
 <!-- MF: should'nt that be done in the metadata folder? I feel like Spectrum guidelines are way over the top, we are not a museum. + is this our role? 
@@ -569,7 +570,6 @@ MF: wrong link, to be updated if relevant
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
 
-
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
 an OCR (optical character recognition) tool to parse it. See
@@ -577,13 +577,13 @@ an OCR (optical character recognition) tool to parse it. See
 A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
 for a list of suggested tools. 
 
-If the raw source code is an archive file (.tar) and/or compressed, you should unpack it locally on your computer. 
+If the raw source code is an archive and/or compressed file (.tar) and/or compressed, you should unpack it locally on your computer. 
 
-Once you made your source code machine readable, all the source code files must then be put into the `browsable_source`
-folder.
+Once you made your source code machine readable, all the source code files must then be put into the `browsable_source_code`
+folder, using a dedicated subfolder for each version (typically `mySoftware_V1`, `mySoftware_V2` etc).
 
 Particular care should be used to ensure the files in
-`browsable_source` have the correct extension: scanner and OCR usually
+`browsable_source_code` have the correct extension: scanner and OCR usually
 generate files with a generic .txt extension, that must be changed to
 the extension typically used for the programming language they
 contain.
@@ -592,21 +592,56 @@ Note that, at this stage, we are not interested in precise information
 about the versions of the software. The purpose is to have
 machine-readable documents.
 
-Finally, in preparation for the curation phase, you may want to copy
-the files in `browsable_source` to the `source` folder. TO DO: why? 
-
 
 Curate 
 ----------------
 
+### Fill in the catalogue
+
+To each collected material (source code or other material) should correspond an entry in the catalogue. This catalogue will become the entry point of anyone willing to navigate your collection, and it is important that information is maintained clear and up to date. Depending on the type of object you are registering, you may want to record different information. We propose the following template, that can be adapted for each type of object:
+
+- Object name: _Name of the material_
+  - Authors: _Author of the code, picture, article etc_
+  - Date: _Creation/publication date_
+  - Digital location: _Link to the corresponding folder in your working environment_
+  - Warehouse: _Link to the physical warehouse where the object is stored_
+  - Collectors: _Name of the person who collected the object_
+  - Description: _Description of the object, for source code, indicate the version_
+  - Copyright: _Personn or institution holding the copyrights_
+  - License: _Distribution license_
+  - Notes: _Any additional information_
+
+
+You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up.  
+
+
 ### Curate the source code
+
+Modern progamming practice use versionning systems to allow to track changes made in the source code at a very detailed level. While that level of information may not be available for legacy softwares, the curation work will focus on rebuilding _part_ of the development history. This will allow a future viewer of the code to easily compare the different versions of the code and to easily see the differences and evolutions from one version to the other. 
+
+To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. 
+This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. Each layer of the stack can be associated to metadata that we will leverage to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
+
+We recommand to fill in the following metadata field for each commit:
+- author name: name of the main author                                          
+- author email: email of the main author, when available                         
+- date original: original date when this version was made                         
+- curator name: name of the curator person or team                               
+- curator email: the reference email of the acquisition process                   
+- release tag: a tag name if the directory contains a release, empty otherwise  
+- message: text containing a brief note from the curation team              
+
+TO DO : update with actual name of metadata field.
+
+<!--
+To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  -->
 
 <!-- unclear sentence
 Once the Depository creation is complete, you can move back to the
 `source` folder in the master branch. -->
 
-The curation phase will allow you to recreate the development history of the code, leveraging the *commit* and *versionning mechanisms of Git. To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  
 
+<!--
 First, sort out the source code files present int the `browsable_source` folder, putting them in a different folder for each version. You can typically call each folder `MySoftware-V1.0`, `MySoftware-V2.0`etc. 
 
 Second, fill in the information that will be used in the metadata of the commits.
@@ -632,9 +667,11 @@ This information should be consigned in the `version_history.csv` in the `metada
 | release tag   	  | a tag name if the directory contains a release, empty otherwise  |
 | message 	 | text containing a brief note from the curation team              |
 
-
+-->
 Now you are ready to (re-)create the development history of the
-software, by successively commiting the source code files of each version from the `browsable source` into the `source` folder, updating the commits metadata to reflect historical develoment.  
+software, by successively commiting the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment.  
+
+
 
 <!--First you need to create a branch Source Code, with the
 *source* folder.-->
@@ -642,28 +679,25 @@ software, by successively commiting the source code files of each version from t
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `source` folder, reading the information collected in the
-    file `version_history.csv` to set the fields for each version to
-    the values determined during the curation phase;
+    into the `versionned source code` folder, manually updating the metadata using the data collected during the curation phase in the catalogue.md file ;
 
--   *automatically*: using a tool that reads the information from
-    `version_history.csv` and produces the synthetic history in a
-    single run; one such tool has been developed, DT2SG
-    ([[https://github.com/Unipisa/DT2SG]{.underline}](https://github.com/Unipisa/DT2SG))
-    , and you can see a running example in the next section.
+-   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
-The result will be a `source` folder that materializes the development history
+The result will be a `versionned source code` folder that materializes the development history
 of the software via Git commits and releases.
 
 ### Create the final repository
 
 Using this `source` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
 
+<!--
 ### Curate the ancillary materials
 
 From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. (MF: are these the right subfolders? At this point of the process we are curating , not presenting yet. I think the folder organisation should have its own logic indepently of the choice of presentation)
 
 To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
+-->
+
 
 At this point you might have collected items for which you don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
 
