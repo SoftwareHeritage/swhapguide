@@ -246,19 +246,25 @@ Heritage*** for the *source code*, ***Wikimedia*** for *images or
 videos*, ***open access repositories*** for *research articles*,
 ***Wikidata*** for *software descriptions and properties*, and so on.
 
+As much as possible we will promote using free and open-source platforms for archiving your content. 
+However this may come with some restrictions : 
+- some plateforms have size limits (which may be an issue for uploading large files like videos)
+- uploading documents to Wikimedia requires a free license, which might not be the case for all the collected materials
+
+In these cases the use of private infrastructures can be considered (like Youtube for large videos). 
+Institutionnal media libraries can also be an option for materials with restricted copy rights. 
+
 Well established guidelines are available for contributing materials to
 Wikimedia (see
 [[https://commons.wikimedia.org/wiki/Commons:First\_steps/Contributing]{.underline}](https://commons.wikimedia.org/wiki/Commons:First_steps/Contributing))
 and Wikidata (see
 [[https://www.wikidata.org/wiki/Wikidata:Data\_donation]{.underline}](https://www.wikidata.org/wiki/Wikidata:Data_donation)
-), hence we will focus primarily on curating and contributing the
+), hence we will focus more specically on curating and contributing the
 software source code to Software Heritage, a process that is new and may
 require rather technical steps.
 
 Present
 ------  
-
-TO DO: Update with science stories / software stories
 
 The purpose of this phase is to create dedicated presentations of the
 curated materials.
@@ -268,6 +274,12 @@ infrastructures, it is possible to use it to create presentations for a
 variety of purposes: special events, virtual or physical expositions for
 museums or websites.
 
+In this guide we will show you how to display you work in a specific format, called [_**Software Story**_](https://stories.softwareheritage.org/).
+The _Software Story_ pulls from different public sources (Wikimedia, Wikidata, Software Heritage, Youtube...) to automatically create a presentation of you software. 
+This is only a proposition, feel free to use any other tool or platform you may like. 
+
+
+<!--
 For this, the archived materials need to be referenced using the
 identifiers that each platform provides for its contents. Software
 Heritage provides intrinsic persistent identifiers that are fully
@@ -279,6 +291,7 @@ we are currently not providing a supporting implementation. Anyway, a
 good example of what can be done is the
 [[https://sciencestories.io]{.underline}](https://sciencestories.io)
 website.
+-->
 
 An iterative process
 --------------------
@@ -414,7 +427,7 @@ The core of the process will take place in your *Digital working environnement*.
 > *Workbench* repository, a working
 > area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
 >
-> *Depository* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials; 
+> *Depository* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials. The Depository can also be used as default archiving location if no better option was found; 
 >
 > *Source Code* repository, will be used to store the "synthetic" version of the source code, as rebuilt by the curation team for old projects that did not use a version control system. This repository will be the source of ingestion for Software Heritage archiving process.
 
@@ -487,15 +500,18 @@ transcribed from pictures, etc.
 -->
 
 Your newly created workbench is composed of the following folders:
-- The `raw_materials` folder used to store all the collected materials in their intial format (ex: source code can be a scanned document) 
-- The `browsable source` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
+- The `raw_source_code` folder used to store the collected source code in their intial format (ex: source code can be a scanned document) 
+- The `browsable_source_code` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
+- The `versionned_source_code` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of
 - The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
-- The `source` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of
+- The `software_stories` folder is used prepare material for creation of the _Software Story_
 *Git*
 - The `metadata folder`, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
-The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
 
+<!--
+The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
+-->
 <!--
 The `source` folder is provided as the starting point for the creation of
 the Source Code *Git* repository, in the curation phase. The curator has
