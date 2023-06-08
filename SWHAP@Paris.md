@@ -512,6 +512,7 @@ software and the acquisition process (catalogue, actors, journal, etc.).
 
 MF: Should we create a metafolder for the code items?
 MF: I think we need to keep separate the `additional_materials` for non code items (collect and curate), and a dedicated `software story` folder for _presenting_ both code + additional material
+MF: I think the actors.md file is confusing. Is it a project metadata file, recording curators ? Or is a data file, recording historical information about who contributed to the software. I think these should be two separate things.
 
 <!--
 The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
