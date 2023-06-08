@@ -484,6 +484,7 @@ Figure 2. Overview of the SWHAPPE process.
 ### Workbench structure
 
 The structure of the template is shown in Fig. 3.
+MF: TO DO update this graph and the screenshot, to make it simpler
 
 <!-- 
 
@@ -509,6 +510,9 @@ Your newly created workbench is composed of the following folders:
 - The `metadata folder`, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 
+MF: Should we create a metafolder for the code items?
+MF: I think we need to keep separate the `additional_materials` for non code items (collect and curate), and a dedicated `software story` folder for _presenting_ both code + additional material
+
 <!--
 The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
 -->
@@ -521,7 +525,10 @@ Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 *Git*.
 -->
 
+As part of the instantiation, you can fill in the first metadata of your project. Go to the `metadata` folder, open the `actors.md` file and register who is working on the project, with which role.
+
 TO DO: part of instantiation would be to add meta data regarding curators etc in actors.md
+TO DO: update this screenshot
 
 ![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
 
@@ -552,9 +559,9 @@ Collect
 In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
-We encourage you to dititalise (by scanning or photographying) all the relevant physical objects. Whenever possible, the physical objects should be stored in a dedicated warehouse.
+We encourage you to digitalise (by scanning or photographying) all the relevant physical objects, since this process only focuses on digital items. Whenever possible, the physical objects should be stored in a dedicated warehouse.
 
-The collected source code should be then stored in the All the collected digital files must then be uploaded in the `raw_source_code` folder. 
+The collected source code should then be stored in the `raw_source_code` folder. 
 The other collected materials should be stored in the `additional_materials` folder, in the corresponding subfolder. 
 
 
@@ -569,6 +576,7 @@ MF: wrong link, to be updated if relevant
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
+TO DO: I think we need to clarify why it is usefull to make it machine readable? Why not just keep the scan of paper listing? This should even be done earlier in the document, we need to explain what we put behind archiving a software, it is not self understanding. 
 
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
@@ -577,7 +585,7 @@ an OCR (optical character recognition) tool to parse it. See
 A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
 for a list of suggested tools. 
 
-If the raw source code is an archive and/or compressed file (.tar) and/or compressed, you should unpack it locally on your computer. 
+If the raw source code is an archived and/or compressed file (.tar) and/or compressed, you should unpack it locally on your computer. 
 
 Once you made your source code machine readable, all the source code files must then be put into the `browsable_source_code`
 folder, using a dedicated subfolder for each version (typically `mySoftware_V1`, `mySoftware_V2` etc).
@@ -611,8 +619,10 @@ To each collected material (source code or other material) should correspond an 
   - License: _Distribution license_
   - Notes: _Any additional information_
 
+You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up. You can also add additional field if you think it helps better identify the item. 
 
-You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up.  
+MF: should there be one entry per software version? Then redundant with codemeta json and to some extent with version excel file. 
+MF: I think the catalogue should be more structured, with clear and pre-identified subcategories.
 
 
 ### Go on license hunting
@@ -628,10 +638,10 @@ Regarding other material, such as working documents, photos, videos, it might be
 
 As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.  
 
-TO DO: be more specific about what to do with authorizations. 
+TO DO: be more specific about what to do with authorizations. No dedicated folder for now.
 TO DO: show a template of license? DIfference between free license and specific license. 
 
-If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`. 
+If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it and get a contact point. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`. 
 
 <!--
 don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
@@ -706,12 +716,14 @@ You can proceed in two ways:
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
+TO DO: make an actual test of the code, see if is working etc. Sould we store the code in a colab notebook to make it ready to run for a non expert user?
+
 The result will be a `versionned source code` folder that materializes the development history
 of the software via Git commits and releases.
 
 ### Create the final Source Code repository
 
-Using this `versionned source code` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
+Using this `versionned_source_code` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
 
 TO DO: explain why a separate repo needs to be created
 
@@ -726,7 +738,7 @@ To every collected item should correspond an entry in the `catalogue.md`file, lo
 ### Create final Depository repository
 
 MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
-Shall we fill in the àdditional amterials`folder before creating the Depository ? This seems more like the curating phase
+Shall we fill in the `additional amterials`folder before creating the Depository ? This seems more like the curating phase
 
 Create the final `Depository` repository, containing only the
 folders `raw_source_code`, `browsable_source_code`, `additional_materials` together with the
@@ -735,7 +747,7 @@ metadata updated to this point.
 Remember to remove the folder containing items for which you did not get the copyrights or sharing license. 
 This will be the publicly available showcase of your work. 
 
-
+TO DO: if the items with no public license are scattered in the additional materials folder, it might be quite tedious to remove them. Shall they be stored in dedicated subfolder?
 
 
 Archive
@@ -743,9 +755,11 @@ Archive
 
 ### Archiving Source Code
 
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runes smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), andsubmit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
 
-Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your Source Code repositoru. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `Source Code` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+
+MF: do we want to forammy archive the `Depository`repo? 
 
 
 ### Archiving additional materials and software information
@@ -756,7 +770,7 @@ As much as possible, the Archiving of additional materials will take place using
 Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
-To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P, which we will refer to later on to let you easily search for a giver property. 
+To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P, which we will refer to later on to let you easily search for a given property. 
 
 Add statements to the Wikidata item based on the codemeta.json file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
 
