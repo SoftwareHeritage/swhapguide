@@ -188,7 +188,7 @@ Collect
 
 The purpose of this phase is *to find* the source code and related
 materials and *gather* it *as is* in a physical and/or logical place
-where it can be properly *archived* for later processing.
+where it can be properly *archived* for later processing. 
 
 Various *strategies* are possible for collecting the raw materials: a
 dedicated team may proactively search for the artifact of specific
@@ -226,12 +226,16 @@ ascertained*, and the *contributors need to be identified* in order to
 build a *faithful history of the evolution* of the software over time.
 
 For both source code artifacts and ancilliary artificats, proper *metadata* should be created and made available, providing all the key information about the artifacts that are discovered during the curation phase. 
+
+<!--
 Regarding source code artifcats, we recommend to use the
 vocabulary provided by **CodeMeta** as an extension to schema.org (see
 [[https://codemeta.github.io/terms/]{.underline}](https://codemeta.github.io/terms/));
 this includes the software runtime platform, programming languages,
 authors, license, etc.
 For other artifacts we will provide a dedicated template. 
+-->
+
 
 Particular care is required to *identify the owners* of the different
 artifacts, and *obtain if needed the necessary authorizations* to make
