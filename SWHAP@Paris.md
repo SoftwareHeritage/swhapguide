@@ -71,9 +71,68 @@ Heritage Acquisition Process*** to rescue, curate and illustrate
 landmark legacy software source code, a joint initiative of Software
 Heritage and the University of Pisa, in collaboration with UNESCO. 
 
-The SWHAP process aims at preserving and presenting legacy software and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
+The SWHAP process aims at preserving and presenting legacy source code and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 
 <a name="context"/>
+
+Legacy software preservation, a brief overview
+============
+
+In the 1950s, the first computers with von Neumann architecture (similar to that of our modern computers) emerged. Initially limited to research laboratories and military programs, their use quickly spread to businesses and administration. In the 1960s, the production of computer programs skyrocketed with the introduction of so-called "high-level" programming languages such as FORTRAN (1957) or COBOL (1959), which made software production independent of the technical configuration of the machine. As a major scientific and technical achievement of the 20th century, software has now become part of human cultural heritage, and the question of its preservation emerged in the 1980s.
+
+In 1986, the Computer Museum in Boston commissioned David Bearman, an expert in electronic archiving, to write a report on the feasibility of a software archive titled "The Concept of a Software Archive: Planning for a Software Archive" (Bearman, 1986). This report served as a basis for discussions with the Smithsonian Institution and the Charles Babbage Institute. In an expanded version of the report published in 1987 (Bearman, 1987), Bearman raised concerns about the risk of software heritage disappearance.
+
+> Early software masterpieces, monumental intellectual achievements of the genre, have already been lost to future study through neglect. And contemporary software concepts [...] will likely be lost unless the cultural history repositories of our day - the museums and archives of our contemporary society - take action soon to prevent the disappearance of this record.
+
+In 2002, John G. Zabolitzky emphasized the importance of preserving not only the hardware but also the software as witnesses of one of the greatest industries of our time in his work titled "Preserving Software, Why and How?" (Zabolitzky, 2002). The author highlights the significance of preserving software as a testament to the advancements made in this field.
+
+> Information technology is the largest industry worldwide today, and is slated to be even more dominant in the future. The roots of this industry are hardware and software developments over the past 50 years. Future generations will find it hard to understand if these roots are not preserved today. While a lot of hardware artifacts have been well preserved, I strongly suspect that some past software artifacts have already been destroyed irrecoverably. (Where are the early UNIVAC operating systems? The first FORTRAN/COBOL/ALGOL compilers?) There is a grave danger that in the near future large bodies of historically relevant software will be destroyed. Now is the time, therefore, to take action and preserve these objects for future study.
+
+In 2017, Paul McJones, a member of the Software Preservation Group, shared his unsuccessful quest for the first FORTRAN compiler in his article titled "The Search for the First Compiler" (McJones, 2017). He highlighted the urgency of preserving historical software, particularly as the original creators of these software programs are nearing the end of their lives. The article emphasized the importance of capturing and documenting this valuable software heritage before it is lost forever.
+
+> Old software and related materials are in constant danger of being lost, damaged, or destroyed; the people who created that software are aging and dying.
+
+<!--
+In February 2019, UNESCO, in collaboration with Software Heritage, published the Paris Call for the Source Code of Software (noauthor, 2019). This document identified a list of challenges faced by software heritage and aimed to raise awareness among stakeholders. The Paris Call specifically highlighted the urgency of collecting, preserving, and safeguarding historical source code (point 28 of the call). The document emphasized the importance of recognizing the cultural significance of software and taking proactive measures to ensure its long-term preservation.
+-->
+
+Preservation in practice
+--------------------
+
+While the importance and urgency of preserving software heritage have been recognized by numerous individuals, organizations, and institutions, the practical implementation of such archiving and conservation efforts remains complex. Various initiatives, with different objectives and strategies, have emerged since the 1980s, primarily in the Anglo-Saxon world.
+
+In 1988, the Library of Congress established a Machine-Readable Collections Reading Room (Kimball, 1990), providing access to software and files that could be executed or read on historical machines. However, the project was abandoned after a few years due to its high cost and low number of users.
+
+In 2002, Grady Booch, an IBM computer scientist, sent an email titled "Preserving classic software products" (noauthor, 2002), calling for the identification of software that should be prioritized for preservation efforts and the location of their source codes. As a result, in 2003, the voluntary committee Software Preservation Group (initially known as the Software Collection Committee) was created to support the Computer History Museum in its software preservation mission. The group's website compiles numerous primary and secondary sources related to the history of software.
+
+In 2007 (?), The Internet Archive launched its library of historical software. While it is generally not possible to download binary files, some software can be executed through an integrated emulator. The collection also includes photographs, videos, advertisements, and other documents.
+
+In 2016, the Software Heritage project (initiated by Inria) was launched, aiming for the massive archiving of publicly available source codes on software forges. This project primarily focuses on the preservation of recent source codes. 
+
+A difficult balance
+--------------------
+
+In "A Response to 'Preserving Software: Why and How'" (Kaplan, 2002), Elisabeth Kaplan, an archivist at the Charles Babbage Institute, summarizes the tension faced by libraries, museums, and archives regarding software preservation. They are caught between the still poorly defined needs for such an archive and the significant costs involved in its implementation.
+
+> First, while all participants agreed that software history is important, that awareness of it should be raised, and that it must be documented, participants simply could not identify a solid user base of any justifiable proportion. Second, as participants stated over and over again, “preserving software” is much more than an act of accumulation. It means conserving, organizing, researching, cataloging, and presenting the materials in ways that researchers can use. To do otherwise is simply hoarding. And no individual institution or consortium of institutions has been able to balance these two issues.
+
+Elisabeth Kaplan explains the approach adopted by some institutions as follows:
+
+> Since then, institutions such as the Smithsonian, the Charles Babbage Institute, and Stanford University have focused efforts on collecting not the software itself, but its documentary record—which may include catalogs and directories, personal papers, business records, oral histories and audiovisual materials. All of these documentary manifestations can be stored, described, and made available to scholars according to established standards—not cheaply, but with the normal expenses associated with the archival enterprise.
+
+The Software Heritage approach
+--------------------
+
+In 2019, Software Heritage and University of Pisa published a first version of this guide, establishing a process for safeguarding historical source codes into the Software Heritage archive. The idea of this guide relied on several core beliefs:
+- Legacy source code gives a precious view on the history of the software and of its authors and is worth preserving for itself
+- Archiving source code can be achieved at a reasonnable cost and effort
+- Preserving source code in a digital and machine readable format ensures its long term availability and allows exploitation by future genertions
+- Preserving historical source code is a task that can only be tackled via a collective effort, and should be adressed via an open-sourced process allowing as many personns and entity to contribute.
+
+Alongside source-code and in line with the approach proposed by Elisabeth Kaplan, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. In this guide, we will propose a process for preserving these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
+
+In 2021, Software Heritage announced the launch of the "Software stories" initiative (noauthor, n.d.), in collaboration with the sciencestories.io team and the University of Pisa. The project aims at presenting the history of significant historical software projects in a way that is accessible to the general public without any technical background. The new version of this guide will also tackle how to contribute to the Software Stories library, based on currated materials. 
+
 
 Who is this guide for and what do you need to get started?
 ============
@@ -83,6 +142,10 @@ Typically :
 - An archive, museum or library 
 - A company or research center
 - Any individual wishing to archive its own legacy software products
+
+In this guide we 
+
+Depending on which goals you are pursuing 
 
 Copyright disclaimer
 --------------------
