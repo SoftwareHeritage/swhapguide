@@ -166,7 +166,7 @@ MF: I think we should make this more detailed, depending on the use cases. If yo
 - *A physical archive*: a physical archive is not strictly required for this process, since we will deal with digital (or digitalized) artefacts. However, we do encourage you to find a physical location where physical raw materials can be safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
 - *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
 - *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
-- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working repositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these repositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
+- *Digital workbench*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as Workbench. If your are implementing the SWHAP process you will be responsible for implementing and managing this workbench, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 TO DO : ajouter shéma
 
@@ -483,14 +483,15 @@ MF: the process should start with collecting, are at least making it clear we ar
 
 In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
 
-Seeting up your digital working environment
+Seeting up your digital workbench
 ----------------
 
 ### General structure
 
-In order to implement SWHAP, the first step is to create the *Digital working environment* that will allow you to store the collected digital artifacts and to curate them. This can very well be set up using
-distinct digital platforms, but it is also possible to instantiate all
-of them on a single platform.
+In order to implement SWHAP, the first step is to create the *Workbench* that will allow you to store the collected digital artifacts and to curate them. 
+In practice, you could choose any collaborative file management tool as your digital workbench.
+Note however that curating source code will require code versionning (typically using a mecanism _à la_ Git). Github or Gitlab are well-known collaborative platforms enabling code versionning and are good options for this part of the process. 
+Depending on what suits you best you could therefore choose such platforms as your one and only workbench for the whole process instead of managing two different environments.
 
 The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
 implementation adopted by the SWHAP\@Pisa project relies on the
@@ -498,7 +499,10 @@ collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
 platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to Appendix A. TO DO: add link
 
-The core of the process will take place in your *Digital working environnement*. We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
+<!--
+MF: I think we only need to introduce the Workbench at this sate. Depository is very much optionnal depenging on the goal of the person. Source Code is a technicality for ingestion in SWH archive. 
+
+We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
 
 > *Workbench* repository, a working
 > area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
@@ -509,6 +513,7 @@ The core of the process will take place in your *Digital working environnement*.
 
 
 Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository and *Source Code* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
+-->
 
 ### Instantiating your Workbench
 
@@ -534,7 +539,9 @@ We created a *template* repository that you can easily copy to instantiate your 
 The [SWHAP-TEMPLATE](https://github.com/Unipisa/SWHAP-TEMPLATE) embodies the core support to enact the process. Its
 structure and use is shown in figure 2. After copying it, you can change its name to *SWName-Workbench* ; the *SWName* being the name of the Software you are working on. 
 
-We recommand you to clone your *SWName-Workbench*
+MF: template to be updated to better separate code and non code items
+
+For those familiar with Github, we recommand you to clone your *SWName-Workbench*
 repository to your machine, so that
 you can work on the collected files locally - the Git clone mechanism
 ensures that these changes can be safely moved to the original
@@ -579,16 +586,15 @@ transcribed from pictures, etc.
 Your newly created workbench is composed of the following folders:
 - The `raw_source_code` folder used to store the collected source code in their intial format (ex: source code can be a scanned document) 
 - The `browsable_source_code` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
-- The `versionned_source_code` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of
+- The `versionned_source_code` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of *Git*
 - The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
 - The `software_stories` folder is used prepare material for creation of the _Software Story_
-*Git*
 - The `metadata folder`, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 
 MF: Should we create a metafolder for the code items?
 MF: I think we need to keep separate the `additional_materials` for non code items (collect and curate), and a dedicated `software story` folder for _presenting_ both code + additional material
-MF: I think the actors.md file is confusing. Is it a project metadata file, recording curators ? Or is a data file, recording historical information about who contributed to the software. I think these should be two separate things.
+MF: I think the actors.md file is confusing. Is it a project metadata file, recording curators ? Or is a data file, recording historical information about who contributed to the software. I think these should be two separate things. At the moment no place to record historical contributors. 
 
 <!--
 The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
@@ -641,6 +647,7 @@ We encourage you to digitalise (by scanning or photographying) all the relevant 
 The collected source code should then be stored in the `raw_source_code` folder. 
 The other collected materials should be stored in the `additional_materials` folder, in the corresponding subfolder. 
 
+MF: how to deal with source code in old versionning systems like SVN? Transfer to Github and then SWH? Can it go directly to SWH?
 
 <!-- MF: should'nt that be done in the metadata folder? I feel like Spectrum guidelines are way over the top, we are not a museum. + is this our role? 
 If there are physical materials, folder `raw_materials` should contain
@@ -653,7 +660,7 @@ MF: wrong link, to be updated if relevant
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
-TO DO: I think we need to clarify why it is usefull to make it machine readable? Why not just keep the scan of paper listing? This should even be done earlier in the document, we need to explain what we put behind archiving a software, it is not self understanding. 
+TO DO: I think we need to clarify why it is usefull to make it machine readable? Why not just keep the scan of paper listing? This should even be done earlier in the document, we need to explain what we put behind archiving a software, it is not self understanding. Edit: partly covered now in the intro.
 
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
@@ -700,6 +707,7 @@ You may not be able to fill in all the information from the beginning, so you sh
 
 MF: should there be one entry per software version? Then redundant with codemeta json and to some extent with version excel file. 
 MF: I think the catalogue should be more structured, with clear and pre-identified subcategories.
+MF: regarding software what is the source of trith? Codemeta, catalogue etc?
 
 
 ### Go on license hunting
@@ -718,7 +726,7 @@ As you get more information about copyrights and licenses don't forget to fill i
 TO DO: be more specific about what to do with authorizations. No dedicated folder for now.
 TO DO: show a template of license? DIfference between free license and specific license. 
 
-If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it and get a contact point. However, you are not allowed to publicly publish these items. Thy should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published in the public `Depository`. 
+If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
 
 <!--
 don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
@@ -728,6 +736,8 @@ don't have copy rights (ex: press articles, photos etc.). Whenever possible we r
 ### Curate the source code
 
 Modern progamming practice use versionning systems to allow to track changes made in the source code at a very detailed level. While that level of information may not be available for legacy softwares, the curation work will focus on rebuilding _part_ of the development history. This will allow a future viewer of the code to easily compare the different versions of the code and to easily see the differences and evolutions from one version to the other. 
+
+MF: maybe elaborate on the point of re-versionning the source code.
 
 To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. 
 This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. Each layer of the stack can be associated to metadata that we will leverage to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
@@ -754,7 +764,7 @@ Once the Depository creation is complete, you can move back to the
 <!--
 First, sort out the source code files present int the `browsable_source` folder, putting them in a different folder for each version. You can typically call each folder `MySoftware-V1.0`, `MySoftware-V2.0`etc. 
 
-Second, fill in the information that will be used in the metadata of the commits.
+Now, gather the information that will be used in the metadata of the commits.
 
 In practice, this means that *for each version of the software* you
 need to ascertain:
@@ -781,7 +791,7 @@ This information should be consigned in the `version_history.csv` in the `metada
 Now you are ready to (re-)create the development history of the
 software, by successively commiting the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment.  
 
-
+MF: very that you don't actually need to branch the code to do so. 
 
 <!--First you need to create a branch Source Code, with the
 *source* folder.-->
@@ -789,7 +799,7 @@ software, by successively commiting the source code files of each version from t
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `versionned source code` folder, manually updating the metadata using the data collected during the curation phase in the catalogue.md file ;
+    into the `versionned source code` folder, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
@@ -798,12 +808,14 @@ TO DO: make an actual test of the code, see if is working etc. Sould we store th
 The result will be a `versionned source code` folder that materializes the development history
 of the software via Git commits and releases.
 
+<!--
+MF: moved to archival part
 ### Create the final Source Code repository
 
 Using this `versionned_source_code` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
 
 TO DO: explain why a separate repo needs to be created
-
+-->
 <!--
 ### Curate the ancillary materials
 
@@ -832,11 +844,15 @@ Archive
 
 ### Archiving Source Code
 
+In order to archive your source code properly in Software Heritage archive, you first want to create a standalone "Source Code" repository containing your reconstructed versionned source code only and independant from the workbench. 
+
+To do so, create an orphan branch of the "Workbench", containing only the `versionned_source_code` folder. Push this orphan branch into a new public dedicated repository, that you can typically call "MySoftware Source Code". This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
+
 Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
 
 Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `Source Code` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
-MF: do we want to forammy archive the `Depository`repo? 
+MF: do we want to formally archive the `Depository`repo? 
 
 
 ### Archiving additional materials and software information
@@ -847,9 +863,16 @@ As much as possible, the Archiving of additional materials will take place using
 Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
-To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P, which we will refer to later on to let you easily search for a given property. 
+To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P`, which we will refer to later on to let you easily search for a given property. 
 
-Add statements to the Wikidata item based on the codemeta.json file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
+Add statements to the Wikidata item based on the codemeta.json (MF: or catalogue file?) file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
+
+Typically you will want to register:
+- The different versions of the software and their publication date using the _software version identifier_ property (P348)
+- The programming languages using the _programmed in_ property (P277)
+- The source code repository URL using (P1324)
+
+MF: is there a SWH property?
 
 (TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to ediit no?)
 
