@@ -893,7 +893,16 @@ Then use the [_Wikimedia upload wizard_](https://commons.wikimedia.org/wiki/Spec
 Once this is done, return to the Wikidata software item and use the _Commons category_ statement (P373) to connect the Wikimedia category.
 
 **Articles**
-TO DO: add link to hall. 
+If you collected reports, articles, in PDF format, you can upload them to Wikimedia in the exact same way as pictures or videos. 
+Once this is done, go back the Wikidata item and use the _document file on Wikimedia Commons (P996)_ statement to link these documents to the Wikidata item. 
+
+### What shall I do with the content I can't archive on Wikimedia? 
+
+Size issue
+Wikimedia has a maximum upload size of 100 megabytes which can be too restrictive to upload 
+
+Copyright issues
+
 
 
 Present
