@@ -170,7 +170,7 @@ MF: I think we should make this more detailed, depending on the use cases. If yo
 
 TO DO : ajouter shéma
 
-What are the different roles invovled?
+What are the different roles involved?
 --------------------
 
 MF:  The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should not be a need for archive engineer or web engineer. Shall we make deposit engineer the same as archive engineer. Are these standard "titles" in conservation processes, or did you create them for SWHAP purpose? This can be a bit scary for someone starting the process alone (like a CS researcher). 
