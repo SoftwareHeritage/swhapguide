@@ -863,7 +863,9 @@ As much as possible, the Archiving of additional materials will take place using
 Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
-To start, search Wikidata to see if an item for the software title exists. If no item is found, create a new item. An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P`, which we will refer to later on to let you easily search for a given property. 
+To start, search Wikidata to see if an item for the software title exists. If no item is found, [create a new item](https://www.wikidata.org/wiki/Special:NewItem). A new item should be created as an _instance_ of one or several larger category. You can typically use a generic _software_ category here, or be more specific: _free software_, _programming languge_, _web browser_ etc.   
+
+An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P`, which we will refer to later on to let you easily search for a given property. 
 
 Add statements to the Wikidata item based on the codemeta.json (MF: or catalogue file?) file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
 
@@ -871,16 +873,24 @@ Typically you will want to register:
 - The different versions of the software and their publication date using the _software version identifier_ property (P348)
 - The programming languages using the _programmed in_ property (P277)
 - The source code repository URL using (P1324)
+- The people or entities who contributed to develop the software using the _developer_ property (P178)
+
+In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement(P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
 MF: is there a SWH property?
+MF: what are the minimum properties we would want to record regarding the software?
 
 (TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to ediit no?)
 
-**Pictures and photos**
-Regarding archiving images and pictures: if there is only one image to archive, you can directly link it to the Wikidata item using a new statement with property P18. 
-If there are multiple images, you can create a category for the software title in Wikimedia Commons and the returns to Wikidata and uses field P373 to connect the category to the Wikidata item.
+**Pictures, photos and videos**
+Regarding archiving images and pictures: if there is only one image to archive, you can directly link it to the Wikidata item using a new statement with _image_ property (P18). 
+If there are multiple images, you will need to upload them in (Wikimedia Commons)[https://commons.wikimedia.org/wiki/Main_Page], the media database of Wikipedia. In Wikimedia, media are grouped in _Categories_. One media can belong to several categories. 
 
-**Videos**
+Start by checking if there already is a Wikimedia category name after your software using the search bar. 
+If no result if found, you will be offered to create a new category. Do so and name it after your software (the name can typically be the same as the Wikidata item).  
+Then use the [_Wikimedia upload wizard_](https://commons.wikimedia.org/wiki/Special:UploadWizard) to upload your different documents, and link them each time to the right category.
+
+Once this is done, return to the Wikidata software item and use the _Commons category_ statement (P373) to connect the Wikimedia category.
 
 **Articles**
 TO DO: add link to hall. 
