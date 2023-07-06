@@ -137,36 +137,43 @@ In 2021, Software Heritage announced the launch of the "Software stories" initia
 Who is this guide for and what do you need to get started?
 ============
 
-The goal of this guide is to allow any party interested in preserving, curating and presenting legacy softwares in a digital format to achieve the SWHAP process in full autonomy. 
+The goal of this guide is to allow any party interested in preserving, curating and presenting legacy source codes to achieve the SWHAP process in full autonomy. 
 Typically :
 - An archive, museum or library 
 - A company or research center
-- Any individual wishing to archive its own legacy software products
+- Any individual wishing to archive its own source codes
 
-In this guide we 
+Depending on which goals you are pursuing, you may refer to different sections of this guide. 
+If you already have a specific software in mind, you know where the source code is and you (or someone you know) can dedicate some time to preserving it, then you can jump directly to the technical section and get the work started (TO DO: add reference). Typically you are one of the author of the code and want to make sure it doesn't get lost for future generations.
 
-Depending on which goals you are pursuing 
+If you want to launch a preservation initiative at a broader scale, for example preserving legacy softwares within your institution, or collecting artefacts as a museum, we will first try to give some guidance as regards how to set things in motions, and which ressources you will need. 
 
+Regardless of where you stand from, here are the entities which will be involved in the process. We designed the process to rely as much as possible on existing open-source solutions, so that you don't have to set anything up by yourself if you don't want to. If you are an institution and wish to use some of you own infrastructure that is of course possible. 
+
+<!--
 Copyright disclaimer
 --------------------
 
 The individual or institution entering the SWHAP process should have all copyrights on the collected documents
 TO DO: ellaborate on this
+-->
 
 What entities are involved?
 --------------------
 
-- *A physical archive*: a physical location where physical raw materials are safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
+MF: I think we should make this more detailed, depending on the use cases. If you are an institution you may have you own media library etc. 
+
+- *A physical archive*: a physical archive is not strictly required for this process, since we will deal with digital (or digitalized) artefacts. However, we do encourage you to find a physical location where physical raw materials can be safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
 - *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
 - *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
-- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working depositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these depositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
+- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as working repositories. If your are implementing the SWHAP process you will be responsible for implementing and managing these repositories, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 TO DO : ajouter shéma
 
 What are the different roles invovled?
 --------------------
 
-MF:  The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should bot be a need for archive engineer or web engineer.
+MF:  The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should not be a need for archive engineer or web engineer. Shall we make deposit engineer the same as archive engineer. Are these standard "titles" in conservation processes, or did you create them for SWHAP purpose? This can be a bit scary for someone starting the process alone (like a CS researcher). 
 
 With respect to the human resources, several roles are needed to enact
 the process, as indicated in the top part of fig. 1. Here is a short
@@ -202,6 +209,8 @@ If you can't find what you are looking for there, please reachout to: TO DO: dec
 
 What is the content of this guide?
 --------------------
+
+MF: to be reviewed at the end
  
 - [Inroduction](#intro)
 - [Who is this guide for and what do you need to get started?](#context)
