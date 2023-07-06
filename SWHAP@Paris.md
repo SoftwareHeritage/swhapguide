@@ -148,7 +148,7 @@ If you already have a specific software in mind, you know where the source code 
 
 If you want to launch a preservation initiative at a broader scale, for example preserving legacy softwares within your institution, or collecting artefacts as a museum, we will first try to give some guidance as regards how to set things in motions, and which ressources you will need. 
 
-Regardless of where you stand from, here are the entities which will be involved in the process. We designed the process to rely as much as possible on existing open-source solutions, so that you don't have to set anything up by yourself if you don't want to. If you are an institution and wish to use some of you own infrastructure that is of course possible. 
+Regardless of where you stand from, here are the entities which will be involved in the process. We designed the process to rely as much as possible on existing open-source solutions, so that you don't have to set anything up by yourself if you don't want to. If you are an institution and wishes to use some of you own infrastructure that is of course possible. 
 
 <!--
 Copyright disclaimer
