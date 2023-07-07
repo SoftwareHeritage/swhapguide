@@ -126,7 +126,7 @@ The Software Heritage approach
 In 2019, Software Heritage and University of Pisa published a first version of this guide, establishing a process for safeguarding historical source codes into the Software Heritage archive. The idea of this guide relied on several core beliefs:
 - Legacy source code gives a precious view on the history of the software and of its authors and is worth preserving for itself
 - Archiving source code can be achieved at a reasonnable cost and effort
-- Preserving source code in a digital and machine readable format ensures its long term availability and allows exploitation by future genertions
+- Preserving source code in a digital and machine readable format ensures its long term availability and allows exploitation by future generations
 - Preserving historical source code is a task that can only be tackled via a collective effort, and should be adressed via an open-sourced process allowing as many personns and entity to contribute.
 
 Alongside source-code and in line with the approach proposed by Elisabeth Kaplan, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. In this guide, we will propose a process for preserving these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
