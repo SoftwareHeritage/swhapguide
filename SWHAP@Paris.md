@@ -942,10 +942,31 @@ Present
 ----------------
 
 TO DO: Add story creation instructions
-Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you have to leverage a given tool, called Software Stories.
+Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you how to leverage a given tool, called [Software Stories](https://stories.softwareheritage.org/).
 
 Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the Software Heritage Acquisition Process (SWHAP) allowing curators to generate a multimedia overview of a landmark legacy software title.
  
+The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
+
+**Create a new collection**
+
+MF: how to do this?
+
+**Contribute to a collection**
+
+Once you have created a new collection or decided to contribute to an exhisting one, you can start building a new software story.
+A story is made up of different _moments_. 
+
+Some moments can be automatically generated base on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
+https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related wikidata item. 
+
+The automatically generated moments are the following:
+- The _People moment_
+- The _Places moment_
+- ...
+- 
+
+
 
 
 Iteration
