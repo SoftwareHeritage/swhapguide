@@ -863,11 +863,12 @@ Once your repository has been archived you can search for its archive location u
 MF: do we want to formally archive the `Depository`repo? 
 
 
-### Archiving additional materials and software information
+### Archiving software information and additional materials 
 
 As much as possible, the Archiving of additional materials will take place using the open source platforms.
 
 **General software information** 
+
 Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
@@ -894,6 +895,7 @@ MF: what are the minimum properties we would want to record regarding the softwa
 (TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to ediit no?)
 
 **Pictures, photos and videos**
+
 Regarding archiving images and pictures: if there is only one image to archive, you can directly link it to the Wikidata item using a new statement with _image_ property (P18). 
 If there are multiple images, you will need to upload them in (Wikimedia Commons)[https://commons.wikimedia.org/wiki/Main_Page], the media database of Wikipedia. In Wikimedia, media are grouped in _Categories_. One media can belong to several categories. 
 
@@ -905,6 +907,7 @@ Once this is done, return to the Wikidata software item and use the _Commons cat
 
 
 **PDFs**
+
 If you collected any document in PDF format (flyers, diagrams, notes, internal communications, correspondences), you can upload them to Wikimedia in the exact same way as pictures or videos. 
 Once this is done, go back the Wikidata item and use the _document file on Wikimedia Commons (P996)_ statement to link these documents to the Wikidata item. 
 
@@ -914,10 +917,24 @@ MF: where shall we archive publications? HAL? Wikimedia
 
 ### What shall I do with the content I can't archive on Wikimedia? 
 
-Size issue
-Wikimedia has a maximum upload size of 100 megabytes which can be too restrictive to upload 
+There are different reasons why you may not be able to archive the material you collected on Wikimedia.
 
-Copyright issues
+**Size issue**
+
+Wikimedia has a maximum upload size of 100 megabytes which can be too restrictive to upload larger files like videos. 
+
+**Copyright issues**
+
+It might be the case that some items you collected are under restricted license. For example, the copyright owner of a picture might agree to the picture beeing used for educational purpose, but not for commercial purpose. In that case you are not allowed to publish it on Wikimedia/Wikidata. 
+
+MF: any other case?
+
+If you are in this situation, here are some hints towards possible alternatives:
+- Some science museums might be interested into collecting these digital artefacts ; reach out to them (MF: provide list?)
+- If you collected written documents (working notes, etc.), reach out to your national archive 
+- If the software was developed in a given insititution, this institution might be interested into collecting related historical artefacts ; reach out to them
+
+MF: any other options?
 
 
 
@@ -925,6 +942,10 @@ Present
 ----------------
 
 TO DO: Add story creation instructions
+Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you have to leverage a given tool, called Software Stories.
+
+Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the Software Heritage Acquisition Process (SWHAP) allowing curators to generate a multimedia overview of a landmark legacy software title.
+ 
 
 
 Iteration
