@@ -248,7 +248,7 @@ The activities involved in the acquisition process can be organized in the
 following four phases.
 
 - **Collect**: the first phase  is *conservative*, i.e., it is devoted to save the raw materials, in their physical or digital format, that the other phases will build upon.
-- **Curate**: the second phase aims at *analyzing, cleaning up and structuring* the raw materials that have been collected.
+- **Curate**: the second phase aims at *analyzing, cleaning up and structuring* the raw materials that have been collected, gather information regarding the software history and identify copyrights and licenses.
 - **Archive**: the third phase's goal is to contribute the curated materials to the digital infrastructures specialized for each kind of materials. From this stage on, all the curated material should have been digitalised in order to be processed. 
 - **Present** The purpose of this phase is to create dedicated presentations of the curated materials.
 
@@ -291,6 +291,11 @@ Curate
 The purpose of this phase is *to* *analyze, cleanup and structure* the
 raw materials that have been collected.
 
+During this phase, the general history of the software will be reconstructed, identifying the software versions and the contributors. 
+MF: no clear place to do so in the Workbench (especially for contributors and their workdate in the project).
+
+Collected materials will be prepared for proper archiving.
+
 Preparing software source code for archival in **Software Heritage**
 requires special care: the source code needs to be *cleaned up*,
 different *versions* with their *production dates need to be
@@ -298,6 +303,7 @@ ascertained*, and the *contributors need to be identified* in order to
 build a *faithful history of the evolution* of the software over time.
 
 For both source code artifacts and ancilliary artificats, proper *metadata* should be created and made available, providing all the key information about the artifacts that are discovered during the curation phase. 
+
 
 <!--
 Regarding source code artifcats, we recommend to use the
@@ -639,6 +645,8 @@ Collect
 
 ### Collect artifacts and upload them
 
+MF: add something about collecting information (regarding software and contributors). 
+
 In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
@@ -791,7 +799,7 @@ This information should be consigned in the `version_history.csv` in the `metada
 Now you are ready to (re-)create the development history of the
 software, by successively commiting the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment.  
 
-MF: very that you don't actually need to branch the code to do so. 
+MF: verify that you don't actually need to branch the code to do so. 
 
 <!--First you need to create a branch Source Code, with the
 *source* folder.-->
@@ -877,6 +885,9 @@ Typically you will want to register:
 
 In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement(P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
+Using the _Source code repository_ statement (P1324), add the link towards the Software Heritage archived source code. 
+
+MF: there also is a source code respository URL statement. WHich one?
 MF: is there a SWH property?
 MF: what are the minimum properties we would want to record regarding the software?
 
@@ -892,9 +903,14 @@ Then use the [_Wikimedia upload wizard_](https://commons.wikimedia.org/wiki/Spec
 
 Once this is done, return to the Wikidata software item and use the _Commons category_ statement (P373) to connect the Wikimedia category.
 
-**Articles**
-If you collected reports, articles, in PDF format, you can upload them to Wikimedia in the exact same way as pictures or videos. 
+
+**PDFs**
+If you collected any document in PDF format (flyers, diagrams, notes, internal communications, correspondences), you can upload them to Wikimedia in the exact same way as pictures or videos. 
 Once this is done, go back the Wikidata item and use the _document file on Wikimedia Commons (P996)_ statement to link these documents to the Wikidata item. 
+
+**Publications**
+
+MF: where shall we archive publications? HAL? Wikimedia
 
 ### What shall I do with the content I can't archive on Wikimedia? 
 
