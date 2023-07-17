@@ -960,14 +960,44 @@ A story is made up of different _moments_.
 Some moments can be automatically generated base on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
 https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related wikidata item. 
 
-The automatically generated moments are the following:
-- The _People moment_
-- The _Places moment_
-- ...
-- 
+Since automatically generated moments might not always fit the story you want to narrate, you may choose to build a custom story, mixing automated and custom moments. Here are the main moments we recommend using to build your story. 
+
+- **Wikipedia moment** (_automated_): and embedded iframe if the related Wikipedia entry
+- **Blogpost moment** (_custom_): a writtent entry, typically the size of a blogpost. 
+- **Timeline moment** (_automated or custom_): shows a timeline of events. Each event is defined by a title, a year, a short description and possibly a picture. The automated version pulls from the dated items in the Wikidata page of the software (typically the release dates of the different versions). 
+- **People moment** (_automated or custom_): shows a gallery of contributor's portrait. Each portrait is define by the contributor name, their picture and a short description. The automated version pulls from the _contributor_ section in the Wikidata page of the software.
+- **Image moment** (_custom_): shows a chosen picture. The picture has a title, a subtitle and a caption.
+- **Video moment** (_custom_): shows a chosen video. The video has a title, a subtitle and a caption.
+- **Iframe moment** (_custom_): displays an iframe of a given website. Has a title and subtitle.
+- **Software heritage moment** (_custom_): shows a view into the archived source code in the Software heritage archive. Has a title and subtitle.
+- **Map moment** (_automated_): shows the different places associated with the software history based on geolocated data in Wikidata.
+- **A library moment** (_automated_): displays the publications registered in Wikidata and linked to the software
+ 
+To start building your story, go to the `software_story` folder and open the 'StoryInventory.md' file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
+
+MF: do we want to give the option to store pictures in the publisher worspace? 
+
+In the `StoryInventory.md' file we suggest a template based on the work done for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
+
+**General information about the software and the context in which it was created**
+- A first **image moment** shows a first view of Amaya and quickly presents what Amaya is about
+- A **timeline moment** narrates the bigger story around Amaya, and the link between Amaya and the history of the Wolrd Wide Web.
+
+**Information regarding the people involved in the software development and how they organized**
+- A **people moment** introduces Amaya's contributers.
+- An **iframe moment** shows a snapshot into Amaya mailing list and shows how Amaya community organized itself.
+
+**Information regarding the software product itself, how it evolved and about its source code**
+- Another **timeline** moment shows how Amaya features and design evolved in time
+- A **software heritage** moment shows a view into Amaya source code
+- Two **image moments** give some statistics and insights on Amaya source code.
 
 
+MF: What should the process then be? Shall we create the JSON/story ourselves, based on registerd info? Shall we let users build the JSON themselves and send it over to us? Ideally we would build an easy tool to convert the registered info into JSON. Could probably be done using Gsheet...Maybe framaform? 
 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in ANNEXE X (TO DO: create Annexe and add link) how each specific custom moment translates into a JSON code. 
+
+Along the way you can test the redering of your story by copy-pasting the JSON file there: (TO DO add link)
 
 Iteration
 ---------
