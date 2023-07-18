@@ -80,15 +80,15 @@ Legacy software preservation, a brief overview
 
 In the 1950s, the first computers with von Neumann architecture (similar to that of our modern computers) emerged. Initially limited to research laboratories and military programs, their use quickly spread to businesses and administration. In the 1960s, the production of computer programs skyrocketed with the introduction of so-called "high-level" programming languages such as FORTRAN (1957) or COBOL (1959), which made software production independent of the technical configuration of the machine. As a major scientific and technical achievement of the 20th century, software has now become part of human cultural heritage, and the question of its preservation emerged in the 1980s.
 
-In 1986, the Computer Museum in Boston commissioned David Bearman, an expert in electronic archiving, to write a report on the feasibility of a software archive titled "The Concept of a Software Archive: Planning for a Software Archive" (Bearman, 1986). This report served as a basis for discussions with the Smithsonian Institution and the Charles Babbage Institute. In an expanded version of the report published in 1987 (Bearman, 1987), Bearman raised concerns about the risk of software heritage disappearance.
+In 1986, the Computer Museum in Boston commissioned David Bearman, an expert in electronic archiving, to write a report on the feasibility of a software archive titled "The Concept of a Software Archive: Planning for a Software Archive" (@Bearman86). This report served as a basis for discussions with the Smithsonian Institution and the Charles Babbage Institute. In an expanded version of the report published in 1987 (@Bearman87), Bearman raised concerns about the risk of software heritage disappearance.
 
 > Early software masterpieces, monumental intellectual achievements of the genre, have already been lost to future study through neglect. And contemporary software concepts [...] will likely be lost unless the cultural history repositories of our day - the museums and archives of our contemporary society - take action soon to prevent the disappearance of this record.
 
-In 2002, John G. Zabolitzky emphasized the importance of preserving not only the hardware but also the software as witnesses of one of the greatest industries of our time in his work titled "Preserving Software, Why and How?" (Zabolitzky, 2002). The author highlights the significance of preserving software as a testament to the advancements made in this field.
+In 2002, John G. Zabolitzky emphasized the importance of preserving not only the hardware but also the software as witnesses of one of the greatest industries of our time in his work titled "Preserving Software, Why and How?" (@Zabolitzky02). The author highlights the significance of preserving software as a testament to the advancements made in this field.
 
 > Information technology is the largest industry worldwide today, and is slated to be even more dominant in the future. The roots of this industry are hardware and software developments over the past 50 years. Future generations will find it hard to understand if these roots are not preserved today. While a lot of hardware artifacts have been well preserved, I strongly suspect that some past software artifacts have already been destroyed irrecoverably. (Where are the early UNIVAC operating systems? The first FORTRAN/COBOL/ALGOL compilers?) There is a grave danger that in the near future large bodies of historically relevant software will be destroyed. Now is the time, therefore, to take action and preserve these objects for future study.
 
-In 2017, Paul McJones, a member of the Software Preservation Group, shared his unsuccessful quest for the first FORTRAN compiler in his article titled "The Search for the First Compiler" (McJones, 2017). He highlighted the urgency of preserving historical software, particularly as the original creators of these software programs are nearing the end of their lives. The article emphasized the importance of capturing and documenting this valuable software heritage before it is lost forever.
+In 2017, Paul McJones, a member of the Software Preservation Group, shared his unsuccessful quest for the first FORTRAN compiler in his article titled "The Search for the First Compiler" (@McJones17). He highlighted the urgency of preserving historical software, particularly as the original creators of these software programs are nearing the end of their lives. The article emphasized the importance of capturing and documenting this valuable software heritage before it is lost forever.
 
 > Old software and related materials are in constant danger of being lost, damaged, or destroyed; the people who created that software are aging and dying.
 
@@ -101,18 +101,18 @@ Preservation in practice
 
 While the importance and urgency of preserving software heritage have been recognized by numerous individuals, organizations, and institutions, the practical implementation of such archiving and conservation efforts remains complex. Various initiatives, with different objectives and strategies, have emerged since the 1980s, primarily in the Anglo-Saxon world.
 
-In 1988, the Library of Congress established a Machine-Readable Collections Reading Room (Kimball, 1990), providing access to software and files that could be executed or read on historical machines. However, the project was abandoned after a few years due to its high cost and low number of users.
+In 1988, the Library of Congress established a Machine-Readable Collections Reading Room (@Kimball90), providing access to software and files that could be executed or read on historical machines. However, the project was abandoned after a few years due to its high cost and low number of users.
 
-In 2002, Grady Booch, an IBM computer scientist, sent an email titled "Preserving classic software products" (noauthor, 2002), calling for the identification of software that should be prioritized for preservation efforts and the location of their source codes. As a result, in 2003, the voluntary committee Software Preservation Group (initially known as the Software Collection Committee) was created to support the Computer History Museum in its software preservation mission. The group's website compiles numerous primary and secondary sources related to the history of software.
+In 2002, Grady Booch, an IBM computer scientist, sent an email titled "Preserving classic software products", calling for the identification of software that should be prioritized for preservation efforts and the location of their source codes. As a result, in 2003, the voluntary committee Software Preservation Group (initially known as the Software Collection Committee) was created to support the Computer History Museum in its software preservation mission. The group's website compiles numerous primary and secondary sources related to the history of software.
 
-In 2007 (?), The Internet Archive launched its library of historical software. While it is generally not possible to download binary files, some software can be executed through an integrated emulator. The collection also includes photographs, videos, advertisements, and other documents.
+In 2007, The Internet Archive launched its library of historical software. While it is generally not possible to download binary files, some software can be executed through an integrated emulator. The collection also includes photographs, videos, advertisements, and other documents.
 
 In 2016, the Software Heritage project (initiated by Inria) was launched, aiming for the massive archiving of publicly available source codes on software forges. This project primarily focuses on the preservation of recent source codes. 
 
 A difficult balance
 --------------------
 
-In "A Response to 'Preserving Software: Why and How'" (Kaplan, 2002), Elisabeth Kaplan, an archivist at the Charles Babbage Institute, summarizes the tension faced by libraries, museums, and archives regarding software preservation. They are caught between the still poorly defined needs for such an archive and the significant costs involved in its implementation.
+In "A Response to 'Preserving Software: Why and How'" (@Kaplan02), Elisabeth Kaplan, an archivist at the Charles Babbage Institute, summarizes the tension faced by libraries, museums, and archives regarding software preservation. They are caught between the still poorly defined needs for such an archive and the significant costs involved in its implementation.
 
 > First, while all participants agreed that software history is important, that awareness of it should be raised, and that it must be documented, participants simply could not identify a solid user base of any justifiable proportion. Second, as participants stated over and over again, “preserving software” is much more than an act of accumulation. It means conserving, organizing, researching, cataloging, and presenting the materials in ways that researchers can use. To do otherwise is simply hoarding. And no individual institution or consortium of institutions has been able to balance these two issues.
 
@@ -292,6 +292,7 @@ The purpose of this phase is *to* *analyze, cleanup and structure* the
 raw materials that have been collected.
 
 During this phase, the general history of the software will be reconstructed, identifying the software versions and the contributors. 
+
 MF: no clear place to do so in the Workbench (especially for contributors and their workdate in the project).
 
 Collected materials will be prepared for proper archiving.
@@ -485,8 +486,6 @@ acquisition process.
 The process, a concrete view {#sec:processconcrete}
 ============================
 
-MF: the process should start with collecting, are at least making it clear we are not tackling it here. Otherwise hard to understand where we are starting from. 
-
 In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
 
 Seeting up your digital workbench
@@ -599,7 +598,9 @@ Your newly created workbench is composed of the following folders:
 software and the acquisition process (catalogue, actors, journal, etc.).
 
 MF: Should we create a metafolder for the code items?
+
 MF: I think we need to keep separate the `additional_materials` for non code items (collect and curate), and a dedicated `software story` folder for _presenting_ both code + additional material
+
 MF: I think the actors.md file is confusing. Is it a project metadata file, recording curators ? Or is a data file, recording historical information about who contributed to the software. I think these should be two separate things. At the moment no place to record historical contributors. 
 
 <!--
@@ -616,7 +617,6 @@ Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 
 As part of the instantiation, you can fill in the first metadata of your project. Go to the `metadata` folder, open the `actors.md` file and register who is working on the project, with which role.
 
-TO DO: part of instantiation would be to add meta data regarding curators etc in actors.md
 TO DO: update this screenshot
 
 ![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
@@ -714,7 +714,7 @@ You may not be able to fill in all the information from the beginning, so you sh
 
 MF: should there be one entry per software version? Then redundant with codemeta json and to some extent with version excel file. 
 MF: I think the catalogue should be more structured, with clear and pre-identified subcategories.
-MF: regarding software what is the source of trith? Codemeta, catalogue etc?
+MF: regarding software what is the source of truth? Codemeta, catalogue etc?
 
 
 ### Go on license hunting
@@ -750,15 +750,15 @@ To recreate the development history of the software we will leverage the *commit
 This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. Each layer of the stack can be associated to metadata that we will leverage to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
 
 We recommand to fill in the following metadata field for each commit:
-- author name: name of the main author                                          
-- author email: email of the main author, when available                         
-- date original: original date when this version was made                         
-- curator name: name of the curator person or team                               
-- curator email: the reference email of the acquisition process                   
-- release tag: a tag name if the directory contains a release, empty otherwise  
-- message: text containing a brief note from the curation team              
+- `GIT_AUTHOR_NAME`: name of the main author                                          
+- `GIT_AUTHOR_EMAIL`: email of the main author, when available                         
+- `GIT_AUTHOR_DATE`: original date when this version was made                         
+- `GIT_COMMITTER_NAME`: name of the curator person or team                               
+- `GIT_COMMITTER_EMAIL`: the reference email of the acquisition process
+- `GIT_COMMITTER_DATE`: date of the reconstruction process (current date)                  
+- `RELEASE_TAG`: a tag name if the directory contains a release, empty otherwise  
+- `MESSAGE`: text containing a brief note from the curation team              
 
-TO DO : update with actual name of metadata field.
 
 <!--
 To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  -->
@@ -940,16 +940,17 @@ MF: any other options?
 Present
 ----------------
 
-TO DO: Add story creation instructions
 Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you how to leverage a given tool, called [Software Stories](https://stories.softwareheritage.org/).
 
 Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the Software Heritage Acquisition Process (SWHAP) allowing curators to generate a multimedia overview of a landmark legacy software title.
  
 The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
 
+MF: do we want to give instructions for people wanting to set up their own instance?
+
 **Create a new collection**
 
-MF: how to do this?
+MF: hthis can be done via pub lisher workspace. I think potential users should reach out to us to do so. Contact point?
 
 **Contribute to a collection**
 
@@ -998,7 +999,7 @@ MF: do we want to provide hosting services for some element of the stories that 
 
 Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in ANNEXE X (TO DO: create Annexe and add link) how each specific custom moment translates into a JSON code. 
 
-Along the way you can test the redering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
+Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
 Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice (MF: is this best process?). 
 
 Iteration
