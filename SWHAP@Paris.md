@@ -995,9 +995,12 @@ In the `StoryInventory.md' file we suggest a template based on the work done for
 
 MF: What should the process then be? Shall we create the JSON/story ourselves, based on registerd info? Shall we let users build the JSON themselves and send it over to us? Ideally we would build an easy tool to convert the registered info into JSON. Could probably be done using Gsheet...Maybe framaform? 
 
+MF: do we want to provide hosting services for some element of the stories that can't be put on Wikidata? Note that it only works for picture. Unsure what to do with PDFs for instance.
+
 Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in ANNEXE X (TO DO: create Annexe and add link) how each specific custom moment translates into a JSON code. 
 
-Along the way you can test the redering of your story by copy-pasting the JSON file there: (TO DO add link)
+Along the way you can test the redering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
+Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice (MF: is this best process?). 
 
 Iteration
 ---------
