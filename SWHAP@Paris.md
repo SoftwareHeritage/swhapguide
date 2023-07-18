@@ -668,7 +668,6 @@ MF: wrong link, to be updated if relevant
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
-TO DO: I think we need to clarify why it is usefull to make it machine readable? Why not just keep the scan of paper listing? This should even be done earlier in the document, we need to explain what we put behind archiving a software, it is not self understanding. Edit: partly covered now in the intro.
 
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
