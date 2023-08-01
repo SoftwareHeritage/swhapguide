@@ -167,27 +167,25 @@ TO DO: ellaborate on this
 
 What entities are involved?
 --------------------
-
-MF: I think we should make this more detailed, depending on the use cases. If you are an institution you may have you own media library etc. 
-
  
 - *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
 - *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
 - *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment. If your are implementing the SWHAP process you will be responsible for implementing and managing this digital environment, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
-TO DO : ajouter shéma
-
-What are the different roles involved?
+What skills are involved?
 --------------------
 
-MF:  The role do not match the roles proposed in the workbecnh template (author, collector, curator). I would be in favor of making it simpler. If the process is simple enough (we should aim for it) there should not be a need for archive engineer or web engineer. Shall we make deposit engineer the same as archive engineer. Are these standard "titles" in conservation processes, or did you create them for SWHAP purpose? This can be a bit scary for someone starting the process alone (like a CS researcher). 
+With respect to the human resources, different skills are needed to enact
+the process. Here is a short summary of the involved capabilities.
 
-With respect to the human resources, several roles are needed to enact
-the process, as indicated in the top part of fig. 1. Here is a short
-summary of the involved capabilities.
+- **Collecting**: Searching and receiving historical raw materials. Identifying provenance, production date, ownership etc.
+- **Curating**: Organizing the collected material in the digital working environment. Registering proper metadata for each artefact. The curation of the source code will require some technical knowledge regarding software versionning systems such as Git (we will further elaborate later in the guide and offer step by step guidance)
+- **Archiving**: Publishing the curated material into digital archives such as Wikimedia and Wikidata.
+- **Presenting**: Narrating the story of the software and presenting collected artefacts to make them accessible to a non technical public. 
 
-- **Collector**: Searches and receives the raw materials. Identifies, classifies and
-separates source code and ancillary materials.
+Because we are dealing with digital artefacts, this process will mainly rely on digital tools and files. Being comfortable with handling digital objects is necessary for implementing the SWHAP. We aime for the SWHAP to require as little technical skills as possible, to make it accessible to the greatest number. Everytime the process will require some technicity (mostly for curating the source code), we will offer step by step guidance.  
+
+<!--
 - **Deposit engineer**: Masters the procedures to archive physical and digital materials, in the
 local context.
 - **Curator**: Prepares the version history, identifying the authors and other
@@ -199,20 +197,18 @@ publish the context in the Wikies.
 note that, though most of the presentations of the archived software
 will be on line, the abilities to design the contents of a presentation
 should be considered separately from the technical ones.
+-->
 
-**[Remark]{.underline}** the roles indicated above need not necessarily
-be played by different persons, e.g., Collector and Curator may be the
-same person, nor be played by a unique person, e.g., there can be
-several cooperating Curators, in case of large systems.
+**[Remark]{.underline}** the skills indicated above need not necessarily
+be played by different persons, e.g., collecting and curating may be handled by the
+same person. Likewise, several people may collaborate on a given expertise.
 
 What if I am stuck or have a question ?
 --------------------
 
 Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
 
-First, we suggest you checkout our FAQ: TO DO: create FAQ and input link
-
-If you can't find what you are looking for there, please reachout to: TO DO: decide if we want to provide a contact point
+To do so, you can join our mailing list: https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info
 
 What is the content of this guide?
 --------------------
@@ -296,7 +292,7 @@ Curate
 ------ 
 
 The purpose of this phase is *to* *analyze, cleanup and structure* the
-raw materials that have been collected.
+raw materials that have been collected. 
 
 During this phase, the general history of the software will be reconstructed, identifying the software versions and the contributors. 
 
