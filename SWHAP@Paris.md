@@ -133,6 +133,11 @@ Alongside source-code and in line with the approach proposed by Elisabeth Kaplan
 
 In 2021, Software Heritage announced the launch of the "Software stories" initiative (noauthor, n.d.), in collaboration with the sciencestories.io team and the University of Pisa. The project aims at presenting the history of significant historical software projects in a way that is accessible to the general public without any technical background. The new version of this guide will also tackle how to contribute to the Software Stories library, based on currated materials. 
 
+What this guide does _not_ cover
+--------------------
+
+In this guide we solely focus on preserving items in digital format, in order to make the preservation process as accessible and scalable as possible. This means we will not tackle how to preserve physical artefacts, even though we do encourage you to  
+
 
 Who is this guide for and what do you need to get started?
 ============
