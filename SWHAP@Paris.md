@@ -123,20 +123,22 @@ Elisabeth Kaplan explains the approach adopted by some institutions as follows:
 The Software Heritage approach
 --------------------
 
-In 2019, Software Heritage and University of Pisa published a first version of this guide, establishing a process for safeguarding historical source codes into the Software Heritage archive. The idea of this guide relied on several core beliefs:
+In 2019, Software Heritage and University of Pisa published a first version of this guide, establishing a process for safeguarding historical source codes into the Software Heritage archive. This process is called **SWHAP**, for _Software Heritage Acquisition Process_. The idea of the SWHAP process relied on several core beliefs:
 - Legacy source code gives a precious view on the history of the software and of its authors and is worth preserving for itself
 - Archiving source code can be achieved at a reasonnable cost and effort
 - Preserving source code in a digital and machine readable format ensures its long term availability and allows exploitation by future generations
 - Preserving historical source code is a task that can only be tackled via a collective effort, and should be adressed via an open-sourced process allowing as many personns and entity to contribute.
 
-Alongside source-code and in line with the approach proposed by Elisabeth Kaplan, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. In this guide, we will propose a process for preserving these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
+Alongside source-code and in line with the approach proposed by Elisabeth Kaplan, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. The SWHAP also covers the preservation of these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
 
 In 2021, Software Heritage announced the launch of the "Software stories" initiative (noauthor, n.d.), in collaboration with the sciencestories.io team and the University of Pisa. The project aims at presenting the history of significant historical software projects in a way that is accessible to the general public without any technical background. The new version of this guide will also tackle how to contribute to the Software Stories library, based on currated materials. 
 
-What this guide does _not_ cover
+What the SWHAP does _not_ cover
 --------------------
 
-In this guide we solely focus on preserving items in digital format, in order to make the preservation process as accessible and scalable as possible. This means we will not tackle how to preserve physical artefacts, even though we do encourage you to  
+The Software Heritage Acquisition Process solely focuses on preserving items in a **digital format**, in order to make the preservation process as accessible and scalable as possible. This means we will not tackle how to preserve physical artefacts, even though we do encourage you to try and safeguard any physical artefacts of interest you may encounter in the preservation process (computers, paper listings, reports etc.). This can typically be done by reaching out to science museums or local preservation associations. In annexe X you will find a non-exhaistive list of such entities. 
+
+The SWHAP focuses on preserving the software **source code**, which we believe is worth preserving for itself. The process does not tackle the execution of this code, or how to deal with emulation systems. 
 
 
 Who is this guide for and what do you need to get started?
@@ -168,10 +170,10 @@ What entities are involved?
 
 MF: I think we should make this more detailed, depending on the use cases. If you are an institution you may have you own media library etc. 
 
-- *A physical archive*: a physical archive is not strictly required for this process, since we will deal with digital (or digitalized) artefacts. However, we do encourage you to find a physical location where physical raw materials can be safely archived and stored. Maintaining the physical archive is the responsibility of the owner of the physical products or any third party untrusted by the owner, like a physical archive or a museum. 
+ 
 - *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
 - *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
-- *Digital workbench*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, which we will refer to as Workbench. If your are implementing the SWHAP process you will be responsible for implementing and managing this workbench, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
+- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment. If your are implementing the SWHAP process you will be responsible for implementing and managing this digital environment, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 TO DO : ajouter shéma
 
