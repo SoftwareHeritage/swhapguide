@@ -491,15 +491,15 @@ The process, a concrete view {#sec:processconcrete}
 
 In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
 
-Seeting up your digital workbench
+Seeting up your digital working environment
 ----------------
 
 ### General structure
 
-In order to implement SWHAP, the first step is to create the *Workbench* that will allow you to store the collected digital artifacts and to curate them. 
-In practice, you could choose any collaborative file management tool as your digital workbench.
+In order to implement SWHAP, the first step is to create the *digital working environment* that will allow you to store the collected digital artifacts and to curate them. 
+In practice, you could choose any collaborative file management tool as your digital working environment.
 Note however that curating source code will require code versionning (typically using a mecanism _à la_ Git). Github or Gitlab are well-known collaborative platforms enabling code versionning and are good options for this part of the process. 
-Depending on what suits you best you could therefore choose such platforms as your one and only workbench for the whole process instead of managing two different environments.
+Depending on what suits you best you could therefore choose such platforms as your one and only working environment for the whole process instead of managing two different environments.
 
 The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
 implementation adopted by the SWHAP\@Pisa project relies on the
@@ -507,10 +507,18 @@ collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
 platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to Appendix A. TO DO: add link
 
+We propose to structure your *Digital working environment* into two disctinct areas, materialized by different spaces, also called repositories on Github.
+
+> *Workbench* repository, a working
+> area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
+>
+> *Depository* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found; 
+
+Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
+
 <!--
 MF: I think we only need to introduce the Workbench at this sate. Depository is very much optionnal depenging on the goal of the person. Source Code is a technicality for ingestion in SWH archive. 
 
-We propose to structure your *Digital working environment* into three disctinct areas, materialized by different folders, also called repositories on Github.
 
 > *Workbench* repository, a working
 > area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
@@ -658,8 +666,6 @@ We encourage you to digitalise (by scanning or photographying) all the relevant 
 The collected source code should then be stored in the `raw_source_code` folder. 
 The other collected materials should be stored in the `additional_materials` folder, in the corresponding subfolder. 
 
-MF: how to deal with source code in old versionning systems like SVN? Transfer to Github and then SWH? Can it go directly to SWH?
-
 <!-- MF: should'nt that be done in the metadata folder? I feel like Spectrum guidelines are way over the top, we are not a museum. + is this our role? 
 If there are physical materials, folder `raw_materials` should contain
 a reference to the related Warehouse, that may follow the Spectrum
@@ -671,6 +677,10 @@ MF: wrong link, to be updated if relevant
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
+Making the source code machine readable will allow:
+- To properly archive the soure code in the Software Heritage archive
+- To reuse part or totality of the source code for future projects
+- To search and explore the code for future analysis or research projects
 
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
