@@ -878,7 +878,7 @@ MF: do we want to formally archive the `Depository`repo?
 
 ### Archiving software information and additional materials 
 
-As much as possible, the Archiving of additional materials will take place using the open source platforms.
+We recommand to archive the software information and additional materials in dedicated open-source archives.
 
 **General software information** 
 
@@ -956,7 +956,7 @@ Present
 
 Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you how to leverage a given tool, called [Software Stories](https://stories.softwareheritage.org/).
 
-Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the Software Heritage Acquisition Process (SWHAP) allowing curators to generate a multimedia overview of a landmark legacy software title.
+Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the SWHAP allowing curators to generate a multimedia overview of a landmark legacy software title.
  
 The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
 
@@ -971,7 +971,7 @@ MF: hthis can be done via pub lisher workspace. I think potential users should r
 Once you have created a new collection or decided to contribute to an exhisting one, you can start building a new software story.
 A story is made up of different _moments_. 
 
-Some moments can be automatically generated base on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
+Some moments can be automatically generated based on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
 https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related wikidata item. 
 
 Since automatically generated moments might not always fit the story you want to narrate, you may choose to build a custom story, mixing automated and custom moments. Here are the main moments we recommend using to build your story. 
