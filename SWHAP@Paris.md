@@ -153,7 +153,7 @@ Typically :
 Depending on which goals you are pursuing, you may refer to different sections of this guide. 
 If you already have a specific software in mind, you know where the source code is and you (or someone you know) can dedicate some time to preserving it, then you can jump directly to the technical section and get the work started (TO DO: add reference). Typically you are one of the author of the code and want to make sure it doesn't get lost for future generations.
 
-If you want to launch a preservation initiative at a broader scale, for example preserving legacy softwares within your institution, or collecting artefacts as a museum, we will first try to give some guidance as regards how to set things in motions, and which ressources you will need. 
+If you want to launch a preservation initiative at a broader scale, for example preserving legacy source codes within your institution, or collecting artefacts as a museum, we will first try to give some guidance as regards how to set things in motions, and which ressources you will need. 
 
 Regardless of where you stand from, here are the entities which will be involved in the process. We designed the process to rely as much as possible on existing open-source solutions, so that you don't have to set anything up by yourself if you don't want to. If you are an institution and wishes to use some of your own infrastructure that is of course possible. 
 
@@ -167,10 +167,12 @@ TO DO: ellaborate on this
 
 What entities are involved?
 --------------------
+
+Performing the SWHAP does not require to set up any infrastructure yourself. The process relies on publicly available tools.
  
-- *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The responsibility of maintaining these open-source digital archives lies in the different entities or consortia implementing them. The use of open source solutions ensure the best perenity of the archiving over time. 
-- *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". In this guide we will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
-- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment. If your are implementing the SWHAP process you will be responsible for implementing and managing this digital environment, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
+- *Digital archives*: in the SWHAP process various types of digital archives are used for different types or artefacts. The proposed process relies on open source solutions even though you may be free to chose alternative options. The use of open source solutions ensure the best perenity of the archiving over time. 
+- *Online presentation plateform*: although you are free to recreate your own website to present your software collection, we offer in this guide to leverage an open-source solution called "Science stories". We will show you how to contribute to the [Software Heritage implementation](https://stories.softwareheritage.org/), eventhough you may decide to create your own dedicated instance.
+- *Digital working environment*: between the collection of physical or digital artefacts and the final archiving and presentation of the software a series of operations will have to be performed in a digital environment, typically a collaborative file sharing system. If your are implementing the SWHAP you will be responsible for implementing and managing this digital environment, and to transfer part of its content to the digital archives and to the presentation plateform of your choice. We will further elaborate about that later in this document. 
 
 What skills are involved?
 --------------------
@@ -178,8 +180,8 @@ What skills are involved?
 With respect to the human resources, different skills are needed to enact
 the process. Here is a short summary of the involved capabilities.
 
-- **Collecting**: Searching and receiving historical raw materials. Identifying provenance, production date, ownership etc.
-- **Curating**: Organizing the collected material in the digital working environment. Registering proper metadata for each artefact. The curation of the source code will require some technical knowledge regarding software versionning systems such as Git (we will further elaborate later in the guide and offer step by step guidance)
+- **Collecting**: Searching and receiving historical raw materials, making them available in a digital format. 
+- **Curating**: Organizing the collected material in the digital working environment. Identifying provenance, production date, ownership etc.. The curation of the source code will require some technical knowledge regarding software versionning systems such as Git (we will further elaborate later in the guide and offer step by step guidance)
 - **Archiving**: Publishing the curated material into digital archives such as Wikimedia and Wikidata.
 - **Presenting**: Narrating the story of the software and presenting collected artefacts to make them accessible to a non technical public. 
 
@@ -208,7 +210,7 @@ What if I am stuck or have a question ?
 
 Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
 
-To do so, you can join our mailing list: https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info
+To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info) and share your questions and your comments with the community. 
 
 What is the content of this guide?
 --------------------
@@ -250,9 +252,9 @@ to perform the various operations described here.
 The activities involved in the acquisition process can be organized in the
 following four phases.
 
-- **Collect**: the first phase  is *conservative*, i.e., it is devoted to save the raw materials, in their physical or digital format, that the other phases will build upon.
+- **Collect**: the first phase  is *conservative*, i.e., it is devoted to save the raw materials, in their digital format, that the other phases will build upon.
 - **Curate**: the second phase aims at *analyzing, cleaning up and structuring* the raw materials that have been collected, gather information regarding the software history and identify copyrights and licenses.
-- **Archive**: the third phase's goal is to contribute the curated materials to the digital infrastructures specialized for each kind of materials. From this stage on, all the curated material should have been digitalised in order to be processed. 
+- **Archive**: the third phase's goal is to contribute the curated materials to the digital infrastructures specialized for each kind of materials. 
 - **Present** The purpose of this phase is to create dedicated presentations of the curated materials.
 
 Figure {@fig:absprocess} provides a pictorial view of the process, its phases,
@@ -262,8 +264,8 @@ Collect
 ------ 
 
 The purpose of this phase is *to find* the source code and related
-materials and *gather* it *as is* in a physical and/or logical place
-where it can be properly *archived* for later processing. 
+materials and *gather* it in the digital working environment
+where it can be properly saved for later processing. 
 
 Various *strategies* are possible for collecting the raw materials: a
 dedicated team may proactively search for the artifact of specific
@@ -275,8 +277,7 @@ approach*).
 *Source code* can be provided in a *digital* or *physical* form.
 Typically, source code for old machines (such as the first Italian
 computer, CEP, now exposed in the Pisa museum of computing) is available
-only as paper printouts that may even include hand-written comments: all
-these materials deserve to be preserved.
+only as paper printouts that may even include hand-written comments. We encourage you to find a safe resting place for the physical item, but a scanned version will be necessary to continue the SWHAP.
 
 *Related materials* can include research articles, pictures, drawings,
 user manuals: all of these are part of the software history and need to
@@ -340,6 +341,8 @@ However this may come with some restrictions :
 In these cases the use of private infrastructures can be considered (like Youtube for large videos). 
 Institutionnal media libraries can also be an option for materials with restricted copy rights. 
 
+<!--
+MF: to be moved later on
 Well established guidelines are available for contributing materials to
 Wikimedia (see
 [[https://commons.wikimedia.org/wiki/Commons:First\_steps/Contributing]{.underline}](https://commons.wikimedia.org/wiki/Commons:First_steps/Contributing))
@@ -348,6 +351,7 @@ and Wikidata (see
 ), hence we will focus more specically on curating and contributing the
 software source code to Software Heritage, a process that is new and may
 require rather technical steps.
+-->
 
 Present
 ------  
@@ -361,7 +365,7 @@ variety of purposes: special events, virtual or physical expositions for
 museums or websites.
 
 In this guide we will show you how to display you work in a specific format, called [_**Software Story**_](https://stories.softwareheritage.org/).
-The _Software Story_ pulls from different public sources (Wikimedia, Wikidata, Software Heritage, Youtube...) to automatically create a presentation of you software. 
+The _Software Story_ pulls from different public sources (Wikimedia, Wikidata, Software Heritage, Youtube...) to semi-automatically create a presentation of you software. 
 This is only a proposition, feel free to use any other tool or platform you may like. 
 
 
@@ -467,18 +471,16 @@ and technologies, as long as the following key requirements are
 satisfied.
 
 - **Long term availability**: The places where the artefact (both raw and curated) are stored must
-provide sufficient guarantees of availability over the long term. These
-places may be physical (warehouses), or logical (depositories).
+provide sufficient guarantees of availability over the long term. 
 - **Historical accuracy**: Any supporting implementation should support the faithful recording of
 the authorship of the source code as well as of the reconstruction
 process, e.g., via a flexible versioning system.
 - **Traceability**: It must be possible to trace the origin of each of the artifacts that
-are collected, curated and deposited. For physical materials, we refer
-to common practice[^3]. For digital artifacts, it is recommended to keep
+are collected, curated and deposited. For digital artifacts, it is recommended to keep
 a *journal of all the operations* that are performed, and to automate
 them as much as possible, as the collection and curation process may
 require several iterations.
-- **Openness**: Any supporting implementation should be based on open and free tools and
+- **Openness**: As much as possible, supporting implementation should be based on open and free tools and
 standards.
 - **Interoperability**: Any supporting implementation should provide support for the cooperation
 and coordination of the many actors playing the many roles of the
@@ -489,8 +491,6 @@ acquisition process.
 The process, a concrete view {#sec:processconcrete}
 ============================
 
-In this process we are assuming that you have a place (refered to as _Warehouse_) to gather any relevant physical artifacts. Because the SWHAP process is about digital archiving and presenting, we also assume that you have digitalized (scanning or taking pictures) of these items to be further ingested in the SWHAP process. From now own, we will be focusing on the digital process only. 
-
 Seeting up your digital working environment
 ----------------
 
@@ -498,7 +498,7 @@ Seeting up your digital working environment
 
 In order to implement SWHAP, the first step is to create the *digital working environment* that will allow you to store the collected digital artifacts and to curate them. 
 In practice, you could choose any collaborative file management tool as your digital working environment.
-Note however that curating source code will require code versionning (typically using a mecanism _à la_ Git). Github or Gitlab are well-known collaborative platforms enabling code versionning and are good options for this part of the process. 
+Note however that curating source code will require code versionning, typically using a mecanism _à la_ Git. If you are not familiar with Git, you can check Annexe X for a quick intro. Github or Gitlab are well-known collaborative platforms based on Git, enabling code versionning and are good options for this part of the process. 
 Depending on what suits you best you could therefore choose such platforms as your one and only working environment for the whole process instead of managing two different environments.
 
 The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
@@ -658,7 +658,7 @@ Collect
 
 MF: add something about collecting information (regarding software and contributors). 
 
-In this first phase you want to spend times collecting the sofwtare artifacts, either in physical or digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
+In this first phase you want to spend times collecting the sofwtare artifacts in digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
 We encourage you to digitalise (by scanning or photographying) all the relevant physical objects, since this process only focuses on digital items. Whenever possible, the physical objects should be stored in a dedicated warehouse.
@@ -678,9 +678,9 @@ MF: wrong link, to be updated if relevant
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
 Making the source code machine readable will allow:
-- To properly archive the soure code in the Software Heritage archive
-- To reuse part or totality of the source code for future projects
-- To search and explore the code for future analysis or research projects
+- To properly archive the soure code in the Software Heritage archive, using minimal storage ressources
+- To make the code reusable, in part or in totality, for future projects
+- To make the code searchable, for future historical analysis or research projects
 
 If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
@@ -746,7 +746,7 @@ As you get more information about copyrights and licenses don't forget to fill i
 TO DO: be more specific about what to do with authorizations. No dedicated folder for now.
 TO DO: show a template of license? DIfference between free license and specific license. 
 
-If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalgoe in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
+If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalogue in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
 
 <!--
 don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
@@ -759,8 +759,9 @@ Modern progamming practice use versionning systems to allow to track changes mad
 
 MF: maybe elaborate on the point of re-versionning the source code.
 
-To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. 
-This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. Each layer of the stack can be associated to metadata that we will leverage to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
+To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. A _commit_ is an incremental change in the code, packaged with relevant metadata regarding the change. 
+This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. 
+Each layer of the stack can be associated to metadata that we will leverage in the SWHAP to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
 
 We recommand to fill in the following metadata field for each commit:
 - `GIT_AUTHOR_NAME`: name of the main author                                          
