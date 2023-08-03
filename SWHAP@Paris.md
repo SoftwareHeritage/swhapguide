@@ -849,40 +849,35 @@ From the `raw_materials` folder, select the ancillary materials that you wish to
 To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
 -->
 
-### Create final Depository repository
+### Create final Curated repository
 
-MF: we need to explain what this depository is actually for. Also why create a branch and not just create directly the Depository?
-Shall we fill in the `additional amterials`folder before creating the Depository ? This seems more like the curating phase
+Once your curation work is done, you can create the final *Curated* repository, as a new public Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name.
+- Push the *READ.ME* file of the _Workbench_ into the *main* branch of the *Curated* repository
+- Push the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories of the *Workbench* into a new orphan branch of the *Curated* repository called `Depository`
+- Push the content of the `Versionned_Source_Code` folder into a new orphan branch of the *Curated* repository called `Source Code` 
 
-Create the final `Depository` repository, containing only the
+<!--
+Create the final `Curated` repository, containing only the
 folders `raw_source_code`, `browsable_source_code`, `additional_materials` together with the
 metadata updated to this point. 
+-->
 
-Remember to remove the folder containing items for which you did not get the copyrights or sharing license. 
+Remember to remove any items for which you did not get the copyrights or sharing license. 
 This will be the publicly available showcase of your work. 
-
-TO DO: if the items with no public license are scattered in the additional materials folder, it might be quite tedious to remove them. Shall they be stored in dedicated subfolder?
 
 
 Archive
 ----------------
 
-### Archiving Source Code
+### Archiving your curation work
 
-In order to archive your source code properly in Software Heritage archive, you first want to create a standalone "Source Code" repository containing your reconstructed versionned source code only and independant from the workbench. 
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
 
-To do so, create an orphan branch of the "Workbench", containing only the `versionned_source_code` folder. Push this orphan branch into a new public dedicated repository, that you can typically call "MySoftware Source Code". This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
-
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of you `Source Code` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
-
-Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `Source Code` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
-
-MF: do we want to formally archive the `Depository`repo? 
-
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
 ### Archiving software information and additional materials 
 
-We recommand to archive the software information and additional materials in dedicated open-source archives.
+Even though your work has been archived in the Software Heritage Archive, we recommand to specifically archive the software information and additional materials in dedicated open-source archives.
 
 **General software information** 
 
