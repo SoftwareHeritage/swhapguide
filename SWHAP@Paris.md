@@ -576,9 +576,9 @@ archive, the former is published by the organization promoting the
 acquisition.
 -->
 
-![Overview of the SWHAPPE approach](./media/image2.png){#fig:swhappe}
+![Overview of the final Curated repository](./media/curatedRepoStructured.png.png){#fig:curatedRepo}
 
-Figure 2. Overview of the SWHAPPE process.
+Figure 2. Structure of the final curated repository and its different branches.
 
 ### Workbench structure
 
