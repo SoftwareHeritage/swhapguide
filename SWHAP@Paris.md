@@ -576,7 +576,7 @@ archive, the former is published by the organization promoting the
 acquisition.
 -->
 
-![Overview of the final Curated repository](./media/curatedRepoStructured.png){#fig:curatedRepo}
+![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
 
 Figure 2. Structure of the final curated repository and its different branches.
 
