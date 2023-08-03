@@ -514,7 +514,7 @@ We propose to structure your *Digital working environment* into two disctinct ar
 >
 > *Curated* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found.
 
-In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the curation work on one side (*Depository* branch) and the reconstructed versioned source code on the other (*Source Code* branch). The *main* branch will serve as an entry point to the two other branches and point towards external ressources such as this guide. See fugire 2 below. 
+In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the curation work on one side (*Depository* branch) and the reconstructed versioned source code on the other (*Source Code* branch). The *main* branch will serve as an entry point to the two other branches and point towards external ressources such as this guide. See figure 2 below. 
 
 ![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
 
