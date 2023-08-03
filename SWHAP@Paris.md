@@ -512,9 +512,15 @@ We propose to structure your *Digital working environment* into two disctinct ar
 > *Workbench* repository, a working
 > area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
 >
-> *Depository* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found; 
+> *Curated* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found.
 
-Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Depository* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
+In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the curation work on one side (*Depository* branch) and the reconstructed versioned source code on the other (*Source Code* branch). The *main* branch will serve as an entry point to the two other branches and point towards external ressources such as this guide.  
+
+![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
+
+Figure 2. Structure of the final curated repository and its different branches.
+
+Note that *Workbench* repository will be instantiated at the very beginning of the process as your main working environnement. *Curated* repository will be instantiated later on, as specific extracts from the *Workbench*. Let's first see how to instantiate your *Workbench*.
 
 <!--
 MF: I think we only need to introduce the Workbench at this sate. Depository is very much optionnal depenging on the goal of the person. Source Code is a technicality for ingestion in SWH archive. 
@@ -576,9 +582,7 @@ archive, the former is published by the organization promoting the
 acquisition.
 -->
 
-![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
 
-Figure 2. Structure of the final curated repository and its different branches.
 
 ### Workbench structure
 
