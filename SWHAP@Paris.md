@@ -814,9 +814,8 @@ This information should be consigned in the `version_history.csv` in the `metada
 
 -->
 Now you are ready to (re-)create the development history of the
-software, by successively commiting the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment.  
+software. First, create a new empty _orphan_ branch, clean of any commit history. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment. The content of the branch should be cleared between two commits. 
 
-MF: verify that you don't actually need to branch the code to do so. 
 
 <!--First you need to create a branch Source Code, with the
 *source* folder.-->
@@ -824,13 +823,13 @@ MF: verify that you don't actually need to branch the code to do so.
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `versionned source code` folder, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
+    into the `SourceCode` brand, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
 TO DO: make an actual test of the code, see if is working etc. Sould we store the code in a colab notebook to make it ready to run for a non expert user?
 
-The result will be a `versionned source code` folder that materializes the development history
+The result will be a `SourceCode` branch that materializes the development history
 of the software via Git commits and releases.
 
 <!--
@@ -851,10 +850,13 @@ To every collected item should correspond an entry in the `catalogue.md`file, lo
 
 ### Create final Curated repository
 
-Once your curation work is done, you can create the final *Curated* repository, as a new public Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name.
-- Push the *READ.ME* file of the _Workbench_ into the *main* branch of the *Curated* repository
-- Push the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories of the *Workbench* into a new orphan branch of the *Curated* repository called `Depository`
-- Push the content of the `Versionned_Source_Code` folder into a new orphan branch of the *Curated* repository called `Source Code` 
+Once your curation work is done for both source code and ancillary materials, you can create the final *Curated* repository, as a new public Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name. This repository will contain three branches: a `main` branch that will serve as an entry point into the two other ones and containing a READ.ME file only, a `SourceCode` branch containing the curated source code and a `Depository` branch containing the materials collected during the curation process and the metadata. 
+
+In your workbench, create a new branch called `Depository`, containing the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories. Push this branch into a new branch of the *Curated* repository also called `Depository`.
+
+Going back to your master branch, remove all the files except for the READ.ME file that you can update if needed. Push that branch into the master branch of the *Curated* repository. 
+
+Finally, push the `SourceCode` branch of the workbench into the *Curated* repository. 
 
 <!--
 Create the final `Curated` repository, containing only the
@@ -871,7 +873,13 @@ Archive
 
 ### Archiving your curation work
 
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository.  You can then follow the archival status of your code [there](https://archive.softwareheritage.org/save/list/).
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository. 
+
+![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow_URL.PNG){#fig:saveCodeNowURL}
+
+You can then follow the archival status of your code in the [_Browse Save Request_ tab below](https://archive.softwareheritage.org/save/list/).
+
+![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow.PNG){#fig:saveCodeNow}
 
 Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
