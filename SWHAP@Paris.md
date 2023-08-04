@@ -883,6 +883,8 @@ You can then follow the archival status of your code in the [_Browse Save Reques
 
 Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
+![View of the _Permaling_tab](./media/SWHBadgeIntegration.PNG){#fig:badge}
+
 ### Archiving software information and additional materials 
 
 Even though your work has been archived in the Software Heritage Archive, we recommand to specifically archive the software information and additional materials in dedicated open-source archives.
