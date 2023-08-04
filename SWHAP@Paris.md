@@ -221,7 +221,7 @@ MF: to be reviewed at the end
 - [Who is this guide for and what do you need to get started?](#context)
 - [The process, abstract view](#abstractview) 
 - [The process, concrete view](#concreteview) 
-- [A walkthrough on a running example](#runningexample)
+- [Curating a source code, a step by step example](#stepbystep)
 - [Appendix A - General Motivation for using Git and GitHub](#appendixa)
 - [Appendix B - Tools that can help](#appendixb)
 - [Appendix C - Tips on Github](#appendixc)
@@ -233,8 +233,8 @@ technologies* that may be used to enact it are made, but some requirements are
 made explicit. Section {@sec:processconcrete} describes how the abstract process
 is implemented at the University of Pisa by leveraging the Git toolset and the
 GitHub collaborative development platform. This implementation is named SWHAPPE
-(SWH Acquisition Process Pisa Enactor) in this document. Finally, Section {@sec:walkthrough}
-provides a walkthrough on an annotated example, using a real world medium-sized software
+(SWH Acquisition Process Pisa Enactor) in this document. Finally, Section {@sec:stepbystep}
+provides step-by-step guidance of a source code curation process using Git, using a real world medium-sized software
 project (@AttardiF96).
 
 <a name="abstractview"/>
@@ -588,6 +588,7 @@ acquisition.
 
 The structure of the template is shown in Fig. 3.
 MF: TO DO update this graph and the screenshot, to make it simpler
+MF: No need for source folder. 
 
 <!-- 
 
@@ -606,7 +607,6 @@ transcribed from pictures, etc.
 Your newly created workbench is composed of the following folders:
 - The `raw_source_code` folder used to store the collected source code in their intial format (ex: source code can be a scanned document) 
 - The `browsable_source_code` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
-- The `versionned_source_code` folder will be used to recreate the development history of the software, using the *commit* and *versioning* mechanisms of *Git*
 - The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
 - The `software_stories` folder is used prepare material for creation of the _Software Story_
 - The `metadata folder`, is used to record all the information about the
@@ -882,6 +882,14 @@ Even though your work has been archived in the Software Heritage Archive, we rec
 **General software information** 
 
 Regarding general software information as well as pictures and photos, we will use Wikimedia and Wikidata. 
+
+Well established guidelines are available for contributing materials to
+Wikimedia (see
+[[https://commons.wikimedia.org/wiki/Commons:First\_steps/Contributing]{.underline}](https://commons.wikimedia.org/wiki/Commons:First_steps/Contributing))
+and Wikidata (see
+[[https://www.wikidata.org/wiki/Wikidata:Data\_donation]{.underline}](https://www.wikidata.org/wiki/Wikidata:Data_donation)
+), but we will try to provide some SWHAP specific guidance thereafter. 
+
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
 To start, search Wikidata to see if an item for the software title exists. If no item is found, [create a new item](https://www.wikidata.org/wiki/Special:NewItem). A new item should be created as an _instance_ of one or several larger category. You can typically use a generic _software_ category here, or be more specific: _free software_, _programming languge_, _web browser_ etc.   
@@ -1053,7 +1061,7 @@ recreate it, performing the following steps:
 
 <a name="runningexample"/>
 
-A walkthrough on a running example {#sec:walkthrough}
+Appendix A - Curating a source code, a step by step example {#sec:stepbystep}
 ==================================
 
 In this section we will show the process at work on one of the first
