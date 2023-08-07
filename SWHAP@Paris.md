@@ -777,6 +777,7 @@ We recommand to fill in the following metadata field for each commit:
 - `RELEASE_TAG`: a tag name if the directory contains a release, empty otherwise  
 - `MESSAGE`: text containing a brief note from the curation team              
 
+MF: shall we change back the metatdata once code curation done? Otherwise the next commits will be impacted.
 
 <!--
 To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  -->
@@ -852,9 +853,9 @@ To every collected item should correspond an entry in the `catalogue.md`file, lo
 
 Once your curation work is done for both source code and ancillary materials, you can create the final *Curated* repository, as a new public Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name. This repository will contain three branches: a `main` branch that will serve as an entry point into the two other ones and containing a READ.ME file only, a `SourceCode` branch containing the curated source code and a `Depository` branch containing the materials collected during the curation process and the metadata. 
 
-In your workbench, create a new branch called `Depository`, containing the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories. Push this branch into a new branch of the *Curated* repository also called `Depository`.
+In your `Workbench`, create a new branch called `Depository`, containing the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories. Push this branch into a new branch of the *Curated* repository also called `Depository`.
 
-Going back to your master branch, remove all the files except for the READ.ME file that you can update if needed. Push that branch into the master branch of the *Curated* repository. 
+Going back to your master branch of your `Workbench`, remove all the files except for the READ.ME file that you can update if needed. Push that branch into the master branch of the *Curated* repository. 
 
 Finally, push the `SourceCode` branch of the workbench into the *Curated* repository. 
 
@@ -914,15 +915,13 @@ Typically you will want to register:
 - The source code repository URL using (P1324)
 - The people or entities who contributed to develop the software using the _developer_ property (P178)
 
-In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement(P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
+In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement (P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
 Using the _Source code repository_ statement (P1324), add the link towards the Software Heritage archived source code. 
 
 MF: there also is a source code respository URL statement. WHich one?
 MF: is there a SWH property?
 MF: what are the minimum properties we would want to record regarding the software?
-
-(TO DO: elaborate on list of information. Only place where JSON file is used? Then let's just use a simple csv, easier to ediit no?)
 
 **Pictures, photos and videos**
 
@@ -1016,12 +1015,12 @@ In the `StoryInventory.md' file we suggest a template based on the work done for
 
 **Information regarding the people involved in the software development and how they organized**
 - A **people moment** introduces Amaya's contributers.
-- An **iframe moment** shows a snapshot into Amaya mailing list and shows how Amaya community organized itself.
-
+- An **iframe moment** showing some notes from one of the first Amaya design meeting
+  
 **Information regarding the software product itself, how it evolved and about its source code**
 - Another **timeline** moment shows how Amaya features and design evolved in time
 - A **software heritage** moment shows a view into Amaya source code
-- Two **image moments** give some statistics and insights on Amaya source code.
+- An **image moments** give some statistics and insights on Amaya source code.
 
 
 MF: What should the process then be? Shall we create the JSON/story ourselves, based on registerd info? Shall we let users build the JSON themselves and send it over to us? Ideally we would build an easy tool to convert the registered info into JSON. Could probably be done using Gsheet...Maybe framaform? 
@@ -1036,38 +1035,45 @@ Once your JSON file is ready, send it out to the Software Heritage team (TO DO :
 Iteration
 ---------
 
-TO DO : to be updated, I don't think adding a simple picture should require clone and pushing etc. 
-
 New material may be discovered after the process has been completed,
 triggering an iteration of some of the phases described above. In this
 case, we recommend to proceed as follows:
 
--   if new raw material (non-source code) is found, we have to clone the
-    Depository repository and add new items to it. In this way, the
-    performed commits will correctly follow the previous ones.
+MF: shall we first update the workbench and then push it in the Curated Repo? Or directly update the repo?
 
--   if new source code is found, after we collected it in the
-    Depository, we have the following cases:
+If new raw material (non-source code) is found, you can clone add them to the _Depository_ branch of the `Workbench` and then push the updated branch to the
+    _Curated_ repository. In this way, the performed commits will correctly follow the previous ones.
 
+If new source code is found:
+
+<!--
 > \(1) The recovered source code is related to a version which is already
 > included in the software history.
 >
 > \(2) The source code represents a completely new version, with respect to
 > the software history as it was previously collected.
+-->
 
-We are not finished yet, since in both cases the SourceCode repository
-is no longer consistent with the collected source code, and we have to
+First collect the source code material in the `raw_source_code` and `browsable_source_code` repositories, in the  _Depository_ branch of the `Workbench`, and update the metadata files accordingly if needed. 
+
+The _SourceCode_ branch of the `Workbench` is no longer consistent with the collected source code, and you have to
 recreate it, performing the following steps:
 
--   Delete the SourceCode repository.
+- Delete the _SourceCode_ branch of the `Workbench`
+- Recreate the software history as for the first iteration, recreating a new orphan _SourceCode_ branch.
+- Delete the _SourceCode_ branch of the `Curated` repository
+- Push the _SourceCode_ branch of the `Workbench` to the `Curated` repository
 
+<!--
+-   Delete the SourceCode repository.
 -   Move back to the Workbench and according to the current case:
+
 
 > if (1), add the source code to the correct version.
 >
 > if (2), add the new version folder with the related metadata.
+-->
 
--   Recreate the software history as for the first iteration.
 
 <a name="runningexample"/>
 
@@ -1133,29 +1139,30 @@ We are now ready to start the collect phase.
 
 Here we fill the local folders with the collected material. In the case
 of CMM, we got a tar.gz file containing the various versions of the
-software, organized according to an ad-hoc versioning system. In the
-`raw_materials` folder we store also the paper presenting the software
+software, organized according to an ad-hoc versioning system. We store the tar.gz file in the `raw_source_code`folder. 
+In the `additional_materials` folder we store also the paper presenting the software
 and the email that Giuseppe Attardi sent us along with them,
 and we commit all these new contents:
 
-	git add raw_materials
+	git add raw_source_code
+ 	git add additional_materials
 	git commit -m "Added raw material"
 	git push
 
-The resulting state of `raw_materials` is shown in Figure {@fig:cmm_raw}.
+The resulting state of `raw_source_code` is shown in Figure {@fig:cmm_raw}.
 
 ![CMM raw materials on GitHub.](./media/cmm_raw.png){#fig:cmm_raw}
 
 ### Unpack the source code in the browsable\_source directory 
 
 In order to get a browsable version of the source code, we decompress
-the .tar.gz archive into the `browsable_source` folder
+the .tar.gz archive into the `browsable_source_code` folder
 
-    tar -xzf raw_materials/cmm.tgz -C browsable_source
+    tar -xzf raw_materials/cmm.tgz -C browsable_source_code
 
-and commit the changes as done for the `raw_materials` folder
+and commit the changes as done previously
 
-    git add browsable_source
+    git add browsable_source_code
     git commit -m "Added browsable source"
     git push
 
@@ -1163,6 +1170,7 @@ We can see the resulting state of the repository in Figure {@fig:cmm_brows}.
 
 ![CMM browsable sources on GitHub.](./media/cmm_brows.png){#fig:cmm_brows}
 
+<!--
 Finally, in preparation for the next phase, curation, we copy the files
 contained in `browsable_source` into the `source` folder[^11].
 
@@ -1173,32 +1181,38 @@ Again, we stage changes as in the previous two steps.
 	git add source
 	git commit -m "Added source"
 	git push
+-->
 
-### Create Depository
-
-The Depository has been filled, hence we create the Depository as an
+### Create Depository branch
+ 
+We create the _Depository_ as an
 orphan branch, i.e., with no references to the parent repository, using
 the checkout command:
 
     git checkout --orphan Depository
 
-As a result, we moved to the Depository branch. Here we modify the
+As a result, we moved to the _Depository_ branch. Here we remove the README file.
+
+<!--
+modify the
 README (guidelines to fill the README file are given in the template)
 and remove the `source` and `metadata` folder, since they are not
 interesting for this area:
-
-    git rm -rf source metadata
+-->
+    	git rm README.md
 
 We stage the last modifications and then push to the remote repository.
 
 	git add .
-	git commit -m "Added raw materials from master branch"
-	git push --mirror origin
+	git commit -m "Create Depository branch and remove README"
+	git push origin +Depository:Depository
 
+<!--
 We are almost ready to move the Depository to a new repository: before that,
 however, we have to create the new remote repository on GitHub (Figure
 {@fig:cmm_depo_creat} shows how to do this using the web interface; here too one
 could use the GitHub API instead).
+
 
 ![CMM-Depository creation.](./media/cmm_depo_creat.png){#fig:cmm_depo_creat}
 
@@ -1206,8 +1220,18 @@ To facilitate the search of the created repository, we add the
 "software-heritage", "depository" and "swhappe" tags (in the same way of 
 what done for the workbench as shown in Figure
 {@fig:workbench_tags}).
+-->
 
+### Update the master branch
 
+Update the master branch, only keeping the README file.
+	git checkout master
+    	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories 
+        git add .
+	git commit -m "Clear master branch"
+ 	git push origin +master:master
+
+<!--
 ### Final depository
 
 Finally, we can perform a push and fill the remote repository.
@@ -1227,6 +1251,7 @@ the Workbench with the information in the Depository.
 	git checkout master
 	git push --delete origin Depository
 	git branch -D Depository
+-->
 
 ### Curate the code
 
@@ -1272,14 +1297,14 @@ We have to create a clean dedicated SourceCode branch
 
 Then, for every directory containing a version of the source code, in
 chronological order, we copy its contents from the `master` branch to the
-current branch, and commit it with the appropriate metadata.
+`SourceCode` branch, and commit it with the appropriate metadata.
 
 For example, for the directory 1.9 of the CMM sources, here is how
 we copy the source contents into our branch:
 
-	git checkout master -- source/1.9
-	mv source/1.9/* .
-	rm -rf source
+	git checkout master -- browsable_source_code/1.9
+	mv browsable_source_code/1.9/* .
+	rm -rf browsable_source_code
 
 Then we use the following template to create manually an individual commit/release:
 
@@ -1303,6 +1328,8 @@ Finally, we clean up the directory before importing a new version
 
 ##### With DT2SG
 
+TO DO: test and update
+
 And here is an example using the [[DT2SG]{.underline}](#t3q5s097euy)
 tool
 
@@ -1317,8 +1344,11 @@ containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 
 ![An excerpt of the synthetic history of CMM.](./media/cmm_sh.png){#fig:cmm_sh}
 
+
+
 ### Create the final repository
 
+<!--
 We move back to the master branch using the checkout command, then
 remove `raw_materials`, `browsable_source` and `source` from it:
 
@@ -1328,13 +1358,14 @@ We now create the README.md file, add it and commit changes:
 
 	git add README.md
 	git commit -m "Final repository created"
+-->
 
-Now we create the final remote repository, that we call "CMM", see
+Now we create the final remote repository, that we call "CMM-Curated", see
 Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
 ![The creation of the final repository.](./media/create_fin.png){#fig:create_fin}
 
-    git push --tags git@github.com:Unipisa/CMM.git +master:master +SourceCode:SourceCode
+    git push --tags git@github.com:Unipisa/CMM.git +master:master +SourceCode:SourceCode +Depository:Depository
 
 To facilitate the search of the created repository, we add the 
 "software-heritage", "archive" and "swhappe" tags (in the same way of 
@@ -1381,7 +1412,10 @@ at
 
 [**[https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM]{.underline}**](https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM)
 
+<!--
 ### Fill the Workbench metadata
+
+MF: I think this should be done along the way, and published publicly in the final repo.
 
 In order to preserve information about the curation process we have to fill the template files under the Workbench `metadata`.
 Starting from some template files (see Figure {@fig:cmm-metadata}, left), we obtain what shown in Figure {@fig:cmm-metadata}, right.
@@ -1396,7 +1430,7 @@ In particular we should create :
 + a journal :`metatdata/journal.md`, where each collect and curate action should be annotated;
 + an actors registry: `metatdata/actors.md`, every person taking part in the process should be registered, with their roles, affiliations and contact information;
 + a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
-
+-->
 
 <a name="appendixa"/>
 
