@@ -136,7 +136,7 @@ In 2021, Software Heritage announced the launch of the "Software stories" initia
 What the SWHAP does _not_ cover
 --------------------
 
-The Software Heritage Acquisition Process solely focuses on preserving items in a **digital format**, in order to make the preservation process as accessible and scalable as possible. This means we will not tackle how to preserve physical artefacts, even though we do encourage you to try and safeguard any physical artefacts of interest you may encounter in the preservation process (computers, paper listings, reports etc.). This can typically be done by reaching out to science museums or local preservation associations. In annexe X you will find a non-exhaistive list of such entities. 
+The Software Heritage Acquisition Process solely focuses on preserving items in a **digital format**, in order to make the preservation process as accessible and scalable as possible. This means we will not tackle how to preserve physical artefacts, even though we do encourage you to try and safeguard any physical artefacts of interest you may encounter in the preservation process (computers, paper listings, reports etc.). This can typically be done by reaching out to science museums or local preservation associations. In [appendix A](#appendixa) you will find a non-exhaustive list of such entities. 
 
 The SWHAP focuses on preserving the software **source code**, which we believe is worth preserving for itself. The process does not tackle the execution of this code, or how to deal with emulation systems. 
 
@@ -150,10 +150,12 @@ Typically :
 - A company or research center
 - Any individual wishing to archive its own source codes
 
+<!--
 Depending on which goals you are pursuing, you may refer to different sections of this guide. 
 If you already have a specific software in mind, you know where the source code is and you (or someone you know) can dedicate some time to preserving it, then you can jump directly to the technical section and get the work started (TO DO: add reference). Typically you are one of the author of the code and want to make sure it doesn't get lost for future generations.
 
 If you want to launch a preservation initiative at a broader scale, for example preserving legacy source codes within your institution, or collecting artefacts as a museum, we will first try to give some guidance as regards how to set things in motions, and which ressources you will need. 
+-->
 
 Regardless of where you stand from, here are the entities which will be involved in the process. We designed the process to rely as much as possible on existing open-source solutions, so that you don't have to set anything up by yourself if you don't want to. If you are an institution and wishes to use some of your own infrastructure that is of course possible. 
 
@@ -215,16 +217,17 @@ To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/sub
 What is the content of this guide?
 --------------------
 
-MF: to be reviewed at the end
  
 - [Inroduction](#intro)
 - [Who is this guide for and what do you need to get started?](#context)
 - [The process, abstract view](#abstractview) 
 - [The process, concrete view](#concreteview) 
 - [Curating a source code, a step by step example](#stepbystep)
-- [Appendix A - General Motivation for using Git and GitHub](#appendixa)
-- [Appendix B - Tools that can help](#appendixb)
-- [Appendix C - Tips on Github](#appendixc)
+- [Appendix A - Possible institutions to archive physical artefacts](#appendixa)
+- [Appendix B - Ressources for an introduction to Git ](#appendixb)
+- [Appendix C - General Motivation for using Git and GitHub](#appendixc)
+- [Appendix D - Tools that can help](#appendixd)
+- [Appendix E - Tips on Github](#appendixe)
 - [Bibliography](#bibliography)
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
@@ -498,14 +501,14 @@ Seeting up your digital working environment
 
 In order to implement SWHAP, the first step is to create the *digital working environment* that will allow you to store the collected digital artifacts and to curate them. 
 In practice, you could choose any collaborative file management tool as your digital working environment.
-Note however that curating source code will require code versionning, typically using a mecanism _à la_ Git. If you are not familiar with Git, you can check Annexe X for a quick intro. Github or Gitlab are well-known collaborative platforms based on Git, enabling code versionning and are good options for this part of the process. 
+Note however that curating source code will require code versionning, typically using a mecanism _à la_ Git. If you are not familiar with Git, you can check [appendix B](#appendixb) for ressources to help you get the basics. Github or Gitlab are well-known collaborative platforms based on Git, enabling code versionning and are good options for this part of the process. 
 Depending on what suits you best you could therefore choose such platforms as your one and only working environment for the whole process instead of managing two different environments.
 
 The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
 implementation adopted by the SWHAP\@Pisa project relies on the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
-platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to Appendix A. TO DO: add link
+platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to [Appendix C](#appendixec). 
 
 We propose to structure your *Digital working environment* into two disctinct areas, materialized by different spaces, also called repositories on Github.
 
@@ -690,7 +693,7 @@ If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
 an OCR (optical character recognition) tool to parse it. See
 [[Appendix
-A]{.underline}](http://www.corestandards.org/assets/Appendix_A.pdf)
+D]{.underline}](#appendixe)
 for a list of suggested tools. 
 
 If the raw source code is an archived and/or compressed file (.tar) and/or compressed, you should unpack it locally on your computer. 
@@ -1027,7 +1030,7 @@ MF: What should the process then be? Shall we create the JSON/story ourselves, b
 
 MF: do we want to provide hosting services for some element of the stories that can't be put on Wikidata? Note that it only works for picture. Unsure what to do with PDFs for instance.
 
-Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in ANNEXE X (TO DO: create Annexe and add link) how each specific custom moment translates into a JSON code. 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in appendix X (TO DO: create appendix and add link) how each specific custom moment translates into a JSON code. 
 
 Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
 Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice (MF: is this best process?). 
@@ -1077,7 +1080,7 @@ recreate it, performing the following steps:
 
 <a name="runningexample"/>
 
-Appendix A - Curating a source code, a step by step example {#sec:stepbystep}
+Curating a source code, a step by step example {#sec:stepbystep}
 ==================================
 
 In this section we will show the process at work on one of the first
@@ -1434,7 +1437,27 @@ In particular we should create :
 
 <a name="appendixa"/>
 
-Appendix A - General Motivation for using Git and GitHub
+Appendix A - Possible institutions to archive physical artefacts
+================================
+
+TO DO: I think Elisabetta identified a list of partners?
+In France:
+- Musée des Arts et Métiers (contact:)
+- L'Expo Inria (contact:)
+- MO5 (contact:)
+- Aconit (contact:)
+- ...
+Outside France
+- Computer History Museum
+
+<a name="appendixb"/>
+Appendix B - Ressources for an introduction to Git
+================================
+
+TO DO: Add some references (ask Zack video)
+
+<a name="appendixc"/>
+Appendix C - General Motivation for using Git and GitHub
 ================================
 
 The choice of Git as the designated tool for traceability and historical
@@ -1481,9 +1504,9 @@ process using Git on GitHub. We think that most of what is described in
 the guide can be easily adapted to any of the other *Git*-based
 collaborative platforms.
 
-<a name="appendixb"/>
+<a name="appendixd"/>
 
-Appendix B - Tools that can help
+Appendix D - Tools that can help
 ================================
 
 Here is a list of tools for code acquisition and curation that have been
@@ -1511,9 +1534,9 @@ used during the initial experimentation of SWHAPPE:
 Many other tools exist, and are currently under construction and will be
 loaded on the SWHAPPE repository on GitHub.
 
-<a name="appendixc"/>
+<a name="appendixe"/>
 
-Appendix C - A few tips on Github
+Appendix E - A few tips on Github
 =================================
 
 *Git* is a distributed version-control system for tracking changes in
