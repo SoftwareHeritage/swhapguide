@@ -1006,7 +1006,7 @@ Since automatically generated moments might not always fit the story you want to
 - **Map moment** (_automated_): shows the different places associated with the software history based on geolocated data in Wikidata.
 - **A library moment** (_automated_): displays the publications registered in Wikidata and linked to the software
  
-To start building your story, go to the `software_story` folder and open the 'StoryInventory.md' file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
+To start building your story, go to the `software_story` folder and open the `StoryInventory.md` file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
 
 MF: do we want to give the option to store pictures in the publisher worspace? 
 
