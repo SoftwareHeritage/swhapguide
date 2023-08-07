@@ -1231,8 +1231,8 @@ what done for the workbench as shown in Figure
 Update the master branch, only keeping the README file.
 
 	git checkout master
-    	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories 
-        git add .
+ 	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories
+	git add .
 	git commit -m "Clear master branch"
  	git push origin +master:master
 
@@ -1449,16 +1449,19 @@ In France:
 - MO5 (contact:)
 - Aconit (contact:)
 - ...
+
 Outside France
 - Computer History Museum
 
 <a name="appendixb"/>
+
 Appendix B - Ressources for an introduction to Git
 ================================
 
 TO DO: Add some references (ask Zack video)
 
 <a name="appendixc"/>
+
 Appendix C - General Motivation for using Git and GitHub
 ================================
 
