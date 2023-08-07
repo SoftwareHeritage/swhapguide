@@ -612,7 +612,7 @@ Your newly created workbench is composed of the following folders:
 - The `browsable_source_code` folder is used to store source code in browsable format (ex: if needed the source as been transcribed in machine readable format)
 - The `additional_materials` folder is used to store all the other collected materials (video, pictures, documents etc)
 - The `software_stories` folder is used prepare material for creation of the _Software Story_
-- The `metadata folder`, is used to record all the information about the
+- The `metadata` folder, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 
 MF: Should we create a metafolder for the code items?
