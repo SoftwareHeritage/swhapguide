@@ -1202,7 +1202,8 @@ README (guidelines to fill the README file are given in the template)
 and remove the `source` and `metadata` folder, since they are not
 interesting for this area:
 -->
-    	git rm README.md
+    
+	git rm README.md
 
 We stage the last modifications and then push to the remote repository.
 
@@ -1228,6 +1229,7 @@ what done for the workbench as shown in Figure
 ### Update the master branch
 
 Update the master branch, only keeping the README file.
+
 	git checkout master
     	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories 
         git add .
@@ -1239,7 +1241,7 @@ Update the master branch, only keeping the README file.
 
 Finally, we can perform a push and fill the remote repository.
 
-    git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
+	git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
 
 We can check the resulting repositories via the web interface (Figure
 {@fig:cmm_repos}): CMM-Depository is now filled with the pushed materials.
