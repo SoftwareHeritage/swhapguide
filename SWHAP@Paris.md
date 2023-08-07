@@ -1010,7 +1010,7 @@ To start building your story, go to the `software_story` folder and open the `St
 
 MF: do we want to give the option to store pictures in the publisher worspace? 
 
-In the `StoryInventory.md' file we suggest a template based on the work done for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
+In the `StoryInventory.md` file we suggest a template based on the work done for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
 
 **General information about the software and the context in which it was created**
 - A first **image moment** shows a first view of Amaya and quickly presents what Amaya is about
