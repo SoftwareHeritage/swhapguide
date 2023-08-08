@@ -1379,10 +1379,10 @@ We now create the README.md file, add it and commit changes:
 	git commit -m "Final repository created"
 -->
 
-Now we create the final remote repository, that we call "CMM-Curated", see
+Now we create the final remote repository. In the cas of Amaya we call it "Amaya-Curated", see
 Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
-![The creation of the final repository.](./media/create_fin.png){#fig:create_fin}
+![The creation of the final repository.](./media/amaya_curated_main_branch.PNG){#fig:create_fin}
 
     git push --tags git@github.com:Unipisa/CMM.git +master:master +SourceCode:SourceCode +Depository:Depository
 
@@ -1400,6 +1400,7 @@ Workbench.
 
 ![The final CMM Workbench.](./media/cmm_wb.png){#fig:cmm_wb}
 
+<!--
 ### Publish the repositories and trigger Software Heritage acquisition
 
 In order to publish the Depository and SourceCode repositories we have to set
@@ -1430,7 +1431,7 @@ A short time after (this may go up to a few hours for huge repositories), the ar
 at 
 
 [**[https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM]{.underline}**](https://archive.softwareheritage.org/browse/origin/https://github.com/Unipisa/CMM)
-
+-->
 <!--
 ### Fill the Workbench metadata
 
