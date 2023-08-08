@@ -234,10 +234,13 @@ Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
 documents and resources. No specific assumptions on the *tools, platforms and
 technologies* that may be used to enact it are made, but some requirements are
 made explicit. Section {@sec:processconcrete} describes how the abstract process
-is implemented at the University of Pisa by leveraging the Git toolset and the
-GitHub collaborative development platform. This implementation is named SWHAPPE
-(SWH Acquisition Process Pisa Enactor) in this document. Finally, Section {@sec:stepbystep}
-provides step-by-step guidance of a source code curation process using Git, using a real world medium-sized software
+can be implemented by leveraging the Git toolset and the
+GitHub collaborative development platform. The concrete process was first elaborated by the University of Pisa and further developped by Software Heritage, based on actual software preservation cases. 
+<!--
+This implementation is named SWHAPPE
+(SWH Acquisition Process Pisa Enactor) in this document.
+-->
+Finally, Section {@sec:stepbystep} provides step-by-step guidance of a source code curation process using Git, using a real world medium-sized software
 project (@AttardiF96).
 
 <a name="abstractview"/>
@@ -295,7 +298,7 @@ different capabilities in different scenarios.
 Curate
 ------ 
 
-The purpose of this phase is *to* *analyze, cleanup and structure* the
+The purpose of this phase is to *analyze, cleanup and structure* the
 raw materials that have been collected. 
 
 During this phase, the general history of the software will be reconstructed, identifying the software versions and the contributors. 
@@ -501,11 +504,11 @@ Seeting up your digital working environment
 
 In order to implement SWHAP, the first step is to create the *digital working environment* that will allow you to store the collected digital artifacts and to curate them. 
 In practice, you could choose any collaborative file management tool as your digital working environment.
-Note however that curating source code will require code versionning, typically using a mecanism _à la_ Git. If you are not familiar with Git, you can check [appendix B](#appendixb) for ressources to help you get the basics. Github or Gitlab are well-known collaborative platforms based on Git, enabling code versionning and are good options for this part of the process. 
+Note however that curating source code will require a code versionning system, typically using a mecanism _à la_ Git. If you are not familiar with Git, you can check [appendix B](#appendixb) for ressources to help you get the basics. Github or Gitlab are well-known collaborative platforms based on Git, enabling code versionning and are good options for this part of the process. 
 Depending on what suits you best you could therefore choose such platforms as your one and only working environment for the whole process instead of managing two different environments.
 
-The latter choice was made for the SWHAP Pisa Enactor (SWHAPPE). The
-implementation adopted by the SWHAP\@Pisa project relies on the
+The latter choice was made by the University of Pisa. The
+implementation adopted by the SWHAP Pisa project relies on the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
 platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to [Appendix C](#appendixec). 
@@ -515,9 +518,9 @@ We propose to structure your *Digital working environment* into two disctinct ar
 > *Workbench* repository, a working
 > area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
 >
-> *Curated* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found.
+> *Curated* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found;
 
-In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the curation work on one side (*Depository* branch) and the reconstructed versioned source code on the other (*Source Code* branch). The *main* branch will serve as an entry point to the two other branches and point towards external ressources such as this guide. See figure 2 below. 
+In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the documented curation work on one side (`Depository` branch) and the reconstructed versioned source code on the other (`Source Code` branch). The `main` branch will serve as an entry point to the two other branches and point towards external ressources such as this guide. See figure 2 below. 
 
 ![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
 
@@ -663,8 +666,6 @@ Collect
 
 ### Collect artifacts and upload them
 
-MF: add something about collecting information (regarding software and contributors). 
-
 In this first phase you want to spend times collecting the sofwtare artifacts in digital format. Appart from source code, it is also important to collect relevant ancillary materials such as pictures, documentation, articles etc.
 Whenever possible, we encourage you to reach out to the authors of the softwares and/or to the institution they belonged to. They might hold some precious documents such as pictures, mails etc. 
 
@@ -707,10 +708,11 @@ generate files with a generic .txt extension, that must be changed to
 the extension typically used for the programming language they
 contain.
 
+<!--
 Note that, at this stage, we are not interested in precise information
 about the versions of the software. The purpose is to have
 machine-readable documents.
-
+-->
 
 Curate 
 ----------------
@@ -746,7 +748,7 @@ In that case you will want to check if you are allowed to collect and share thes
 
 Regarding source code, it might be the case that the software you are working on is under a free license such as _GNU General Public License_. Such license will typically let you freely archive and share the source code on any plateform you'd like, as well as any derived materials such as logos or screenshots. 
 
-Regarding other material, such as working documents, photos, videos, it might be the case that there is no predefined license attached to them. In that case you may want to reach out to the copyright owner and ask them for their authorisation to archive and share their documents. You will want to be specific on the use you will make of these documents and about the plateforms you will use in the process. 
+Regarding other material, such as working documents, photos, videos, there might be no predefined license attached to them. In that case you may want to reach out to the copyright owner and ask them for their authorisation to archive and share their documents. You will want to be specific on the use you will make of these documents and about the plateforms you will use in the process. 
 
 As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.  
 
@@ -763,8 +765,6 @@ don't have copy rights (ex: press articles, photos etc.). Whenever possible we r
 ### Curate the source code
 
 Modern progamming practice use versionning systems to allow to track changes made in the source code at a very detailed level. While that level of information may not be available for legacy softwares, the curation work will focus on rebuilding _part_ of the development history. This will allow a future viewer of the code to easily compare the different versions of the code and to easily see the differences and evolutions from one version to the other. 
-
-MF: maybe elaborate on the point of re-versionning the source code.
 
 To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. A _commit_ is an incremental change in the code, packaged with relevant metadata regarding the change. 
 This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. 
@@ -818,7 +818,7 @@ This information should be consigned in the `version_history.csv` in the `metada
 
 -->
 Now you are ready to (re-)create the development history of the
-software. First, create a new empty _orphan_ branch, clean of any commit history. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical develoment. The content of the branch should be cleared between two commits. 
+software. First, create a new empty _orphan_ branch, clean of any commit history. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical development. The content of the branch should be cleared between two commits. 
 
 
 <!--First you need to create a branch Source Code, with the
@@ -827,7 +827,7 @@ software. First, create a new empty _orphan_ branch, clean of any commit history
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `SourceCode` brand, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
+    into the `SourceCode` branch, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
@@ -854,13 +854,13 @@ To every collected item should correspond an entry in the `catalogue.md`file, lo
 
 ### Create final Curated repository
 
-Once your curation work is done for both source code and ancillary materials, you can create the final *Curated* repository, as a new public Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name. This repository will contain three branches: a `main` branch that will serve as an entry point into the two other ones and containing a READ.ME file only, a `SourceCode` branch containing the curated source code and a `Depository` branch containing the materials collected during the curation process and the metadata. 
+Once your curation work is done for both source code and ancillary materials, you can create the final `Curated` repository, as a new *public* Github repository. You can call this new repository *SWName-Curated*, replacing SWName by your actual software name. This repository will contain three branches: a `main` branch that will serve as an entry point into the two other ones and containing a README file only, a `SourceCode` branch containing the curated source code and a `Depository` branch containing the materials collected during the curation process and the metadata. 
 
-In your `Workbench`, create a new branch called `Depository`, containing the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` repositories. Push this branch into a new branch of the *Curated* repository also called `Depository`.
+In your `Workbench`, create a new branch called `Depository`. Keep all the folders but remove the README file. The branch will thus contain the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` folders. Push this branch into a new branch of the `Curated` repository also called `Depository`.
 
-Going back to your master branch of your `Workbench`, remove all the files except for the READ.ME file that you can update if needed. Push that branch into the master branch of the *Curated* repository. 
+Going back to your `master` branch of your `Workbench`, remove all the files except for the README file that you can update if needed. Push that branch into the `master` branch of the `Curated` repository. 
 
-Finally, push the `SourceCode` branch of the workbench into the *Curated* repository. 
+Finally, push the `SourceCode` branch of the workbench into the `Curated` repository. 
 
 <!--
 Create the final `Curated` repository, containing only the
@@ -885,7 +885,7 @@ You can then follow the archival status of your code in the [_Browse Save Reques
 
 ![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow.PNG){#fig:saveCodeNow}
 
-Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the READ.ME of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the README of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
 ![View of the _Permaling_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
 
@@ -1006,11 +1006,11 @@ Since automatically generated moments might not always fit the story you want to
 - **Map moment** (_automated_): shows the different places associated with the software history based on geolocated data in Wikidata.
 - **A library moment** (_automated_): displays the publications registered in Wikidata and linked to the software
  
-To start building your story, go to the `software_story` folder and open the `StoryInventory.md` file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
+To start building your story, go to the `software_story` folder of the `Depository` branch of your `Workbench` and open the `StoryInventory.md` file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
 
 MF: do we want to give the option to store pictures in the publisher worspace? 
 
-In the `StoryInventory.md` file we suggest a template based on the work done for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
+In the `StoryInventory.md` file we suggest a template based on the work done by Software Heritage for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
 
 **General information about the software and the context in which it was created**
 - A first **image moment** shows a first view of Amaya and quickly presents what Amaya is about
@@ -1030,7 +1030,7 @@ MF: What should the process then be? Shall we create the JSON/story ourselves, b
 
 MF: do we want to provide hosting services for some element of the stories that can't be put on Wikidata? Note that it only works for picture. Unsure what to do with PDFs for instance.
 
-Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in appendix X (TO DO: create appendix and add link) how each specific custom moment translates into a JSON code. 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in appendix X (TO DO: create appendix and add link) how each specific moment translates into a JSON code. 
 
 Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
 Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice (MF: is this best process?). 
@@ -1083,13 +1083,22 @@ recreate it, performing the following steps:
 Curating a source code, a step by step example {#sec:stepbystep}
 ==================================
 
-In this section we will show the process at work on one of the first
-source code acquired by the SWHAP\@Pisa project, the CMM conservative
+In this section we will walk you through the curation of a source code, from the instantiation of the `Workbench` to the curation of the source code using Git.
+This step by step process was initially based on the work done for the first
+source code acquired by the University of Pisa using the SWHAP process, the CMM conservative
 garbage collector for C++ that was initially developed for project PoSSo
 (Polynomial System Solver) and later became the basis for the Java GC
 and the Oak GC [\[7\]](https://www.zotero.org/google-docs/?tVCOZn).
+
+The process was updated based on thd work done by Software Heritage on the source code of Amaya, a web browser and editor. 
+Some screenshots might thus feature indifferently CMM or Amaya. 
+
+
+
+<!--
 Since it has evolved through various versions, CMM is a good workbench
 for SWHAPPE and an appropriate example to show how to use the tools.
+-->
 
 ### Starting the process
 
