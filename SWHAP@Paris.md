@@ -1183,7 +1183,7 @@ and commit the changes as done previously
 
 We can see the resulting state of the repository in Figure {@fig:amaya_brows}.
 
-![Amaya browsable sources on GitHub.](./media/amaya_wb_browse_brows.png){#fig:amaya_brows}
+![Amaya browsable sources on GitHub.](./media/amaya_wb_browse.png){#fig:amaya_brows}
 
 <!--
 Finally, in preparation for the next phase, curation, we copy the files
