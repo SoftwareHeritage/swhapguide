@@ -522,7 +522,7 @@ We propose to structure your *Digital working environment* into two disctinct ar
 
 In the final *Curated* repository we will leverage the Git *branches* system to compartimentalize the documented curation work on one side (`Depository` branch) and the reconstructed versioned source code on the other (`Source Code` branch). The `main` branch will serve as an entry point to the two other branches and point towards external ressources such as this guide. See figure 2 below. 
 
-![Overview of the final Curated repository](./media/curatedRepoStructure.png){#fig:curatedRepo}
+![Overview of the final Curated repository](./media/curatedRepoStructure2.png){#fig:curatedRepo}
 
 Figure 2. Structure of the final curated repository and its different branches.
 
