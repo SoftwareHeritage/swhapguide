@@ -1111,7 +1111,7 @@ does not involve a Warehouse.
 
 ### Instantiation
 
-![Instantiation of the template](./media/temp_inst.png){#fig:temp_inst}
+![Instantiation of the template](./media/template_structure_updated.png){#fig:temp_inst}
 
 We instantiate on GitHub the SWHAP repository template[^8] into a new
 repository[^9], that we name "CMM-Workbench". This action, as most of
