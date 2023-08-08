@@ -1089,7 +1089,7 @@ garbage collector for C++ that was initially developed for project PoSSo
 (Polynomial System Solver) and later became the basis for the Java GC
 and the Oak GC [\[7\]](https://www.zotero.org/google-docs/?tVCOZn).
 
-The process was updated based on thd work done by Software Heritage on the source code of Amaya, a web browser and editor. 
+The process was updated based on the work done by Software Heritage on the source code of Amaya, a web browser and editor. 
 Some screenshots might thus feature indifferently CMM or Amaya. 
 
 
@@ -1100,7 +1100,7 @@ for SWHAPPE and an appropriate example to show how to use the tools.
 -->
 
 ### Starting the process
-
+<!--
 The acquisition process of the CMM software started informally when one
 of the authors, still active in the Computer Science department, learned
 about the SWHAP project, and proposed to search for the source code and
@@ -1108,20 +1108,21 @@ make it available to the project. Shortly after, we received a mail
 message with all the sources, as well as the associated research
 article. Since the materials were already in digital form, the process
 does not involve a Warehouse.
+-->
 
 ### Instantiation
 
 ![Instantiation of the template](./media/template_structure_updated.png){#fig:temp_inst}
 
 We instantiate on GitHub the SWHAP repository template[^8] into a new
-repository[^9], that we name "CMM-Workbench". This action, as most of
+repository[^9], that we name "Amaya-Workbench". This action, as most of
 the following ones, can be performed through the user interface (as
 shown in Figure {@fig:temp_inst}), or programmatically through the GitHub API.
 
 It has the same directory structure as SWHAP-Template, as shown in Figure
 {@fig:template}.
 
-![Instantiated workbench for CMM.](./media/cmm_wb_inst.png){#fig:cmm_wb_inst}
+![Instantiated workbench for Amaya](./media/amaya_wb.png){#fig:amaya_wb_inst}
 
 To facilitate the search of the created repository, we add the 
 "software-heritage", "workbench" and "swhappe" tags, as shown in Figure
