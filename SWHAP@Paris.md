@@ -867,6 +867,7 @@ metadata updated to this point.
 Remember to remove any items for which you did not get the copyrights or sharing license. 
 This will be the publicly available showcase of your work. 
 
+![Final curated repository branch structure](./media/final_repo_branches.png){#fig:finalbranches}
 
 Archive
 ----------------
