@@ -976,6 +976,8 @@ Software Stories was set up by Software Heritage in collaboration with the scien
  
 The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
 
+![View of the Pisa Software Stories collection](./media/SWstories_libraries.png){#fig:pisacollection}
+
 MF: do we want to give instructions for people wanting to set up their own instance?
 
 **Create a new collection**
