@@ -926,7 +926,7 @@ MF: what are the minimum properties we would want to record regarding the softwa
 **Pictures, photos and videos**
 
 Regarding archiving images and pictures: if there is only one image to archive, you can directly link it to the Wikidata item using a new statement with _image_ property (P18). 
-If there are multiple images, you will need to upload them in (Wikimedia Commons)[https://commons.wikimedia.org/wiki/Main_Page], the media database of Wikipedia. In Wikimedia, media are grouped in _Categories_. One media can belong to several categories. 
+If there are multiple images, you will need to upload them in [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page), the media database of Wikipedia. In Wikimedia, media are grouped in _Categories_. One media can belong to several categories. 
 
 Start by checking if there already is a Wikimedia category name after your software using the search bar. 
 If no result if found, you will be offered to create a new category. Do so and name it after your software (the name can typically be the same as the Wikidata item).  
