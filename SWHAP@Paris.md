@@ -1147,13 +1147,12 @@ the acquisition, and synchronize it with the remote repository:
 
 We are now ready to start the collect phase.
 
-### Upload files in raw\_materials
+### Upload collected files
 
 Here we fill the local folders with the collected material. In the case
-of CMM, we got a tar.gz file containing the various versions of the
-software, organized according to an ad-hoc versioning system. We store the tar.gz file in the `raw_source_code`folder. 
-In the `additional_materials` folder we store also the paper presenting the software
-and the email that Giuseppe Attardi sent us along with them,
+of Amaya, we got several tar.gz files containing the various versions of the
+software. We store the tar.gz file in the `raw_source_code`folder. 
+In the `additional_materials` folder we store various collected items (like photos, screenshots, logos, papers),
 and we commit all these new contents:
 
 	git add raw_source_code
@@ -1161,14 +1160,18 @@ and we commit all these new contents:
 	git commit -m "Added raw material"
 	git push
 
-The resulting state of `raw_source_code` is shown in Figure {@fig:cmm_raw}.
+The resulting state of `raw_source_code` is shown in Figure {@fig:amaya_raw}.
 
-![CMM raw materials on GitHub.](./media/cmm_raw.png){#fig:cmm_raw}
+![Amaya raw materials on GitHub.](./media/amaya_wb_raw.png){#fig:amaya_wb_raw}
+
+The resulting state of `additional_material` (picture sub-folder) is shown in Figure {@fig:amaya_wb_add}.
+
+![Amaya additional materials (photos) on GitHub.](./media/amaya_wb_add.png){#fig:amaya_wb_add}
 
 ### Unpack the source code in the browsable\_source directory 
 
 In order to get a browsable version of the source code, we decompress
-the .tar.gz archive into the `browsable_source_code` folder
+the .tar.gz archive into the `browsable_source_code` folder (organized per version).
 
     tar -xzf raw_materials/cmm.tgz -C browsable_source_code
 
@@ -1178,9 +1181,9 @@ and commit the changes as done previously
     git commit -m "Added browsable source"
     git push
 
-We can see the resulting state of the repository in Figure {@fig:cmm_brows}.
+We can see the resulting state of the repository in Figure {@fig:amaya_brows}.
 
-![CMM browsable sources on GitHub.](./media/cmm_brows.png){#fig:cmm_brows}
+![Amaya browsable sources on GitHub.](./media/amaya_wb_browse_brows.png){#fig:amaya_brows}
 
 <!--
 Finally, in preparation for the next phase, curation, we copy the files
