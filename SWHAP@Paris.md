@@ -618,11 +618,8 @@ Your newly created workbench is composed of the following folders:
 - The `metadata` folder, is used to record all the information about the
 software and the acquisition process (catalogue, actors, journal, etc.).
 
-MF: Should we create a metafolder for the code items?
+![Top structure of the Template repository.](./media/template_structure_updated.png){#fig:template}
 
-MF: I think we need to keep separate the `additional_materials` for non code items (collect and curate), and a dedicated `software story` folder for _presenting_ both code + additional material
-
-MF: I think the actors.md file is confusing. Is it a project metadata file, recording curators ? Or is a data file, recording historical information about who contributed to the software. I think these should be two separate things. At the moment no place to record historical contributors. 
 
 <!--
 The guidelines to fill this part are given in the template itself. (MF: I think we should include part of it in the guide, otherwise not clear when is the best moment to fill them in)
@@ -638,9 +635,8 @@ Deposit, however, we exploit the *commit* and *versioning* mechanisms of
 
 As part of the instantiation, you can fill in the first metadata of your project. Go to the `metadata` folder, open the `actors.md` file and register who is working on the project, with which role.
 
-TO DO: update this screenshot
 
-![Top structure of the Template repository.](./media/template_structure.png){#fig:template}
+
 
 
 <!--
