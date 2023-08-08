@@ -1274,11 +1274,13 @@ the Workbench with the information in the Depository.
 
 #### Version History
 
+<!--
 In this phase, the curation team should clean up the code and organize
 it in separate folders, one per version. In the case of CMM, the code is
 already structured this way, as shown in Figure
 {@fig:cmm_repos}, so there is nothing
 to do.
+-->
 
 In order to support the (re-)creation of the development history of the
 original project, we prepare the `version_history.csv` file with the
@@ -1286,7 +1288,7 @@ appropriate metadata (see Figure {@fig:cmm_vers_hist}).
 
 ![The version history for CMM](./media/cmm_vers_hist.png){#fig:cmm_vers_hist}
 
-
+<!--
 #### Codemeta
 
 Contextually we fill the `metadata/codemeta.json` template file (see Figure {@fig:cmm_json}, left) with metadata according to [CodeMeta guidelines](https://codemeta.github.io/terms/) obtaining what shown in  (see Figure {@fig:cmm_json}, right).
@@ -1299,7 +1301,7 @@ Contextually we fill the `metadata/codemeta.json` template file (see Figure {@fi
 To conclude the curation phase, we have to identify licensing information.
 
 If we find a file specyfing the licence in the source code, we have to copy its content in the `metadata/LICENCE` file.  Otherwise, in the case there is no licensing file in the source and we obtained license information in other finds, we fill `metadata/LICENCE` according to the [SPDX standard](https://spdx.org/licenses/).
-
+-->
 
 ### (Re-)Create the development History
 
