@@ -903,7 +903,9 @@ and Wikidata (see
 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
-To start, search Wikidata to see if an item for the software title exists. If no item is found, [create a new item](https://www.wikidata.org/wiki/Special:NewItem). A new item should be created as an _instance_ of one or several larger category. You can typically use a generic _software_ category here, or be more specific: _free software_, _programming languge_, _web browser_ etc.   
+To start, search Wikidata to see if an item for the software title exists. If no item is found, [create a new item](https://www.wikidata.org/wiki/Special:NewItem). A new item should be created as an _instance_ of one or several larger category. You can typically use a generic _software_ category here, or be more specific: _free software_, _programming languge_, _web browser_ etc. Each Wikidata item is identified by a _Q number_ that you can see at the top of the item page.  
+
+![View of the Amaya Wikidata item](./media/amaya_wiki_instance.png){#fig:amaya_wiki_inst}
 
 An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P`, which we will refer to later on to let you easily search for a given property. 
 
@@ -914,6 +916,8 @@ Typically you will want to register:
 - The programming languages using the _programmed in_ property (P277)
 - The source code repository URL using (P1324)
 - The people or entities who contributed to develop the software using the _developer_ property (P178)
+
+![View of Amaya's Wikidata developper statement](./media/amaya_wiki_dev.png){#fig:amaya_wiki_dev}
 
 In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement (P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
@@ -931,6 +935,8 @@ If there are multiple images, you will need to upload them in [Wikimedia Commons
 Start by checking if there already is a Wikimedia category name after your software using the search bar. 
 If no result if found, you will be offered to create a new category. Do so and name it after your software (the name can typically be the same as the Wikidata item).  
 Then use the [_Wikimedia upload wizard_](https://commons.wikimedia.org/wiki/Special:UploadWizard) to upload your different documents, and link them each time to the right category.
+
+![View of the Amaya Wikimedia category](./media/amaya_wiki_media.png){#fig:amaya_wiki_media}
 
 Once this is done, return to the Wikidata software item and use the _Commons category_ statement (P373) to connect the Wikimedia category.
 
@@ -990,7 +996,7 @@ Once you have created a new collection or decided to contribute to an exhisting 
 A story is made up of different _moments_. 
 
 Some moments can be automatically generated based on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
-https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related wikidata item. 
+https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related Wikidata item. 
 
 Since automatically generated moments might not always fit the story you want to narrate, you may choose to build a custom story, mixing automated and custom moments. Here are the main moments we recommend using to build your story. 
 
@@ -1004,6 +1010,8 @@ Since automatically generated moments might not always fit the story you want to
 - **Software heritage moment** (_custom_): shows a view into the archived source code in the Software heritage archive. Has a title and subtitle.
 - **Map moment** (_automated_): shows the different places associated with the software history based on geolocated data in Wikidata.
 - **A library moment** (_automated_): displays the publications registered in Wikidata and linked to the software
+
+![View of the Amaya Software Story, timeline moment](./media/amaya_story.png){#fig:amaya_story}
  
 To start building your story, go to the `software_story` folder of the `Depository` branch of your `Workbench` and open the `StoryInventory.md` file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
 
