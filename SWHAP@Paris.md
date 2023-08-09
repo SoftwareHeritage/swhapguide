@@ -1618,29 +1618,29 @@ The JSON file is structured in the following way:
 
 In the header, the `id` corresponds to the _Q number_ of the Wikidata item of your software. The `label`and `description` fields will appear in the navigation bar of your story.
 
-![Structure of the Amaya story JSON](./media/story_structure.png){#fig:story_struct}
-
-Each moment of a story is defined by its `type`. We will show below some of the most commonly used types.
+Each moment of a story is defined by its `type`. We will show below some of the most commonly used types. The `index` indicates the position of the moment in the story (starting from `O`). 
 Each moment is also made up of a `title` and a `subtitle` that will show on top of each moment. The `label` section will be used in the navigation bar of your story.
 A default color will be assigned for the top bar of each moment, but you can also choose a specific color.  
 
+![Structure of the Amaya story JSON](./media/story_structure.png){#fig:story_struct}
+
 Image moment
 ---------
-An image moment is indicated by the `type` : `image`.
+An image moment is indicated by the `type` : "image".
 It is defined by the URL of the image, and possibly a caption.
 
 ![View of a JSON image moment](./media/story_img.png){#fig:story_img}
 
-If your image is hosted on Wikimedia, make sure to retrieve the _File URL_ (and not the _Page URL_), by going on the image Wikimedia page and clicking on _Use the file on the web_. Using the page URL instead will result in an error.  
+If your image is hosted on Wikimedia, make sure to retrieve its _File URL_ (and not the _Page URL_), by going on the image Wikimedia page and clicking on _Use the file on the web_. Using the page URL instead will result in an error.  
 
 ![Retrieving file URL on Wikimedia](./media/file_URL.PNG){#fig:file_url}
 
 Video moment
 ---------
 
-A video moment is indicated by one of the following `types` : `video`, `youtube`, `vimeo`, and defined by its URL.
-Use `video` if your video is a video file hosted online (the URL will typically end by _.mp4_ or another video extension).
-Use `youtube` if your video is hosted on the Youtube platform and fill in the corresponding URL. Use `vimeo` if your video is hosted on the Vimeo platform fill in the corresponding URL. 
+A video moment is indicated by one of the following `types` : "video", "youtube", "vimeo", and defined by its URL.
+Use "video" if your video is a video file hosted online (the URL will typically end by _.mp4_ or another video extension).
+Use "youtube" if your video is hosted on the Youtube platform and fill in the corresponding Youtuve URL. Use "vimeo" if your video is hosted on the Vimeo platform fill in the corresponding Vimeo URL. 
 
 ![View of a JSON video moment](./media/story_video.png){#fig:story_video}
 
