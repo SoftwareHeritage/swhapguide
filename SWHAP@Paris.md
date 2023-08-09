@@ -1162,7 +1162,7 @@ and we commit all these new contents:
 
 The resulting state of `raw_source_code` is shown in Figure {@fig:amaya_raw}.
 
-![Amaya raw materials on GitHub.](./media/amaya_wb_raw.png){#fig:amaya_wb_raw}
+![Amaya raw materials on GitHub.](./media/amaya_wb_raw2.png){#fig:amaya_wb_raw}
 
 The resulting state of `additional_material` (picture sub-folder) is shown in Figure {@fig:amaya_wb_add}.
 
