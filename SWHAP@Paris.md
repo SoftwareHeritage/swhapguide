@@ -882,9 +882,9 @@ You can then follow the archival status of your code in the [_Browse Save Reques
 
 ![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow.PNG){#fig:saveCodeNow}
 
-Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permaling tab` and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the README of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permalink` tab and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the README of your `SWName_Curated` repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
-![View of the _Permaling_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
+![View of the _Permalink_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
 
 ### Archiving software information and additional materials 
 
@@ -1688,7 +1688,7 @@ An iframe moment is define by the desired embedded webpage URL. Note that some w
 Software Heritage moment
 ---------
 
-A Software Heritage moment is a way to showcase your archived source code and to give an entry point into the archive to interested visitors. It is defined by the _Softare Heritage embedded URL_, that you can retrieve by navigating to your archived source code, clicking on the `Permaling` tab on the right side, then `Iframe embeeding`.  
+A Software Heritage moment is a way to showcase your archived source code and to give an entry point into the archive to interested visitors. It is defined by the _Softare Heritage embedded URL_, that you can retrieve by navigating to your archived source code, clicking on the `Permalink` tab on the right side, then `Iframe embeeding`.  
 
 ![View of a JSON iframe moment](./media/story_swh.png){#fig:story_swh}
 
