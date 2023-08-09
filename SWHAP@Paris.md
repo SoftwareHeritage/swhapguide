@@ -1602,6 +1602,96 @@ thus the history of Depository and SourceCode is kept clean and easy to
 consult. Here is a discussion on how to see the branch history:
 [[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
 
+
+<a name="appendixd"/>
+
+Appendix D - Creating the JSON for your story
+=================================
+
+General structure
+---------
+
+For your software story to be generated you first need to create the corresponding JSON file. 
+The JSON file is structured in the following way:
+- A _header_ section which records the general information of your story.
+- A _moments_ section, made up of several _moment_ subections
+
+In the header, the `id` corresponds to the _Q number_ of the Wikidata item of your software. The `label`and `description` fields will appear in the navigation bar of your story.
+
+![Structure of the Amaya story JSON](./media/story_structure.png){#fig:story_struct}
+
+Each moment of a story is defined by its `type`. We will show below some of the most commonly used types.
+Each moment is also made up of a `title` and a `subtitle` that will show on top of each moment. The `label` section will be used in the navigation bar of your story.
+A default color will be assigned for the top bar of each moment, but you can also choose a specific color.  
+
+Image moment
+---------
+An image moment is indicated by the `type` : `image`.
+It is defined by the URL of the image, and possibly a caption.
+
+![View of a JSON image moment](./media/story_img.png){#fig:story_img}
+
+If your image is hosted on Wikimedia, make sure to retrieve the _File URL_ (and not the _Page URL_), by going on the image Wikimedia page and clicking on _Use the file on the web_. Using the page URL instead will result in an error.  
+
+![Retrieving file URL on Wikimedia](./media/file_URL.PNG){#fig:file_url}
+
+Video moment
+---------
+
+A video moment is indicated by one of the following `types` : `video`, `youtube`, `vimeo`, and defined by its URL.
+Use `video` if your video is a video file hosted online (the URL will typically end by _.mp4_ or another video extension).
+Use `youtube` if your video is hosted on the Youtube platform and fill in the corresponding URL. Use `vimeo` if your video is hosted on the Vimeo platform fill in the corresponding URL. 
+
+![View of a JSON video moment](./media/story_video.png){#fig:story_video}
+
+
+Timeline moment
+---------
+
+A timeline moment can be automatically generated (based on Wikidata information) or customized.
+
+A timeline moment is defined by several events. One event can be made up of the following information:
+- A `title`
+- A `date`, defined by its day, month and year. 
+- An `image` (optionnal)
+- A `descritpion` (optional)
+
+![View of a JSON timeline moment](./media/story_time.png){#fig:story_time}
+
+People gallery moment
+---------
+
+A people gallery moment can be automatically generated (based on Wikidata information) or customized.
+
+A people gallery moment is defined by several portraits. One portrait can be made up of the following information:
+- A `label` (typically the name of the person)  
+- An `image` (optionnal)
+- A `descritpion` (optional)
+- Dates of `birth` and `death` (optional)
+
+![View of a JSON people gallery moment](./media/story_people.png){#fig:story_people}
+
+Map moment
+---------
+
+A map moment is automatically generated.
+
+![View of a JSON map moment](./media/story_map.png){#fig:story_map}
+
+Iframe moment
+---------
+
+An iframe moment is define by the desired embedded webpage URL. Note that some websites set up some protections to prevent embedding. This can be bypassed by using the archived version of the website from the [Internet Archive](https://archive.org/).  Using the URL from Internet Archive also guarantees the perennity of your story and is the recommanded option.
+
+![View of a JSON iframe moment](./media/story_iframe.png){#fig:story_iframe}
+
+Software Heritage moment
+---------
+
+A Software Heritage moment is a way to showcase your archived source code and to give an entry point into the archive to interested visitors. It is defined by the _Softare Heritage embedded URL_, that you can retrieve by navigating to your archived source code, clicking on the `Permaling` tab on the right side, then `Iframe embeeding`.  
+
+![View of a JSON iframe moment](./media/story_swh.png){#fig:story_swh}
+
 <a name="bibliography"/>
 
 Bibliography
