@@ -1357,12 +1357,12 @@ tool
       /source/cmm/
       -m SWHAP-EXAMPLE/CMM-Workbench
       metadata/version_history.csv
-
+<!--
 As a result we will find in our local repository a new local branch
 containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 
 ![An excerpt of the synthetic history of CMM.](./media/cmm_sh.png){#fig:cmm_sh}
-
+-->
 
 
 ### Create the final repository
