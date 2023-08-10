@@ -224,10 +224,10 @@ What is the content of this guide?
 - [The process, concrete view](#concreteview) 
 - [Curating a source code, a step by step example](#stepbystep)
 - [Appendix A - Possible institutions to archive physical artefacts](#appendixa)
-- [Appendix B - Ressources for an introduction to Git ](#appendixb)
+- [Appendix B - Tips on Git and Github ](#appendixb)
 - [Appendix C - General Motivation for using Git and GitHub](#appendixc)
 - [Appendix D - Tools that can help](#appendixd)
-- [Appendix E - Tips on Github](#appendixe)
+- [Appendix E - Creating the JSON file for your software story](#appendixe)
 - [Bibliography](#bibliography)
 
 Section {@sec:processabs} provides an *abstract* view of SWHAP, its steps,
@@ -509,7 +509,7 @@ The latter choice was made by the University of Pisa. The
 implementation adopted by the SWHAP Pisa project relies on the
 collaborative platform [[GitHub]{.underline}](https://github.com/) (
 [[https://github.com/]{.underline}](https://github.com/) ) as a host
-platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to [Appendix C](#appendixec). 
+platform for all the virtual support areas of the process. If you are interested in further understaning the rational for using Github, you can refere to [Appendix C](#appendixc). 
 
 We propose to structure your *Digital working environment* into two disctinct areas, materialized by different spaces, also called repositories on Github.
 
@@ -684,7 +684,7 @@ If the code is only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
 an OCR (optical character recognition) tool to parse it. See
 [[Appendix
-D]{.underline}](#appendixe)
+D]{.underline}](#appendixd)
 for a list of suggested tools. 
 
 If the raw source code is an archived and/or compressed file (.tar) and/or compressed, you should unpack it locally on your computer. 
@@ -809,7 +809,7 @@ software. First, create a new empty _orphan_ branch, clean of any commit history
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `SourceCode` branch, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. See (TO DO add link) for the step by step process ;
+    into the `SourceCode` branch, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. The step by step process is detailed in a (dedicated chapter)[#stepbystep] ;
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
@@ -1442,10 +1442,46 @@ Outside France
 
 <a name="appendixb"/>
 
-Appendix B - Ressources for an introduction to Git
-================================
+Appendix B - A few tips on Git and Github
+=================================
 
 TO DO: Add some references (ask Zack video)
+
+*Git* is a distributed version-control system for tracking changes in
+source code during software development. Here, we provide some
+references on *Git* and the GitHub platform.
+
+For a review on GitHub key concepts, you can see the following glossary:
+
+[[https://help.github.com/en/articles/github-glossary]{.underline}](https://help.github.com/en/articles/github-glossary).
+
+In order to fully exploit Github, you should install *Git* on your pc:
+
+[[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]{.underline}](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+This will allow you to use Git from command line. Even if it can be less
+intuitive, it's more powerful than working with the web interface: for
+instance, you can upload folders and files of any size, without the
+limitations of the latter. Furthermore, using Git commands allows for
+instantiating the process on any Git supported platform. For a review of
+the commands, please check the manual: [[
+https://git-scm.com/docs]{.underline}](https://git-scm.com/docs).
+
+As an alternative, if you're using a Mac or Windows, you can download
+Github Desktop, which provides a comfortable GUI: [[
+https://desktop.github.com/]{.underline}](https://desktop.github.com/).
+
+For more information about the commit mechanism and how to see the log
+of changes, please see the following link:
+[[https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History]{.underline}](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
+	
+To implement the process and separate areas, we chose to create two
+different branches (Depository and SourceCode) and get the corresponding
+repositories from them. Each branch has an independent commit history,
+thus the history of Depository and SourceCode is kept clean and easy to
+consult. Here is a discussion on how to see the branch history:
+[[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
+
 
 <a name="appendixc"/>
 
@@ -1528,48 +1564,7 @@ loaded on the SWHAPPE repository on GitHub.
 
 <a name="appendixe"/>
 
-Appendix E - A few tips on Github
-=================================
-
-*Git* is a distributed version-control system for tracking changes in
-source code during software development. Here, we provide some
-references on *Git* and the GitHub platform.
-
-For a review on GitHub key concepts, you can see the following glossary:
-
-[[https://help.github.com/en/articles/github-glossary]{.underline}](https://help.github.com/en/articles/github-glossary).
-
-In order to fully exploit Github, you should install *Git* on your pc:
-
-[[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]{.underline}](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
-This will allow you to use Git from command line. Even if it can be less
-intuitive, it's more powerful than working with the web interface: for
-instance, you can upload folders and files of any size, without the
-limitations of the latter. Furthermore, using Git commands allows for
-instantiating the process on any Git supported platform. For a review of
-the commands, please check the manual: [[
-https://git-scm.com/docs]{.underline}](https://git-scm.com/docs).
-
-As an alternative, if you're using a Mac or Windows, you can download
-Github Desktop, which provides a comfortable GUI: [[
-https://desktop.github.com/]{.underline}](https://desktop.github.com/).
-
-For more information about the commit mechanism and how to see the log
-of changes, please see the following link:
-[[https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History]{.underline}](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
-	
-To implement the process and separate areas, we chose to create two
-different branches (Depository and SourceCode) and get the corresponding
-repositories from them. Each branch has an independent commit history,
-thus the history of Depository and SourceCode is kept clean and easy to
-consult. Here is a discussion on how to see the branch history:
-[[https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch]{.underline}](https://stackoverflow.com/questions/16974204/how-to-get-commit-history-for-just-one-branch).
-
-
-<a name="appendixd"/>
-
-Appendix D - Creating the JSON for your story
+Appendix E - Creating the JSON file for your software story
 =================================
 
 General structure
