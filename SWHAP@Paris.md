@@ -907,7 +907,7 @@ In order to be able to fill in the _developer_ section, you will first need to m
 Using the _Source code repository URL_ statement (P1324), add the link towards the Software Heritage archived source code. (MF: or Github repo?)
 Using the _Software Heritage ID_ statement (P6138), add the Software Heritage identifier (that can be found in the _Permalinks_ of the archived source code.)
 
-![View of Amaya's Wikidata Software Heritage ID statement](./media/wik_swh.PNG){#fig:wiki_swh}
+![View of Amaya's Wikidata Software Heritage ID statement](./media/wiki_swh.PNG){#fig:wiki_swh}
 
 **Pictures, photos and videos**
 
