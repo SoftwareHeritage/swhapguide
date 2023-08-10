@@ -303,8 +303,6 @@ raw materials that have been collected.
 
 During this phase, the general history of the software will be reconstructed, identifying the software versions and the contributors. 
 
-MF: no clear place to do so in the Workbench (especially for contributors and their workdate in the project).
-
 Collected materials will be prepared for proper archiving.
 
 Preparing software source code for archival in **Software Heritage**
@@ -567,8 +565,6 @@ We created a *template* repository that you can easily copy to instantiate your 
 The [SWHAP-TEMPLATE](https://github.com/Unipisa/SWHAP-TEMPLATE) embodies the core support to enact the process. Its
 structure and use is shown in figure 2. After copying it, you can change its name to *SWName-Workbench* ; the *SWName* being the name of the Software you are working on. 
 
-MF: template to be updated to better separate code and non code items
-
 For those familiar with Github, we recommand you to clone your *SWName-Workbench*
 repository to your machine, so that
 you can work on the collected files locally - the Git clone mechanism
@@ -593,8 +589,6 @@ acquisition.
 ### Workbench structure
 
 The structure of the template is shown in Fig. 3.
-MF: TO DO update this graph and the screenshot, to make it simpler
-MF: No need for source folder. 
 
 <!-- 
 
@@ -730,11 +724,6 @@ To each collected material (source code or other material) should correspond an 
 
 You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up. You can also add additional field if you think it helps better identify the item. 
 
-MF: should there be one entry per software version? Then redundant with codemeta json and to some extent with version excel file. 
-MF: I think the catalogue should be more structured, with clear and pre-identified subcategories.
-MF: regarding software what is the source of truth? Codemeta, catalogue etc?
-
-
 ### Go on license hunting
 
 If you own the copyright of the source code or any other material then you can freely decide what you will be willing to share on any given plateform. 
@@ -746,10 +735,7 @@ Regarding source code, it might be the case that the software you are working on
 
 Regarding other material, such as working documents, photos, videos, there might be no predefined license attached to them. In that case you may want to reach out to the copyright owner and ask them for their authorisation to archive and share their documents. You will want to be specific on the use you will make of these documents and about the plateforms you will use in the process. 
 
-As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.  
-
-TO DO: be more specific about what to do with authorizations. No dedicated folder for now.
-TO DO: show a template of license? DIfference between free license and specific license. 
+As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.   
 
 If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalogue in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
 
@@ -827,8 +813,6 @@ You can proceed in two ways:
 
 -   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
 
-TO DO: make an actual test of the code, see if is working etc. Sould we store the code in a colab notebook to make it ready to run for a non expert user?
-
 The result will be a `SourceCode` branch that materializes the development history
 of the software via Git commits and releases.
 
@@ -838,12 +822,11 @@ MF: moved to archival part
 
 Using this `versionned_source_code` folder, you can finally create the "official" software repository. This repository will be used for ingestion in the Software Heritage Archive, as described in the following step. 
 
-TO DO: explain why a separate repo needs to be created
 -->
 <!--
 ### Curate the ancillary materials
 
-From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. (MF: are these the right subfolders? At this point of the process we are curating , not presenting yet. I think the folder organisation should have its own logic indepently of the choice of presentation)
+From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. 
 
 To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
 -->
@@ -921,11 +904,10 @@ Typically you will want to register:
 
 In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement (P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
-Using the _Source code repository_ statement (P1324), add the link towards the Software Heritage archived source code. 
+Using the _Source code repository URL_ statement (P1324), add the link towards the Software Heritage archived source code. (MF: or Github repo?)
+Using the _Software Heritage ID_ statement (P6138), add the Software Heritage identifier (that can be found in the _Permalinks_ of the archived source code.)
 
-MF: there also is a source code respository URL statement. WHich one?
-MF: is there a SWH property?
-MF: what are the minimum properties we would want to record regarding the software?
+![View of Amaya's Wikidata Software Heritage ID statement](./media/wik_swh.PNG){#fig:wiki_swh}
 
 **Pictures, photos and videos**
 
@@ -962,15 +944,11 @@ Wikimedia has a maximum upload size of 100 megabytes which can be too restrictiv
 
 It might be the case that some items you collected are under restricted license. For example, the copyright owner of a picture might agree to the picture beeing used for educational purpose, but not for commercial purpose. In that case you are not allowed to publish it on Wikimedia/Wikidata. 
 
-MF: any other case?
 
 If you are in this situation, here are some hints towards possible alternatives:
-- Some science museums might be interested into collecting these digital artefacts ; reach out to them (MF: provide list?)
+- Some science museums might be interested into collecting these digital artefacts ; reach out to them (see (Appendix A)[#appendixa])
 - If you collected written documents (working notes, etc.), reach out to your national archive 
 - If the software was developed in a given insititution, this institution might be interested into collecting related historical artefacts ; reach out to them
-
-MF: any other options?
-
 
 
 Present
@@ -983,8 +961,6 @@ Software Stories was set up by Software Heritage in collaboration with the scien
 The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
 
 ![View of the Pisa Software Stories collection](./media/SWstories_libraries.png){#fig:pisacollection}
-
-MF: do we want to give instructions for people wanting to set up their own instance?
 
 **Create a new collection**
 
@@ -1015,8 +991,6 @@ Since automatically generated moments might not always fit the story you want to
  
 To start building your story, go to the `software_story` folder of the `Depository` branch of your `Workbench` and open the `StoryInventory.md` file. In this file, updating the proposed template, register the different moments you want to use in the desired order, as well as the information needed to instantiate each moment. The title of each moment will display on the side bar and will help the viewer navigate the different moments. Note that all the pictures and videos used in a story need to be publicly hosted somewhere in the internet (typically Wikimedia, but not necesseraly). 
 
-MF: do we want to give the option to store pictures in the publisher worspace? 
-
 In the `StoryInventory.md` file we suggest a template based on the work done by Software Heritage for a software called Amaya, structured from the more general information regarding Amaya to the most specific:
 
 **General information about the software and the context in which it was created**
@@ -1032,15 +1006,10 @@ In the `StoryInventory.md` file we suggest a template based on the work done by 
 - A **software heritage** moment shows a view into Amaya source code
 - An **image moments** give some statistics and insights on Amaya source code.
 
-
-MF: What should the process then be? Shall we create the JSON/story ourselves, based on registerd info? Shall we let users build the JSON themselves and send it over to us? Ideally we would build an easy tool to convert the registered info into JSON. Could probably be done using Gsheet...Maybe framaform? 
-
-MF: do we want to provide hosting services for some element of the stories that can't be put on Wikidata? Note that it only works for picture. Unsure what to do with PDFs for instance.
-
-Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in appendix X (TO DO: create appendix and add link) how each specific moment translates into a JSON code. 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in (appendix E)[#appendixe] how each specific moment translates into a JSON code. 
 
 Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
-Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice (MF: is this best process?). 
+Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice. 
 
 Iteration
 ---------
@@ -1048,8 +1017,6 @@ Iteration
 New material may be discovered after the process has been completed,
 triggering an iteration of some of the phases described above. In this
 case, we recommend to proceed as follows:
-
-MF: shall we first update the workbench and then push it in the Curated Repo? Or directly update the repo?
 
 If new raw material (non-source code) is found, you can clone add them to the _Depository_ branch of the `Workbench` and then push the updated branch to the
     _Curated_ repository. In this way, the performed commits will correctly follow the previous ones.
@@ -1355,8 +1322,6 @@ Finally, we clean up the directory before importing a new version
 
 ##### With DT2SG
 
-TO DO: test and update
-
 And here is an example using the [[DT2SG]{.underline}](#t3q5s097euy)
 tool
 
@@ -1465,7 +1430,6 @@ In particular we should create :
 Appendix A - Possible institutions to archive physical artefacts
 ================================
 
-TO DO: I think Elisabetta identified a list of partners?
 In France:
 - Musée des Arts et Métiers (contact:)
 - L'Expo Inria (contact:)
