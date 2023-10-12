@@ -14,6 +14,9 @@ author:
  - name: Guido Scatena
    affiliation: Dept. of Computer Science, University of Pisa
    email: guido.scatena@unipi.it
+- name: Mathilde Fichen
+   affiliation: Software Heritage, Inria
+   email: mathilde.fichen@inria.fr
 subparagraph: yes
 bibliography: swhap.bib
 ---
@@ -66,9 +69,9 @@ amount of human intervention, as demonstrated by the pioneering works
 reconstructing the history of Unix (@SpinellisUnix2017) and the source code
 of the Apollo Guidance Computer (@VirtualAGC).
 
-This document presents the first version of SWHAP, the ***SoftWare
+This document presents an revised version of SWHAP, the ***SoftWare
 Heritage Acquisition Process*** to rescue, curate and illustrate
-landmark legacy software source code, a joint initiative of Software
+landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software
 Heritage and the University of Pisa, in collaboration with UNESCO. 
 
 The SWHAP process aims at preserving and presenting legacy source code and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
@@ -129,7 +132,7 @@ In 2019, Software Heritage and University of Pisa published a first version of t
 - Preserving source code in a digital and machine readable format ensures its long term availability and allows exploitation by future generations
 - Preserving historical source code is a task that can only be tackled via a collective effort, and should be adressed via an open-sourced process allowing as many personns and entity to contribute.
 
-Alongside source-code and in line with the approach proposed by Elisabeth Kaplan, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. The SWHAP also covers the preservation of these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
+Alongside source-code, we also believe that ancilliary material, such as catalogs, personal artifacts, oral testimonies etc. should be preserved. To some extent, the SWHAP also covers the preservation of these artifacts, focusing on digital format and exploiting as much as possible open-source archiving solutions. 
 
 In 2021, Software Heritage announced the launch of the "Software stories" initiative (noauthor, n.d.), in collaboration with the sciencestories.io team and the University of Pisa. The project aims at presenting the history of significant historical software projects in a way that is accessible to the general public without any technical background. The new version of this guide will also tackle how to contribute to the Software Stories library, based on currated materials. 
 
@@ -240,8 +243,7 @@ GitHub collaborative development platform. The concrete process was first elabor
 This implementation is named SWHAPPE
 (SWH Acquisition Process Pisa Enactor) in this document.
 -->
-Finally, Section {@sec:stepbystep} provides step-by-step guidance of a source code curation process using Git, using a real world medium-sized software
-project (@AttardiF96).
+Finally, Section {@sec:stepbystep} provides step-by-step guidance of a source code curation process using Git, using a real world medium-sized software project (@AttardiF96).
 
 <a name="abstractview"/>
 
@@ -292,8 +294,12 @@ be preserved as well as the source code.
 At this stage of elaboration of the process, this phase is better
 thought of as *abstract*, in the sense that several, more focussed
 descriptions should be provided to cater for the different situations
-identified. The same applies to the Curator role, which may need
+identified. 
+
+<!--
+The same applies to the Curator role, which may need
 different capabilities in different scenarios.
+-->
 
 Curate
 ------ 
@@ -513,8 +519,7 @@ platform for all the virtual support areas of the process. If you are interested
 
 We propose to structure your *Digital working environment* into two disctinct areas, materialized by different spaces, also called repositories on Github.
 
-> *Workbench* repository, a working
-> area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
+> *Workbench* repository, a working area where one can temporarily collect an curate the materials, only accessible to people directly working on the project;
 >
 > *Curated* repository, will be used as the final and publicly available depository, allowing anyone interested to visit your work, check the curation process and browse through collected materials and the curated source code. The Depository can also be used as default archiving location if no better option was found;
 
@@ -672,6 +677,15 @@ guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 MF: wrong link, to be updated if relevant
 -->
 
+### Collect historical information
+
+Spend time gathering historical information regarding the software you are working on. 
+The following information can be identified:
+- Who are the main historical contributors of the software? When did they work on the software? To which organization did they belong to?
+- What were the different versions of the software ? Who were the main contributors to each ? When were they released?
+
+Information regarding contributors can be gathered in the `actor.md` file. Information regarding software versions are to be filled in the `version_history.csv` file. Both files are locate din the `metadata folder`. 
+
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
@@ -724,6 +738,7 @@ To each collected material (source code or other material) should correspond an 
 
 You may not be able to fill in all the information from the beginning, so you should keep this file updated as new information may come up. You can also add additional field if you think it helps better identify the item. 
 
+
 ### Go on license hunting
 
 If you own the copyright of the source code or any other material then you can freely decide what you will be willing to share on any given plateform. 
@@ -737,12 +752,16 @@ Regarding other material, such as working documents, photos, videos, there might
 
 As you get more information about copyrights and licenses don't forget to fill in the `catalogue.md` file accordingly. You will also want to keep a record of all the authorisations you may have been granted : that might mean storing email discussions or contract pdf for the record.   
 
-If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalogue in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
+If you can't get a sharing license for some items you own (ex: press article), you should still reference the items in `catalogue.md` along with storage location and contact point. Some people might see the catalogue in the future and be interested in accessing it and getting a contact point. However, you are not allowed to publicly publish these items. 
+
+<!--
+They should be stored in a dedicated folder that can stay in the private `Workbench` but can't be published publicly.
+-->
 
 <!--
 don't have copy rights (ex: press articles, photos etc.). Whenever possible we recommand to reach out to the copyright owners and ask if they would be willing to let you use and share their material. See below for more details on copyrights (Add a section about the different cases). If you obtain the copyright for a specific item, store the related contractual document (it can be a simple email) in the `copyrights` (MF: to be created) folder and update the copyright information in the `catalogue.md` file. 
 -->
- 
+  
 
 ### Curate the source code
 
@@ -750,7 +769,7 @@ Modern progamming practice use versionning systems to allow to track changes mad
 
 To recreate the development history of the software we will leverage the *commit* and *versionning* mechanisms of Git. A _commit_ is an incremental change in the code, packaged with relevant metadata regarding the change. 
 This system allows to stack versions of the software one upon the other, only storing the differences (also called _deltas_) between each versions. 
-Each layer of the stack can be associated to metadata that we will leverage in the SWHAP to make the distinction between the author of the software and the curator, and between the creation date and the curation date.  
+Each layer of the stack can be associated to metadata that we will leverage in the SWHAP to make the distinction between the historical author of the software and the curator, and between the creation date and the curation date.  
 
 We recommand to fill in the following metadata field for each commit:
 - `GIT_AUTHOR_NAME`: name of the main author                                          
@@ -762,7 +781,9 @@ We recommand to fill in the following metadata field for each commit:
 - `RELEASE_TAG`: a tag name if the directory contains a release, empty otherwise  
 - `MESSAGE`: text containing a brief note from the curation team              
 
+<!--
 MF: shall we change back the metatdata once code curation done? Otherwise the next commits will be impacted.
+-->
 
 <!--
 To prepare for the reconstruction itlsef you need to organize your source code files properly and to identify metadata.  -->
@@ -799,6 +820,7 @@ This information should be consigned in the `version_history.csv` in the `metada
 | message 	 | text containing a brief note from the curation team              |
 
 -->
+
 Now you are ready to (re-)create the development history of the
 software. First, create a new empty _orphan_ branch, clean of any commit history. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical development. The content of the branch should be cleared between two commits. 
 
