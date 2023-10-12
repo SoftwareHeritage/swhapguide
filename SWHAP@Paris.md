@@ -686,6 +686,8 @@ The following information can be identified:
 
 Information regarding contributors can be gathered in the `actor.md` file. Information regarding software versions are to be filled in the `version_history.csv` file. Both files are locate din the `metadata folder`. 
 
+One tip to retrieve information about your software is to use the Internet [Archive website](https://archive.org/), and dig into past versions of your software website. This is of course if your software is recent enough to have be associated with a project website...
+
 ### Make the source code machine readable
 
 The next step is to ensure that the collected source code is made available in a machine-readable format. 
@@ -822,7 +824,7 @@ This information should be consigned in the `version_history.csv` in the `metada
 -->
 
 Now you are ready to (re-)create the development history of the
-software. First, create a new empty _orphan_ branch, clean of any commit history. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable source code` into the `versionned source code` folder, updating the commits metadata to reflect historical development. The content of the branch should be cleared between two commits. 
+software. First, create a new _orphan_ branch, clean of any commit history, and cleared of all pre-existing content. The branch should be empty before starting the process. You can name this new branch `SourceCode`. Then, successively commit the source code files of each version from the `browsable_source_code` of the `main branch` into the new empty `SourceCode` branch, updating the commits metadata to reflect historical development. The content of the branch should be cleared between two commits. 
 
 
 <!--First you need to create a branch Source Code, with the
@@ -831,9 +833,9 @@ software. First, create a new empty _orphan_ branch, clean of any commit history
 You can proceed in two ways:
 
 -   *manually*: using the *Git* commands to push the successive versions
-    into the `SourceCode` branch, manually updating the metadata using the data collected during the curation phase in the catalogue.md file. The step by step process is detailed in a (dedicated chapter)[#stepbystep] ;
+    into the `SourceCode` branch, manually updating the metadata using the historical data collected previsouly. The step by step process is detailed in a (dedicated chapter)[#stepbystep] ;
 
--   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in one csv file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section.
+-   *automatically*: if a great number of versions have been collected it might become very tedious to commit them manually one by one. To alleviate the hurdle, we set up a tool that can automatically do it for you. To allow the tool to work, you will first need to gather the commit metadata for all the versions in the `version_history.csv` file, that the tool will be able to read from. Then you will be able to reconstruct the development history of the software in one single run; using the [DT2SG Tool developed by University of Pisa](https://github.com/Unipisa/DT2SG). You can see a running example in the next section. 
 
 The result will be a `SourceCode` branch that materializes the development history
 of the software via Git commits and releases.
@@ -848,7 +850,7 @@ Using this `versionned_source_code` folder, you can finally create the "official
 <!--
 ### Curate the ancillary materials
 
-From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` foLder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. 
+From the `raw_materials` folder, select the ancillary materials that you wish to keep for archival and presentation, and move them in the `additional_materials` folder. You should sort them in the right subfolder : `software_moment`, `people_moment` or `other_materials`. 
 
 To every collected item should correspond an entry in the `catalogue.md`file, located in the `metadata`folder. If there are physical materials, make a different entry for the object itself, indicating its warehouse or storage location, and for its digital version. (MF: is it the case? Shall we also register the source code in the catalogue file?)
 -->
@@ -859,9 +861,9 @@ Once your curation work is done for both source code and ancillary materials, yo
 
 In your `Workbench`, create a new branch called `Depository`. Keep all the folders but remove the README file. The branch will thus contain the `additional_material`, `raw_source_code`, `browsable_source_code` and `metadata` folders. Push this branch into a new branch of the `Curated` repository also called `Depository`.
 
-Going back to your `master` branch of your `Workbench`, remove all the files except for the README file that you can update if needed. Push that branch into the `master` branch of the `Curated` repository. 
+Going back to the `master` branch of your `Workbench`, remove all the files except for the README file that you can update if needed. Push that branch into the `master` branch of the `Curated` repository. 
 
-Finally, push the `SourceCode` branch of the workbench into the `Curated` repository. 
+Finally, push the `SourceCode` branch of the workbench into the `Curated` repository. To see a concrete exemple of the final result, you can visit the work done at Software Heritage for the [Amaya browser](https://github.com/mathfichen/Amaya-curated), and based on the latest version of this guide. 
 
 <!--
 Create the final `Curated` repository, containing only the
@@ -869,7 +871,7 @@ folders `raw_source_code`, `browsable_source_code`, `additional_materials` toget
 metadata updated to this point. 
 -->
 
-Remember to remove any items for which you did not get the copyrights or sharing license. 
+Remember to remove any items for which you did not get the copyrights or sharing license from the `SWName_Curated` final repository. 
 This will be the publicly available showcase of your work. 
 
 ![Final curated repository branch structure](./media/final_repo_branches.png){#fig:finalbranches}
@@ -914,7 +916,7 @@ To start, search Wikidata to see if an item for the software title exists. If no
 
 An item is made up of different _statements_, which are different block of information linked to that article. Each statement describes a different _property_ of the item. A proprerty is identified with a code starting with letter `P`, which we will refer to later on to let you easily search for a given property. 
 
-Add statements to the Wikidata item based on the codemeta.json (MF: or catalogue file?) file as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
+Add statements to the Wikidata item based on the `version_history.csv` and `actors.md`files as well as any other available information using properties related to software. You can use the Wikidata item about [Scilab](https://www.wikidata.org/wiki/Q828742) as an example.
 
 Typically you will want to register:
 - The different versions of the software and their publication date using the _software version identifier_ property (P348)
@@ -926,7 +928,7 @@ Typically you will want to register:
 
 In order to be able to fill in the _developer_ section, you will first need to make sure that the people or entities who developped the software are also referenced in Wikidata. If they're not, you will need to create new Wikidata items first for these people or entity. If you collected pictures of the people who developped the software, add them to their Wikidata page using the _image_ statement (P18). Once this is done you can come back to the software items and fill in the _developer_ statement.   
 
-Using the _Source code repository URL_ statement (P1324), add the link towards the Software Heritage archived source code. (MF: or Github repo?)
+Using the _Source code repository URL_ statement (P1324), add the link towards the Software Heritage archived source code. 
 Using the _Software Heritage ID_ statement (P6138), add the Software Heritage identifier (that can be found in the _Permalinks_ of the archived source code.)
 
 ![View of Amaya's Wikidata Software Heritage ID statement](./media/wiki_swh.PNG){#fig:wiki_swh}
@@ -950,9 +952,10 @@ Once this is done, return to the Wikidata software item and use the _Commons cat
 If you collected any document in PDF format (flyers, diagrams, notes, internal communications, correspondences), you can upload them to Wikimedia in the exact same way as pictures or videos. 
 Once this is done, go back the Wikidata item and use the _document file on Wikimedia Commons (P996)_ statement to link these documents to the Wikidata item. 
 
+<!--
 **Publications**
-
 MF: where shall we archive publications? HAL? Wikimedia
+-->
 
 ### What shall I do with the content I can't archive on Wikimedia? 
 
@@ -978,7 +981,7 @@ Present
 
 Once you have archived the collected materials, you can consider showcasing them in a digital exhibition. In this section we will show you how to leverage a given tool, called [Software Stories](https://stories.softwareheritage.org/).
 
-Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of  the SWHAP allowing curators to generate a multimedia overview of a landmark legacy software title.
+Software Stories was set up by Software Heritage in collaboration with the sciencestories.io team and the University of Pisa. The Software Stories interface is designed to highlight materials about a software title in a  visual manner, similar to a digital software museum. The engine provides a semi-automatic tool for curators to create the presentation layer of the SWHAP allowing curators to generate a multimedia overview of a landmark legacy software title.
  
 The Software Heritage library is devided into collections. You can either choose to contribute to an exhisting collection (for now Pisa and Inria), or to create a new dedicated collection for your institution. 
 
@@ -986,7 +989,7 @@ The Software Heritage library is devided into collections. You can either choose
 
 **Create a new collection**
 
-MF: hthis can be done via pub lisher workspace. I think potential users should reach out to us to do so. Contact point?
+If you wish to add a new collection to the Software Heritage library, please reach out to us using our [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info). 
 
 **Contribute to a collection**
 
@@ -1028,10 +1031,11 @@ In the `StoryInventory.md` file we suggest a template based on the work done by 
 - A **software heritage** moment shows a view into Amaya source code
 - An **image moments** give some statistics and insights on Amaya source code.
 
-Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. You can find in (appendix E)[#appendixe] how each specific moment translates into a JSON code. 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. Check [Appendix E](#appendixe) to see how each moment translates into a JSON piece of code. 
+
 
 Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
-Once your JSON file is ready, send it out to the Software Heritage team (TO DO : add contact) to be added to the collection of you choice. 
+Once your JSON file is ready, send it out to the Software Heritage team ([mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info)) to be added to the collection of you choice. 
 
 Iteration
 ---------
@@ -1040,7 +1044,7 @@ New material may be discovered after the process has been completed,
 triggering an iteration of some of the phases described above. In this
 case, we recommend to proceed as follows:
 
-If new raw material (non-source code) is found, you can clone add them to the _Depository_ branch of the `Workbench` and then push the updated branch to the
+If new raw material (non-source code) is found, you can add them to the `Depository` branch of the `Workbench` and then push the updated branch to the
     _Curated_ repository. In this way, the performed commits will correctly follow the previous ones.
 
 If new source code is found:
@@ -1148,7 +1152,7 @@ We are now ready to start the collect phase.
 
 Here we fill the local folders with the collected material. In the case
 of Amaya, we got several tar.gz files containing the various versions of the
-software. We store the tar.gz file in the `raw_source_code`folder. 
+software. We store the tar.gz file in the `raw_source_code` folder. 
 In the `additional_materials` folder we store various collected items (like photos, screenshots, logos, papers),
 and we commit all these new contents:
 
@@ -1170,7 +1174,7 @@ The resulting state of `additional_material` (picture sub-folder) is shown in Fi
 In order to get a browsable version of the source code, we decompress
 the .tar.gz archive into the `browsable_source_code` folder (organized per version).
 
-    tar -xzf raw_materials/cmm.tgz -C browsable_source_code
+    tar -xzf raw_materials/amaya.tgz -C browsable_source_code
 
 and commit the changes as done previously
 
@@ -1235,37 +1239,6 @@ what done for the workbench as shown in Figure
 {@fig:workbench_tags}).
 -->
 
-### Update the master branch
-
-Update the master branch, only keeping the README file.
-
-	git checkout master
- 	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories
-	git add .
-	git commit -m "Clear master branch"
- 	git push origin +master:master
-
-<!--
-### Final depository
-
-Finally, we can perform a push and fill the remote repository.
-
-	git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
-
-We can check the resulting repositories via the web interface (Figure
-{@fig:cmm_repos}): CMM-Depository is now filled with the pushed materials.
-
-![The CMM repositories at the end of the collect phase.](./media/cmm_repos.png){#fig:cmm_repos}
-
-The Depository branch is then removed from the Workbench, to avoid
-having multiple copies that may diverge. Should new materials became
-available, a new iteration of the process should start, re-initializing
-the Workbench with the information in the Depository.
-
-	git checkout master
-	git push --delete origin Depository
-	git branch -D Depository
--->
 
 ### Curate the code
 
@@ -1311,7 +1284,7 @@ We have to create a clean dedicated SourceCode branch
 	git checkout --orphan SourceCode
 	git rm -rf *
 
-Then, for every directory containing a version of the source code, in
+Then, for every directory of `browsable_source_code` containing a version of the source code, in
 chronological order, we copy its contents from the `master` branch to the
 `SourceCode` branch, and commit it with the appropriate metadata.
 
@@ -1359,6 +1332,37 @@ containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 ![An excerpt of the synthetic history of CMM.](./media/cmm_sh.png){#fig:cmm_sh}
 -->
 
+### Update the master branch
+
+Update the master branch, only keeping the README file.
+
+	git checkout master
+ 	git rm rf  additional_materials browsable_source_code metadata raw_source_code software_stories
+	git add .
+	git commit -m "Clear master branch"
+ 	git push origin +master:master
+
+<!--
+### Final depository
+
+Finally, we can perform a push and fill the remote repository.
+
+	git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
+
+We can check the resulting repositories via the web interface (Figure
+{@fig:cmm_repos}): CMM-Depository is now filled with the pushed materials.
+
+![The CMM repositories at the end of the collect phase.](./media/cmm_repos.png){#fig:cmm_repos}
+
+The Depository branch is then removed from the Workbench, to avoid
+having multiple copies that may diverge. Should new materials became
+available, a new iteration of the process should start, re-initializing
+the Workbench with the information in the Depository.
+
+	git checkout master
+	git push --delete origin Depository
+	git branch -D Depository
+-->
 
 ### Create the final repository
 
@@ -1466,8 +1470,6 @@ Outside France
 
 Appendix B - A few tips on Git and Github
 =================================
-
-TO DO: Add some references (ask Zack video)
 
 *Git* is a distributed version-control system for tracking changes in
 source code during software development. Here, we provide some
