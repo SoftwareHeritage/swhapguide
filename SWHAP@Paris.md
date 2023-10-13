@@ -14,7 +14,7 @@ author:
  - name: Guido Scatena
    affiliation: Dept. of Computer Science, University of Pisa
    email: guido.scatena@unipi.it
-- name: Mathilde Fichen
+ - name: Mathilde Fichen
    affiliation: Software Heritage, Inria
    email: mathilde.fichen@inria.fr
 subparagraph: yes
