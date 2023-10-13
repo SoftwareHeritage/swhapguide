@@ -997,7 +997,7 @@ Once you have created a new collection or decided to contribute to an exhisting 
 A story is made up of different _moments_. 
 
 Some moments can be automatically generated based on the information you filled in Wikimedia and Wikidata. You can already preview the automatically generated story using this URL:
-https://stories.softwareheritage.org/inria/Q828742. The Q number at the end of the URL should be the reference number of the related Wikidata item. 
+https://stories.softwareheritage.org/inria/Q828742. The Q-number at the end of the URL should be the reference number of the related Wikidata item. 
 
 Since automatically generated moments might not always fit the story you want to narrate, you may choose to build a custom story, mixing automated and custom moments. Here are the main moments we recommend using to build your story. 
 
@@ -1031,7 +1031,8 @@ In the `StoryInventory.md` file we suggest a template based on the work done by 
 - A **software heritage** moment shows a view into Amaya source code
 - An **image moments** give some statistics and insights on Amaya source code.
 
-Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file (MF: ask Kenneth how to get it). Update this JSON file, adding, removing or reorganizing the desired moments. Check [Appendix E](#appendixe) to see how each moment translates into a JSON piece of code. 
+Once the outline of your story is ready, you need to turn it into a JSON file. To do so, we suggest that you start from the automated generated JSON file. To retrieve the automatically generated JSON file use this URL, in which you should replace the Q-number by the one of your software. https://stories.k2.services/api/story/Q580318/?collection=45&api-key=tN5X1y7O.2NhLogJVhLsYANuCtSP1FjHPZHA6TUBd&format=json
+Update this JSON file, adding, removing or reorganizing the desired moments. Check [Appendix E](#appendixe) to see how each moment translates into a JSON piece of code. 
 
 
 Along the way you can test the rendering of your story by copy-pasting the JSON file [there](https://stories.k2.services/publisher/sandbox/).
