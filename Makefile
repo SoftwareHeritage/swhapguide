@@ -2,7 +2,7 @@
 MDS = $(wildcard *.md)
 TEXS = $(patsubst %.md,%.tex,$(MDS))
 PDFS = $(patsubst %.md,%.pdf,$(MDS))
-MAIN = SWHAP@Pisa
+MAIN = SWHAP@Paris
 
 all: $(MAIN).pdf
 
