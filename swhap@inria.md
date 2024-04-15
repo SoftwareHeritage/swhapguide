@@ -94,6 +94,8 @@ To start archiving legacy source code in the Sofwtare Heritage Archive, the foll
 - A source code in machine readable format
 - A Github account
 - A Linux Console
+- Git
+- Connect to Github with SSH
 
 ### A source code in machine readable format
 
@@ -112,6 +114,25 @@ In this guide we will show you how to do it using Github, and you will therefore
 ### A Linux Console
 
 To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
-However the command lines we will use are written for a Linux exploitation system. If you are already a Linux user, you can skip this step. If you are not a Lunix user, you can download a Linux 
+However, the command lines we will use are written for a Linux exploitation system. If you are already a Linux user, you can skip this step. If you are not a Lunix user, you can download a Linux subsystem.
+
+For Windows, you can find detailed instructions [here]([url](https://learn.microsoft.com/en-us/windows/wsl/install)).
+In practice do the following:
+- Open Windows PowerShell
+- Enter the following command line: 'wsl --install'
+- Wait for the installation to complete
+- Restart your computer
+- Re-open Windows PowerShell and open a new Ubuntu tab (clicking on the small + sign on top)
+- You will be asked to enter a new user name and password. And that's it, you can start typing linux command lines in your console.
+
+### Git
+
+Git is the versionning system we will use to curate your source code. If you do not have Git installed yet, you will need to install it. From your Linux console enter the following instruction: 'sudo apt install git-all'.
+If it does not work the first time, you may need to first update the local packages index using the following command line: 'sudo apt-get update'. 
+
+### Connect to GitHub with SSH
+
+The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion. You can find detailed instructions [here]([url](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
+
 
 
