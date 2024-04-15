@@ -101,10 +101,17 @@ If your source code is already stored in a digital machine-readable format, you 
 However, if your source code is not machine-readable (typically your code is a paper listing), a little prework is required so that your code can be ingested in the Software Heritage Archive. 
 
 1) Use a scanner to digitalize your code. If your code is too long to be scanned in its entirety, select a section that you find most relevant for archiving.
-2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/)
-3) Check for any error, correct if needed, and save your code in a file, using the file extension linked to the programming language asociated with your code. 
-
+2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/) and paste your code into a text editor.
+3) Check for any error, correct if needed, and save your code using the file extension linked to the programming language asociated with your code. 
 
 ### A Github account
+
+Source code ingestion into the Software Heritage archives will require your source code to be uploaded into a public forge first, such as Github or Gitlab. 
+In this guide we will show you how to do it using Github, and you will therefore need a Github account. If you do not already own one, you can easily create it [here](https://github.com/signup).
+
+### A Linux Console
+
+To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
+However the command lines we will use are written for a Linux exploitation system. If you are already a Linux user, you can skip this step. If you are not a Lunix user, you can download a Linux 
 
 
