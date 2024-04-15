@@ -132,7 +132,14 @@ If it does not work the first time, you may need to first update the local packa
 
 ### Connect to GitHub with SSH
 
-The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion. You can find detailed instructions [here]([url](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
+The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion. You can find detailed instructions [here]([url](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)). If you do not already have a SSH key, here is what you need to do:
+- Create a new SSH using this command line `ssh-keygen -t ed25519 -C "john.smith@gmail.com" ` using your own email address. Press enter to accept the default repository or adjust as you wish. Enter a passphrase if you wish of leave empty and press enter.
+- Then add your newly created SSH key into your ssh-agent. Check that your ssh-agent is running by entering: `eval "$(ssh-agent -s)" `. Then add your key by entering: `ssh-add ~/.ssh/id_ed25519`
+- Navigate to the folder where your SSH key is stored. If you use a Windows Linux Subsystem, it should be in `Linux>Ubuntu>home>myname>.ssh`. Open the public key file `id_ed25519.pub` and copy the key
+- Now go to your Github account, click on your logo on the top right corner, go the `Settings` and `SSH and GPG keys`. Click on `New SSH key`, enter a name to your key and paste the public key. Click on `Add SHS key`
+
+You are done with the settings and you are now ready to archive your code into the Software Heritage Universal Archive!
+    
 
 
 
