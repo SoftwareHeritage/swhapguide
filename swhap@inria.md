@@ -111,12 +111,12 @@ However, if your source code is not machine-readable (typically your code is a p
 Source code ingestion into the Software Heritage archives will require your source code to be uploaded into a public forge first, such as Github or Gitlab. 
 In this guide we will show you how to do it using Github, and you will therefore need a Github account. If you do not already own one, you can easily create it [here](https://github.com/signup).
 
-### A Linux Console
+### A Unix Console
 
 To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
-However, the command lines we will use are written for a Linux exploitation system. If you are already a Linux user, you can skip this step. If you are not a Lunix user, you can download a Linux subsystem.
+However, the command lines we will use are written for a Unix exploitation system. If your computer is running on a Unix-like exploitation system (Unix, Linux, MacOS), you can skip this step. If you are using Windows, you can download a Linux subsystem for Windows.
 
-For Windows, you can find detailed instructions [here]([url](https://learn.microsoft.com/en-us/windows/wsl/install)).
+To do so, you can find detailed instructions [here]([url](https://learn.microsoft.com/en-us/windows/wsl/install)).
 In practice do the following:
 - Open Windows PowerShell
 - Enter the following command line: 'wsl --install'
@@ -140,6 +140,32 @@ The archiving process will require you to interact with Github from your Linux c
 
 You are done with the settings and you are now ready to archive your code into the Software Heritage Universal Archive!
     
+Archiving your legacy code
+----------------------
+In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so properly. In this guide we will the most widely used forge, Github. 
+
+We will provide a step by step guidance, using a software called Amaya as an example. 
+
+**Wait, why don't I just manually upload my code on Github then?**
+If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Mathilde, upload a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. Using Git command lines will allow us to properly set the metadata. 
+
+If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
+
+
+
+
+### Prepare your code for archival
+
+As mentionne earlier, to start the process your code needs to be in a machine-readable format.
+If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it.
+If the raw source code is an archived and/or compressed file (.tar or .zip), you should unpack it locally on your computer. 
+
+If your code has several versions, organize each version in a dedicated foler, calling each folder with an easily recognizable name, for example `Amaya_V1`, `Amaya_V2` etc.    
+
+For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
+
+
+
 
 
 
