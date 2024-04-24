@@ -142,15 +142,19 @@ You are done with the settings and you are now ready to archive your code into t
     
 Archiving your legacy code
 ----------------------
-In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so properly. In this guide we will the most widely used forge, Github. 
+In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will the most widely used forge, Github. 
 
-We will provide a step by step guidance, using a software called Amaya as an example. 
+We will provide a step by step guidance, using a historical software called Amaya as an example. 
 
 **Wait, why don't I just manually upload my code on Github then?**
 If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Mathilde, upload a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. Using Git command lines will allow us to properly set the metadata. 
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
+
+### Set up your working environment
+
+To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. We will call this clone respository 
 
 
 
