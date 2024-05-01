@@ -157,7 +157,7 @@ If your source code has several versions we will also reconstruct the version hi
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
 Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper eight hand corner click on `Use this template` > `Create a new repository` 
 
-![SWHAP template.](./media2/01_template.PNG){#fig:template}
+![SWHAP template.](./media2/01_template.png){#fig:template}
 
 The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
 
@@ -182,9 +182,9 @@ For historical accuracy purpose we will upload both your source code in its init
 You are now ready to upload your materials to the `Workbench`. 
 Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
 
-![Upload raw materials.](./media2/04_Addfiles.PNG){#fig:addfiles}
+![Upload raw materials.](./media2/04_Addfiles.png){#fig:addfiles}
 
-![Upload raw materials.](./media2/05_Addfiles.PNG){#fig:addfiles2}
+![Upload raw materials.](./media2/05_Addfiles.png){#fig:addfiles2}
 
 
 
