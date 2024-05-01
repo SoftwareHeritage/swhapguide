@@ -161,7 +161,7 @@ Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the 
 
 The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
 
-![SWHAP template.](./media2/01_CreateWorkbench.PNG){#fig:createWorkbench}
+![Create your Workbench.](./media2/02_CreateWorkbench.PNG){#fig:createWorkbench}
 
 
 ### Prepare your code for archival
@@ -169,7 +169,7 @@ The repository you will create is a temporary working environment, and we recomm
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
 If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
 
-![SWHAP template.](./media2/01_OCR.PNG){#fig:OCR}
+![Make your source code machine readable.](./media2/09_OCR.PNG){#fig:OCR}
 
 If the raw source code is an archived and/or compressed file (.tar or .zip), you should unpack it locally on your computer. 
 
@@ -180,7 +180,11 @@ For historical accuracy purpose we will upload both your source code in its init
 ### Upload raw materials
 
 You are now ready to upload your materials to the `Workbench`. 
-Navigate to the `raw_materials` folder. This folder is meant to store the 
+Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
+
+![Upload raw materials.](./media2/04_Addfiles.PNG){#fig:OCR}
+
+![Upload raw materials.](./media2/05_Addfiles.PNG){#fig:OCR}
 
 
 
