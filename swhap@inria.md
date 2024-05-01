@@ -308,12 +308,36 @@ If ou have numerous source code version and do not want to reconstruct the devel
 
 //Add link
 
-### 
+### Create the final repository
 
 You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public reository, named after your software. 
 
 //add SC
 
+We populate this final `MySoftware` repository from our workbench.
+
+    git push --tags git@github.com:mathfichen/MySoftware.git +master:master +SourceCode:SourceCode
+
+To facilitate the search of the created repository, we add the 
+"software-heritage", "archive" and "swhappe" tags (in the same way of 
+what done for the workbench as shown in Figure
+{@fig:workbench_tags}).
 //add tags
+
+### Trigger the Software Heritage Acquisition
+
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository. 
+
+![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow_URL.PNG){#fig:saveCodeNowURL}
+
+You can then follow the archival status of your code in the [_Browse Save Request_ tab below](https://archive.softwareheritage.org/save/list/).
+
+![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow.PNG){#fig:saveCodeNow}
+
+Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permalink` tab and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+
+![View of the _Permalink_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
+
+
 
 
