@@ -205,5 +205,6 @@ Go back to the `metadata` folder and go to the `license.md` file and fill in any
 ### Upload machine readable source code
  We are now going to upload the machine readable versions of your source code, each version (if several version) in a dedicated folder. 
 
-To manipulate folders in Github, the easiest way is to open Github explorer by just clicking on `.` symbol on your keyboard from the Github interface. This will open a file manager in which you can manipulate folders and files easily. In the `source_code` folder create one folder per version of your software. Here, we created two distinct folders, `v1` and `v2`.  
+To manipulate folders in Github, the easiest way is to open Github explorer by just clicking on `.` symbol on your keyboard from the Github interface. This will open a file manager in which you can manipulate folders and files easily. Click on the `source_code` folder and create one sub-folder per version of your software. Here, we created two distinct folders, `v1` and `v2`. In each folder, add the files corresponding to each version.  
 
+![Upload source code.](./media2/10_SourceCode.png){#fig:license}
