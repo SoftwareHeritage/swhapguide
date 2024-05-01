@@ -151,6 +151,10 @@ If you just uploaded your source code files on Github the metadata associated wi
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
+### Final result
+
+Add what we want to achieve
+
 ### Prepare your code for archival
 
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
@@ -339,5 +343,5 @@ Once your repository has been archived you can search for its archive location u
 ![View of the _Permalink_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
 
 
-
+TO DO: fix code snippets, add screenshots
 
