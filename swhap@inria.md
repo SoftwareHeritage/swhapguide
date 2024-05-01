@@ -297,3 +297,23 @@ Finally, we clean up the directory before importing a new version
 
 Redo the previous command lines for each version, starting at `git checkout master -- source_code/v2`. For the last version do not clean up the directory. 
 
+Finally, synchronize with your remote repository. 
+
+  	git push --tags origin +SourceCode:SourceCode
+  		
+
+##### With DT2SG
+
+If ou have numerous source code version and do not want to reconstruct the development history by hand, we developped a script to do it for you. 
+
+//Add link
+
+### 
+
+You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public reository, named after your software. 
+
+//add SC
+
+//add tags
+
+
