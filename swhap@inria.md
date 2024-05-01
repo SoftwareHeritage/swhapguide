@@ -154,7 +154,11 @@ If your source code has several versions we will also reconstruct the version hi
 
 ### Set up your working environment
 
-To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. We will call this clone respository 
+To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
+Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper eight hand corner click on `Use this template` > `Create a new repository` 
+
+The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` and to make it private.
+
 
 
 
@@ -164,7 +168,7 @@ As mentionne earlier, to start the process your code needs to be in a machine-re
 If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it.
 If the raw source code is an archived and/or compressed file (.tar or .zip), you should unpack it locally on your computer. 
 
-If your code has several versions, organize each version in a dedicated foler, calling each folder with an easily recognizable name, for example `Amaya_V1`, `Amaya_V2` etc.    
+If your code has several versions, organize each version in a dedicated foler, calling each folder with an easily recognizable name, for example `MySoftware_V1`, `MySoftware_V2` etc.    
 
 For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
 
