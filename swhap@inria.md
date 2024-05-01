@@ -159,7 +159,7 @@ Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the 
 
 The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` and to make it private.
 
-
+![SWHAP template.](./media2/01_template.PNG){#fig:template}
 
 
 ### Prepare your code for archival
