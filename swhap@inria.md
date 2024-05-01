@@ -182,12 +182,28 @@ For historical accuracy purpose we will upload both your source code in its init
 You are now ready to upload your materials to the `Workbench`. 
 Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
 
+CLick on `Add file` > `Upload files`
+
 ![Upload raw materials.](./media2/04_Addfiles.png){#fig:addfiles}
+
+Upload your initial files and click on `Commit changes` ("Commit" is the Git equivalent of "Saving").
 
 ![Upload raw materials.](./media2/05_Addfiles.png){#fig:addfiles2}
 
+In my case I uploaded two documents: a scanned listing from 1971 and a later digital version from 1972 in a compressed file. 
 
+### Fill in the metadata
 
+Then navigate to the `metadata` folder and the `catalogue.md` file. This file will help any future viewer to better understand the different items you uploaded. Click on the `Pencil` symbol and edit the file, filing in the metadata linked to the items your uploaded. When you are done, save by clicking on `Commit changes`.  
 
+![Upload raw materials.](./media2/07_Metadata.PNG){#fig:metadata}
 
+Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
+
+![Upload raw materials.](./media2/08_License.PNG){#fig:license}
+
+### Upload machine readable source code
+ We are now going to upload the machine readable versions of your source code, each version (if several version) in a dedicated folder. 
+
+To manipulate folders in Github, the easiest way is to open Github explorer by just clicking on `.` symbol on your keyboard from the Github interface. This will open a file manager in which you can manipulate folders and files easily. In the `source_code` folder create one folder per version of your software. Here, we created two distinct folders, `v1` and `v2`.  
 
