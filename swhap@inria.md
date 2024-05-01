@@ -243,25 +243,26 @@ You can chcek the result in the distant repository.
 
 ### (Re-)Create the development History
 
-The development history can now be (re-)created either by issuing manually (i.e. for each version directory) the appropriate git commands, or by using a specialised tool.
+The development history can now be (re-)created either by issuing manually (i.e. for each version directory) the appropriate git commands, or by using a specialised tool. This recreated development history will be stored in a dedicated branch, that we will call `SourceCode`. This branch will be created as an empty orphan branch, meaning that it will be cleaned of any previous content or commits information, as if it were a standalone branch. 
 
 ##### Manually
 
-We have to create a clean dedicated SourceCode branch
+We first create the SourceCode orphan branch
 
-	git checkout --orphan SourceCode
-	git rm -rf *
+	`git checkout --orphan SourceCode`
 
-Then, for every directory of `browsable_source_code` containing a version of the source code, in
+ An remove all files and folders: 
+	`git rm -rf *`
+
+Then, for every directory of `source_code` containing a version of the source code, in
 chronological order, we copy its contents from the `master` branch to the
-`SourceCode` branch, and commit it with the appropriate metadata.
+`SourceCode` branch, and commit it with the appropriate metadata, as recorded in `version_history.csv`.
 
-For example, for the directory 1.9 of the CMM sources, here is how
+In our case here is how
 we copy the source contents into our branch:
 
-	git checkout master -- browsable_source_code/1.9
-	mv browsable_source_code/1.9/* .
-	rm -rf browsable_source_code
+	git checkout master -- source_code/v1
+	mv source_code/v1/* .
 
 Then we use the following template to create manually an individual commit/release:
 
@@ -273,14 +274,26 @@ Then we use the following template to create manually an individual commit/relea
 	export GIT_AUTHOR_EMAIL=<email@address>"
 	git add -A
 	git commit -m "Commit Message Here"
+
+ In our case
+
+ 	export GIT_COMMITTER_DATE="2024-05-01 00:00:00"
+	export GIT_COMMITTER_NAME="Math Fichen"
+	export GIT_COMMITTER_EMAIL="mathfichen@monadresse.com"
+	export GIT_AUTHOR_DATE="1972-05-01 00:00:00"
+	export GIT_AUTHOR_NAME="Colmerauer et al."
+	export GIT_AUTHOR_EMAIL="<>"
+	git add -A
+	git commit -m "V1 of MySoftware"
 	
-We also need to add an annotated tag to this version. For version 1.9 of CMM, here is
+We also need to add an annotated tag to this version. For version 1 of MySoftware, here is
 the command we used, you can adapt it to your needs:
 
-	git tag -a 1.9 -m "Version 1.9"
+	git tag -a 1 -m "Version 1"
 
 Finally, we clean up the directory before importing a new version
 
-    git rm -rf *
+    	git rm -rf *
 
+Redo the previous command lines for each version, starting at `git checkout master -- source_code/v2`. For the last version do not clean up the directory. 
 
