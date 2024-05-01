@@ -151,19 +151,6 @@ If you just uploaded your source code files on Github the metadata associated wi
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
-
-### Set up your working environment
-
-To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
-Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper eight hand corner click on `Use this template` > `Create a new repository` 
-
-![SWHAP template.](./media2/01_template.png){#fig:template}
-
-The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
-
-![Create your Workbench.](./media2/02_CreateWorkbench.PNG){#fig:createWorkbench}
-
-
 ### Prepare your code for archival
 
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
@@ -177,42 +164,123 @@ If your code has several versions, organize each version in a dedicated foler, c
 
 For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
 
-### Upload raw materials
+### Set up your working environment
+
+To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
+Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper eight hand corner click on `Use this template` > `Create a new repository` 
+
+![SWHAP template.](./media2/01_template.png){#fig:template}
+
+The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
+
+![Create your Workbench.](./media2/02_CreateWorkbench.PNG){#fig:createWorkbench}
+
+Via the Github interface you can edit the `Read.me` file, using the actual name of your software. To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
+
+To start working, we create a local copy on our computer, cloning this
+repository[^10]. By clicking on the green button `Code`
+(Figure {@fig:cmm_wb_inst}), we get a link that we can use for this purpose in the
+following command from the command line:
+
+`git clone git@github.com:mathfichen/MySoftware_Workbench.git`
+
+This command will create local version of the Workbench on your computer, that you can manipulate (add files, edit files, create folders etc) the same way you would usually do it.
+
+In our case (using Linux Subsystem for Windows), the local copy of MySoftware_Workbench has been created at this location:
+`Linux` > `Ubuntu` > `home` > `mathfichen` > `MySoftware_Workbench`.
+
+Open a Linux command line interpreter an navigate to `MySoftware_Workbench`.
+In our case the interpreter current directory is `/home/mathfichen`, so we juste type: `cd MySoftware_Workbench`
+
+### Upload collected files
 
 You are now ready to upload your materials to the `Workbench`. 
-Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
+In your local Workbench, navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
 
-CLick on `Add file` > `Upload files`
+In our case we uploaded two documents: a scanned listing from 1971 and a later digital version from 1972 in a compressed file. 
 
-![Upload raw materials.](./media2/04_Addfiles.png){#fig:addfiles}
+//add SC
 
-Upload your initial files and click on `Commit changes` ("Commit" is the Git equivalent of "Saving").
+To synchronize our local Workbench with the remote repository, we run the following command lines:
 
-![Upload raw materials.](./media2/05_Addfiles.png){#fig:addfiles2}
+`git add raw_source_code`
+`git commit -m "Added raw material"`
+`git push`
 
-In my case I uploaded two documents: a scanned listing from 1971 and a later digital version from 1972 in a compressed file. 
+The resulting state of `raw_source_code` is shown in Figure {@fig:amaya_raw}.
 
 ### Fill in the metadata
 
-Then navigate to the `metadata` folder and the `catalogue.md` file. This file will help any future viewer to better understand the different items you uploaded. Click on the `Pencil` symbol and edit the file, filing in the metadata linked to the items your uploaded. When you are done, save by clicking on `Commit changes`.  
-
-![Upload raw materials.](./media2/07_Metadata.PNG){#fig:metadata}
+Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.  
 
 Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
 
-![Upload raw materials.](./media2/08_License.PNG){#fig:license}
+Finally, go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section XXX)
+
+The `codemeta.json` file will be updated at the end of the process. 
+
+Synchronize with the remote repository using the follwing command lines:
+
+`git add metadata`
+`git commit -m "Updated metadata"`
+`git push`
+
 
 ### Upload machine readable source code
- We are now going to upload the machine readable versions of your source code, each version (if several version) in a dedicated folder. 
+We are now going to upload the machine readable versions of your source code into the `source_code` folder. Each version of the source code should be in a machine readable format, and stored in a dedicated sub-folder. 
 
-To manipulate folders in Github, the easiest way is to open Github file explorer by just clicking on `.` symbol on your keyboard from the Github interface. This will open a file manager in which you can manipulate folders and files easily. Click on the `source_code` folder and create one sub-folder per version of your software. Here, we created two distinct folders, `v1` and `v2`. In each folder, add the files corresponding to each version.  
+In our case we create two folders, `v1` and `v2`. `v1` contains the transcribed version of our scanned paper listing from 1971, and `v2` contains the unzipped source code from 1972. 
 
-![Upload source code.](./media2/10_SourceCode.png){#fig:uploadSourceCode}
+When you are done, synchronize with the remote repository:
 
-To save your changes, click on the small graph sign on the left, add a small "commit message" and click on `Commit and Push`. 
+`git add source_code`
+`git commit -m "Added machine readable source code"`
+`git push`
 
-![Commit source code.](./media2/11_CommitSourceCode.png){#fig:Commit}
+You can chcek the result in the distant repository.
 
-You can then close the file explorer, go back to your Github Workbench and check in the `source_code` folder that your different sub-folders and your machine readable source code files have been properly uploaded. 
+//Add SC
+
+### (Re-)Create the development History
+
+The development history can now be (re-)created either by issuing manually (i.e. for each version directory) the appropriate git commands, or by using a specialised tool.
+
+##### Manually
+
+We have to create a clean dedicated SourceCode branch
+
+	git checkout --orphan SourceCode
+	git rm -rf *
+
+Then, for every directory of `browsable_source_code` containing a version of the source code, in
+chronological order, we copy its contents from the `master` branch to the
+`SourceCode` branch, and commit it with the appropriate metadata.
+
+For example, for the directory 1.9 of the CMM sources, here is how
+we copy the source contents into our branch:
+
+	git checkout master -- browsable_source_code/1.9
+	mv browsable_source_code/1.9/* .
+	rm -rf browsable_source_code
+
+Then we use the following template to create manually an individual commit/release:
+
+	export GIT_COMMITTER_DATE="YYYY-MM-DD HH:MM:SS"
+	export GIT_COMMITTER_NAME="Commiter Name"
+	export GIT_COMMITTER_EMAIL="email@address"
+	export GIT_AUTHOR_DATE="YYYY-MM-DD HH:MM:SS"
+	export GIT_AUTHOR_NAME="Author Name"
+	export GIT_AUTHOR_EMAIL=<email@address>"
+	git add -A
+	git commit -m "Commit Message Here"
+	
+We also need to add an annotated tag to this version. For version 1.9 of CMM, here is
+the command we used, you can adapt it to your needs:
+
+	git tag -a 1.9 -m "Version 1.9"
+
+Finally, we clean up the directory before importing a new version
+
+    git rm -rf *
 
 
