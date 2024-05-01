@@ -182,9 +182,9 @@ For historical accuracy purpose we will upload both your source code in its init
 You are now ready to upload your materials to the `Workbench`. 
 Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. 
 
-![Upload raw materials.](./media2/04_Addfiles.PNG){#fig:OCR}
+![Upload raw materials.](./media2/04_Addfiles.PNG){#fig:addfiles}
 
-![Upload raw materials.](./media2/05_Addfiles.PNG){#fig:OCR}
+![Upload raw materials.](./media2/05_Addfiles.PNG){#fig:addfiles2}
 
 
 
