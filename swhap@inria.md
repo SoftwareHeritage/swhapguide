@@ -157,20 +157,30 @@ If your source code has several versions we will also reconstruct the version hi
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
 Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper eight hand corner click on `Use this template` > `Create a new repository` 
 
-The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` and to make it private.
-
 ![SWHAP template.](./media2/01_template.PNG){#fig:template}
+
+The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
+
+![SWHAP template.](./media2/01_CreateWorkbench.PNG){#fig:createWorkbench}
 
 
 ### Prepare your code for archival
 
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
-If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it.
+If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
+
+![SWHAP template.](./media2/01_OCR.PNG){#fig:OCR}
+
 If the raw source code is an archived and/or compressed file (.tar or .zip), you should unpack it locally on your computer. 
 
 If your code has several versions, organize each version in a dedicated foler, calling each folder with an easily recognizable name, for example `MySoftware_V1`, `MySoftware_V2` etc.    
 
 For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
+
+### Upload raw materials
+
+You are now ready to upload your materials to the `Workbench`. 
+Navigate to the `raw_materials` folder. This folder is meant to store the 
 
 
 
