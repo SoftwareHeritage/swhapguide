@@ -359,7 +359,7 @@ To facilitate the search of the created repository, add the "software-heritage",
 
 ### Trigger the Software Heritage Acquisition
 
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository. 
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your software final repository. 
 
 ![View of the _Save Code Now_ URL entry bar](./media2/19_savecode.png){#fig:saveCodeNowURL}
 
