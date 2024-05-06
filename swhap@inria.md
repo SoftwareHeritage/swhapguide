@@ -369,7 +369,7 @@ Your legacy code is now forever safely archived on the Software Heritage univers
 
 Also on the `Permalink` tab, you can click on the two `archived` badges and retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
-![View of the _Permalink_tab](./media2/SWHBadges.png){#fig:badge}
+![View of the _Permalink_tab](./media2/20_SWHbadges.png){#fig:badge}
 
 
 ### Create your CodeMeta Json file
