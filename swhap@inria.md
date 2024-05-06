@@ -358,16 +358,24 @@ To facilitate the search of the created repository, we add the "software-heritag
 
 Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your `SWName_Curated` final repository. 
 
-![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow_URL.PNG){#fig:saveCodeNowURL}
+![View of the _Save Code Now_ URL entry bar](./media2/19_savecode.png){#fig:saveCodeNowURL}
 
 You can then follow the archival status of your code in the [_Browse Save Request_ tab below](https://archive.softwareheritage.org/save/list/).
 
-![View of the _Save Code Now_ URL entry bar](./media/SaveCodeNow.PNG){#fig:saveCodeNow}
+Your legacy code is now forever safely archived on the Software Heritage universal archive. You can search for its archive location using its URL in [Software Heritage]([url](https://archive.softwareheritage.org/browse/search/)). Your code now has a unique identifier called [_SWHID_]([url](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html)) (Software Heritage IDentifier), that can be used for example to cite your code in an academic paper. This _SWHID_ can be found clicking on the `Permalink` tab on the right side of your archived code page.
 
-Once your repository has been archived you can search for its archive location using its URL in Software Heritage. Clicking on the `Permalink` tab and clicking on the two `archived` badges, you can retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+Also on the `Permalink` tab, you can click on the two `archived` badges and retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
 
-![View of the _Permalink_tab](./media/SWHBadgeIntergration.PNG){#fig:badge}
+![View of the _Permalink_tab](./media2/SWHBadges.png){#fig:badge}
 
 
-TO DO: fix code snippets, add screenshots
+### Create your CodeMeta Json file
+
+The [CodeMeta project](https://codemeta.github.io/) defines a standard JSON structure for software metadata. this JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the [CodeMeta generator](https://codemeta.github.io/codemeta-generator/). Use the _SWHID_ in the `Unique Identifier` section. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
+
+	git add metadata
+	git commit -m "Updated Codemeta JSON"
+	git push
+
+
 
