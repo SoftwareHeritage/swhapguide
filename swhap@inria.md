@@ -336,12 +336,11 @@ In your distant repository you will now see a new `SourceCode` branch, that will
 
 ##### With DT2SG
 
-If ou have numerous source code version and do not want to reconstruct the development history by hand, the University of Pisa developped a script to do it for you, called [DT2SG](https://github.com/Unipisa/DT2SG). This script will automatically used the information stored into version_history.csv to perform the successive commits.
+If you have numerous source code versions and do not want to reconstruct the development history by hand, the University of Pisa developped a script to do it for you, called [DT2SG](https://github.com/Unipisa/DT2SG). This script will automatically used the information stored into version_history.csv to perform the successive commits.
 
 Here are the associated Git instructions to run it:
-	dotnet ./DT2SG/DT2SG_app.dll
-	-r mathfichen/MySoftware_Workbench/source_code/
-	-m mathfichen/MySoftware_Workbench/metadata/version_history.csv
+
+	dotnet ./DT2SG/DT2SG_app.dll -r mathfichen/MySoftware_Workbench/source_code/ -m mathfichen/MySoftware_Workbench/metadata/version_history.csv
 
 ### Create the final repository
 
