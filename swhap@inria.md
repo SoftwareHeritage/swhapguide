@@ -353,7 +353,7 @@ We populate this final `MySoftware` repository from our workbench.
 
     git push --tags git@github.com:mathfichen/MySoftware.git +master:master +SourceCode:SourceCode
 
-To facilitate the search of the created repository, we add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics. 
+To facilitate the search of the created repository, add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics. 
 
 ![Add topics.](./media2/18_tags.png){#fig:Topics}   
 
