@@ -191,7 +191,7 @@ Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the 
 
 The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and to make it private.
 
-![Create your Workbench.](./media2/02_CreateWorkbench.PNG){#fig:createWorkbench}
+![Create your Workbench.](./media2/02_CreateWorkbench.png){#fig:createWorkbench}
 
 Via the Github interface you can edit the `Read.me` file, using the actual name of your software. To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
 
