@@ -217,15 +217,17 @@ In your local Workbench, navigate to the `raw_materials` folder. This folder is 
 
 In our case we uploaded two documents: a scanned listing from 1971 and a later digital version from 1972 in a compressed file. 
 
-//add SC
+![Add raw materials.](./media2/12_AddRawMaterials_local.png){#fig:RawMaterials_local}
 
 To synchronize our local Workbench with the remote repository, we run the following command lines:
 
-`git add raw_source_code`
-`git commit -m "Added raw material"`
-`git push`
+	git add raw_source_code
+	git commit -m "Added raw material"
+	git push
 
-The resulting state of `raw_source_code` is shown in Figure {@fig:amaya_raw}.
+The resulting state of `raw_materials` is shown in Figure {@fig:RawMaterials}.
+
+![Synch raw materials.](./media2/13_AddRawMaterials.png){#fig:RawMaterials_local}
 
 ### Fill in the metadata
 
