@@ -117,7 +117,7 @@ In this guide we will show you how to do it using Github, and you will therefore
 To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
 However, the command lines we will use are written for a Unix exploitation system. If your computer is running on a Unix-like exploitation system (Unix, Linux, MacOS), you can skip this step. If you are using Windows, you can download a Linux subsystem for Windows.
 
-To do so, you can find detailed instructions [here]((https://learn.microsoft.com/en-us/windows/wsl/install).
+To do so, you can find detailed instructions [here](https://learn.microsoft.com/en-us/windows/wsl/install).
 In practice do the following:
 - Open Windows PowerShell
 - Enter the following command line: `wsl --install`
