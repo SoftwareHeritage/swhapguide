@@ -142,18 +142,32 @@ You are done with the settings and you are now ready to archive your code into t
     
 Archiving your legacy code
 ----------------------
-In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will the most widely used forge, Github. 
+In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
 
-We will provide a step by step guidance, using a historical software called Amaya as an example. 
+We will provide a step by step guidance, using a dummy software name _MySoftware_ as an example. 
 
 **Wait, why don't I just manually upload my code on Github then?**
-If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Mathilde, upload a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. Using Git command lines will allow us to properly set the metadata. 
+If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Math, uploaded a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. Using Git command lines to upload our source code on Github will allow us to properly set the metadata. 
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
 ### Final result
 
-Add what we want to achieve
+The structure we want to achieve on Github before launching the archival on the Software Heritage archive is the following:
+- A public repository, named after the software you want to archive (here called _MySoftware_)
+- The repository has two branches:
+	- The _Main_ branch contains all your initial materials (_Raw Materials_), your source code in machine readable format (_Source Code_), the relevant Metadata as well as ReadMe file helping a future visitor to navigate the repository.
+ 	- The _SourceCode_ branch contains the reconstructed development history of your source code, i.e. each version of your code stacked one upon the other.
+ 
+Those two branches allow a future viewer to navigate in your legacy code via two different angles: either browsing through the historical material and its retranscription (_Main_ branch), or viewing the code as if it had been developped with a modern versionning system (_Source Code_ branch).  
+
+![Final repository structure.](./media2/01_RepoStructure.png){#fig:repoStructure}
+
+**Some Github vocabulary**
+If you are not familiar with Github (or forges in general):
+- A _repository_ is similar to a folder, a place where you can store your code, your files, and each file's revision history
+- A _branch_ is a parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
+
 
 ### Prepare your code for archival
 
