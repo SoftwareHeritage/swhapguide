@@ -254,14 +254,15 @@ We are now going to upload the machine readable versions of your source code int
 In our case we create two folders, `v1` and `v2`. `v1` contains the transcribed version of our scanned paper listing from 1971, and `v2` contains the unzipped source code from 1972. 
 
 When you are done, synchronize with the remote repository:
-
-`git add source_code`
-`git commit -m "Added machine readable source code"`
-`git push`
+	
+	git add source_code
+	git commit -m "Added machine readable source code"
+	git push
 
 You can chcek the result in the distant repository.
 
-//Add SC
+![Add macine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
+
 
 ### (Re-)Create the development History
 
@@ -271,10 +272,10 @@ The development history can now be (re-)created either by issuing manually (i.e.
 
 We first create the SourceCode orphan branch
 
-	`git checkout --orphan SourceCode`
+	git checkout --orphan SourceCode
 
  An remove all files and folders: 
-	`git rm -rf *`
+	git rm -rf *
 
 Then, for every directory of `source_code` containing a version of the source code, in
 chronological order, we copy its contents from the `master` branch to the
@@ -319,10 +320,15 @@ Finally, we clean up the directory before importing a new version
 
 Redo the previous command lines for each version, starting at `git checkout master -- source_code/v2`. For the last version do not clean up the directory. 
 
-Finally, synchronize with your remote repository. 
+Finally, synchronize with your remote repository, creating a new remote `SourceCode` branch.
 
   	git push --tags origin +SourceCode:SourceCode
-  		
+
+In your distant repository you will now see a new `SourceCode` branch, that will only display the latest version of your code. The development history of your code can be seen in the _commits_ history. 
+![Add macine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:VersionHistory}   
+
+
+    
 
 ##### With DT2SG
 
