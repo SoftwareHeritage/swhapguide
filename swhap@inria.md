@@ -325,32 +325,34 @@ Finally, synchronize with your remote repository, creating a new remote `SourceC
   	git push --tags origin +SourceCode:SourceCode
 
 In your distant repository you will now see a new `SourceCode` branch, that will only display the latest version of your code. The development history of your code can be seen in the _commits_ history. 
-![Add macine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:VersionHistory}   
+![Add machine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:VersionHistory}   
 
 
     
 
 ##### With DT2SG
 
-If ou have numerous source code version and do not want to reconstruct the development history by hand, we developped a script to do it for you. 
+If ou have numerous source code version and do not want to reconstruct the development history by hand, the University of Pisa developped a script to do it for you, called [DT2SG](https://github.com/Unipisa/DT2SG). 
 
-//Add link
+Here are the associated Git instructions to run it:
+	dotnet ./DT2SG/DT2SG_app.dll
+	-r mathfichen/MySoftware_Workbench/source_code/
+	-m mathfichen/MySoftware_Workbench/metadata/version_history.csv
 
 ### Create the final repository
 
-You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public reository, named after your software. 
+You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public repository, named after your software. 
 
-//add SC
+![Create final repository.](./media2/17_Finalrepo.png){#fig:FinalRepo}
+
 
 We populate this final `MySoftware` repository from our workbench.
 
     git push --tags git@github.com:mathfichen/MySoftware.git +master:master +SourceCode:SourceCode
 
-To facilitate the search of the created repository, we add the 
-"software-heritage", "archive" and "swhappe" tags (in the same way of 
-what done for the workbench as shown in Figure
-{@fig:workbench_tags}).
-//add tags
+To facilitate the search of the created repository, we add the "software-heritage", "legacy code", "archive" and "swhap" topics to your repository. To do so, click on the `setting` icon of your repository. 
+
+![Add topics.](./media2/18_tags.png){#fig:Topics}   
 
 ### Trigger the Software Heritage Acquisition
 
