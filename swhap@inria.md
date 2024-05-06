@@ -163,8 +163,8 @@ Those two branches allow a future viewer to navigate in your legacy code via two
 
 ![Final repository structure.](./media2/01_RepoStructure.png){#fig:repoStructure}
 
-**Some Github vocabulary**
-If you are not familiar with Github (or forges in general):
+**Some vocabulary**
+If you are not familiar with Git:
 - A _repository_ is similar to a folder, a place where you can store your code, your files, and each file's revision history
 - A _branch_ is a parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
 
