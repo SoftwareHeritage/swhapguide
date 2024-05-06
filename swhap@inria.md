@@ -235,16 +235,18 @@ Then navigate to the `metadata` folder and open the `catalogue.md` file using an
 
 Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
 
-Finally, go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section XXX)
+Finally, go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section called _(Re-)Create the development History_)
 
 The `codemeta.json` file will be updated at the end of the process. 
 
 Synchronize with the remote repository using the follwing command lines:
 
-`git add metadata`
-`git commit -m "Updated metadata"`
-`git push`
+	git add metadata
+	git commit -m "Updated metadata"
+	git push
 
+
+You can see an example of the different metadata files loooking at [_MySoftware_ final repository](https://github.com/mathfichen/MySoftware/tree/master/metadata)
 
 ### Upload machine readable source code
 We are now going to upload the machine readable versions of your source code into the `source_code` folder. Each version of the source code should be in a machine readable format, and stored in a dedicated sub-folder. 
