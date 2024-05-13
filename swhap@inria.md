@@ -237,9 +237,13 @@ Then navigate to the `metadata` folder and open the `catalogue.md` file using an
 
 Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
 
-Finally, go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section called _(Re-)Create the development History_)
+Go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section called _(Re-)Create the development History_)
 
-The `codemeta.json` file will be updated at the end of the process. 
+The [CodeMeta project](https://codemeta.github.io/) defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the [CodeMeta generator](https://codemeta.github.io/codemeta-generator/). Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
+
+	git add metadata
+	git commit -m "Updated Codemeta JSON"
+	git push
 
 Synchronize with the remote repository using the follwing command lines:
 
@@ -369,14 +373,6 @@ Also on the `Permalink` tab, you can click on the two `archived` badges and retr
 
 ![View of the _Permalink_tab](./media2/20_SWHbadges.png){#fig:badge}
 
-
-### Create your CodeMeta Json file
-
-The [CodeMeta project](https://codemeta.github.io/) defines a standard JSON structure for software metadata. this JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the [CodeMeta generator](https://codemeta.github.io/codemeta-generator/). Use the _SWHID_ in the `Unique Identifier` section. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
-
-	git add metadata
-	git commit -m "Updated Codemeta JSON"
-	git push
 
 
 ### Congrats
