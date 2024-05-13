@@ -287,7 +287,7 @@ chronological order, we copy its contents from the `master` branch to the
 In our case here is how
 we copy the source contents into our branch:
 
-	git checkout master -- source_code/v1
+	git checkout master -- source_code/v1/*
 	mv source_code/v1/* .
 
 Then we use the following template to create manually an individual commit/release:
