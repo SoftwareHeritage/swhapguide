@@ -289,6 +289,8 @@ we copy the source contents into our branch:
 
 	git checkout master -- source_code/v1/*
 	mv source_code/v1/* .
+ 	rm −rf source_code
+
 
 Then we use the following template to create manually an individual commit/release:
 
