@@ -278,6 +278,7 @@ We first create the SourceCode orphan branch
 	git checkout --orphan SourceCode
 
  An remove all files and folders:
+ 
  	git rm -rf *
 
 Then, for every directory of `source_code` containing a version of the source code, in
