@@ -241,9 +241,6 @@ Go back once again to the `metadata` folder and update the `version-history.csv`
 
 The [CodeMeta project](https://codemeta.github.io/) defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the [CodeMeta generator](https://codemeta.github.io/codemeta-generator/). Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
 
-	git add metadata
-	git commit -m "Updated Codemeta JSON"
-	git push
 
 Synchronize with the remote repository using the follwing command lines:
 
