@@ -1,3 +1,4 @@
+<!--
 ---
 title: 'The Software Heritage Acquisition Process: archiving and preserving legacy source code'
 date: 18 October 2022
@@ -8,7 +9,12 @@ author:
 subparagraph: yes
 bibliography: swhap.bib
 ---
+-->
+
 <a name="intro"/>
+
+
+# The Software Heritage Acquisition Process: archiving and preserving legacy source code
 
 Introduction
 ============
