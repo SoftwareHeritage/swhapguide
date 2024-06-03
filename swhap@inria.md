@@ -10,11 +10,6 @@ subparagraph: yes
 bibliography: swhap.bib
 ---
 -->
-<style>
-a{
-    color:red;
-}
-</style>
 <a name="intro"/>
 
 
