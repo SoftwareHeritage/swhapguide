@@ -84,30 +84,30 @@ Dans le cadre de la campagne de préservation est portée par Software Heritage 
 
 Présentation de la médiathèque Inria sur [Intranet](https://intranet.inria.fr/Vie-pratique/Informer-Communiquer/Identite-pour-aller-plus-loin/Iconographie-Illustrer-et-montrer-Inria) 
 
-### Précautions juridiques
+#### Précautions juridiques
 Attention, veillez à ne déposer que les documents dont vous êtes l’auteur/co-auteur. Pour les photos, les personnes représentées doivent avoir donné leur accord. 
 En déposant sur la médiathèque Inria, vous acceptez que ces documents puissent être consultés par tout public ou par les agents d’Inria, éventuellement réutilisés par Inria et ses partenaires pour illustrer les sujets concernés. 
 Si vous le souhaitez, vous pouvez choisir une licence ouverte, de type Creative Commons - à préciser en commentaire.
 Pour tout cas particulier, contactez : phototheque@inria.fr 
 
-### Recommandations 
+#### Recommandations 
 - Déposez les documents nativement numériques ou déjà numérisés : photos, reproductions de documents, dans la meilleure qualité disponible.
 - Numérisation : résolution 300 dpi pour les documents de taille A4 et supérieure,  soit A4 (21x29,7 cm) en 300 dpi = 2 480 x 3 508 pixels, résolution  600 dpi ou 1200 dpi pour les documents plus petits que format A4.
 - Documents à numériser : contacter préalablement phototheque@inria.fr. 
 
 Nous pouvons vous aider dans la numérisation de vos documents : numérisation de diapositives en petite quantité, numérisation par scanner à plat jusqu’au format A3, la reproduction photographique pour les plus grands formats. Il faudra faire parvenir les documents à Rocquencourt Inria Siège. Sinon, nous vous indiquerons les prestataires et spécifications techniques adéquates.
 
-### Comment déposer ?
+#### Comment déposer ?
 - Envoi d’un lien de partage de fichiers https://filesender.renater.fr/ : documents + éléments de contexte (légende, date, personnes représentées), 
 - Dépôt direct dans la https://mediatheque.inria.fr/ > Connexion CAS Inria (menu en haut à droite) > Déposer dans la médiathèque Inria et remplir les formulaires de légende.
 
-### Contacts
+#### Contacts
 phototheque@inria.fr
 Camille Picard  - Responsable de projets iconographiques - Direction de la communication -
 +33 6 98 79 08 31
 
 
-### Physical archives
+### Inria l'Expo
 
 In the context of the Inria Software Preservation effort, we recommand to submit any physical artefact you may want to safeguard to Inria l'Expo, the Inria museum initiative.
 To do so, contact Inria l'Expo at expo@inria.fr with a short desciption of the items you would like to donate. 
