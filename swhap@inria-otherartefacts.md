@@ -78,7 +78,7 @@ Wikimedia has a maximum upload size of 100 megabytes which can be too restrictiv
 
 It might be the case that some items you collected are under restricted license. For example, the copyright owner of a picture might agree to the picture beeing used for educational purpose, but not for commercial purpose. In that case you are not allowed to publish it on Wikimedia/Wikidata and we suggest to archive them in Inria dedicated infrastructures. 
 
-### Médiathèque Inria (_in French_)** 
+### Médiathèque Inria (_in French_)
 
 Dans le cadre de la campagne de préservation est portée par Software Heritage et Inria Alumni, en complément du dépôt du code source sur l'archive Software Heritage, les documents associés peuvent être déposés dans la [médiathèque Inria](https://mediatheque.inria.fr/)  - pour une diffusion en accès public ou limité à Inria, accompagné de légendes explicitant le contexte.
 
