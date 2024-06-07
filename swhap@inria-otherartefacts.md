@@ -3,12 +3,13 @@ Archiving other historical artefacts linked to the history of the software
 
 Alongside preserving the source code of your software, we encourage you to also look into any historical materials or information that might be associated with it and be worth preserving. To do so you might reach out to the historical developpers of the software or check if the historical project website has been archived by the [Internet Archive](https://archive.org/) to recover some screenshots or team pictures.  
 
-Such materials and information are worth preserving, and we will give some indication regarding how this can be achieved leveraging open-source solutions as much as possible.
+Such materials and information are worth preserving, and we will give some indication regarding how this can be achieved leveraging open-source solutions and Inria institutionnal infrastructures.
+
+## Wikipedia and Wikimedia
+
+Wikimedia and Wikidata are well suited to archive general software information as well as pictures and photos that you are willing to share with a broad audience. 
+
 The following instructions are based on the real-life example of Amaya, a web browser and editor developped by Inria and W3C in the 1990's. The preservation work done on Amaya involved three historical developpers of the software. Together they could provide information about the project and recovered some pictures, screenshots and documents. 
-
-### Wikipedia and Wikimedia
-
-Wikimedia and Wikidata are well suited to archive general software information as well as pictures and photos. 
 
 Well established guidelines are available for contributing materials to
 Wikimedia (see
@@ -65,9 +66,9 @@ Once this is done, go back the Wikidata item and use the _document file on Wikim
 MF: where shall we archive publications? HAL? Wikimedia
 -->
 
-### Institutionnal archives
+## Inria infrastructures
 
-There are different reasons why you may not be able to archive the material you collected on Wikimedia.
+There are different reasons why you may not be able to archive the material you collected on Wikimedia. 
 
 **Size issue**
 
@@ -75,17 +76,38 @@ Wikimedia has a maximum upload size of 100 megabytes which can be too restrictiv
 
 **Copyright issues**
 
-It might be the case that some items you collected are under restricted license. For example, the copyright owner of a picture might agree to the picture beeing used for educational purpose, but not for commercial purpose. In that case you are not allowed to publish it on Wikimedia/Wikidata. 
+It might be the case that some items you collected are under restricted license. For example, the copyright owner of a picture might agree to the picture beeing used for educational purpose, but not for commercial purpose. In that case you are not allowed to publish it on Wikimedia/Wikidata and we suggest to archive them in Inria dedicated infrastructures. 
 
-**Inria Photothèque** 
+### Médiathèque Inria (_in French_)** 
 
-In the context of the Inria Software Preservation effort, we recommand to submit any photo or video you may not be able or willing to store on Wikimedia to the Inria Médiathèque.
+Dans le cadre de la campagne de préservation est portée par Software Heritage et Inria Alumni, en complément du dépôt du code source sur l'archive Software Heritage, les documents associés peuvent être déposés dans la [médiathèque Inria](https://mediatheque.inria.fr/)  - pour une diffusion en accès public ou limité à Inria, accompagné de légendes explicitant le contexte.
 
-TODO: add process
+Présentation de la médiathèque Inria sur [Intranet](https://intranet.inria.fr/Vie-pratique/Informer-Communiquer/Identite-pour-aller-plus-loin/Iconographie-Illustrer-et-montrer-Inria) 
+
+### Précautions juridiques
+Attention, veillez à ne déposer que les documents dont vous êtes l’auteur/co-auteur. Pour les photos, les personnes représentées doivent avoir donné leur accord. 
+En déposant sur la médiathèque Inria, vous acceptez que ces documents puissent être consultés par tout public ou par les agents d’Inria, éventuellement réutilisés par Inria et ses partenaires pour illustrer les sujets concernés. 
+Si vous le souhaitez, vous pouvez choisir une licence ouverte, de type Creative Commons - à préciser en commentaire.
+Pour tout cas particulier, contactez : phototheque@inria.fr 
+
+### Recommandations 
+- Déposez les documents nativement numériques ou déjà numérisés : photos, reproductions de documents, dans la meilleure qualité disponible.
+- Numérisation : résolution 300 dpi pour les documents de taille A4 et supérieure,  soit A4 (21x29,7 cm) en 300 dpi = 2 480 x 3 508 pixels, résolution  600 dpi ou 1200 dpi pour les documents plus petits que format A4.
+- Documents à numériser : contacter préalablement phototheque@inria.fr. 
+
+Nous pouvons vous aider dans la numérisation de vos documents : numérisation de diapositives en petite quantité, numérisation par scanner à plat jusqu’au format A3, la reproduction photographique pour les plus grands formats. Il faudra faire parvenir les documents à Rocquencourt Inria Siège. Sinon, nous vous indiquerons les prestataires et spécifications techniques adéquates.
+
+### Comment déposer ?
+- Envoi d’un lien de partage de fichiers https://filesender.renater.fr/ : documents + éléments de contexte (légende, date, personnes représentées), 
+- Dépôt direct dans la https://mediatheque.inria.fr/ > Connexion CAS Inria (menu en haut à droite) > Déposer dans la médiathèque Inria et remplir les formulaires de légende.
+
+### Contacts
+phototheque@inria.fr
+Camille Picard  - Responsable de projets iconographiques - Direction de la communication -
++33 6 98 79 08 31
 
 
 ### Physical archives
 
-In the context of the Inria Software Preservation effort, we recommand to submit any physical artefact you may want to safeguard to l'Expo Inria, the Inria museum initiative.
-
-TODO: add process
+In the context of the Inria Software Preservation effort, we recommand to submit any physical artefact you may want to safeguard to Inria l'Expo, the Inria museum initiative.
+To do so, contact Inria l'Expo at expo@inria.fr with a short desciption of the items you would like to donate. 
