@@ -382,7 +382,7 @@ Also on the `Permalink` tab, you can click on the two `archived` badges and retr
 
 ### Congrats
 
-Congrats, you are done archiving your code! Please do not hesistate to share your thoughts and send us feedback using the [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info). 
+Congrats, you are done archiving your code! Please do not hesistate to share your thoughts and send us feedback using the [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap-inria?previous_action=info)). 
 
 
 
