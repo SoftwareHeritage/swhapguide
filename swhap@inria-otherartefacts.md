@@ -12,11 +12,8 @@ Wikimedia and Wikidata are well suited to archive general software information a
 The following instructions are based on the real-life example of Amaya, a web browser and editor developped by Inria and W3C in the 1990's. The preservation work done on Amaya involved three historical developpers of the software. Together they could provide information about the project and recovered some pictures, screenshots and documents. 
 
 Well established guidelines are available for contributing materials to
-Wikimedia (see
-[[https://commons.wikimedia.org/wiki/Commons:First\_steps/Contributing]{.underline}](https://commons.wikimedia.org/wiki/Commons:First_steps/Contributing))
-and Wikidata (see
-[[https://www.wikidata.org/wiki/Wikidata:Data\_donation]{.underline}](https://www.wikidata.org/wiki/Wikidata:Data_donation)
-), but we will try to provide some SWHAP specific guidance thereafter. 
+[Wikimedia](https://commons.wikimedia.org/wiki/Commons:First_steps/Contributing)
+and [Wikidata](https://www.wikidata.org/wiki/Wikidata:Data\_donation), but we will try to provide some SWHAP specific guidance thereafter. 
 
 Beware, only items with [free license](https://commons.wikimedia.org/wiki/Commons:Licensing#Acceptable_licenses) are allowed to be archived on Wikimedia. Typically, if the software you are working on is distributed under a free-license (typically an open-source software), the logos or screenshots taken will also be considered as being under free license. 
 
