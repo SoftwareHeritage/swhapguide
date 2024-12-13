@@ -8,6 +8,9 @@ author:
  - name: Roberto Di Cosmo
    affiliation: Software Heritage, Inria and University of Paris
    email: roberto@dicosmo.org
+ - name: Mathilde Fichen
+   affiliation: Software Heritage, Inria and CNAM
+   email: mathilde.fichen@inria.fr
  - name: Carlo Montangero
    affiliation: Dept. of Computer Science, University of Pisa
    email: carlo@montangero.eu
