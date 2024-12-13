@@ -22,15 +22,6 @@ subparagraph: yes
 bibliography: swhap.bib
 ---
 
----
-title: 'The Software Heritage Acquisition Process'
-date: 18 October 2022
-author: 
-
-subparagraph: yes
-bibliography: swhap.bib
----
-
 
 <a name="intro"/>
 
