@@ -167,7 +167,7 @@ The archiving process will require you to interact with Github from your Linux c
 
 You are done with the settings and you are now ready to archive your code into the Software Heritage Universal Archive!
     
-Prepqring your source code for archiving {#sec:prepare}
+Preparing your source code for archiving {#sec:prepare}
 ======================================
 
 In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will leverage the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
