@@ -50,7 +50,7 @@ Archiving physical artefacts is not the primary goal of this guide but we will p
 This document builds up on the SWHAP, the [***SoftWare Heritage Acquisition Process***](https://www.softwareheritage.org/swhap/) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO. This guide also aims at simplifying the practical implementation of the SWHAP as proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf).
 
 
-Why preserve legacy source code?
+Why preserve legacy source code? {#sec:whypreserve}
 ================================
 
 Software is everywhere, binding our personal and social lives, embodying
@@ -97,16 +97,15 @@ amount of human intervention, as demonstrated by the pioneering works
 reconstructing the history of Unix (@SpinellisUnix2017) and the source code
 of the Apollo Guidance Computer (@VirtualAGC).
 
-What if I am stuck or have a question ?
+What if I am stuck or have a question ? {#sec:Iamstuck}
 ======================================
 
 Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
 To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info) and share your questions and your comments with the community. 
 
-Archiving legacy source code into Software Heritage Archive
-================================================================
-Requirements and setup
-----------------------
+Requirements and setup {#sec:requirements}
+======================================
+
 
 To start archiving legacy source code in the Sofwtare Heritage Archive, the following elements are required:
 - A source code in machine readable format
@@ -115,7 +114,8 @@ To start archiving legacy source code in the Sofwtare Heritage Archive, the foll
 - Git
 - Connect to Github with SSH
 
-### A source code in machine readable format
+A source code in machine readable format
+----------------------------------
 
 If your source code is already stored in a digital machine-readable format, you can skip this step. 
 However, if your source code is not machine-readable (typically your code is a paper listing), a little prework is required so that your code can be ingested in the Software Heritage Archive. 
@@ -124,12 +124,14 @@ However, if your source code is not machine-readable (typically your code is a p
 2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/) and paste your code into a text editor.
 3) Check for any error, correct if needed, and save your code using the file extension linked to the programming language asociated with your code. 
 
-### A Github account
+A Github account
+----------------------------------
 
 Source code ingestion into the Software Heritage archives will require your source code to be uploaded into a public forge first, such as Github or Gitlab. 
 In this guide we will show you how to do it using Github, and you will therefore need a Github account. If you do not already own one, you can easily create it [here](https://github.com/signup).
 
-### A Unix Console
+A Unix Console
+----------------------------------
 
 To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
 However, the command lines we will use are written for a Unix exploitation system. If your computer is running on a Unix-like exploitation system (Unix, Linux, MacOS), you can skip this step. If you are using Windows, you can download a Linux subsystem for Windows.
@@ -143,7 +145,8 @@ In practice do the following:
 - Re-open Windows PowerShell and open a new Ubuntu tab (clicking on the small + sign on top)
 - You will be asked to enter a new user name and password. And that's it, you can start typing linux command lines in your console.
 
-### Git
+Git
+----------------------------------
 
 Git is the versionning system we will use to curate your source code. If you do not have Git installed yet, you will need to install it. From your Linux console enter the following instruction: 
 	
@@ -153,7 +156,8 @@ If it does not work the first time, you may need to first update the local packa
 	
  	sudo apt-get update 
 
-### Connect to GitHub with SSH
+Connect to GitHub with SSH
+----------------------------------
 
 The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion between Github and your personal computer. You can find detailed instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). If you do not already have a SSH key, here is what you need to do:
 - Create a new SSH using this command line `ssh-keygen -t ed25519 -C "john.smith@gmail.com" ` using your own email address. Press enter to accept the default repository or adjust as you wish. Enter a passphrase if you wish of leave empty and press enter.
@@ -163,8 +167,9 @@ The archiving process will require you to interact with Github from your Linux c
 
 You are done with the settings and you are now ready to archive your code into the Software Heritage Universal Archive!
     
-Archiving your legacy code
-----------------------
+Prepqring your source code for archiving {#sec:prepare}
+======================================
+
 In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will leverage the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
 
 We will provide a step by step guidance, using a dummy software name _MySoftware_ as an example. 
@@ -174,7 +179,8 @@ If you just uploaded your source code files on Github the metadata associated wi
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
-### Final result
+Final result
+----------------------------------
 
 The structure we want to achieve on Github before launching the archival on the Software Heritage archive is the following:
 - A public repository, named after the software you want to archive (here called _MySoftware_)
@@ -192,7 +198,8 @@ If you are not familiar with Git:
 - A _branch_ is a parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
 
 
-### Prepare your code for archival
+Prepare your code for archival
+----------------------------------
 
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
 If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually, or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
@@ -203,7 +210,8 @@ If the raw source code is an archived and/or compressed file (.tar or .zip), you
 
 For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
 
-### Set up your working environment
+Set up your working environment
+----------------------------------
 
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
 Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper right hand corner click on `Use this template` > `Create a new repository` 
@@ -231,7 +239,8 @@ In our case (using Linux Subsystem for Windows), the local copy of `MySoftware_W
 Open a Linux command line interpreter an navigate to `MySoftware_Workbench`.
 In our case the interpreter current directory is `/home/mathfichen`, so we juste type: `cd MySoftware_Workbench`
 
-### Upload collected files
+Upload collected files
+----------------------------------
 
 You are now ready to upload your materials to the `Workbench`. 
 In your local Workbench, navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. You can also store any item you may deem relevant to understand the historical context in which the software was produced, such as technical documentation. 
@@ -250,7 +259,8 @@ The resulting state of `raw_materials` is shown in Figure {@fig:RawMaterials}.
 
 ![Synch raw materials.](./media2/13_AddRawMaterials.png){#fig:RawMaterials_local}
 
-### Fill in the metadata
+Fill in the metadata
+----------------------------------
 
 Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.  
 
@@ -270,7 +280,8 @@ Synchronize with the remote repository using the follwing command lines:
 
 You can see an example of the different metadata files loooking at [_MySoftware_ final repository](https://github.com/mathfichen/MySoftware/tree/master/metadata)
 
-### Upload machine readable source code
+Upload machine readable source code
+----------------------------------
 We are now going to upload the machine readable versions of your source code into the `source_code` folder. Each version of the source code should be in a machine readable format, and stored in a dedicated sub-folder. 
 
 In our case we create two folders, `v1` and `v2`. `v1` contains the transcribed version of our scanned paper listing from 1971, and `v2` contains the unzipped source code from 1972. 
@@ -286,11 +297,12 @@ You can chcek the result in the distant repository.
 ![Add macine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
 
 
-### (Re-)Create the development History
+(Re-)Create the development History
+----------------------------------
 
 The development history can now be (re-)created either by issuing manually (i.e. for each version directory) the appropriate git commands, or by using a specialised tool. This recreated development history will be stored in a dedicated branch, that we will call `SourceCode`. This branch will be created as an empty orphan branch, meaning that it will be cleaned of any previous content or commits information, as if it were a standalone branch. 
 
-##### Manually
+### Manually
 
 We first create the SourceCode orphan branch
 
@@ -353,9 +365,7 @@ In your distant repository you will now see a new `SourceCode` branch, that will
 ![Add machine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:VersionHistory}   
 
 
-    
-
-##### With DT2SG
+#### With DT2SG
 
 If you have numerous source code versions and do not want to reconstruct the development history by hand, the University of Pisa developped a script to do it for you, called [DT2SG](https://github.com/Unipisa/DT2SG). This script will automatically used the information stored into version_history.csv to perform the successive commits.
 
@@ -363,7 +373,8 @@ Here are the associated Git instructions to run it:
 
 	dotnet ./DT2SG/DT2SG_app.dll -r mathfichen/MySoftware_Workbench/source_code/ -m mathfichen/MySoftware_Workbench/metadata/version_history.csv
 
-### Create the final repository
+Create the final repository
+----------------------------------
 
 You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public repository, named after your software. 
 
@@ -378,7 +389,8 @@ To facilitate the search of the created repository, add the "software-heritage",
 
 ![Add topics.](./media2/18_tags.png){#fig:Topics}   
 
-### Trigger the Software Heritage Acquisition
+Trigger the Software Heritage Acquisition
+==================================
 
 Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your software final repository. 
 
