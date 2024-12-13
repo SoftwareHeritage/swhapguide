@@ -1,5 +1,5 @@
 ---
-title: 'The Software Heritage Acquisition Process'
+title: 'The Software Heritage Acquisition Process - A practical guide'
 date: 13 December 2024
 author: 
  - name: Laura Bussi
@@ -24,8 +24,6 @@ bibliography: swhap.bib
 
 <a name="intro"/>
 
-
-# The Software Heritage Acquisition Process: archiving and preserving legacy source code
 
 Introduction
 ============
