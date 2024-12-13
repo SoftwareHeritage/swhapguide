@@ -389,7 +389,7 @@ To facilitate the search of the created repository, add the "software-heritage",
 
 ![Add topics.](./media2/18_tags.png){#fig:Topics}   
 
-Trigger the Software Heritage Acquisition
+Trigger the Software Heritage Acquisition {#sec:archive}
 ==================================
 
 Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your software final repository. 
