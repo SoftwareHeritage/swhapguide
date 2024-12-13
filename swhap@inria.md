@@ -1,15 +1,37 @@
-<!--
+
 ---
 title: 'The Software Heritage Acquisition Process: archiving and preserving legacy source code'
 date: 18 October 2022
 author: 
- - name: Mathilde Fichen
+- name: Laura Bussi
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: l.bussi1@studenti.unipi.it
+ - name: Roberto Di Cosmo
+   affiliation: Software Heritage, Inria and University of Paris
+   email: roberto@dicosmo.org
+- name: Mathilde Fichen
    affiliation: Software Heritage, Inria
    email: mathilde.fichen@inria.fr
+ - name: Carlo Montangero
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: carlo@montangero.eu
+ - name: Guido Scatena
+   affiliation: Dept. of Computer Science, University of Pisa
+   email: guido.scatena@unipi.it
 subparagraph: yes
 bibliography: swhap.bib
 ---
--->
+
+---
+title: 'The Software Heritage Acquisition Process'
+date: 18 October 2022
+author: 
+
+subparagraph: yes
+bibliography: swhap.bib
+---
+
+
 <a name="intro"/>
 
 
