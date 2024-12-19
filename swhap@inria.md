@@ -35,7 +35,7 @@ By legacy, we mean any source code which has not been developped on a modern sof
 Typically the source code can be stored on a private hard drive, a USB stick or even on paper listings and you might be worried it will get lost if not archived properly. 
 The guide focuses on preserving the software **source code**, which we believe is worth preserving for itself. The process does not tackle the execution of this code, or how to deal with emulation systems. 
 
-<--
+<!--
 Appart from archiving the source code itself, the guide will also propose solutions to help archive historical artefacts linked to the story of the source code (such as pictures, screenshots, reports etc.) 
 The guide is devided into three sections, each of them can be read and executed independently of the others.
 
@@ -47,7 +47,9 @@ The guide is devided into three sections, each of them can be read and executed 
 Note that the process aims at preserving legacy source code and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 Archiving physical artefacts is not the primary goal of this guide but we will provide some contact points if you would intend to do so. 
 
-This document builds up on the SWHAP, the [***SoftWare Heritage Acquisition Process***](https://www.softwareheritage.org/swhap/) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO. This guide also aims at simplifying the practical implementation of the SWHAP as proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf).
+This document builds up on the SWHAP, the [***SoftWare Heritage Acquisition Process***] (@swhcacm2018) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO [^1]. This guide also aims at simplifying the practical implementation of the SWHAP as proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf).
+
+[^1] See the Software Heritage webpage dedicated to legacy source code https://www.softwareheritage.org/swhap/ and get the initial guide on the UNESCO website https://unesdoc.unesco.org/ark:/48223/pf0000371017. 
 
 
 Why preserve legacy source code? {#sec:whypreserve}
