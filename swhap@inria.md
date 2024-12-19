@@ -225,20 +225,20 @@ Set up your working environment
 ----------------------------------
 
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
-Visit the template page on Github[^7], on the upper right hand corner click on `Use this template` > `Create a new repository` (#fig:template). 
+Visit the template page on Github[^7], on the upper right hand corner click on `Use this template` > `Create a new repository` (See figure 3). 
 
 [^7]: https://github.com/mathfichen/Swhap-Template
 
 ![SWHAP template.](./media2/01_template.png){#fig:template}
 
-The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (replace "MySoftware" by the actual name of your software and make it private.
+The repository you will create is a temporary working environment, and we recommand naming it `MySoftware-Workbench` (See figure 4, replace "MySoftware" by the actual name of your software and make it private).
 
 ![Create your Workbench.](./media2/02_CreateWorkbench.png){#fig:createWorkbench}
 
 Via the Github interface you can edit the `Read.me` file, using the actual name of your software. To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
 
 To start working, we create a local copy on our computer, cloning this
-repository[^10]. By clicking on the green button `Code`
+repository[^8]. By clicking on the green button `Code`
 (Figure {@fig:cmm_wb_inst}), we get a link that we can use for this purpose in the
 following command from the command line:
 
@@ -251,6 +251,8 @@ In our case (using Linux Subsystem for Windows), the local copy of `MySoftware_W
 
 Open a Linux command line interpreter an navigate to `MySoftware_Workbench`.
 In our case the interpreter current directory is `/home/mathfichen`, so we juste type: `cd MySoftware_Workbench`
+
+[^8]: 
 
 Upload collected files
 ----------------------------------
