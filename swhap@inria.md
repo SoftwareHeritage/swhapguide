@@ -237,9 +237,7 @@ The repository you will create is a temporary working environment, and we recomm
 
 Via the Github interface you can edit the `Read.me` file, using the actual name of your software. To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
 
-To start working, we create a local copy on our computer, cloning this
-repository[^8]. By clicking on the green button `Code`
-(Figure {@fig:cmm_wb_inst}), we get a link that we can use for this purpose in the
+To start working, we create a local copy on our computer, cloning this repository. By clicking on the green button `Code`, we get a link that we can use for this purpose in the
 following command from the command line:
 
 `git clone git@github.com:mathfichen/MySoftware_Workbench.git`
@@ -252,7 +250,6 @@ In our case (using Linux Subsystem for Windows), the local copy of `MySoftware_W
 Open a Linux command line interpreter an navigate to `MySoftware_Workbench`.
 In our case the interpreter current directory is `/home/mathfichen`, so we juste type: `cd MySoftware_Workbench`
 
-[^8]: 
 
 Upload collected files
 ----------------------------------
@@ -270,21 +267,22 @@ To synchronize our local Workbench with the remote repository, we run the follow
 	git commit -m "Added raw material"
 	git push
 
-The resulting state of `raw_materials` is shown in Figure {@fig:RawMaterials}.
+The resulting state of `raw_materials` is shown in Figure 5.
 
 ![Synch raw materials.](./media2/13_AddRawMaterials.png){#fig:RawMaterials_local}
 
 Fill in the metadata
 ----------------------------------
 
-Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.  
+Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.
 
 Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
 
 Go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section called _(Re-)Create the development History_)
 
-The [CodeMeta project](https://codemeta.github.io/) defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the [CodeMeta generator](https://codemeta.github.io/codemeta-generator/). Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
+The CodeMeta project defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^8]. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
 
+[^8]: See the Code Meta project at https://codemeta.github.io/ and the Code Meta Generator at https://codemeta.github.io/codemeta-generator/ 
 
 Synchronize with the remote repository using the follwing command lines:
 
@@ -309,7 +307,7 @@ When you are done, synchronize with the remote repository:
 
 You can chcek the result in the distant repository.
 
-![Add macine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
+![Add machine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
 
 
 (Re-)Create the development History
@@ -376,8 +374,8 @@ Finally, synchronize with your remote repository, creating a new remote `SourceC
 
   	git push --tags origin +SourceCode:SourceCode
 
-In your distant repository you will now see a new `SourceCode` branch, that will only display the latest version of your code. The development history of your code can be seen in the _commits_ history. 
-![Add machine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:VersionHistory}   
+In your distant repository you will now see a new `SourceCode` branch, that will only display the latest version of your code (See figure 8). The development history of your code can be seen in the _commits_ history. 
+![Add machine readable source code.](./media2/15_SourceCodeBranch2.png){#fig:SourceCodeBranch}   
 
 
 #### With DT2SG
@@ -391,7 +389,7 @@ Here are the associated Git instructions to run it:
 Create the final repository
 ----------------------------------
 
-You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public repository, named after your software. 
+You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public repository, named after your software (See Figure 9). 
 
 ![Create final repository.](./media2/17_Finalrepo.png){#fig:FinalRepo}
 
@@ -400,22 +398,29 @@ We populate this final `MySoftware` repository from our workbench.
 
     git push --tags git@github.com:mathfichen/MySoftware.git +master:master +SourceCode:SourceCode
 
-To facilitate the search of the created repository, add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics. 
+To facilitate the search of the created repository, add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics (See figure 10). 
 
 ![Add topics.](./media2/18_tags.png){#fig:Topics}   
 
 Trigger the Software Heritage Acquisition {#sec:archive}
 ==================================
 
-Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage ["Save code now" page](https://archive.softwareheritage.org/save/), and submit the URL of your software final repository. 
+Even though Software Heritage automatically archives any repository publicly available on Github we suggest yout to specifically schedule it to make sure everything runs smoothly. To do so, visit the Software Heritage "Save code now" page[^9], and submit the URL of your software final repository. 
+
+[^9]: https://archive.softwareheritage.org/save/
 
 ![View of the _Save Code Now_ URL entry bar](./media2/19_savecode.png){#fig:saveCodeNowURL}
 
-You can then follow the archival status of your code in the [_Browse Save Request_ tab below](https://archive.softwareheritage.org/save/list/).
+You can then follow the archival status of your code in the _Browse Save Request_ tab below[^10].
 
-Your legacy code is now forever safely archived on the Software Heritage universal archive. You can search for its archive location using its URL in [Software Heritage](https://archive.softwareheritage.org/browse/search/). Your code now has a unique identifier called [_SWHID_](https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html) (Software Heritage IDentifier), that can be used for example to cite your code in an academic paper. This _SWHID_ can be found clicking on the `Permalink` tab on the right side of your archived code page.
+[^10]: https://archive.softwareheritage.org/save/list/
 
-Also on the `Permalink` tab, you can click on the two `archived` badges and retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage.
+Your legacy code is now forever safely archived on the Software Heritage universal archive. You can search for its archive location using its URL in Software Heritage[^11]. Your code now has a unique identifier called _SWHID_[^12] (Software Heritage IDentifier), that can be used for example to cite your code in an academic paper. This _SWHID_ can be found clicking on the `Permalink` tab on the right side of your archived code page.
+
+[^11]: https://archive.softwareheritage.org/browse/search/
+[^12]: See https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html for more information on the SWHID
+
+Also on the `Permalink` tab, you can click on the two `archived` badges and retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage (See figure 12).
 
 ![View of the _Permalink_tab](./media2/20_SWHbadges.png){#fig:badge}
 
