@@ -102,18 +102,24 @@ What if I am stuck or have a question ? {#sec:Iamstuck}
 ======================================
 
 Because we are still developping and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvment. 
-To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info) and share your questions and your comments with the community. 
+To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info) [^2] and share your questions and your comments with the community. 
+
+We also developped two video tutorials based on the content of this guide [^3]:
+1) An introduction to the Software Heritage Acquistition Process
+2) A step by step guide to the Software Heritage Acquisition Process
+
+[^2]: Subscribe at https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info
+[^3]: Introduction tutorial https://www.youtube.com/watch?v=ZBTpa09P_Ho&t=4s and step-by-step tutorial https://www.youtube.com/watch?v=xBQ915N6LyI&t=19s
 
 Requirements and setup {#sec:requirements}
 ======================================
 
-
 To start archiving legacy source code in the Sofwtare Heritage Archive, the following elements are required:
-- A source code in machine readable format
-- A Github account
-- A Linux Console
-- Git
-- Connect to Github with SSH
+1) A source code in machine readable format
+2) A Github account
+3) A Linux Console
+4) Git
+5) Connect to Github with SSH
 
 A source code in machine readable format
 ----------------------------------
@@ -122,13 +128,15 @@ If your source code is already stored in a digital machine-readable format, you 
 However, if your source code is not machine-readable (typically your code is a paper listing), a little prework is required so that your code can be ingested in the Software Heritage Archive. 
 
 1) Use a scanner to digitalize your code. If your code is too long to be scanned in its entirety, select a section that you find most relevant for archiving.
-2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/) and paste your code into a text editor.
-3) Check for any error, correct if needed, and save your code using the file extension linked to the programming language asociated with your code. 
+2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/)[^4] and paste your code into a text editor.
+3) Check for any error, correct if needed, and save your code using the file extension linked to the programming language asociated with your code.
+
+[^4]: https://ocr.space/
 
 A Github account
 ----------------------------------
 
-Source code ingestion into the Software Heritage archives will require your source code to be uploaded into a public forge first, such as Github or Gitlab. 
+Source code ingestion into the Software Heritage archives will first require your source code to be uploaded into a public forge first, such as Github or Gitlab. 
 In this guide we will show you how to do it using Github, and you will therefore need a Github account. If you do not already own one, you can easily create it [here](https://github.com/signup).
 
 A Unix Console
@@ -137,14 +145,16 @@ A Unix Console
 To properly deposit your source code into the archive, you will need to use the Git versionning management system. You do not need an extensive understanding of Git mechanisms to do so and we will guide you step by step.
 However, the command lines we will use are written for a Unix exploitation system. If your computer is running on a Unix-like exploitation system (Unix, Linux, MacOS), you can skip this step. If you are using Windows, you can download a Linux subsystem for Windows.
 
-To do so, you can find detailed instructions [here](https://learn.microsoft.com/en-us/windows/wsl/install).
+To do so, you can find detailed instructions online[^5].
 In practice do the following:
-- Open Windows PowerShell
-- Enter the following command line: `wsl --install`
-- Wait for the installation to complete
-- Restart your computer
-- Re-open Windows PowerShell and open a new Ubuntu tab (clicking on the small + sign on top)
-- You will be asked to enter a new user name and password. And that's it, you can start typing linux command lines in your console.
+1) Open Windows PowerShell
+2) Enter the following command line: `wsl --install`
+3) Wait for the installation to complete
+4) Restart your computer
+5) Re-open Windows PowerShell and open a new Ubuntu tab (clicking on the small + sign on top)
+6) You will be asked to enter a new user name and password. And that's it, you can start typing linux command lines in your console.
+
+[^5]: For example on https://learn.microsoft.com/en-us/windows/wsl/install
 
 Git
 ----------------------------------
@@ -160,13 +170,15 @@ If it does not work the first time, you may need to first update the local packa
 Connect to GitHub with SSH
 ----------------------------------
 
-The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion between Github and your personal computer. You can find detailed instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). If you do not already have a SSH key, here is what you need to do:
-- Create a new SSH using this command line `ssh-keygen -t ed25519 -C "john.smith@gmail.com" ` using your own email address. Press enter to accept the default repository or adjust as you wish. Enter a passphrase if you wish of leave empty and press enter.
-- Then add your newly created SSH key into your ssh-agent. Check that your ssh-agent is running by entering: `eval "$(ssh-agent -s)" `. Then add your key by entering: `ssh-add ~/.ssh/id_ed25519`
-- Navigate to the folder where your SSH key is stored. If you use a Windows Linux Subsystem, it should be in `Linux>Ubuntu>home>myname>.ssh`. Open the public key file `id_ed25519.pub` and copy the key
-- Now go to your Github account, click on your logo on the top right corner, go the `Settings` and `SSH and GPG keys`. Click on `New SSH key`, enter a name to your key and paste the public key. Click on `Add SHS key`
+The archiving process will require you to interact with Github from your Linux console. To do so, you need to establish a secure SSH connexion between Github and your personal computer. You can find detailed instructions on Github's website[^6]. If you do not already have a SSH key, here is what you need to do:
+1) Create a new SSH using this command line `ssh-keygen -t ed25519 -C "john.smith@gmail.com" ` using your own email address. Press enter to accept the default repository or adjust as you wish. Enter a passphrase if you wish of leave empty and press enter.
+2) Then add your newly created SSH key into your ssh-agent. Check that your ssh-agent is running by entering: `eval "$(ssh-agent -s)" `. Then add your key by entering: `ssh-add ~/.ssh/id_ed25519`
+3) Navigate to the folder where your SSH key is stored. If you use a Windows Linux Subsystem, it should be in `Linux>Ubuntu>home>myname>.ssh`. Open the public key file `id_ed25519.pub` and copy the key
+4) Now go to your Github account, click on your logo on the top right corner, go the `Settings` and `SSH and GPG keys`. Click on `New SSH key`, enter a name to your key and paste the public key. Click on `Add SHS key`
 
 You are done with the settings and you are now ready to archive your code into the Software Heritage Universal Archive!
+
+[^6]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
     
 Preparing your source code for archiving {#sec:prepare}
 ======================================
@@ -180,18 +192,16 @@ If you just uploaded your source code files on Github the metadata associated wi
 
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
-Final result
+Final Github repository structure
 ----------------------------------
 
-The structure we want to achieve on Github before launching the archival on the Software Heritage archive is the following:
-- A public repository, named after the software you want to archive (here called _MySoftware_)
-- The repository has two branches:
-	- The _Main_ branch contains all your initial materials (_Raw Materials_), your source code in machine readable format (_Source Code_), the relevant Metadata as well as a ReadMe file helping a future visitor to navigate the repository.
- 	- The _SourceCode_ branch contains the reconstructed development history of your source code, i.e. each version of your code stacked one upon the other.
+The structure we want to achieve on Github before launching the archival on the Software Heritage archive is the following. We will create at public repository, named after the software you want to archive (here called _MySoftware_). This repository has two branches:
+1) The _Main_ branch contains all your initial materials (_Raw Materials_), your source code in machine readable format (_Source Code_), the relevant Metadata as well as a ReadMe file helping a future visitor to navigate the repository.
+2) The _SourceCode_ branch contains the reconstructed development history of your source code, i.e. each version of your code stacked one upon the other.
  
 Those two branches allow a future viewer to navigate in your legacy code according to two different angles: either browsing through the historical material and its retranscription (_Main_ branch), or viewing the code as if it had been developped with a modern versionning system (_Source Code_ branch).  
 
-![Final repository structure.](./media2/01_RepoStructure.png){#fig:repoStructure}
+![Final Github repository structure.](./media2/01_RepoStructure.png){#fig:repoStructure}
 
 **Some vocabulary**
 If you are not familiar with Git:
@@ -215,7 +225,9 @@ Set up your working environment
 ----------------------------------
 
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
-Visit [the template page](https://github.com/mathfichen/Swhap-Template), on the upper right hand corner click on `Use this template` > `Create a new repository` 
+Visit the template page on Github[^7], on the upper right hand corner click on `Use this template` > `Create a new repository` (#fig:template). 
+
+[^7]: https://github.com/mathfichen/Swhap-Template
 
 ![SWHAP template.](./media2/01_template.png){#fig:template}
 
