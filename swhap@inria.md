@@ -19,6 +19,8 @@ author:
    email: guido.scatena@unipi.it
 subparagraph: yes
 bibliography: swhap.bib
+toc: true
+toc-depth: 2
 ---
 
 
