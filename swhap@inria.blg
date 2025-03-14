@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'swhap@inria.blg'
+[71] biber:340> INFO - === Fri Mar 14, 2025, 13:37:30
+[92] Biber.pm:418> INFO - Reading 'swhap@inria.bcf'
+[146] Biber.pm:972> INFO - Found 6 citekeys in bib section 0
+[159] Biber.pm:4383> INFO - Processing section 0
+[171] Biber.pm:4574> INFO - Looking for bibtex file 'swhap.bib' for section 0
+[175] bibtex.pm:1713> INFO - LaTeX decoding ...
+[192] bibtex.pm:1518> INFO - Found BibTeX data source 'swhap.bib'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[268] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[268] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[280] bbl.pm:654> INFO - Writing 'swhap@inria.bbl' with encoding 'UTF-8'
+[282] bbl.pm:757> INFO - Output to swhap@inria.bbl
+[282] Biber.pm:130> WARN - ISBN '0-262-01077-1 (MIT Press), 0-07-000422-6 (McGraw-Hill)' in entry 'Abelson:SIC85' is invalid - run biber with '--validate_datamodel' for details.
+[283] Biber.pm:132> INFO - WARNINGS: 1

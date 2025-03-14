@@ -1,0 +1,230 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Abelson:SIC85}{book}{}
+      \name{author}{2}{}{%
+        {{hash=9d498f19d0ecec78ed8839d5d872ba8b}{%
+           family={Abelson},
+           familyi={A\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e0b578baadb1ab3d9614e608d20277ec}{%
+           family={Julie\bibnamedelima Sussman},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Gerald\bibnamedelimb J.\bibnamedelimi Sussman},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={with},
+           prefixi={w\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{2}{%
+        {The MIT Press}%
+        {Mc{\-}Graw-Hill}%
+      }
+      \strng{namehash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \strng{fullhash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \strng{bibnamehash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \strng{authorbibnamehash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \strng{authornamehash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \strng{authorfullhash}{b28cdefb3aa9ffc1a4eb097b0fbe3c58}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-262-01077-1 (MIT Press), 0-07-000422-6 (McGraw-Hill)}
+      \field{title}{Structure and Interpretation of Computer Programs}
+      \field{year}{1985}
+      \field{pages}{xx + 542}
+      \range{pages}{-1}
+    \endentry
+    \entry{swhcacm2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ba2eb45171e175ed10e9af67e89a39c6}{%
+           family={Abramatic},
+           familyi={A\bibinitperiod},
+           given={Jean-François},
+           giveni={J\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=503a45cc1a2a33c116691521716e1522}{%
+           family={Di\bibnamedelima Cosmo},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=37793c8bd46d30533470b220704d85b1}{%
+           family={Zacchiroli},
+           familyi={Z\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{f715f2b813136635cbe24d75abf9e448}
+      \strng{fullhash}{f715f2b813136635cbe24d75abf9e448}
+      \strng{bibnamehash}{f715f2b813136635cbe24d75abf9e448}
+      \strng{authorbibnamehash}{f715f2b813136635cbe24d75abf9e448}
+      \strng{authornamehash}{f715f2b813136635cbe24d75abf9e448}
+      \strng{authorfullhash}{f715f2b813136635cbe24d75abf9e448}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{9}
+      \field{number}{10}
+      \field{title}{Building the Universal Archive of Source Code}
+      \field{volume}{61}
+      \field{year}{2018}
+      \field{pages}{29\bibrangedash 31}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1145/3183558
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/3183558
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/3183558
+      \endverb
+    \endentry
+    \entry{VirtualAGC}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2878b9d3f519b0f7b190d116157a7388}{%
+           family={Burkey},
+           familyi={B\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2878b9d3f519b0f7b190d116157a7388}
+      \strng{fullhash}{2878b9d3f519b0f7b190d116157a7388}
+      \strng{bibnamehash}{2878b9d3f519b0f7b190d116157a7388}
+      \strng{authorbibnamehash}{2878b9d3f519b0f7b190d116157a7388}
+      \strng{authornamehash}{2878b9d3f519b0f7b190d116157a7388}
+      \strng{authorfullhash}{2878b9d3f519b0f7b190d116157a7388}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{http://ibiblio.org/apollo/changes.html}}
+      \field{note}{Spans years 2003 to 2019}
+      \field{title}{Virtual AGC - Changelog}
+    \endentry
+    \entry{ParisCall2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4e3288fbef9b713fe8467393fe47431d}{%
+           family={Report},
+           familyi={R\bibinitperiod},
+           given={Expert\bibnamedelima Group},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e3288fbef9b713fe8467393fe47431d}
+      \strng{fullhash}{4e3288fbef9b713fe8467393fe47431d}
+      \strng{bibnamehash}{4e3288fbef9b713fe8467393fe47431d}
+      \strng{authorbibnamehash}{4e3288fbef9b713fe8467393fe47431d}
+      \strng{authornamehash}{4e3288fbef9b713fe8467393fe47431d}
+      \strng{authorfullhash}{4e3288fbef9b713fe8467393fe47431d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available from https://unesdoc.unesco.org/ark:/48223/pf0000366715}
+      \field{title}{Paris Call: Software Source Code as Heritage for Sustainable Development}
+      \field{year}{2019}
+    \endentry
+    \entry{Shustek06}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c26de56d0912649a64854ccba2dbc8e1}{%
+           family={Shustek},
+           familyi={S\bibinitperiod},
+           given={Leonard\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c26de56d0912649a64854ccba2dbc8e1}
+      \strng{fullhash}{c26de56d0912649a64854ccba2dbc8e1}
+      \strng{bibnamehash}{c26de56d0912649a64854ccba2dbc8e1}
+      \strng{authorbibnamehash}{c26de56d0912649a64854ccba2dbc8e1}
+      \strng{authornamehash}{c26de56d0912649a64854ccba2dbc8e1}
+      \strng{authorfullhash}{c26de56d0912649a64854ccba2dbc8e1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Annals of the History of Computing}
+      \field{number}{4}
+      \field{title}{What Should We Collect to Preserve the History of Software?}
+      \field{volume}{28}
+      \field{year}{2006}
+      \field{pages}{110\bibrangedash 112}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/MAHC.2006.78
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/MAHC.2006.78
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/MAHC.2006.78
+      \endverb
+    \endentry
+    \entry{SpinellisUnix2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=84b8e5364aab5f32e81e2aefc1cdb30a}{%
+           family={Spinellis},
+           familyi={S\bibinitperiod},
+           given={Diomidis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \strng{fullhash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \strng{bibnamehash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \strng{authorbibnamehash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \strng{authornamehash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \strng{authorfullhash}{84b8e5364aab5f32e81e2aefc1cdb30a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{number}{3}
+      \field{title}{A repository of Unix history and evolution}
+      \field{volume}{22}
+      \field{year}{2017}
+      \field{pages}{1372\bibrangedash 1404}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1007/s10664-016-9445-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10664-016-9445-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10664-016-9445-5
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
