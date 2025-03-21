@@ -45,7 +45,6 @@ The guide is divided into three sections, each of them can be read and executed 
 -->
 
 Note that the process aims at preserving legacy source code and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
-Archiving physical artefacts is not the primary goal of this guide but we will provide some contact points if you would intend to do so. 
 
 This document builds up on the SWHAP, the ***SoftWare Heritage Acquisition Process*** (@swhcacm2018) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO [^1]. This guide also aims at simplifying the practical implementation of the SWHAP as proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf)[^2].
 
@@ -274,7 +273,7 @@ In our case we uploaded two documents: a scanned listing from 1971 and a later d
 
 To synchronize our local Workbench with the remote repository, we run the following command lines:
 
-	git add raw_source_code
+	git add raw_material
 	git commit -m "Added raw material"
 	git push
 
@@ -345,7 +344,7 @@ we copy the source contents into our branch:
 
 	git checkout master -- source_code/v1/*
 	mv source_code/v1/* .
- 	rm −rf source_code
+ 	rm -rf source_code
 
 
 Then we use the following template to create manually an individual commit/release:

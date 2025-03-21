@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.3)  14 MAR 2025 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.3)  14 MAR 2025 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1280,9 +1280,9 @@ LaTeX Font Warning: Font shape `T1/lmss/bx/sc' undefined
 \openout6 = `swhap@inria.toc'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 123.
+(Font)              <8> on input line 121.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 123.
+(Font)              <6> on input line 121.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 129.
@@ -1296,121 +1296,121 @@ Package pdftex.def Info: logos/line.png  used on input line 129.
 ]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 190.
+Package pdftex.def Info: logos/line.png  used on input line 188.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 190.
+Package pdftex.def Info: logos/line.png  used on input line 188.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 194--194
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
 [][][]\T1/lmr/m/n/8 (+20) Introduction tu-to-rial https://www.youtube.com/watch
 ?v=ZBTpa09P_Ho&t=4s and step-by-step tu-to-rial
  []
 
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 266.
+Package pdftex.def Info: logos/line.png  used on input line 264.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 266.
+Package pdftex.def Info: logos/line.png  used on input line 264.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 [4]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-78.
+76.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 349.
+Package pdftex.def Info: logos/line.png  used on input line 347.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 349.
+Package pdftex.def Info: logos/line.png  used on input line 347.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [5]
 <./media2/01_RepoStructure.png, id=249, 425.33907pt x 283.0575pt>
 File: ./media2/01_RepoStructure.png Graphic file (type png)
 <use ./media2/01_RepoStructure.png>
-Package pdftex.def Info: ./media2/01_RepoStructure.png  used on input line 412.
+Package pdftex.def Info: ./media2/01_RepoStructure.png  used on input line 410.
 
 (pdftex.def)             Requested size: 425.35748pt x 283.06975pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 440.
+Package pdftex.def Info: logos/line.png  used on input line 438.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 440.
+Package pdftex.def Info: logos/line.png  used on input line 438.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [6]
 <./media2/09_OCR.PNG, id=263, 916.92563pt x 505.89pt>
 File: ./media2/09_OCR.PNG Graphic file (type png)
 <use ./media2/09_OCR.PNG>
-Package pdftex.def Info: ./media2/09_OCR.PNG  used on input line 446.
+Package pdftex.def Info: ./media2/09_OCR.PNG  used on input line 444.
 (pdftex.def)             Requested size: 455.27171pt x 251.18437pt.
 <./media2/01_template.png, id=265, 636.414pt x 245.718pt>
 File: ./media2/01_template.png Graphic file (type png)
 <use ./media2/01_template.png>
-Package pdftex.def Info: ./media2/01_template.png  used on input line 472.
+Package pdftex.def Info: ./media2/01_template.png  used on input line 470.
 (pdftex.def)             Requested size: 455.27533pt x 175.78076pt.
 <./media2/02_CreateWorkbench.png, id=266, 413.034pt x 376.899pt>
 File: ./media2/02_CreateWorkbench.png Graphic file (type png)
 <use ./media2/02_CreateWorkbench.png>
 Package pdftex.def Info: ./media2/02_CreateWorkbench.png  used on input line 48
-5.
+3.
 (pdftex.def)             Requested size: 413.03297pt x 376.89807pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [7 <./media2/01_RepoStructure.png>]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [8 <./media2/09_OCR.PNG> <./media2/01_template.png>]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 498.
+Package pdftex.def Info: logos/line.png  used on input line 496.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [9 <./media2/02_CreateWorkbench.png>]
 <./media2/12_AddRawMaterials_local.png, id=297, 716.6775pt x 180.675pt>
 File: ./media2/12_AddRawMaterials_local.png Graphic file (type png)
 <use ./media2/12_AddRawMaterials_local.png>
 Package pdftex.def Info: ./media2/12_AddRawMaterials_local.png  used on input l
-ine 549.
+ine 547.
 (pdftex.def)             Requested size: 455.28201pt x 114.77696pt.
 <./media2/13_AddRawMaterials.png, id=298, 1426.57968pt x 252.19218pt>
 File: ./media2/13_AddRawMaterials.png Graphic file (type png)
 <use ./media2/13_AddRawMaterials.png>
 Package pdftex.def Info: ./media2/13_AddRawMaterials.png  used on input line 56
-9.
+7.
 (pdftex.def)             Requested size: 455.27406pt x 80.4838pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 580.
+Package pdftex.def Info: logos/line.png  used on input line 578.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 580.
+Package pdftex.def Info: logos/line.png  used on input line 578.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [10 <./media2/12_AddRawMaterials_local.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 596--596
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
 [][][]\T1/lmr/m/n/8 (+20) See the Code Meta project at https://codemeta.github.
 io/ and the Code Meta Gen-er-a-tor at
  []
@@ -1419,27 +1419,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{fig:RawMateri
 als_local}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.645 }
+l.643 }
        
 <./media2/14_addedSourceCode.png, id=319, 1426.57968pt x 249.93375pt>
 File: ./media2/14_addedSourceCode.png Graphic file (type png)
 <use ./media2/14_addedSourceCode.png>
 Package pdftex.def Info: ./media2/14_addedSourceCode.png  used on input line 64
-5.
+3.
 (pdftex.def)             Requested size: 455.27406pt x 79.76305pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 646.
+Package pdftex.def Info: logos/line.png  used on input line 644.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 646.
+Package pdftex.def Info: logos/line.png  used on input line 644.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [11pdfTeX warning (ext4): destination with the same identifier (name{fig:RawMa
 terials_local}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.646 \end{figure}
+l.644 \end{figure}
                    <./media2/13_AddRawMaterials.png>]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC’).
@@ -1448,126 +1448,120 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.687 rm âˆ’rf 
+l.685 rm âˆ’rf 
                source_code
 ? 
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 706.
+Package pdftex.def Info: logos/line.png  used on input line 704.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 706.
+Package pdftex.def Info: logos/line.png  used on input line 704.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 [12 <./media2/14_addedSourceCode.png>]
 <./media2/15_SourceCodeBranch2.png, id=364, 826.58812pt x 292.84406pt>
 File: ./media2/15_SourceCodeBranch2.png Graphic file (type png)
 <use ./media2/15_SourceCodeBranch2.png>
 Package pdftex.def Info: ./media2/15_SourceCodeBranch2.png  used on input line 
-745.
+743.
 (pdftex.def)             Requested size: 455.28073pt x 161.29707pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 765.
+Package pdftex.def Info: logos/line.png  used on input line 763.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 765.
+Package pdftex.def Info: logos/line.png  used on input line 763.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [13 <./media2/15_SourceCodeBranch2.png>]
 <./media2/17_Finalrepo.png, id=390, 580.41844pt x 626.34pt>
 File: ./media2/17_Finalrepo.png Graphic file (type png)
 <use ./media2/17_Finalrepo.png>
-Package pdftex.def Info: ./media2/17_Finalrepo.png  used on input line 778.
+Package pdftex.def Info: ./media2/17_Finalrepo.png  used on input line 776.
 (pdftex.def)             Requested size: 455.27522pt x 491.29568pt.
 <./media2/18_tags.png, id=391, 829.59938pt x 465.99094pt>
 File: ./media2/18_tags.png Graphic file (type png)
 <use ./media2/18_tags.png>
-Package pdftex.def Info: ./media2/18_tags.png  used on input line 799.
+Package pdftex.def Info: ./media2/18_tags.png  used on input line 797.
 (pdftex.def)             Requested size: 455.26839pt x 255.72696pt.
 <./media2/19_savecode.png, id=393, 1001.99344pt x 164.11313pt>
 File: ./media2/19_savecode.png Graphic file (type png)
 <use ./media2/19_savecode.png>
-Package pdftex.def Info: ./media2/19_savecode.png  used on input line 817.
+Package pdftex.def Info: ./media2/19_savecode.png  used on input line 815.
 (pdftex.def)             Requested size: 455.28087pt x 74.56891pt.
 <./media2/20_SWHbadges.png, id=397, 342.5297pt x 434.37282pt>
 File: ./media2/20_SWHbadges.png Graphic file (type png)
 <use ./media2/20_SWHbadges.png>
-Package pdftex.def Info: ./media2/20_SWHbadges.png  used on input line 846.
+Package pdftex.def Info: ./media2/20_SWHbadges.png  used on input line 844.
 (pdftex.def)             Requested size: 342.54976pt x 434.39825pt.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 [14]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [15 <./media2/17_Finalrepo.png>]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [16 <./media2/18_tags.png> <./media2/19_savecode.png>]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 857.
+Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
  [17 <./media2/20_SWHbadges.png>]
 
 AED: lastpage setting LastPage
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 859.
+Package pdftex.def Info: logos/line.png  used on input line 857.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
-Package pdftex.def Info: logos/line.png  used on input line 859.
+Package pdftex.def Info: logos/line.png  used on input line 857.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
 [18] (./swhap@inria.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `swhap@inria.out' has not changed.
 (rerunfilecheck)             Checksum: 3142DE32A5CB9F2239099D8259D79812;3797.
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'swhap@inria.run.xml'.
 \openout1 = `swhap@inria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35046 strings out of 480247
- 652001 string characters out of 5896152
- 1439868 words of memory out of 5000000
- 52043 multiletter control sequences out of 15000+600000
+ 35044 strings out of 480247
+ 651956 string characters out of 5896152
+ 1440053 words of memory out of 5000000
+ 52041 multiletter control sequences out of 15000+600000
  562820 words of font info for 176 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,17n,83p,1200b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1583,7 +1577,7 @@ fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
 /public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on swhap@inria.pdf (19 pages, 3706449 bytes).
+Output written on swhap@inria.pdf (19 pages, 3706454 bytes).
 PDF statistics:
  562 PDF objects out of 1000 (max. 8388607)
  463 compressed objects within 5 object streams
