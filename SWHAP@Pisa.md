@@ -534,8 +534,45 @@ guidelines [\[8\]](https://www.zotero.org/google-docs/?X25TEk).
 All the source code files must then be put into the `browsable_source`
 folder.
 
-If the raw material is an archive, you should unpack it locally and
-then upload the result on GitHub by performing a push[^7].
+If the raw material is an archive, you need to unpack it locally, put it into
+the `browsable_source` folder, and upload the result on GitHub by performing a
+push[^7].
+
+#### Preserving Empty Directories
+
+By default, Git does not track empty directories — only files. This creates a
+problem for SWHAP curation: many historical source archives contain empty
+directories that are meaningful for build systems, test harnesses, or simply
+for documenting the project structure. If we ignore them, the curated history
+in Git and Software Heritage will no longer faithfully represent the original
+layout.
+
+**Workaround.**  
+To preserve empty directories, SWHAP workbenches should add a placeholder file
+named `.emptydir` inside each directory that is otherwise empty. This ensures
+Git records the directory, while making it clear that the file is a curatorial
+artifact and not part of the original software distribution. These markers
+should be documented explicitly in the curation metadata (`journal.md`,
+`README.md`), so that future users are aware they were introduced solely for
+structural preservation.
+
+Example, suppose you find in the original source code tree a couple of empty directories:
+```
+Tests/ERR/
+Tests/REFDIFF/
+```
+
+To ensure their correct recording in Git, add inside them an empty file named `.emptydir`:
+
+```
+Tests/ERR/.emptydir
+Tests/REFDIFF/.emptydir
+```
+
+Do not add these markers in the *Depository* branch: only the curated
+*SourceCode* branch needs them.
+
+### Notes on OCR
 
 If the code was only available in non digital form (e.g. printed
 listings), you can either transcribe it manually, or use a scanner and
