@@ -601,14 +601,23 @@ folders `raw_materials` and `browsable_source`, together with the
 metadata updated to this point. Then, create the Depository repository
 from this branch.
 
+
 ### Curate phase
 
 **Curate the source code**
 
 Once the Depository creation is complete, you can move back to the
 `source` folder in the `main` branch. Here you have to divide and number
-the versions, putting the files of each one in a dedicated folder and
-determining who did what and when.
+the versions, putting the files of each one in a dedicated folder.
+
+#### Flattening of Tarballs
+
+Tarballs distributed by projects often include a single top-level directory
+(e.g., `project-1.0/`) to avoid “tarbombs.” For curation purposes, such
+artificial wrappers should be stripped so that all source files live at the
+root of the curated version directory.
+
+#### Determining who did what and when
 
 In practice, this means that *for each version of the software* you
 need to ascertain:
