@@ -631,15 +631,15 @@ This information should be consigned in a dedicated metadata file,
 
 \rowcolors{1}{gray!10}{white} 
 
-| Field name          | description                                                      |
-|---------------------+------------------------------------------------------------------|
+| Field name         | description                                                      |
+|--------------------+------------------------------------------------------------------|
 | directory name 	 | name of the directory containing the source code of this version |
 | author name    	 | name of the main author                                          |
 | author email   	 | email of the main author, when available                         |
 | date original  	 | original date when this version was made                         |
 | curator name   	 | name of the curator person or team                               |
 | curator email  	 | the reference email of the acquisition process                   |
-| release tag   	  | a tag name if the directory contains a release, empty otherwise  |
+| release tag   	 | a tag name if the directory contains a release, empty otherwise  |
 | commit message 	 | text containing a brief note from the curation team              |
 
 **(Re-)Create the Development History**
@@ -1031,6 +1031,56 @@ In particular we should create :
 + a journal :`metatdata/journal.md`, where each collect and curate action should be annotated;
 + an actors registry: `metatdata/actors.md`, every person taking part in the process should be registered, with their roles, affiliations and contact information;
 + a notepad : `metatdata/journal.md` where write possible information not covered by previous files.
+
+### Codemeta Best Practices for SWHAP
+
+Each SWHAP workbench must include a [`codemeta.json`](https://codemeta.github.io/terms/) file,
+providing machine-readable metadata about the curated software. To ensure consistency
+and validity against the CodeMeta 2.0 schema, curators should follow these best practices:
+
+1. **Use only terms defined in the CodeMeta 2.0 context**
+   - The context is fixed:
+     ```json
+     "@context": "https://doi.org/10.5063/sciencecodemeta/codemeta-2.0"
+     ```
+   - Avoid custom fields unless explicitly agreed and documented.
+
+2. **Mandatory fields for SWHAP deposits**
+   - `@type` = `"SoftwareSourceCode"`
+   - `name` (title of the software)
+   - `identifier` (short unique identifier, e.g. `CMM`)
+   - `description` (short abstract of the software)
+   - `version` (last archived version)
+   - `author` (primary authors, with affiliation)
+   - `license` (with URL to the license file in `metadata/`)
+   - `programmingLanguage` (list with details)
+
+3. **Recommended fields**
+   - `keywords` (research areas, technologies)
+   - `contributor` (secondary contributors)
+   - `referencePublication` (books, papers, manuals)
+   - `dateCreated`, `datePublished`, `dateModified` (ISO format `YYYY-MM-DD`)
+   - `funder` (organization or project supporting the work)
+   - `codeRepository` (URL to original upstream repository or archival location)
+   - `relatedLink` (pointers to SWHAP guide, Software Heritage, project pages)
+
+4. **Authors and contributors**
+   - Use `author` for primary developers; `contributor` for collaborators.
+   - Include `affiliation` objects whenever possible (with `@type: Organization`).
+
+5. **Licensing**
+   - Use a `license` object with `@type: CreativeWork`, including `name` and `url`.
+   - If the license is non-standard (e.g. DEC non-commercial), link directly to the copy in `metadata/license.txt`.
+
+6. **Publications**
+   - Cite reference documents (manuals, handbooks, articles) under `referencePublication`, including authors and URLs when available.
+
+7. **Validation**
+   - Always validate `codemeta.json` using the [CodeMeta JSON-LD Playground](https://codemeta.github.io/codemeta-generator/) or JSON schema tools before finalizing.
+
+8. **Do not include**
+   - Fields not defined in CodeMeta 2.0.
+   - Internal curatorial notes (keep those in `journal.md`).
 
 Appendix A - Tools that can help
 ================================
