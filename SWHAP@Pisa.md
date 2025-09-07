@@ -569,7 +569,7 @@ from this branch.
 **Curate the source code**
 
 Once the Depository creation is complete, you can move back to the
-`source` folder in the master branch. Here you have to divide and number
+`source` folder in the `main` branch. Here you have to divide and number
 the versions, putting the files of each one in a dedicated folder and
 determining who did what and when.
 
@@ -621,7 +621,7 @@ of the software via Git commits and releases.
 **Create the final repository**
 
 Finally you can create the "official" software repository, taking the
-versions history from the src branch and the metadata from the master
+versions history from the src branch and the metadata from the `main`
 branch.
 
 Iteration
@@ -781,7 +781,7 @@ interesting for this area:
 We stage the last modifications and then push to the remote repository.
 
 	git add .
-	git commit -m "Added raw materials from master branch"
+	git commit -m "Added raw materials from main branch"
 	git push --mirror origin
 
 We are almost ready to move the Depository to a new repository: before that,
@@ -801,7 +801,7 @@ what done for the workbench as shown in Figure
 
 Finally, we can perform a push and fill the remote repository.
 
-    git push https://github.com/Unipisa/CMM-Depository.git +Depository:master
+    git push https://github.com/Unipisa/CMM-Depository.git +Depository:main
 
 We can check the resulting repositories via the web interface (Figure
 {@fig:cmm_repos}): CMM-Depository is now filled with the pushed materials.
@@ -813,7 +813,7 @@ having multiple copies that may diverge. Should new materials became
 available, a new iteration of the process should start, re-initializing
 the Workbench with the information in the Depository.
 
-	git checkout master
+	git checkout main
 	git push --delete origin Depository
 	git branch -D Depository
 
@@ -860,13 +860,13 @@ We have to create a clean dedicated SourceCode branch
 	git rm -rf *
 
 Then, for every directory containing a version of the source code, in
-chronological order, we copy its contents from the `master` branch to the
+chronological order, we copy its contents from the `main` branch to the
 current branch, and commit it with the appropriate metadata.
 
 For example, for the directory 1.9 of the CMM sources, here is how
 we copy the source contents into our branch:
 
-	git checkout master -- source/1.9
+	git checkout main -- source/1.9
 	mv source/1.9/* .
 	rm -rf source
 
@@ -908,7 +908,7 @@ containing the rebuilt version history, that is shown in Figure {@fig:cmm_sh}.
 
 ### Create the final repository
 
-We move back to the master branch using the checkout command, then
+We move back to the `main` branch using the checkout command, then
 remove `raw_materials`, `browsable_source` and `source` from it:
 
 	git rm -rf raw_materials browsable_source source
@@ -923,7 +923,7 @@ Figure {@fig:create_fin}, and we push the relevant branches (and tags) to it.
 
 ![The creation of the final repository.](./media/create_fin.png){#fig:create_fin}
 
-    git push --tags git@github.com:Unipisa/CMM.git +master:master +SourceCode:SourceCode
+    git push --tags git@github.com:Unipisa/CMM.git +main:main +SourceCode:SourceCode
 
 To facilitate the search of the created repository, we add the 
 "software-heritage", "archive" and "swhappe" tags (in the same way of 
