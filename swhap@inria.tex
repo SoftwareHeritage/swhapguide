@@ -551,8 +551,8 @@ To synchronize our local Workbench with the remote repository, we run
 the following command lines:
 
 \begin{lstlisting}
-git add raw_source_code
-git commit -m "Added raw material"
+git add raw_materials
+git commit -m "Added raw materials"
 git push
 \end{lstlisting}
 
@@ -682,7 +682,7 @@ In our case here is how we copy the source contents into our branch:
 \begin{lstlisting}
 git checkout master -- source_code/v1/*
 mv source_code/v1/* .
-rm −rf source_code
+rm -rf source_code
 \end{lstlisting}
 
 Then we use the following template to create manually an individual

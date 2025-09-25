@@ -273,8 +273,8 @@ In our case we uploaded two documents: a scanned listing from 1971 and a later d
 
 To synchronize our local Workbench with the remote repository, we run the following command lines:
 
-	git add raw_material
-	git commit -m "Added raw material"
+	git add raw_materials
+	git commit -m "Added raw materials"
 	git push
 
 The resulting state of `raw_materials` in the remote repository is shown in Figure 5.
@@ -369,6 +369,9 @@ Then we use the following template to create manually an individual commit/relea
 	git add -A
 	git commit -m "V1 of MySoftware"
 	
+
+If you do not have an email address for the historical author, you still need to update it with an empty value, to avoid your own default email address to be used instead `export GIT_AUTHOR_EMAIL="<>"`.  
+
 We also need to add an annotated tag to this version. For version 1 of MySoftware, here is
 the command we used, you can adapt it to your needs:
 

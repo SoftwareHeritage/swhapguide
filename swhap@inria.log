@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.3)  14 MAR 2025 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.3)  24 MAR 2025 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,16 +1441,6 @@ terials_local}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.644 \end{figure}
                    <./media2/13_AddRawMaterials.png>]
-
-! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC’).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.685 rm âˆ’rf 
-               source_code
-? 
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 704.
@@ -1459,7 +1449,7 @@ File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 704.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
-[12 <./media2/14_addedSourceCode.png>]
+ [12 <./media2/14_addedSourceCode.png>]
 <./media2/15_SourceCodeBranch2.png, id=364, 826.58812pt x 292.84406pt>
 File: ./media2/15_SourceCodeBranch2.png Graphic file (type png)
 <use ./media2/15_SourceCodeBranch2.png>
@@ -1506,7 +1496,7 @@ File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
-[14]
+ [14]
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 855.
@@ -1533,8 +1523,7 @@ File: logos/line.png Graphic file (type png)
 <use logos/line.png>
 Package pdftex.def Info: logos/line.png  used on input line 855.
 (pdftex.def)             Requested size: 455.24812pt x 2.75266pt.
- [17 <./media2/20_SWHbadges.png>]
-
+ [17 <./media2/20_SWHbadges.png>] 
 AED: lastpage setting LastPage
 File: logos/line.png Graphic file (type png)
 <use logos/line.png>
@@ -1558,10 +1547,10 @@ Package logreq Info: Writing requests to 'swhap@inria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35044 strings out of 480247
- 651956 string characters out of 5896152
+ 35039 strings out of 480247
+ 651876 string characters out of 5896152
  1440053 words of memory out of 5000000
- 52041 multiletter control sequences out of 15000+600000
+ 52036 multiletter control sequences out of 15000+600000
  562820 words of font info for 176 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,17n,83p,1200b,1613s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1577,7 +1566,7 @@ fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
 /public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on swhap@inria.pdf (19 pages, 3706454 bytes).
+Output written on swhap@inria.pdf (19 pages, 3706439 bytes).
 PDF statistics:
  562 PDF objects out of 1000 (max. 8388607)
  463 compressed objects within 5 object streams
