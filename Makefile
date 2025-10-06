@@ -1,10 +1,10 @@
 # Depends: rubber
-MDS = $(wildcard *.md)
+MDS = $(wildcard SwhapGuide-*.md) SWHAPprocess.md
 TEXS = $(patsubst %.md,%.tex,$(MDS))
 PDFS = $(patsubst %.md,%.pdf,$(MDS))
-MAIN = SWHAP@Pisa
+MAIN = SWHAPprocess
 
-all: $(MAIN).pdf
+all: $(PDFS)
 
 .PRECIOUS: $(TEXS)
 
