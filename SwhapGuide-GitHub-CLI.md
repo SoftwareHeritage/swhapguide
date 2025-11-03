@@ -219,12 +219,20 @@ If you are not familiar with Git:
 Prepare your code for archival
 ----------------------------------
 
+#### Machine-readable code
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
 If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually (see figure 2), or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
 
 ![Make your source code machine readable.](./media2/09_OCR.PNG){#fig:OCR}
 
+
+#### Unpacking your code & flattening of tarballs
 If the raw source code is an archived and/or compressed file (.tar or .zip), you should unpack it locally on your computer. 
+
+Tarballs distributed by projects often include a single top-level directory
+(e.g., `project-1.0/`) to avoid “tarbombs.” For curation purposes, such
+artificial wrappers should be stripped so that all source files live at the
+root of the curated version directory.
 
 For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
 
