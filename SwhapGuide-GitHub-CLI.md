@@ -284,13 +284,17 @@ The resulting state of `raw_materials` in the remote repository is shown in Figu
 Fill in the metadata
 ----------------------------------
 
+### Catalogue
 Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.
 
+### License
 Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
 
+### Version history
 Go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section _5.7 (Re-)Create the development History_)
 
-The CodeMeta project defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^9]. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
+### CodeMeta
+The CodeMeta project defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^9]. You can see best practices for filling in the data in the paragraph below. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
 
 [^9]: See the Code Meta project at https://codemeta.github.io/ and the Code Meta Generator at https://codemeta.github.io/codemeta-generator/ 
 
@@ -301,7 +305,60 @@ Synchronize with the remote repository using the following command lines:
 	git push
 
 
-You can see an example of the different metadata files looking at [_MySoftware_ final repository](https://github.com/mathfichen/MySoftware/tree/master/metadata)
+### Codemeta Best Practices for SWHAP
+
+ To ensure consistency and validity against the CodeMeta 2.0 schema, curators should follow these best practices:
+
+1. **Use only terms defined in the CodeMeta 2.0 context**
+   - The context is fixed:
+     ```json
+     "@context": "https://doi.org/10.5063/sciencecodemeta/codemeta-2.0"
+     ```
+   - Avoid custom fields unless explicitly agreed and documented.
+
+2. **Mandatory fields for SWHAP deposits**
+   - `@type` = `"SoftwareSourceCode"`
+   - `name` (title of the software)
+   - `identifier` (short unique identifier, e.g. `CMM`)
+   - `description` (short abstract of the software)
+   - `version` (last archived version)
+   - `author` (primary authors, with affiliation)
+   - `license` (with URL to the license file in `metadata/`)
+   - `programmingLanguage` (list with details)
+
+3. **Recommended fields**
+   - `keywords` (research areas, technologies)
+   - `contributor` (secondary contributors)
+   - `referencePublication` (books, papers, manuals)
+   - `dateCreated`, `datePublished`, `dateModified` (ISO format `YYYY-MM-DD`)
+   - `funder` (organization or project supporting the work)
+   - `codeRepository` (URL to original upstream repository or archival location)
+   - `relatedLink` (pointers to SWHAP guide, Software Heritage, project pages)
+
+4. **Authors and contributors**
+   - Use `author` for primary developers; `contributor` for collaborators.
+   - Include `affiliation` objects whenever possible (with `@type: Organization`).
+
+5. **Licensing**
+   - Use a `license` object with `@type: CreativeWork`, including `name` and `url`.
+   - If the license is non-standard (e.g. DEC non-commercial), link directly to the copy in `metadata/license.txt`.
+
+6. **Publications**
+   - Cite reference documents (manuals, handbooks, articles) under `referencePublication`, including authors and URLs when available.
+
+7. **Validation**
+   - Always validate `codemeta.json` using the [CodeMeta JSON-LD Playground](https://codemeta.github.io/codemeta-generator/) or JSON schema tools before finalizing.
+
+8. **Do not include**
+   - Fields not defined in CodeMeta 2.0.
+   - Internal curatorial notes (keep those in `journal.md`).
+
+Synchronize with the remote repository using the following command lines:
+
+	git add metadata
+	git commit -m "Updated metadata"
+	git push
+
 
 Upload machine readable source code
 ----------------------------------
