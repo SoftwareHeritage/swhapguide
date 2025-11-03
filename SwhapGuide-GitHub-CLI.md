@@ -319,6 +319,31 @@ You can check the result in the distant repository.
 
 ![Add machine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
 
+#### Note on Preserving Empty Directories
+
+By default, Git does not track empty directories — only files. This creates a problem for SWHAP curation: many historical source archives contain empty
+directories that are meaningful for build systems, test harnesses, or simply
+for documenting the project structure. If we ignore them, the curated history in Git and Software Heritage will no longer faithfully represent the original
+layout.
+
+**Workaround.**  
+To preserve empty directories, you should add a placeholder file named `.emptydir` inside each directory that is otherwise empty. This ensures Git records the directory, while making it clear that the file is a curatorial
+artifact and not part of the original software distribution. These markers
+should be documented explicitly in the curation metadata, so that future users are aware they were introduced solely for structural preservation.
+
+Example, suppose you find in the original source code tree a couple of empty directories:
+```
+Tests/ERR/
+Tests/REFDIFF/
+```
+
+To ensure their correct recording in Git, add inside them an empty file named `.emptydir`:
+
+```
+Tests/ERR/.emptydir
+Tests/REFDIFF/.emptydir
+```
+
 
 (Re-)Create the development History
 ----------------------------------
