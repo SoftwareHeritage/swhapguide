@@ -1,8 +1,8 @@
 # Depends: rubber
-MDS = $(wildcard SwhapGuide-*.md) SWHAPprocess.md
+MDS = $(wildcard SwhapGuide-*.md) SwhapGuide-GitHub-CLI
 TEXS = $(patsubst %.md,%.tex,$(MDS))
 PDFS = $(patsubst %.md,%.pdf,$(MDS))
-MAIN = SWHAPprocess
+MAIN = SwhapGuide-GitHub-CLI
 
 all: $(PDFS)
 
