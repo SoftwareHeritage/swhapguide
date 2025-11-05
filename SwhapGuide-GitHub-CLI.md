@@ -361,11 +361,6 @@ Synchronize with the remote repository using the following command lines:
    - Fields not defined in CodeMeta 2.0.
    - Internal curatorial notes (keep those in `journal.md`).
 
-Synchronize with the remote repository using the following command lines:
-
-	git add metadata
-	git commit -m "Updated metadata"
-	git push
 
 
 Upload machine readable source code
@@ -525,7 +520,7 @@ Your legacy code is now forever safely archived on the Software Heritage univers
 
 Also on the `Permalink` tab, you can click on the two `archived` badges and retrieve a markdown code snippet. Use these code snippets in the README of your final software repository. This will display the badges on the first page of your repository, allowing anyone visiting it to click on them and get access to its archive on Software Heritage (See figure 12).
 
-![View of the _Permalink_tab](./media2/20_SWHbadges.png){#fig:badge}
+![View of the _Permalink_tab](./media2/20_SWHbadges.png){#fig:badge .centered width=0.4\textwidth}
 
 
 
