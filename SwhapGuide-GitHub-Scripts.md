@@ -261,7 +261,7 @@ Visit the template page on Github[^8], on the upper right hand corner click on `
 
 ![SWHAP template.](./media2/01_template.png){#fig:template}
 
-The repository you will create is your working environment, and we recommend naming it `MySoftware` (see figure 4), replace "MySoftware" by the actual name of your software and make it public.
+The repository you will create is your working environment, and we recommend naming it `MySoftware` (see figure 4), replace "MySoftware" by the actual name of your software, add a short description and make it public.
 
 ![Create your Workbench.](./media2/02_CreateWorkbecnh_NEW.png){#fig:createWorkbench}
 
