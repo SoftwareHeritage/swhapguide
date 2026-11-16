@@ -293,6 +293,8 @@ You are now ready to upload your materials. Navigate to the `raw_materials` fold
 
 To add your material, just click on the `Add file` button on the top right corner and select them from your computer. 
 In our case we uploaded three documents: a scanned and OCRed listing from 1971 and a later digital version from 1972 in a compressed file. 
+For historical accuracy purpose uploaded both your source code in its initial format (a scanned listing for example), and in its machine-readable format. Only the machine readable files will be used from now on. 
+
 
 <!--
 ![Add raw materials.](./media2/12_AddRawMaterials_local.png){#fig:RawMaterials_local}
@@ -318,30 +320,26 @@ artificial wrappers should be stripped so that all source files live at the
 root of the curated version directory.
 -->
 
-For historical accuracy purpose we will upload both your source code in its initial format, and in its machine-readable format. 
 
 Fill in the metadata
 ----------------------------------
 
-### Catalogue
-Then navigate to the `metadata` folder and open the `catalogue.md` file using any text editor. This file will help any future viewer to better understand the different items you uploaded. Edit the file, filing in the metadata linked to each item your uploaded.
+Navigate to the `metadata` folder. It contains different metadata fils, some are for humans to read, some will be used later in the automated process. 
 
-### License
-Go back to the `metadata` folder and go to the `license.md` file and fill in any license information you have about the usage of the software you are archiving. 
+### Catalogue
+`catalogue.md` is for human to read.  This file will help any future viewer to better understand the different items you uploaded, especially their origin and possible license or copyright. Edit the file, filing in the metadata linked to each item your uploaded.
+
+### Extraction recipe
+During the automated phase that will prepare your repo for archival, a script will extract the machine-readable files you just uploaded, unzip or unpack them if they are compressed and cleanly store them each in a different subfolder with the `source_code` folder. 
+In `extraction-recipe.yaml` you must indicate the path to each machine-readable source code artefact you previously uploaded, as well as a short label to refer to it.  
 
 ### Version history
-Go back once again to the `metadata` folder and update the `version-history.csv` folder. The content of this file should correspond to the data you will want to use later on in the process when reconstructing the code synthetic history (see section _5.7 (Re-)Create the development History_)
+The version_history.csv file will also be used during the automated process. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. 
 
 ### CodeMeta
-The CodeMeta project defines a standard JSON structure for software metadata. This JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^9]. You can see best practices for filling in the data in the paragraph below. Add this JSON file to `MySoftware_Workbench`>`Metadata` folder and synchronize with the distant repository. 
+The CodeMeta project defines a standard JSON structure for software metadata. Once your code will be archived, this JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^9]. You can see best practices for filling in the data in the paragraph below. 
 
 [^9]: See the Code Meta project at https://codemeta.github.io/ and the Code Meta Generator at https://codemeta.github.io/codemeta-generator/ 
-
-Synchronize with the remote repository using the following command lines:
-
-	git add metadata
-	git commit -m "Updated metadata"
-	git push
 
 
 ### Codemeta Best Practices for SWHAP
