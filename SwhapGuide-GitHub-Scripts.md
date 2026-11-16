@@ -257,16 +257,18 @@ Set up your working environment
 To archive your legacy source code we will be using Github, and we prepared a Github template that you can clone (if you are not familiar with Github lingo _to clone_ means _to make a copy_) to create your own working space. 
 Visit the template page on Github[^8], on the upper right hand corner click on `Use this template` > `Create a new repository` (see figure 3). 
 
-[^8]: https://github.com/mathfichen/Swhap-Template
+[^8]: https://github.com/SWHAP/swhap-workbench-template
 
 ![SWHAP template.](./media2/01_template.png){#fig:template}
 
-The repository you will create is a temporary working environment, and we recommend naming it `MySoftware-Workbench` (see figure 4), replace "MySoftware" by the actual name of your software and make it private).
+The repository you will create is your working environment, and we recommend naming it `MySoftware` (see figure 4), replace "MySoftware" by the actual name of your software and make it public.
 
-![Create your Workbench.](./media2/02_CreateWorkbench.png){#fig:createWorkbench}
+![Create your Workbench.](./media2/02_CreateWorkbecnh_NEW.png){#fig:createWorkbench}
 
-Via the Github interface you can edit the `Read.me` file, using the actual name of your software. To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
+Via the Github interface you can edit the `Read.me` file, using the actual name of your software. Add a short description of the software and also the context in which this archival process is taking place and who is involved in it. 
+To edit a file in Github click on the pencil symbol. When you are done editing, click on `Commit` to save your changes. 
 
+<!--
 To start working, we create a local copy on our computer, cloning this repository. By clicking on the green button `Code`, we get a link that we can use for this purpose in the
 following command from the command line:
 
@@ -282,7 +284,7 @@ Open a Linux command line interpreter an navigate to `MySoftware_Workbench`.
 In our case the interpreter current directory is `/home/mathfichen`, so we juste type: 
 	
 	cd MySoftware_Workbench
-
+-->
 
 Upload collected files
 ----------------------------------
