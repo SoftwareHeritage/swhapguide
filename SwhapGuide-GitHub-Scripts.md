@@ -402,8 +402,23 @@ The CodeMeta project defines a standard JSON structure for software metadata. On
    - Fields not defined in CodeMeta 2.0.
    - Internal curatorial notes (keep those in `journal.md`).
 
+Preparing your source code for archiving {#sec:prepare}
+======================================
+
+Now that your source code files are uploaded and the metadata registered, you are ready to run the automation script. The 
+The script will perform the following tasks: 
+
+1) For each machine-readable source code item in `raw_materials`, the script will unpack it, remove possible unnecessary parent folder and cleanly store it in the `source_code` folder
+2) The script will then create a new branch called `SourceCode` that will contain the synthetic history of the code, i.e, it will reconstruct a versionned view of the code, where each version will correspond to one commit. The script will use the data you registered in `version_history.csv` as commit data.
+3) The script will perform a series of checks to make sure that your repository is compliant and ready for archiving 
+
+To run the script, click on `Actions` on the ribbon at the top of the page, then on `Build SourceCode + publish` on the left panel, and finally on the green button `Run workflow`.
+
+![Run script.](./media2/15_runScript.png){#fig:RunScript}
 
 
+
+<!--
 Upload machine readable source code
 ----------------------------------
 We are now going to upload the machine readable versions of your source code into the `source_code` folder. Each version of the source code should be in a machine readable format, and stored in a dedicated sub-folder. 
@@ -537,9 +552,12 @@ We populate this final `MySoftware` repository from our workbench.
 
     git push --tags git@github.com:mathfichen/MySoftware.git +master:master +SourceCode:SourceCode
 
+
+-->	
+
 To facilitate the search of the created repository, add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics (See figure 10). 
 
-![Add topics.](./media2/18_tags.png){#fig:Topics}   
+![Add topics.](./media2/18_tags.png){#fig:Topics} 
 
 Trigger the Software Heritage Acquisition {#sec:archive}
 ==================================
