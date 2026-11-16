@@ -306,7 +306,7 @@ To synchronize our local Workbench with the remote repository, we run the follow
 
 The resulting state of `raw_materials` in the remote repository is shown in Figure 5.
 
-![Synch raw materials.](./media2/13_AddRawMaterials_NEW.PNG){#fig:RawMaterials_local}
+![Synch raw materials.](./media2/13_AddRawMaterials_NEW.png){#fig:RawMaterials_local}
 
 <!--
 #### Unpacking your code & flattening of tarballs
