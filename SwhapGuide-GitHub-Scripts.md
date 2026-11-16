@@ -331,7 +331,17 @@ Navigate to the `metadata` folder. It contains different metadata fils, some are
 
 ### Extraction recipe
 During the automated phase that will prepare your repo for archival, a script will extract the machine-readable files you just uploaded, unzip or unpack them if they are compressed and cleanly store them each in a different subfolder with the `source_code` folder. 
-In `extraction-recipe.yaml` you must indicate the path to each machine-readable source code artefact you previously uploaded, as well as a short label to refer to it.  
+In `extraction-recipe.yaml` you must indicate the path to each machine-readable source code artefact you previously uploaded, as well as a short label to refer to it. In our case we indicated the two items below:  
+
+```json
+	trees:
+	  "v1":
+	    - path: "raw_materials/Compressed1972.tar.gz"
+	      strip_components: "auto"
+	  "v2":
+	    - path: "raw_materials/Listing_OCR_1971.zip"
+	      strip_components: "auto"
+````
 
 ### Version history
 The version_history.csv file will also be used during the automated process. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. 
