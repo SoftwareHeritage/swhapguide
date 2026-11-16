@@ -46,10 +46,13 @@ The guide is divided into three sections, each of them can be read and executed 
 
 Note that the process aims at preserving legacy source code and related materials in a **digital** format, to ensure long term availability of the curated materials and the possibility to share and present it to a broad audience. 
 
-This document builds up on the SWHAP, the ***SoftWare Heritage Acquisition Process*** (@swhcacm2018) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO [^1]. This guide also aims at simplifying the practical implementation of the SWHAP as proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf)[^2].
+This document builds up on the SWHAP, the ***SoftWare Heritage Acquisition Process*** (@swhcacm2018) to rescue, curate and illustrate landmark legacy software source code. The initial version of this guide was published in 2019 as a joint initiative of Software Heritage and the University of Pisa, in collaboration with UNESCO [^1]. A practical implementation of the SWHAP was proposed by Pisa Univeristy in the [SWHAPPE (SWHAP Pisa Enactor)](https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf)[^2] in 2022, and a [simplified version](https://github.com/SoftwareHeritage/swhapguide/blob/master/SwhapGuide-GitHub-CLI.pdf)[^3] was produced in 2024.
+
+The present guide builds up on the latest 2024 version. While the fundamental logic is left untouched, this updated guide incorporates new tools that will allow you to archive code much more quickly, thanks to the automation of some tasks which were previsouly done manually. In this version, everything can be done in the browser, and no command lines instructions are required. 
 
 [^1]: See the Software Heritage webpage dedicated to legacy source code https://www.softwareheritage.org/swhap/ and get the initial guide on the UNESCO website https://unesdoc.unesco.org/ark:/48223/pf0000371017. 
 [^2]: https://github.com/SoftwareHeritage/swhapguide/blob/master/SWHAP%40Pisa.pdf
+[^3]: https://github.com/SoftwareHeritage/swhapguide/blob/master/SwhapGuide-GitHub-CLI.pdf
 
 Why preserve legacy source code? {#sec:whypreserve}
 ================================
@@ -104,9 +107,11 @@ What if I am stuck or have a question ? {#sec:Iamstuck}
 Because we are still developing and improving the SWHAP process you may stumble upon some difficulties, have some doubts on the best practices to adopt or you may just want to suggest an improvement. 
 To do so, you can join our SWHAP [mailing list](https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info) [^2] and share your questions and your comments with the community. 
 
-We also develpped two video tutorials based on the content of this guide [^3]:
+We also develpped two video tutorials [^3]:
 1) An introduction to the Software Heritage Acquisition Process
 2) A step by step guide to the Software Heritage Acquisition Process
+
+Note that these videos were made on the 2024 version of the guide. The core logic remains the same, but some actions have been automated since. In particular the introduction video remains a good introduction to the general logic of our preservation process. 
 
 [^2]: Subscribe at https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info
 [^3]: Introduction tutorial https://www.youtube.com/watch?v=ZBTpa09P_Ho&t=4s and step-by-step tutorial https://www.youtube.com/watch?v=xBQ915N6LyI&t=19s
@@ -118,9 +123,12 @@ To start archiving legacy source code in the Sofwtare Heritage Archive, the foll
 
 1) A source code in machine readable format
 2) A Github account
-3) A Linux Console
-4) Git
-5) Connect to Github with SSH
+
+<!--
+4) A Linux Console
+5) Git
+6) Connect to Github with SSH
+-->
 
 A source code in machine readable format
 ----------------------------------
@@ -142,6 +150,7 @@ In this guide we will show you how to do it using Github, and you will therefore
 
 [^5]: https://github.com/signup
 
+<!--
 ///////////////Probably possible to remove//////////
 
 A Unix Console
@@ -188,6 +197,7 @@ You are done with the settings and you are now ready to archive your code into t
 [^7]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 /////////////////////////////////
+-->
 	
 Preparing your source code for archiving {#sec:prepare}
 ======================================
@@ -197,8 +207,9 @@ In order to archive your legacy code on the Software Heritage Universal Archive,
 We will provide a step by step guidance, using a dummy software name _MySoftware_ as an example. 
 
 **Wait, why don't I just manually upload my code on Github then?**
-If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Math, uploaded a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. Using Git command lines to upload our source code on Github will allow us to properly set the metadata. 
+If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Math, uploaded a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. The SWHAP will allow us to properly set the metadata. 
 
+The SWHAP Process also takes care to make the archiving process as transparent as possible for a possible viewer, showing both the raw archived material (whatever you started the process with° and the archived result.   
 If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
 
 Final Github repository structure
