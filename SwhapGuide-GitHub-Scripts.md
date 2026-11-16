@@ -344,7 +344,9 @@ In `extraction-recipe.yaml` you must indicate the path to each machine-readable 
 
 
 ### Version history
-The version_history.csv file will also be used during the automated process. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. 
+The version_history.csv file will also be used during the automated process. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. Note that the `directory` field should match the label you gave each item in `extraction-recipe.yaml`. 
+
+![version_history.](./media2/14_version_history.png){#fig:version_history}
 
 ### CodeMeta
 The CodeMeta project defines a standard JSON structure for software metadata. Once your code will be archived, this JSON will allow your code to be more easily discovered by search engines (including the Software Heritage search engine). You can generate such a JSON file using the CodeMeta generator[^9]. You can see best practices for filling in the data in the paragraph below. 
