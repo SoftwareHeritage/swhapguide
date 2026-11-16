@@ -116,6 +116,16 @@ Note that these videos were made on the 2024 version of the guide. The core logi
 [^2]: Subscribe at https://sympa.inria.fr/sympa/subscribe/swhap?previous_action=info
 [^3]: Introduction tutorial https://www.youtube.com/watch?v=ZBTpa09P_Ho&t=4s and step-by-step tutorial https://www.youtube.com/watch?v=xBQ915N6LyI&t=19s
 
+
+Process Overview {#sec:overview}
+======================================
+The SWHAP process broadly consists of the following steps:
+1) **Duplicate a provided Github template**: this will become the Github repository in which you will be working
+2) **Fill in metadata and upload source code artefacts**: in this repository, fill in the provided metadata files and upload your source code files
+3) **Prepare the code for archival**: prepare the repository for archival (this step is now automated)
+4) **Trigger the Software Heritage Archival**: archive your code in the Software Heritage universal archive 
+
+
 Requirements and setup {#sec:requirements}
 ======================================
 
