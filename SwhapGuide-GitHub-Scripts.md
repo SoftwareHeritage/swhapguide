@@ -289,11 +289,12 @@ In our case the interpreter current directory is `/home/mathfichen`, so we juste
 Upload collected files
 ----------------------------------
 
-You are now ready to upload your materials to the `Workbench`. 
-In your local Workbench, navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. You can also store any item you may deem relevant to understand the historical context in which the software was produced, such as technical documentation. 
+You are now ready to upload your materials. Navigate to the `raw_materials` folder. This folder is meant to store all your initial materials, to help any future viewer understand the origin of the code. This covers the source code in its initial format (scanned listing, compressed file etc.) as well as any contextual element. For example, if the source code was sent over to you by the historical author via email, you can also store this email. You can also store any item you may deem relevant to understand the historical context in which the software was produced, such as technical documentation. 
 
-In our case we uploaded two documents: a scanned listing from 1971 and a later digital version from 1972 in a compressed file. 
+To add your material, just click on the `Add file` button on the top right corner and select them from your computer. 
+In our case we uploaded two documents: a scanned and OCRed listing from 1971 and a later digital version from 1972 in a compressed file. 
 
+<!--
 ![Add raw materials.](./media2/12_AddRawMaterials_local.png){#fig:RawMaterials_local}
 
 To synchronize our local Workbench with the remote repository, we run the following command lines:
@@ -301,10 +302,11 @@ To synchronize our local Workbench with the remote repository, we run the follow
 	git add raw_materials
 	git commit -m "Added raw materials"
 	git push
+-->
 
 The resulting state of `raw_materials` in the remote repository is shown in Figure 5.
 
-![Synch raw materials.](./media2/13_AddRawMaterials.png){#fig:RawMaterials_local}
+![Synch raw materials.](./media2/13_AddRawMaterials_NEW.png){#fig:RawMaterials_local}
 
 
 #### Unpacking your code & flattening of tarballs
