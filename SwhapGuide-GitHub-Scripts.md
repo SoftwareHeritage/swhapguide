@@ -209,7 +209,7 @@ You are done with the settings and you are now ready to archive your code into t
 /////////////////////////////////
 -->
 	
-Preparing your source code for archiving {#sec:prepare}
+Uploading source code and metadata {#sec:prepare}
 ======================================
 
 In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will leverage the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
@@ -241,7 +241,7 @@ If you are not familiar with Git:
 - A _branch_ is a parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
 
 
-Prepare your code for archival
+Prepare your code 
 ----------------------------------
 
 #### Machine-readable code
@@ -402,8 +402,11 @@ The CodeMeta project defines a standard JSON structure for software metadata. On
    - Fields not defined in CodeMeta 2.0.
    - Internal curatorial notes (keep those in `journal.md`).
 
-Preparing your source code for archiving {#sec:prepare}
+Preparing your repository for archiving {#sec:prepare}
 ======================================
+
+Run the script
+----------------------------------
 
 Now that your source code files are uploaded and the metadata registered, you are ready to run the automation script. The 
 The script will perform the following tasks: 
@@ -416,6 +419,10 @@ To run the script, click on `Actions` on the ribbon at the top of the page, then
 
 ![Run script.](./media2/15_runScript.png){#fig:RunScript}
 
+If the script ran successfully, a green check mark will appear next to it in the `Actions` section of your repository. 
+you should now have two branches, the `main` branch and the `SourceCode` branch. The `SourceCode` branch should display the latest version of your software ; the previous versions are flagged as individua releases in the development history of the branch.  
+
+![Successful script.](./media2/12_sucess.png){#fig:SuccessScript}
 
 
 <!--
@@ -540,8 +547,6 @@ Here are the associated Git instructions to run it:
 
 	dotnet ./DT2SG/DT2SG_app.dll -r mathfichen/MySoftware_Workbench/source_code/ -m mathfichen/MySoftware_Workbench/metadata/version_history.csv
 
-Create the final repository
-----------------------------------
 
 You are now ready to create the final public repository of your Software, that will be ingested into the Software Heritage archive. Go to the Github interface. From the `home` page, click on the `New` green button and create a new public repository, named after your software (See Figure 9). 
 
@@ -554,6 +559,9 @@ We populate this final `MySoftware` repository from our workbench.
 
 
 -->	
+
+Add topic tags
+----------------------------------
 
 To facilitate the search of the created repository, add the "software-heritage", "legacy code", "archive" and "swhap" topic tags to your repository. To do so, click on the `setting` icon of your repository and add the relevant topics (See figure 10). 
 
