@@ -411,8 +411,15 @@ The CodeMeta project defines a standard JSON structure for software metadata. On
    - Fields not defined in CodeMeta 2.0.
    - Internal curatorial notes (keep those in `journal.md`).
 
-Build the final repository {#sec:prepare}
+Run a Dryrun {#sec:dryrun}
 ======================================
+
+a completer
+
+Build and publish {#sec:build}
+======================================
+
+a mettre à jour
 
 Run the script
 ----------------------------------
