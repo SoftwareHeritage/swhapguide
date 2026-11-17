@@ -209,28 +209,32 @@ You are done with the settings and you are now ready to archive your code into t
 /////////////////////////////////
 -->
 	
-Uploading source code and metadata {#sec:prepare}
+Conceptual model {#sec:concept}
 ======================================
 
-In order to archive your legacy code on the Software Heritage Universal Archive, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will leverage the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
+The Software Heritage Universal archive is based on a Git-like structure. In order to archive your legacy code on Software Heritage, you first need to deposit your code on a public forge such as Github or Gitlab, and most of the work we will do in the following steps aims at doing so in a clean way. In this guide we will leverage the most widely used forge, Github. Note that the process could be easily done on any other forge of your choice. 
 
 We will provide a step by step guidance, using a dummy software name _MySoftware_ as an example. 
 
 **Wait, why don't I just manually upload my code on Github then?**
-If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Math, uploaded a code initially written in 1987 by Tim Berners Lee on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. The SWHAP will allow us to properly set the metadata. 
+If you just uploaded your source code files on Github the metadata associated with your code would be wrong. For example, if I, Math (the Curator), uploaded a code initially written in 1987 by Tim Berners Lee (the Author) on Github, the commit data will tell that I am the author and that the code was written in 2024. That would be obviously wrong. The SWHAP will allow us to properly set the metadata and clearly distinguish the curator from the author. 
 
-The SWHAP Process also takes care to make the archiving process as transparent as possible for a possible viewer, showing both the raw archived material (whatever you started the process with° and the archived result.   
-If your source code has several versions we will also reconstruct the version history, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers. 
+The SWHAP process makes the archiving process as transparent as possible for a possible for a future viewer.
+It takes care to clearly distinguish:
+- The raw materials you started with (ex: the zip files you recovered from an old hard drive)
+- The metadata and any extra information brought by the curator
+- The reconstructed versionned software, using Git to _stack_ each version upon the other and make them easier to navigate and compare one to another for future viewers.     
 
+To achieve this, the process leverages the _branch_ structure of Github, allowing to give two different views of the software to a future viewer.
+   
 Final Github repository structure
 ----------------------------------
 
 The structure we want to achieve on Github before launching the archival on the Software Heritage archive is the following. We will create at public repository, named after the software you want to archive (here called _MySoftware_). This repository has two branches (see figure 1):
 
-1) The _Main_ branch contains all your initial materials (_Raw Materials_), your source code in machine readable format (_Source Code_), the relevant Metadata as well as a ReadMe file helping a future visitor to navigate the repository.
-2) The _SourceCode_ branch contains the reconstructed development history of your source code, i.e. each version of your code stacked one upon the other.
- 
-Those two branches allow a future viewer to navigate in your legacy code according to two different angles: either browsing through the historical material and its retranscription (_Main_ branch), or viewing the code as if it had been developed with a modern versioning system (_Source Code_ branch).  
+1) The _Main_ branch contains all your initial materials (_Raw Materials_), your source code in machine readable format (_Source Code_), the relevant Metadata as well as a ReadMe file helping a future visitor to navigate the repository. This branch contains all the historical artefacts and metadata, allowing a viewer to understand the software as a historical object.
+2) The _SourceCode_ branch contains the reconstructed development history of your source code. Each version of your code is "stacked" one upon the other using Git "commit" mechanisms. One version corresponds to one _commit_ and one annotate _tag_. This reconstructed version allows a future viewer to navigate into the code as they would for any contemporary software. This vision is anachronous but easier to navigate.
+
 
 ![Final Github repository structure.](./media2/01_RepoStructure.png){#fig:repoStructure}
 
@@ -239,12 +243,16 @@ If you are not familiar with Git:
 
 - A _repository_ is similar to a folder, a place where you can store your code, your files, and each file's revision history
 - A _branch_ is a parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
+- A _commit_ is an operation that sends the latest changes of the source code to the repository. It is saved with commit metadata (the author, a commit message)
+- Important commits can be _tagged_, to help navigate in the successive versions of a code. 
+  
 
+Prepare your code {#sec:prepare}
+======================================
 
-Prepare your code 
+Machine-readable code 
 ----------------------------------
 
-#### Machine-readable code
 As mentionne earlier, to start the process your code needs to be in a machine-readable format.
 If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually (see figure 2), or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
 
@@ -344,7 +352,7 @@ In `extraction-recipe.yaml` you must indicate the path to each machine-readable 
 
 
 ### Version history
-The version_history.csv file will also be used during the automated process. It acts as the source of truht regarding the history of the software. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. Note that the `directory` field should match the label you gave each item in `extraction-recipe.yaml`. This label acts as a join key between the two files.
+The version_history.csv file will also be used during the automated process. It acts as the source of truht regarding the history of the software. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. **Note that the `directory` field should match the label you gave each item in `extraction-recipe.yaml`.** This label acts as a join key between the two files.
 
 Fields in version_history.csv cannot be left empty. If you miss one information (for example the email of the author), use the empty value instead `<>`
 
@@ -404,17 +412,17 @@ The CodeMeta project defines a standard JSON structure for software metadata. On
    - Fields not defined in CodeMeta 2.0.
    - Internal curatorial notes (keep those in `journal.md`).
 
-Preparing your repository for archiving {#sec:prepare}
+Build the final repository {#sec:prepare}
 ======================================
 
 Run the script
 ----------------------------------
 
-Now that your source code files are uploaded and the metadata registered, you are ready to run the automation script. The 
+Now that your source code files are uploaded and the metadata registered, you are ready to run the automation script. 
 The script will perform the following tasks: 
 
 1) For each machine-readable source code item in `raw_materials`, the script will unpack it, remove possible unnecessary parent folder, deal with empty directories (see below) and cleanly store it in the `source_code` folder
-2) The script will then create a new branch called `SourceCode` that will contain the synthetic history of the code, i.e, it will reconstruct a versionned view of the code, where each version will correspond to one commit. The script will use the data you registered in `version_history.csv` as commit data.
+2) The script will then create a new branch called `SourceCode`. This branch will be populated using the content of the `source_code`folder, recreating the synthetic history of the code, i.e, it will reconstruct a versionned view of the code, where each version will correspond to one commit. The script will use the data you registered in `version_history.csv` as commit data.
 3) The script will perform a series of checks to make sure that your repository is compliant and ready for archiving 
 
 To run the script, click on `Actions` on the ribbon at the top of the page, then on `Build SourceCode + publish` on the left panel, and finally on the green button `Run workflow`.
@@ -430,6 +438,10 @@ In case of failure
 ----------------------------------
 
 If the script fails, the SourceCode branch won't be created. The issue probably lies in a failure of one of the compliance checks performed by the script. On the `Actions` view, click on the failed run. At the bottom of the page you will find a `revalidate-report.json` file that you can download. It should help you to identify which check did not pass and to correct it.  
+
+Here is the list of checks performed:
+
+
 
 Note on Preserving Empty Directories
 ----------------------------------
