@@ -344,7 +344,9 @@ In `extraction-recipe.yaml` you must indicate the path to each machine-readable 
 
 
 ### Version history
-The version_history.csv file will also be used during the automated process. It acts as the source of truht regarding the history of the software. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. Note that the `directory` field should match the label you gave each item in `extraction-recipe.yaml`. 
+The version_history.csv file will also be used during the automated process. It acts as the source of truht regarding the history of the software. When reconstructing the synthetic view of the code, the script will use the data contained in this file to correctly set the metadata of each commit (one commit corresponding of a version of your code). Note that we here distinguish who is the actual author of the code from the person performing the archival process. Note that the `directory` field should match the label you gave each item in `extraction-recipe.yaml`. This label acts as a join key between the two files.
+
+Fields in version_history.csv cannot be left empty. If you miss one information (for example the email of the author), use the empty value instead `<>`
 
 ![version_history.](./media2/14_version_history.png){#fig:version_history}
 
