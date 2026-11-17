@@ -420,10 +420,14 @@ To run the script, click on `Actions` on the ribbon at the top of the page, then
 ![Run script.](./media2/15_runScript.png){#fig:RunScript}
 
 If the script ran successfully, a green check mark will appear next to it in the `Actions` section of your repository. 
-you should now have two branches, the `main` branch and the `SourceCode` branch. The `SourceCode` branch should display the latest version of your software ; the previous versions are flagged as individua releases in the development history of the branch.  
+you should now have two branches, the `main` branch and the `SourceCode` branch. The `SourceCode` branch is an orphan branch, meaning it did not inherit previous commits from the main branch. It should display the latest version of your software ; the previous versions are flagged as individua releases in the development history of the branch.  
 
 ![Successful script.](./media2/12_sucess.png){#fig:SuccessScript}
 
+In case of failure
+----------------------------------
+
+If the script fails, the SourceCode branch won't be created. The issue probably lies in a failure of one of the compliance checks performed by the script. On the `Actions` view, click on the failed run. At the bottom of the page you will find a `revalidate-report.json` file that you can download. It should help you to identify which check did not pass and to correct it.  
 
 <!--
 Upload machine readable source code
