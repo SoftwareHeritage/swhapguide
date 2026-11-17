@@ -122,9 +122,11 @@ Process Overview {#sec:overview}
 The SWHAP process broadly consists of the following steps:
 1) **Duplicate a provided Github template**: this will become the Github repository in which you will be working
 2) **Fill in metadata and upload source code artefacts**: in this repository, fill in the provided metadata files and upload your source code files
-3) **Prepare the code for archival**: prepare the repository for archival (this step is now automated)
-4) **Trigger the Software Heritage Archival**: archive your code in the Software Heritage universal archive 
+3) **Run a Dryrun**: the `Dryrun` workflow will automatically check that the files and data you provided are ready to be processed
+4) **Build and Publish**: The `Build and Publish` workflow will automatically build the final repository according to the SWHAP conceptual model (see {#sec:concept}) 
+6) **Trigger the Software Heritage Archival**: archive your code in the Software Heritage universal archive 
 
+The biggest part of your work is to upload your legacy code pieces and to fill in the metadata. 
 
 Requirements and setup {#sec:requirements}
 ======================================
@@ -149,6 +151,11 @@ However, if your source code is not machine-readable (typically your code is a p
 1) Use a scanner to digitalize your code. If your code is too long to be scanned in its entirety, select a section that you find most relevant for archiving.
 2) Convert your code to a machine-readable format, for example by using an OCR tool such as [OCR.space](https://ocr.space/)[^4] and paste your code into a text editor.
 3) Check for any error, correct if needed, and save your code using the file extension linked to the programming language associated with your code.
+
+When saving our edited file, we made sure to correct the file extension to reflect the programming language. 
+
+![Make your source code machine readable.](./media2/09_OCR.PNG){#fig:OCR}
+
 
 [^4]: https://ocr.space/
 
@@ -249,14 +256,6 @@ If you are not familiar with Git:
 
 Prepare your code {#sec:prepare}
 ======================================
-
-Machine-readable code 
-----------------------------------
-
-As mentionne earlier, to start the process your code needs to be in a machine-readable format.
-If the code is only available in non digital form (e.g. printed listings), you can either transcribe it manually (see figure 2), or use a scanner and an OCR (optical character recognition) tool to parse it. In the example below we scanned a paper listing. The scanner had integrated OCR function, so we could copy-past the result in a text editor and correct the errors manually. When saving our edited file, we made sure to correct the file extension to reflect the programming language (in our case .pl). 
-
-![Make your source code machine readable.](./media2/09_OCR.PNG){#fig:OCR}
 
 
 Set up your working environment
