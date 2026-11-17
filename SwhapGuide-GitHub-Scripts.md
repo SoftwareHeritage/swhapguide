@@ -411,7 +411,7 @@ Run the script
 Now that your source code files are uploaded and the metadata registered, you are ready to run the automation script. The 
 The script will perform the following tasks: 
 
-1) For each machine-readable source code item in `raw_materials`, the script will unpack it, remove possible unnecessary parent folder and cleanly store it in the `source_code` folder
+1) For each machine-readable source code item in `raw_materials`, the script will unpack it, remove possible unnecessary parent folder, deal with empty directories (see below) and cleanly store it in the `source_code` folder
 2) The script will then create a new branch called `SourceCode` that will contain the synthetic history of the code, i.e, it will reconstruct a versionned view of the code, where each version will correspond to one commit. The script will use the data you registered in `version_history.csv` as commit data.
 3) The script will perform a series of checks to make sure that your repository is compliant and ready for archiving 
 
@@ -429,6 +429,21 @@ In case of failure
 
 If the script fails, the SourceCode branch won't be created. The issue probably lies in a failure of one of the compliance checks performed by the script. On the `Actions` view, click on the failed run. At the bottom of the page you will find a `revalidate-report.json` file that you can download. It should help you to identify which check did not pass and to correct it.  
 
+Note on Preserving Empty Directories
+----------------------------------
+
+By default, Git does not track empty directories — only files. This creates a problem for SWHAP curation: many historical source archives contain empty directories that are meaningful for build systems, test harnesses, or simply
+for documenting the project structure. If we ignore them, the curated history in Git and Software Heritage will no longer faithfully represent the original
+layout.
+
+**Workaround.**  
+To preserve empty directories, the script adds a placeholder file named `.emptydir` inside each directory that is otherwise empty. This ensures Git records the directory, while making it clear that the file is a curatorial
+artifact and not part of the original software distribution. 
+
+<!--
+These markers
+should be documented explicitly in the curation metadata, so that future users are aware they were introduced solely for structural preservation.
+-->
 <!--
 Upload machine readable source code
 ----------------------------------
@@ -446,17 +461,7 @@ You can check the result in the distant repository.
 
 ![Add machine readable source code.](./media2/14_addedSourceCode.png){#fig:RawMaterials_local}
 
-#### Note on Preserving Empty Directories
 
-By default, Git does not track empty directories — only files. This creates a problem for SWHAP curation: many historical source archives contain empty
-directories that are meaningful for build systems, test harnesses, or simply
-for documenting the project structure. If we ignore them, the curated history in Git and Software Heritage will no longer faithfully represent the original
-layout.
-
-**Workaround.**  
-To preserve empty directories, you should add a placeholder file named `.emptydir` inside each directory that is otherwise empty. This ensures Git records the directory, while making it clear that the file is a curatorial
-artifact and not part of the original software distribution. These markers
-should be documented explicitly in the curation metadata, so that future users are aware they were introduced solely for structural preservation.
 
 Example, suppose you find in the original source code tree a couple of empty directories:
 ```
