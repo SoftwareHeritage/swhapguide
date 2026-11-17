@@ -441,6 +441,16 @@ If the script fails, the SourceCode branch won't be created. The issue probably 
 
 Here is the list of checks performed:
 
+| Family | Checks | Example |
+|---|---|---|
+| **TF** | Tree fidelity — verifies that the data extracted from raw_materials (files, content and structure) matches what is pushed into the SourceCode branch (nothing leaked, nothing missing)? | 
+| **BP** | Branch purity — does each branch hold only what it should, as per the conceptual model? |
+| **CSV** | Manifest grammar — verifies that version_history.csv is a well formed csv file, with the canonical header, ISO dates, well-formed rows. |
+| **CM** | CodeMeta validity — checks that codemeta.json respects CodeMeta nomenclature |
+| **SZ** | Size - check the size of each item. Github rejects file of 100MiB or bigger.  | 
+| **PI** | Personal-information — looks for real personal email addresses in metadata/version_history.csv and raises a WARN (never a FAIL), so nobody publishes an email by accident. |
+| **JC** | Journal coverage — every commit/tag is recorded in `journal.jsonl`. journal.json is created automatically | 
+| **DV** | Divergence — makes sure a rebuild can’t silently overwrite history that’s already published. If no SourceCode branch as already been published, this test is skipped | 
 
 
 Note on Preserving Empty Directories
